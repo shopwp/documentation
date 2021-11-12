@@ -6,7 +6,7 @@ sidebar_position: 1
 
 :::caution
 
-Before you can use ShopWP you must already have an active Shopify store. The plugin is compatible with any Shopify plan including [14-day free trials](https://www.shopify.com/?ref=wps) and the more affordable $9 [Lite plan](https://www.shopify.com/lite). 
+Before you can use ShopWP you must already have an active Shopify store. The plugin is compatible with any Shopify plan including [14-day free trials](https://www.shopify.com/?ref=wps) and the more affordable $9 [Lite plan](https://www.shopify.com/lite).
 
 :::
 
@@ -14,7 +14,7 @@ As mentioned in the introduction, ShopWP comes in two versions; a [free version]
 
 We recommended the [Shopify Lite plan](https://www.shopify.com/lite) if you intend to only sell on WordPress and other sales channels such as Facebook or Instagram. All plugin features will work with Shopify Lite and is a great option if want to save money!
 
-Okay, let's get started. 🙌
+Okay, let's get started! 🙌
 
 ## Installing the free version
 
@@ -26,7 +26,7 @@ Within the WordPress dashboard open the plugins page.
 
 ### 2. Search for ShopWP
 
-While on the plugins page search for ShopWP. It should be the first result. You can also try searching for the old name, WP Shopify.
+While on the plugins page search for ShopWP. It should be the first result. You can also try searching for the old name, ShopWP.
 
 ![Installing free plugin step one](./assets/install-free-2.png)
 
@@ -38,10 +38,9 @@ You're all set!
 
 ![Installing free plugin step one](./assets/install-free-3.png)
 
-
 ## Installing the Pro version
 
-Installing the Pro version comes with a few more steps. If you've already purchased ShopWP Pro, please skip to step 2. 
+Installing the Pro version comes with a few more steps. If you've already purchased ShopWP Pro, please skip to step 2.
 
 ### 1. Purchase the Pro version
 
@@ -68,7 +67,7 @@ Once it's finished installing click `Activate`. When it's done, you'll be redire
 
 ### 4. Activate your license key
 
-After installing and activating the plugin, you'll need to activate your license key. 
+After installing and activating the plugin, you'll need to activate your license key.
 
 Begin by finding your license key. It should be listed in your ShopWP account under the `Licenses` tab. You can also find it on the payment confirmation screen as well as in the post purchase email.
 

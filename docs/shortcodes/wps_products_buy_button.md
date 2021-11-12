@@ -4,12 +4,16 @@ sidebar_position: 6
 
 # [wps_products_buy_button]
 
-Displays the product "Buy Button" component. Will output three different elements: 
+The `[wps_products_buy_button]` shortcode allows you to display one or more product buy buttons in a list or grid. This is useful if you only want to show the product buy button without title, pricing, etc.
+
+Will output three different elements:
 
 - The quantity selector
 - Variant selections
 - Add to cart button
 
-Watch our [quick video tutorial](https://www.youtube.com/watch?v=lYm6G35e8sI) to learn how to use this.
+:::info
 
-This shortcode uses all the attributes from [[wps_products]](/shortcodes/wps_products)
+For examples and a full list of available attributes, reference the [[wps_products] shortcode attribute list](/shortcodes/wps_products).
+
+:::

@@ -1,5 +1,5 @@
 ---
-sidebar_position: 6
+sidebar_position: 7
 ---
 
 # ShopWP Pro License
@@ -12,7 +12,7 @@ When you purchase [ShopWP Pro](https://wpshop.io/purchase?utm_medium=docs&utm_so
 
 :::info
 
-To continue receiving access to the above features you must have an active license key.
+To continue receiving access to the above features, you must have an **active** license key.
 
 :::
 
@@ -21,11 +21,11 @@ If you purchased the [Standard plan](https://wpshop.io/purchase/), your license 
 ## Finding your license key
 
 Your license key is listed in your ShopWP account under the `Licenses` tab. You can also find it in the following places:
+
 - Payment confirmation screen (after checkout)
 - The post purchase email
 
 ![License page](./assets/license-page.png)
-
 
 ## Activating your license key
 

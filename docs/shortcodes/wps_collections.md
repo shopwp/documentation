@@ -182,8 +182,9 @@ Determines whether to hide or show pagination.
 
 When [pagination](#pagination) is set to true, this allows for specifying a custom location in the DOM to place the pagination "load more" control component for collections. Takes any valid CSS selector. When set to false, the load more button will be placed directly below the products output. Default: `false`.
 
-> [!NOTE|className:info sm]
-> The HTML element specified will be completely emptied and replaced with the load more component.
+:::info
+The HTML element specified will be completely emptied and replaced with the load more component.
+:::
 
 **Example**
 
@@ -195,8 +196,9 @@ When [pagination](#pagination) is set to true, this allows for specifying a cust
 
 When [single](#single) is set to true, this allows for specifying a custom location in the DOM to place the collection title. Takes any valid CSS selector.
 
-> [!NOTE|className:info sm]
-> The HTML element specified will be completely emptied and replaced with the load more component.
+:::info
+The HTML element specified will be completely emptied and replaced with the load more component.
+:::
 
 **Example**
 
@@ -208,8 +210,9 @@ When [single](#single) is set to true, this allows for specifying a custom locat
 
 When [single](#single) is set to true, this allows for specifying a custom location in the DOM to place the collection image. Takes any valid CSS selector.
 
-> [!NOTE|className:info sm]
-> The HTML element specified will be completely emptied and replaced with the load more component.
+:::info
+The HTML element specified will be completely emptied and replaced with the load more component.
+:::
 
 **Example**
 
@@ -221,8 +224,9 @@ When [single](#single) is set to true, this allows for specifying a custom locat
 
 When [single](#single) is set to true, this allows for specifying a custom location in the DOM to place the collection description. Takes any valid CSS selector.
 
-> [!NOTE|className:info sm]
-> The HTML element specified will be completely emptied and replaced with the load more component.
+:::info
+The HTML element specified will be completely emptied and replaced with the load more component.
+:::
 
 **Example**
 
@@ -234,8 +238,9 @@ When [single](#single) is set to true, this allows for specifying a custom locat
 
 When [single](#single) is set to true, this allows for specifying a custom location in the DOM to place the collection products. Takes any valid CSS selector.
 
-> [!NOTE|className:info sm]
-> The HTML element specified will be completely emptied and replaced with the load more component.
+:::info
+The HTML element specified will be completely emptied and replaced with the load more component.
+:::
 
 **Example**
 
@@ -526,7 +531,7 @@ Determines whether to only show the product feature image. By default, all produ
 
 ### products_show_zoom` (Pro only
 
-Determines whether to enable product image zooming. When enabled, zoom will be triggered on the featured image. Only available in [WP Shopify Pro](getting-started/wp-shopify-pro.md).
+Determines whether to enable product image zooming. When enabled, zoom will be triggered on the featured image. Only available in [ShopWP Pro](https://wpshop.io/purchase).
 
 | Possible values |
 | :-------------- |
@@ -601,8 +606,9 @@ Determines the offset from the edge of the items container. For example, a value
 
 When `pagination` is set to true, this allows for specifying a custom location in the DOM to place the pagination "load more" control component. Takes any valid CSS selector. When set to false, the load more button will be placed directly below the products output. Default: `false`.
 
-> [!NOTE|className:info sm]
-> The HTML element specified will be completely emptied and replaced with the load more component.
+:::info
+The HTML element specified will be completely emptied and replaced with the load more component.
+:::
 
 **Example**
 

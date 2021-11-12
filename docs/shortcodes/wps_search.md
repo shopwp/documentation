@@ -4,7 +4,7 @@ sidebar_position: 9
 
 # [wps_search]
 
-Displays the search component. Only available in [WP Shopify Pro](https://wpshop.io/purchase?utm_medium=docs&utm_source=features&utm_campaign=upgrade).
+Displays the search component. Only available in [ShopWP Pro](https://wpshop.io/purchase?utm_medium=docs&utm_source=features&utm_campaign=upgrade).
 
 Watch our [quick video tutorial](https://www.youtube.com/watch?v=lYm6G35e8sI) to learn how to use this.
 
@@ -57,7 +57,7 @@ Reverses the order of products. Useful when used in combination with `sort_by`.
 
 ### page_size
 
-Determines the number of products to show per page. Only applicable when pagination is turned on. Will default to the plugin's global [products per page](getting-started/settings?id=products-per-page) setting.
+Determines the number of products to show per page. Only applicable when pagination is turned on. Will default to the plugin's global [products per page](/shortcodes/getting-started/settings) setting.
 
 | Possible values |
 | :-------------- |
@@ -201,8 +201,9 @@ Specifies where the search form should render. Takes any valid CSS selector.
 
 When `pagination` is set to true, this allows for specifying a custom location in the DOM to place the pagination "load more" control component. Takes any valid CSS selector. When set to false, the load more button will be placed directly below the products output. Default: `false`.
 
-> [!NOTE|className:info sm]
-> The HTML element specified will be completely emptied and replaced with the load more component.
+:::info
+The HTML element specified will be completely emptied and replaced with the load more component.
+:::
 
 **Example**
 

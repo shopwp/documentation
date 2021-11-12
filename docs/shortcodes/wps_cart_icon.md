@@ -4,7 +4,7 @@ sidebar_position: 8
 
 # [wps_cart_icon]
 
-Displays the cart icon component. 
+Displays the cart icon component.
 
 Watch our [quick video tutorial](https://www.youtube.com/watch?v=lYm6G35e8sI) to learn how to use this.
 
@@ -72,3 +72,45 @@ Whether to display the icon as inline or fixed. Default: `inline`.
 ```js
 [wps_cart_icon type="fixed"]
 ```
+
+### cart_title
+
+Allows for customizing the cart title. Default: `Shopping Cart`.
+
+#### Example
+
+```php
+add_filter('shopwp_cart_default_payload_settings', function($cart_settings) {
+    $cart_settings['cart_title'] = 'Custom Shopping Cart Title';
+
+    return $cart_settings;
+});
+```
+
+### checkout_text
+
+### checkout_failed_message
+
+### lineitem_remove_text
+
+### lineitem_sale_label_text
+
+### lineitems_disable_link
+
+### lineitems_max_quantity
+
+### lineitems_min_quantity
+
+### lineitems_quantity_step
+
+### notes_label
+
+### notes_placeholder
+
+### empty_cart_text
+
+### subtotal_label_text
+
+### show_cart_title
+
+### show_cart_close_icon

@@ -4,7 +4,7 @@ sidebar_position: 10
 
 # [wps_storefront]
 
-Displays the "storefront" component containing filtering, pagination, and sorting. Only available in [WP Shopify Pro](https://wpshop.io/purchase?utm_medium=docs&utm_source=features&utm_campaign=upgrade). Take note that this shortcode contains three required attributes.
+Displays the "storefront" component containing filtering, pagination, and sorting. Only available in [ShopWP Pro](https://wpshop.io/purchase?utm_medium=docs&utm_source=features&utm_campaign=upgrade). Take note that this shortcode contains three required attributes.
 
 Watch our [quick video tutorial](https://www.youtube.com/watch?v=lYm6G35e8sI) to learn how to use this.
 
@@ -28,6 +28,8 @@ Watch our [quick video tutorial](https://www.youtube.com/watch?v=lYm6G35e8sI) to
 
 Specifies where the actual filter results should render. Takes any valid CSS selector.
 
+**Example**
+
 ```js
 [wps_storefront dropzone_payload="#dropzone-payload"]
 ```
@@ -36,6 +38,8 @@ Specifies where the actual filter results should render. Takes any valid CSS sel
 
 Specifies where the selectable filter options should render. Takes any valid CSS selector.
 
+**Example**
+
 ```js
 [wps_storefront dropzone_options="#dropzone-options"]
 ```
@@ -43,6 +47,8 @@ Specifies where the selectable filter options should render. Takes any valid CSS
 ### dropzone_selections
 
 Specifies where the selected user choices should render. Takes any valid CSS selector. Omitting will hide user selections all together.
+
+**Example**
 
 ```js
 [wps_storefront dropzone_selections="#dropzone-selections"]
@@ -207,6 +213,8 @@ Determines the offset from the edge of the items container. For example, a value
 
 Specifies where the sorting component should render. Takes any valid CSS selector. Omitting will hide sorting all together.
 
+**Example**
+
 ```js
 [wps_storefront dropzone_sorting="#dropzone-sorting"]
 ```
@@ -214,6 +222,8 @@ Specifies where the sorting component should render. Takes any valid CSS selecto
 ### dropzone_pagination
 
 Specifies where the pagination should render. Takes any valid CSS selector. Omitting will hide pagination all together.
+
+**Example**
 
 ```js
 [wps_storefront dropzone_pagination="#dropzone-pagination"]
@@ -223,6 +233,8 @@ Specifies where the pagination should render. Takes any valid CSS selector. Omit
 
 Specifies whether to allow the user to filer by product tags. Setting to false will hide the ability to filter by tags.
 
+**Example**
+
 ```js
 [wps_storefront show_tags="false"]
 ```
@@ -230,6 +242,8 @@ Specifies whether to allow the user to filer by product tags. Setting to false w
 ### show_vendors
 
 Specifies whether to allow the user to filer by product vendors. Setting to false will hide the ability to filter by vendors.
+
+**Example**
 
 ```js
 [wps_storefront show_vendors="false"]
@@ -239,6 +253,8 @@ Specifies whether to allow the user to filer by product vendors. Setting to fals
 
 Specifies whether to allow the user to filer by product types. Setting to false will hide the ability to filter by types.
 
+**Example**
+
 ```js
 [wps_storefront show_types="false"]
 ```
@@ -246,6 +262,8 @@ Specifies whether to allow the user to filer by product types. Setting to false 
 ### show_options_heading
 
 Specifies whether to show the default "Filter by" options heading.
+
+**Example**
 
 ```js
 [wps_storefront show_options_heading="false"]
@@ -264,4 +282,181 @@ Display products based on their availability. Setting to `true` will only show p
 
 ```js
 [wps_storefront available_for_sale="true"]
+```
+
+### price_heading
+
+Allows for customizing the heading of the "Pricing" filter group. Default: `Price`.
+
+| Possible values  |
+| :--------------- |
+| Any valid string |
+
+**Example**
+
+```js
+[wps_storefront price_heading="Custom price heading"]
+```
+
+### collections_heading
+
+Allows for customizing the heading of the "Collections" filter group. Default: `Price`.
+
+| Possible values  |
+| :--------------- |
+| Any valid string |
+
+**Example**
+
+```js
+[wps_storefront collections_heading="Custom collections heading"]
+```
+
+### types_heading
+
+Allows for customizing the heading of the "Types" filter group. Default: `Price`.
+
+| Possible values  |
+| :--------------- |
+| Any valid string |
+
+**Example**
+
+```js
+[wps_storefront types_heading="Custom types heading"]
+```
+
+### tags_heading
+
+Allows for customizing the heading of the "Tags" filter group. Default: `Price`.
+
+| Possible values  |
+| :--------------- |
+| Any valid string |
+
+**Example**
+
+```js
+[wps_storefront tags_heading="Custom tags heading"]
+```
+
+### vendors_heading
+
+Allows for customizing the heading of the "Vendors" filter group. Default: `Price`.
+
+| Possible values  |
+| :--------------- |
+| Any valid string |
+
+**Example**
+
+```js
+[wps_storefront vendors_heading="Custom vendors heading"]
+```
+
+### filter_by_label_text
+
+Allows for customizing the "Filter by" label. Default: `Filter by:`.
+
+| Possible values  |
+| :--------------- |
+| Any valid string |
+
+**Example**
+
+```js
+[wps_storefront filter_by_label_text="Custom filter by text"]
+```
+
+### page_size_label_text
+
+Allows for customizing the "Page size" label. Default: `Page size:`.
+
+| Possible values  |
+| :--------------- |
+| Any valid string |
+
+**Example**
+
+```js
+[wps_storefront page_size_label_text="Custom page size text"]
+```
+
+### clear_filter_selections_text
+
+Allows for customizing the "Clear selections" text that shows after selecting a filter. Default: `Clear selections`.
+
+| Possible values  |
+| :--------------- |
+| Any valid string |
+
+**Example**
+
+```js
+[wps_storefront clear_filter_selections_text="Custom clear selections"]
+```
+
+### selections_available_for_sale_text
+
+Allows for customizing the "Available for sale" text. Default: `Available for sale`.
+
+| Possible values  |
+| :--------------- |
+| Any valid string |
+
+**Example**
+
+```js
+[wps_storefront selections_available_for_sale_text="Custom available for sale"]
+```
+
+### sort_by_label_text
+
+Allows for customizing the "Sort by" text. Default: `Sort by:`.
+
+| Possible values  |
+| :--------------- |
+| Any valid string |
+
+**Example**
+
+```js
+[wps_storefront sort_by_label_text="Custom sort by text"]
+```
+
+### no_filter_group_found_text
+
+Allows for customizing the text shown when no filter group is found. Default: `No %s found`.
+
+| Possible values                                                              |
+| :--------------------------------------------------------------------------- |
+| Any valid string. Use the %s character to dynamically show filter group type |
+
+**Example**
+
+```js
+[wps_storefront no_filter_group_found_text="Custom text"]
+```
+
+### filterable_price_values
+
+Allows for customizing the available price values that users can select.
+
+**Example**
+
+```js
+add_filter(
+	'shopwp_storefront_default_payload_settings',
+	function ($storefront_settings) {
+		$storefront_settings['filterable_price_values'] = [
+			'$0.00 - $15.00',
+			'$15.00 - $25.00',
+			'$25.00 - $50.00',
+			'$50.00 - $100.00',
+			'$100.00 +',
+		]
+
+		return $storefront_settings
+	}
+)
 ```
