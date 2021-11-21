@@ -13,7 +13,6 @@ Watch our [quick video tutorial](https://www.youtube.com/watch?v=lYm6G35e8sI) to
 ```js
 // Drops the search results into a container with the id of #search-container
 [wps_search dropzone_form="#search-container"]
-
 ```
 
 ## Available Attributes

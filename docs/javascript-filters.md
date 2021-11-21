@@ -213,4 +213,16 @@ wp.hooks.addFilter('product.colorSwatchValue', 'shopwp', function (color) {
 
 ### before.productTitle
 
+**Example**
+
+```js
+wp.hooks.addFilter(
+	'before.productTitle',
+	'shopwp',
+	function (defaultValue, props) {
+		return '<p>Vendor: ' + props.product.vendor + '</p>'
+	}
+)
+```
+
 ### after.productTitle

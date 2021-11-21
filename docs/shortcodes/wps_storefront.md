@@ -19,7 +19,6 @@ Watch our [quick video tutorial](https://www.youtube.com/watch?v=lYm6G35e8sI) to
 
 // Show products without the description present
 [wps_storefront excludes="description"]
-
 ```
 
 ## Available Attributes
