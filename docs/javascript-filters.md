@@ -1,6 +1,10 @@
 # JavaScript Filters
 
-You can hook into these JavaScript filters to customize a variety of different plugin features.
+The below JavaScript filters allow you to customize various aspects of the plugin. You can do things such as modify the checkout url, add custom HTML into the layout, and more.
+
+To get started, follow our [Using JavaScript Hooks](/guides/javascript-hooks) guide first.
+
+Any filter name that begins with `before` or `after` will allow you to insert custom HTML directly into the product layout.
 
 ### product.titleText
 
@@ -36,10 +40,10 @@ Allows for customizing the name of a product option. For example, `Color` or `Si
 
 ```js
 wp.hooks.addFilter(
-	'product.titleText',
+	'product.optionName',
 	'shopwp',
 	function (optionName, productOptionState) {
-		return optionName + ' plus custom text'
+		return optionName + ' custom'
 	}
 )
 ```
