@@ -3,9 +3,9 @@
 	"version": "0.0.0",
 	"private": true,
 	"scripts": {
-		"docusaurus": "export NODE_OPTIONS=--openssl-legacy-provider; docusaurus",
+		"docusaurus": "docusaurus",
 		"start": "export NODE_OPTIONS=--openssl-legacy-provider; docusaurus start",
-		"build": "export NODE_OPTIONS=--openssl-legacy-provider; docusaurus build",
+		"build": "docusaurus build",
 		"swizzle": "export NODE_OPTIONS=--openssl-legacy-provider; docusaurus swizzle",
 		"deploy": "export NODE_OPTIONS=--openssl-legacy-provider; docusaurus deploy",
 		"clear": "export NODE_OPTIONS=--openssl-legacy-provider; docusaurus clear",
