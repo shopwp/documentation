@@ -207,9 +207,9 @@ wp.hooks.addFilter('product.modalSettings', 'shopwp', function (modalSettings) {
 
 Allows you to customize the final checkout url. Useful for adding tracking parameters or customizations to the final checkout page.
 
-| Parameter      | Description                                       |
-| :------------- | :------------------------------------------------ |
-| url - (string) | Represents the checkout url before customizations |
+| Parameter      | Description                 |
+| :------------- | :-------------------------- |
+| url - (string) | Represents the checkout url |
 
 **Example**
 
