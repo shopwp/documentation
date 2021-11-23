@@ -107,7 +107,7 @@ wp.hooks.addFilter('product.variantValue', 'shopwp', function (variantValue) {
 
 ### product.preSelectVariantById
 
-Allows for pre-selecting a product variant on page load, based on variant id. You must return a valid [GraphQL product variant ID](https://shopify.dev/api/admin-graphql/2021-10/scalars/ID).
+Allows for selecting a product variant on page load, based on variant id. You must return a valid [GraphQL product variant ID](https://shopify.dev/api/admin-graphql/2021-10/scalars/ID).
 
 The GraphQL product id is a base64-encoded string in this format: `gid://shopify/ProductVariant/40323659989183`. To create the GraphQL id, append the _numeric_ product id to this string: `gid://shopify/ProductVariant/`, like this:
 
@@ -134,11 +134,11 @@ wp.hooks.addFilter(
 
 ### product.lineItemOptions
 
-Allows you to customize the line item options before they're added to the cart.
+Allows you to customize the line item options before they're added to the cart. Useful for customizing things like the quantity, variant, or min/max quantity.
 
-| Parameter                  | Description                                                             |
-| :------------------------- | :---------------------------------------------------------------------- |
-| lineItemOptions - (object) | Represents the line item options that are going to be added to the cart |
+| Parameter                  | Description                                  |
+| :------------------------- | :------------------------------------------- |
+| lineItemOptions - (object) | Represents the line item options to be added |
 
 **Example**
 
@@ -155,11 +155,11 @@ wp.hooks.addFilter(
 
 ### product.colorSwatchValue
 
-Allows you to customize the value of the color swatch when using the variant buttons style.
+Allows you to customize the value of the color swatch when using the variant buttons. This is useful if you want to display a custom color for each variant option. By default, the plugin will attempt to use the variant value to generate the color.
 
-| Parameter        | Description                                                      |
-| :--------------- | :--------------------------------------------------------------- |
-| color - (string) | Represents the name of the color. For example, `black` or `red`. |
+| Parameter        | Description                                                     |
+| :--------------- | :-------------------------------------------------------------- |
+| color - (string) | Represents the name of the color. For example, `black` or `red` |
 
 **Example**
 
@@ -171,9 +171,54 @@ wp.hooks.addFilter('product.colorSwatchValue', 'shopwp', function (color) {
 
 ### product.variantStyles
 
+Allows you to customize the CSS styles of the variant buttons
+
+| Parameter         | Description                                  |
+| :---------------- | :------------------------------------------- |
+| styles - (string) | Represents the CSS inline styles to be added |
+
+**Example**
+
+```js
+wp.hooks.addFilter('product.variantStyles', 'shopwp', function (styles) {
+	return styles
+})
+```
+
 ### product.modalSettings
 
+Allows you to customize the modal settings. The available modal settings match the available [[wps_products] shortcode attributes](/shortcodes/wps_products). In other words, any shortcode attribute can be used to customize the modal.
+
+| Parameter                | Description                   |
+| :----------------------- | :---------------------------- |
+| modalSettings - (object) | Represents the modal settings |
+
+**Example**
+
+```js
+// Disable image zoom within modal only
+wp.hooks.addFilter('product.modalSettings', 'shopwp', function (modalSettings) {
+	modalSettings.showZoom = false
+	return modalSettings
+})
+```
+
 ### cart.checkoutUrl
+
+Allows you to customize the final checkout url. Useful for adding tracking parameters or various customizations to the final checkout page.
+
+| Parameter      | Description                                       |
+| :------------- | :------------------------------------------------ |
+| url - (string) | Represents the checkout url before customizations |
+
+**Example**
+
+```js
+wp.hooks.addFilter('cart.checkoutUrl', 'shopwp', function (url) {
+	console.log('url', url)
+	return url
+})
+```
 
 ### cart.isCheckingOut
 
