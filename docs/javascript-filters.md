@@ -215,16 +215,68 @@ Allows you to customize the final checkout url. Useful for adding tracking param
 
 ```js
 wp.hooks.addFilter('cart.checkoutUrl', 'shopwp', function (url) {
-	console.log('url', url)
 	return url
 })
 ```
 
 ### cart.isCheckingOut
 
+Allows you to short-circuit the checkout redirect.
+
+| Parameter              | Description                          |
+| :--------------------- | :----------------------------------- |
+| isCheckingOut - (bool) | Whether to redirect to checkout page |
+
+**Example**
+
+```js
+// Prevent the checkout redirect
+wp.hooks.addFilter('cart.isCheckingOut', 'shopwp', function (isCheckingOut) {
+	return false
+})
+```
+
 ### cart.lineItemsLink
 
+Allows you to set a link for the lineitems inside the cart.
+
+| Parameter            | Description                   |
+| :------------------- | :---------------------------- |
+| defaultLink - (bool) | link                          |
+| lineItem - (object)  | Represents the line item data |
+| cartState - (object) | Represents the cart state     |
+
+**Example**
+
+```js
+wp.hooks.addFilter(
+	'cart.lineItemsLink',
+	'shopwp',
+	function (defaultLink, lineItem, cartState) {
+		return false
+	}
+)
+```
+
 ### cart.lineItemSubscriptionDescription
+
+Allows you to customize the subscription description label
+
+| Parameter                    | Description        |
+| :--------------------------- | :----------------- |
+| subscriptionLabel - (string) | Subscription label |
+
+**Example**
+
+```js
+wp.hooks.addFilter(
+	'cart.lineItemSubscriptionDescription',
+	'shopwp',
+	function (subscriptionLabel) {
+		return subscriptionLabel
+	}
+)
+```
 
 ### cart.lineItemVariantTitleText
 
@@ -235,6 +287,35 @@ wp.hooks.addFilter('cart.checkoutUrl', 'shopwp', function (url) {
 ### misc.linkTarget
 
 ### misc.carouselSettings
+
+### storefront.availableCollections
+
+Allows you to filter the available collections that the user is shown. Useful for preventing users from filtering certain collections. You must return the same collections data structure from the callback.
+
+| Parameter              | Description                                |
+| :--------------------- | :----------------------------------------- |
+| collections - (object) | Represents the collections shown to filter |
+
+**Example**
+
+```js
+// Exclude the "games" collection
+wp.hooks.addFilter(
+	'storefront.availableCollections',
+	'shopwp',
+	function (collections) {
+		return collections.filter(collection => collection.label !== 'Games')
+	}
+)
+```
+
+### storefront.availableTags
+
+### storefront.availableVendors
+
+### storefront.availableTypes
+
+### storefront.availablePricing
 
 ### before.cartCheckoutButton
 

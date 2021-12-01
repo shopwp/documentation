@@ -382,3 +382,13 @@ var discountCode = 'CUSTOM_DISCOUNT_CODE'
 
 wp.hooks.doAction('do.setCheckoutDiscount', discountCode)
 ```
+
+### do.shopRender
+
+Allows for manually rendering a component
+
+**Example**
+
+```js
+wp.hooks.doAction('do.shopRender')
+```

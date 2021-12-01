@@ -33,6 +33,16 @@ After updating, the plugin will be deactivated. Once the update is finished you'
 3. Most of the PHP hook names have changed.
 4. The Orders and Customers functionality has been removed.
 
+## JavaScript hooks
+
+Any custom JavaScript from your theme _must_ be loaded _after_ ShopWP loads it's JavaScript. This differs from previous versions. If not done, you will see an error that looks like this:
+
+```
+Uncaught ReferenceError: wp is not defined
+```
+
+In order to ensure your custom JavaScript is added correctly, reference the [Using JavaScript Hooks](/guides/javascript-hooks) guide.
+
 ## Full list of breaking changes
 
 Below is a full list of breaking changes in 4.0.
