@@ -172,11 +172,34 @@ add_filter('shopwp_products_default_payload_settings', function($payloadSettings
 
 ### shopwp_storefront_default_payload_settings
 
+Allows you to customize the default storefront options.
+
+| Parameter | Description                               |
+| :-------- | :---------------------------------------- |
+| $options  | Represents the default storefront options |
+
+**Example**
+
+```php
+add_filter('shopwp_storefront_default_payload_settings', function($options) {
+
+    $options['collections_heading'] = 'New collections heading';
+    $options['price_heading'] = 'New price heading';
+    $options['tags_heading'] = 'New tags heading';
+    $options['types_heading'] = 'New type heading';
+    $options['vendors_heading'] = 'New vendors heading';
+
+    return $options;
+});
+```
+
 ### shopwp_show_breadcrumbs
 
 ### shopwp_cart_data
 
 ### shopwp_compatibility_enable_theme
+
+### shopwp_flush_permalinks_after_sync
 
 ### shopwp_skip_compatibility
 
