@@ -20,11 +20,18 @@ With this in mind, our minimum requirements for ShopWP are:
 - PHP `max_execution_time` of `100` (300 if running into syncing timeout issues)
 - Valid HTTPS certificate
 
+## Incompatible Themes
+
+Below are some of the currently unsupported themes:
+
+- [Pro Photo 7](https://pro.photo)
+
 ## Incompatible Plugins
 
-Below are some of the (currently) unsupported plugins:
+Below are some of the currently unsupported plugins:
 
 - [Async JavaScript](https://wordpress.org/plugins/async-javascript)
+- [TheGem Theme Elements (for WPBakery)](https://codex-themes.com/thegem/)
 
 ## Plugin conflicts
 
@@ -33,3 +40,14 @@ Below are some of the (currently) unsupported plugins:
 
 - [OptimizeBuilder](https://www.optimizepress.com/)
   If you're using the OptimizeBuilder plugin from OptimizePress, you'll need to manually "enable" the ShopWP JavaScript and CSS. OptimizeBuilder turns these off by default. To do this, open the OptimizeBuilder plugin settings and go to the scripts and styles tab. From there, find the ShopWP plugin and enable `Js` and `Css` for both the frontend and backend. Then click save.
+
+- [TheGem Theme Elements (for WPBakery)](https://codex-themes.com/thegem/)
+  This plugin uses a WordPress filter called `nonce_life`, and sets it to 1 year. This causes all ShopWP REST Endpoints to fail with a 403 error. To fix, open the plugin and comment out the below function:
+
+  ```php
+  function thegem_nonce_life() {
+    return 31536000;
+  }
+
+  // add_filter('nonce_life', 'thegem_nonce_life');
+  ```

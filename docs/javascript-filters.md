@@ -284,6 +284,22 @@ wp.hooks.addFilter(
 
 ### misc.linkHref
 
+Allows you to filter product or collection links. This filter will run whether you link products to WordPress or Shopify.
+
+| Parameter           | Description                              |
+| :------------------ | :--------------------------------------- |
+| linkHref - (string) | Represents the link's default href value |
+| linkTo - (string)   | Represents where the link goes           |
+
+**Example**
+
+```js
+// Added utm params to product links
+wp.hooks.addFilter('misc.linkHref', 'shopwp', function (linkHref, linkTo) {
+	return linkHref + '&utm_campaign=123'
+})
+```
+
 ### misc.linkTarget
 
 ### misc.carouselSettings

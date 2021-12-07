@@ -8,6 +8,8 @@ A simple way to decrease the latency is by telling your site to preconnect to th
 
 For a detailed explanation of how this works, view the [MDN docs on dns-prefetch](https://developer.mozilla.org/en-US/docs/Web/Performance/dns-prefetch)
 
+In the example below, we're using both `rel="preconnect"` and `rel="dns-prefetch"` for the best possible results. The `https://cdn.shopify.com` domain is used when loading product images, and `https://<your-store>.myshopify.com` is used when fetching product data.
+
 **Examples**
 
 ```html
