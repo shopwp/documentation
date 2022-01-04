@@ -296,7 +296,7 @@ Allows you to filter product or collection links. This filter will run whether y
 ```js
 // Added utm params to product links
 wp.hooks.addFilter('misc.linkHref', 'shopwp', function (linkHref, linkTo) {
-	return linkHref + '&utm_campaign=123'
+	return linkHref + '?utm_campaign=123'
 })
 ```
 

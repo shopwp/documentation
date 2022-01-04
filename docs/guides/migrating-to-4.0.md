@@ -4,20 +4,26 @@ sidebar_position: 1
 
 # Migrating Guide 4.0
 
-ShopWP 4.0 was just released! With it comes a new name, new features, and many updates that _may_ require some migration steps on your end.
-
-If you haven't used any of the plugin's JavaScript or PHP hooks in your project, then you should be fine upgrading without any migration steps. However if you _have_, the hooks have probably changed. You'll need to perform a few steps to make them work again.
-
 :::info
 After updating, the plugin will be deactivated. Once the update is finished you'll need to manually re-active the plugin.
 :::
 
-## Things to do before updating
+ShopWP 4.0 is a major update to the plugin. With it comes a new name, new features, and many updates that _may_ require some migration steps on your end.
+
+If you haven't used any of the plugin's JavaScript or PHP hooks in your project, then you should be fine upgrading without any migration steps. However if you _have_, the hooks have probably changed. You'll need to perform a few steps to make them work again.
+
+## Things to do _before_ updating
 
 1. Please backup your site. In the unlikely event that something goes wrong, it's nice to have a recent backup to restore.
 2. If possible, perform the update on a staging site. This will allow you to test the changes without affecting your live site. If you don't have a staging site or need help setting one up, please contact your webhost. Most modern webhosts are happy to do this for you. And if they're not, move to [WP Engine](https://wpengine.com) 😃
 3. Ensure that your ShopWP license key is activated inside the plugin. If your key is not set, you won't see the update notification.
 4. Compile a list of all the PHP and JavaScript customizations that you've made for reference.
+
+## Things to do _after_ updating
+
+We recommend that you reconnect your Shopify store after updating to `4.0`. Doing so will ensure you're using the new connection process. Please note that **nothing will be lost when you do this**. Your product detail pages and plugin settings will remain unchanged.
+
+To reconnect, go to the "Connect" tab of the plugin settings and click the "Disconnect your Shopify store" button. After this completes, click the "Begin the connection process" button and follow the connection wizard.
 
 ## What has _not_ changed?
 
@@ -42,6 +48,10 @@ Uncaught ReferenceError: wp is not defined
 ```
 
 In order to ensure your custom JavaScript is added correctly, reference the [Using JavaScript Hooks](/guides/javascript-hooks) guide.
+
+## Product detail page links
+
+If you’re linking to product detail pages, after updating to 4.0 you’ll need to go into the plugin settings, re-assign your “default” pages, and save the settings again. After saving, the links should work as expected.
 
 ## Full list of breaking changes
 
