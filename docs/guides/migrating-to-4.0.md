@@ -23,9 +23,8 @@ If you haven't used any of the plugin's JavaScript or PHP hooks in your project,
 
 1. After updating, the plugin will be deactivated. You'll need to manually reactivate it again.
 2. After reactivating, some of you may see an error regarding "ShopWP\Bootstrap". In this case, you'll need to reactivate the plugin one more time.
-3. We recommend that you reconnect your Shopify store after updating to `4.0`. Doing so will ensure you're using the new connection process. Please note that **nothing will be lost when you do this**. Your product detail pages and plugin settings will remain unchanged.
-
-To reconnect, go to the "Connect" tab of the plugin settings and click the "Disconnect your Shopify store" button. After this completes, click the "Begin the connection process" button and follow the connection wizard.
+3. The plugin folder has changed from "wpshopify" to "shopwp". In the Pro version it has changed to "shopwp-pro". During the update process, WordPress should change this for you automatically. However, some server setups may not do this. If the folder does not change during the update the plugin will fail to display anything on the frontend. In this case, you'll need to manually change the plugin folder from "wpshopify" to "shopwp" via FTP. If you're unsure how to do this, please contact your webhost and they should easily do it for you.
+4. We recommend that you reconnect your Shopify store after updating to `4.0`. Doing so will ensure you're using the new connection process. Please note that **nothing will be lost when you do this**. Your product detail pages and plugin settings will remain unchanged. To reconnect, go to the "Connect" tab of the plugin settings and click the "Disconnect your Shopify store" button. After this completes, click the "Begin the connection process" button and follow the connection wizard.
 
 ## What has _not_ changed?
 
