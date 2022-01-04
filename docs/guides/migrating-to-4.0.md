@@ -21,7 +21,9 @@ If you haven't used any of the plugin's JavaScript or PHP hooks in your project,
 
 ## Things to do _after_ updating
 
-We recommend that you reconnect your Shopify store after updating to `4.0`. Doing so will ensure you're using the new connection process. Please note that **nothing will be lost when you do this**. Your product detail pages and plugin settings will remain unchanged.
+1. After updating, the plugin will be deactivated. You'll need to manually reactivate it again.
+2. After reactivating, some of you may see an error regarding "ShopWP\Bootstrap". In this case, you'll need to reactivate the plugin one more time.
+3. We recommend that you reconnect your Shopify store after updating to `4.0`. Doing so will ensure you're using the new connection process. Please note that **nothing will be lost when you do this**. Your product detail pages and plugin settings will remain unchanged.
 
 To reconnect, go to the "Connect" tab of the plugin settings and click the "Disconnect your Shopify store" button. After this completes, click the "Begin the connection process" button and follow the connection wizard.
 
