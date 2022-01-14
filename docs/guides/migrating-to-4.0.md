@@ -39,6 +39,7 @@ If you haven't used any of the plugin's JavaScript or PHP hooks in your project,
 2. Most of the JavaScript hook names have changed.
 3. Most of the PHP hook names have changed.
 4. The Orders and Customers functionality has been removed.
+5. Removed function `get_images_from_post_id`. Use [get_product](/php-functions#get_product) instead.
 
 ## JavaScript hooks
 
@@ -199,4 +200,5 @@ To check whether you need to update your customizations, copy each JavaScript or
 - Changed PHP hook `wps_products_single_args` to `shopwp_products_single_args`
 - Changed PHP hook `wps_register_collections_args` to `shopwp_register_collections_args`
 - Changed PHP hook `wps_register_products_args` to `shopwp_register_products_args`
+- Removed PHP function `get_images_from_post_id`. Use `get_product` instead.
 - Completely removed Orders and Customers functionality from the plugin. If you still need this data, send me a message on the Slack channel and I can provide a workaround.

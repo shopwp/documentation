@@ -24,10 +24,11 @@ We continue to try our best to ensure that the syncing process works across mult
 2. Change the `Items per request` setting to **25** and turn on `Synchronous Requests`. You can find these within the plugin settings under the "Syncing" section. After these are updated, try re-syncing.
 3. Make sure your site is not password protected. Sometimes managed hosts like WP Engine or Flywheel will have this turned on by default.
 4. Make sure your site is not using BasicAuth. If it is, skip to the [BasicAuth section](/getting-started/syncing#basicauth) below for a workaround.
-5. Check your PHP and Apache/Nginx logs for any errors. If you don't know how to do this, contact your web host and ask them to look on your behalf. If you find any errors, [please send them to us by email](mailto:hello@wpshop.io) or in the private Slack channel for further help.
-6. Ask your web host if they have a firewall enabled that restricts numerous third-party API requests during a short period of time. If they do have a firewall, ask them to make an exception for requests sent to ".myshopify.com".
-7. Make sure you have a working SSL certificate on your WordPress site
-8. Ensure you meet the ShopWP [minimum requirements](/getting-started/requirements).
+5. If you're seeing a "timeout" error message, try adding this to your `wp-config.php` file: `ini_set( 'default_socket_timeout', 300 )`;
+6. Check your PHP and Apache/Nginx logs for any errors. If you don't know how to do this, contact your web host and ask them to look on your behalf. If you find any errors, [please send them to us by email](mailto:hello@wpshop.io) or in the private Slack channel for further help.
+7. Ask your web host if they have a firewall enabled that restricts numerous third-party API requests during a short period of time. If they do have a firewall, ask them to make an exception for requests sent to ".myshopify.com".
+8. Make sure you have a working SSL certificate on your WordPress site
+9. Ensure you meet the ShopWP [minimum requirements](/getting-started/requirements).
 
 If none of these steps resolve your syncing issues, [please send us an email](mailto:hello@wpshop.io) and we'll be happy to debug with you.
 
