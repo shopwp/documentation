@@ -12,6 +12,8 @@ ShopWP 4.0 is a major update to the plugin. With it comes a new name, new featur
 
 If you haven't used any of the plugin's JavaScript or PHP hooks in your project, then you should be fine upgrading without any migration steps. However if you _have_, the hooks have probably changed. You'll need to perform a few steps to make them work again.
 
+Also, if you have any plugin template overrides inside your theme, OR if you're using the Render API, you'll need to change all instances of `WP_Shopify` to `ShopWP`.
+
 ## Things to do _before_ updating
 
 1. Please backup your site. In the unlikely event that something goes wrong, it's nice to have a recent backup to restore.
@@ -35,11 +37,12 @@ If you haven't used any of the plugin's JavaScript or PHP hooks in your project,
 
 ## What _has_ changed?
 
-1. Some shortcode attributes have either been renamed or removed.
-2. Most of the JavaScript hook names have changed.
-3. Most of the PHP hook names have changed.
-4. The Orders and Customers functionality has been removed.
-5. Removed function `get_images_from_post_id`. Use [get_product](/php-functions#get_product) instead.
+1. The plugin's namespace has changed from `WP_Shopify` to `ShopWP`. If you're using template overrides or the Render API, you'll need to change all instances of `WP_Shopify` to `ShopWP`.
+2. Some shortcode attributes have either been renamed or removed.
+3. Most of the JavaScript hook names have changed.
+4. Most of the PHP hook names have changed.
+5. The Orders and Customers functionality has been removed.
+6. Removed function `get_images_from_post_id`. Use [get_product](/php-functions#get_product) instead.
 
 ## JavaScript hooks
 

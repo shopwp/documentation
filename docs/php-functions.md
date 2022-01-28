@@ -66,6 +66,28 @@ $result = $Products->get_product([
 ]);
 ```
 
+**Example**
+Get a list of collections that belong to a product, by post id
+
+```php
+$Products = ShopWP\Factories\API\Items\Products_Factory::build();
+$post_id = 16563; // required
+
+$result = $Products->get_product([
+   'post_id' => $post_id,
+   'schema' => '
+      collections(first: 250) {
+        edges {
+            node {
+                id
+                title
+            }
+        }
+      }
+   '
+]);
+```
+
 ### get_products()
 
 Allows you to fetch multiple products by using a Shopify [search query](https://shopify.dev/api/usage/search-syntax).

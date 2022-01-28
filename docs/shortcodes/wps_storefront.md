@@ -218,14 +218,14 @@ Specifies where the sorting component should render. Takes any valid CSS selecto
 [wps_storefront dropzone_sorting="#dropzone-sorting"]
 ```
 
-### dropzone_pagination
+### dropzone_load_more
 
 Specifies where the pagination should render. Takes any valid CSS selector. Omitting will hide pagination all together.
 
 **Example**
 
 ```js
-[wps_storefront dropzone_pagination="#dropzone-pagination"]
+[wps_storefront dropzone_load_more="#dropzone-load-more"]
 ```
 
 ### show_tags
@@ -256,6 +256,26 @@ Specifies whether to allow the user to filer by product types. Setting to false 
 
 ```js
 [wps_storefront show_types="false"]
+```
+
+### show_price
+
+Determines whether to hide the filer by price section. Setting to `false` will hide the ability to filter by price.
+
+**Example**
+
+```js
+[wps_storefront show_price="false"]
+```
+
+### show_collections
+
+Determines whether to hide the filer by collections section. Setting to `false` will hide the ability to filter by collections.
+
+**Example**
+
+```js
+[wps_storefront show_collections="false"]
 ```
 
 ### show_options_heading

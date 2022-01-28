@@ -9,16 +9,16 @@ By default, the SG Optimizer plugin will attempt to modify the ShopWP JavaScript
 Open your `functions.php` file inside your WordPress theme and add the following:
 
 ```php
-function wpshopify_sg_exclude_handles($exclude_list) {
+function shopwp_sg_exclude_handles($exclude_list) {
 
-   $exclude_list[] = 'wpshopify-runtime';
-   $exclude_list[] = 'wpshopify-vendors-public';
-   $exclude_list[] = 'wpshopify-public';
+   $exclude_list[] = 'shopwp-runtime';
+   $exclude_list[] = 'shopwp-vendors-public';
+   $exclude_list[] = 'shopwp-public';
 
    return $exclude_list;
 }
 
-add_filter( 'sgo_js_minify_exclude', 'wpshopify_sg_exclude_handles' );
-add_filter( 'sgo_js_async_exclude', 'wpshopify_sg_exclude_handles' );
-add_filter( 'sgo_javascript_combine_exclude', 'wpshopify_sg_exclude_handles' );
+add_filter( 'sgo_js_minify_exclude', 'shopwp_sg_exclude_handles' );
+add_filter( 'sgo_js_async_exclude', 'shopwp_sg_exclude_handles' );
+add_filter( 'sgo_javascript_combine_exclude', 'shopwp_sg_exclude_handles' );
 ```
