@@ -8,7 +8,7 @@ Please first read our [Template Overriding](/guides/template-overriding.md) guid
 
 This template controls the default product "all" page. This is the page set for the default `/products` and `/collections` URLs.
 
-Will only run when [Sync posts](/getting-started/settings?id=sync-posts) is turned on.
+Will only run when the "Sync posts" setting is turned on.
 
 #### How to override
 
@@ -21,7 +21,7 @@ Copy to: <your-theme>/wps-templates/products-all.php
 
 Please first read our [Template Overriding](/guides/template-overriding.md) guide.
 
-This template controls the product single pages. Will only run when [Sync posts](/getting-started/settings?id=sync-posts) is turned on.
+This template controls the product single pages. Will only run when the "Sync posts" setting is turned on.
 
 #### How to override
 
@@ -36,7 +36,7 @@ Please first read our [Template Overriding](/guides/template-overriding.md) guid
 
 This template controls the default collection "all" page. This is the page set for the default `/products` and `/collections` URLs.
 
-Will only run when [Sync posts](/getting-started/settings?id=sync-posts) is turned on.
+Will only run when the "Sync posts" setting is turned on.
 
 #### How to override
 
@@ -49,7 +49,7 @@ Copy to: <your-theme>/wps-templates/collections-all.php
 
 Please first read our [Template Overriding](/guides/template-overriding.md) guide.
 
-This template controls the collection single pages. Will only run when [Sync posts](/getting-started/settings?id=sync-posts) is turned on.
+This template controls the collection single pages. Will only run when the "Sync posts" setting is turned on.
 
 #### How to override
 

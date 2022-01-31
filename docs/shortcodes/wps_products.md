@@ -238,7 +238,7 @@ Reverse the order of products. Useful when used in combination with [sort_by](#s
 
 Determines the number of products to show per page. Only applicable when [pagination](#pagination) is turned on.
 
-Will default to the plugin's global [products per page](getting-started/settings?id=products-per-page) setting.
+Will default to the plugin's global "products per page" setting.
 
 | Possible values |
 | :-------------- |

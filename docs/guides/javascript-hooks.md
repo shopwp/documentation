@@ -40,7 +40,7 @@ We've listed all of the [available JavaScript hooks](#list-of-available-hooks) i
 
 The JavaScript filters can provide a lot of flexibility when it comes to the product layout. Many of these filters will allow you to add raw HTML before or after various components of the layout.
 
-For example, let's say we want to add the product vendor name before the product title. We can do this by hooking into the [before.productTitle](js/filters/cart?id=defaultcartcheckouttext) filter. We have access to a "props" argument which we can use like this:
+For example, let's say we want to add the product vendor name before the product title. We can do this by hooking into the `before.productTitle` filter. We have access to a "props" argument which we can use like this:
 
 ```js
 wp.hooks.addFilter(

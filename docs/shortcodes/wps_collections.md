@@ -6,7 +6,7 @@ sidebar_position: 7
 
 Displays the main collections component. Useful for showing a general list of collections.
 
-Watch our [quick video tutorial](https://www.youtube.com/watch?v=lYm6G35e8sI) to learn how to use this.
+Watch our [quick video tutorial](https://www.youtube.com/watch?v=v3AC2SPK40o&t=0s) to learn how to use this.
 
 ## Example Usage
 
@@ -87,7 +87,7 @@ Default: `false`
 
 ### page_size
 
-Determines the number of collections to show per page. Only applicable when pagination is turned on. Will default to the plugin's global [products per page](getting-started/settings?id=products-per-page) setting.
+Determines the number of collections to show per page. Only applicable when pagination is turned on. Will default to the plugin's global "products per page" setting.
 
 | Possible values |
 | :-------------- |
@@ -314,7 +314,7 @@ Reverses the order of products. Useful when used in combination with `sort_by`.
 
 ### products_page_size
 
-Determines the number of products to show per page. Only applicable when pagination is turned on. Will default to the plugin's global [products per page](getting-started/settings?id=products-per-page) setting.
+Determines the number of products to show per page. Only applicable when pagination is turned on. Will default to the plugin's global "products per page" setting.
 
 | Possible values |
 | :-------------- |

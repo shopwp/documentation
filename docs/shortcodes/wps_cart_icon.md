@@ -6,7 +6,7 @@ sidebar_position: 8
 
 Displays the cart icon component.
 
-Watch our [quick video tutorial](https://www.youtube.com/watch?v=lYm6G35e8sI) to learn how to use this.
+Watch our [quick video tutorial](https://www.youtube.com/watch?v=v3AC2SPK40o&t=0s) to learn how to use this.
 
 ## Example Usage
 

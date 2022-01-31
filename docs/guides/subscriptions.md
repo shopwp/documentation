@@ -85,4 +85,4 @@ The checkout process will work the same way is does with non-subscription produc
 
 ### Additional questions
 
-If you have additional question or need extra support, make a comment in the Slack channel or send us an email: [hello@wpshop.io](hello@wpshop.io)
+If you have additional question or need extra support, make a comment in the Slack channel or send us an email: [hello@wpshop.io](mailto:hello@wpshop.io)

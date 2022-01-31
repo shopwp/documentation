@@ -6,7 +6,7 @@ sidebar_position: 10
 
 Displays the "storefront" component containing filtering, pagination, and sorting. Only available in [ShopWP Pro](https://wpshop.io/purchase?utm_medium=docs&utm_source=features&utm_campaign=upgrade). Take note that this shortcode contains three required attributes.
 
-Watch our [quick video tutorial](https://www.youtube.com/watch?v=lYm6G35e8sI) to learn how to use this.
+Watch our [quick video tutorial](https://www.youtube.com/watch?v=v3AC2SPK40o&t=0s) to learn how to use this.
 
 ## Example Usage
 
@@ -92,7 +92,9 @@ Reverses the order of products. Useful when used in combination with `sort_by`. 
 
 ### page_size
 
-Determines the number of products to show per page. Only applicable when pagination is turned on. Will default to the plugin's global [products per page](getting-started/settings?id=products-per-page) setting. Will be overwritten if user uses the provided page size dropdown.
+Determines the number of products to show per page. Only applicable when pagination is turned on. Will default to the plugin's global "products per page" setting.
+
+Will be overwritten if user uses the provided page size dropdown.
 
 | Possible values |
 | :-------------- |
