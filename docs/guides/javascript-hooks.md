@@ -1,10 +1,12 @@
 # Using JavaScript Hooks
 
+ShopWP provides many different types of JavaScript hooks allowing you to customize various parts of the product and collection layout.
+
+For example, these hooks enable you to do things such as detect when the cart opens, or when the user clicks the checkout button. You can then run your own code from a callback function to make any customizations you want. Let's see how this works.
+
 JavaScript hooks were introduce in WordPress version `5.0` with the advent of the highly anticipated Gutenberg release. These hooks are very similar to the standard PHP hooks that WordPress developers have been familiar with for years.
 
 Like PHP hooks, these JavaScript-based hooks allow you to "filter" data and listen to unique "actions". This guide won't be a comprehensive tutorial on how to use WordPress hooks. For that, please take a look at the [official WordPress documentation](https://developer.wordpress.org/block-editor/packages/packages-hooks/) first.
-
-ShopWP provides many JavaScript hooks allowing you to hook into various parts of the plugin. This enables you to do things such as detect when the cart opens, or when the user clicks the checkout button. You can then run your own code from a callback function to make any customizations you want. Let's see how this works.
 
 ## Setting things up
 

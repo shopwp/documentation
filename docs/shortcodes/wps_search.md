@@ -4,9 +4,11 @@ sidebar_position: 9
 
 # [wps_search]
 
-Displays the search component. Only available in [ShopWP Pro](https://wpshop.io/purchase?utm_medium=docs&utm_source=features&utm_campaign=upgrade).
+The ShopWP search shortcode displays a dynamic search form which will show products immediately as the user types what they're looking for.
 
-Watch our [quick video tutorial](https://www.youtube.com/watch?v=v3AC2SPK40o&t=0s) to learn how to use this.
+:::info
+This feature is only available in [ShopWP Pro](https://wpshop.io/purchase?utm_medium=docs&utm_source=features&utm_campaign=upgrade).
+:::
 
 ## Example Usage
 

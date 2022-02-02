@@ -1,3 +1,3 @@
 # Gutenberg Blocks
 
-[ShopWP Pro](https://wpshop.io/purchase/) comes with custom Gutenberg Blocks to help you show your products easier.
+ShopWP Pro comes with Gutenberg Blocks for displaying your Shopify products. Ditch the shortcodes and start building your product layouts more intuitively.

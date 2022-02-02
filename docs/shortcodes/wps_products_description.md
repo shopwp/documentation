@@ -4,7 +4,7 @@ sidebar_position: 5
 
 # [wps_products_description]
 
-The `[wps_products_description]` shortcode allows you to display one or more product descriptions in a list or grid. This is useful if you only want to show the product descriptions without title, pricing, etc.
+The description shortcode allows you to display one or more product descriptions in a list or grid. Useful if you only want to show the product description.
 
 :::info
 

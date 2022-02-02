@@ -4,7 +4,7 @@ sidebar_position: 2
 
 # [wps_products_title]
 
-The `[wps_products_title]` shortcode allows you to display one or more product titles in a list or grid. This is useful if you only want to show the product title without pricing, description, etc.
+The title shortcode allows you to display one or more product titles in a list or grid. Useful for only show the product title.
 
 :::info
 

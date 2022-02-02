@@ -1,6 +1,8 @@
 # Improving Performance
 
-ShopWP is built to be fast. However given the nature of WordPress, there may be other aspects of your site contributing to slowing things down. Below are some additional steps you can take to make your products load as fast as possible.
+ShopWP is built to be fast. However given the nature of WordPress, there may be other aspects of your site contributing to slowing things down.
+
+Below are some additional steps you can take to make your products load as fast as possible.
 
 ## Prefetch & Preconnect
 

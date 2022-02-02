@@ -1,6 +1,6 @@
 # Common Issues
 
-Below are some of the most common issues people experience and how to fix them.
+Below are the most common issues people experience with ShopWP and how to fix them. If you're having a problem not listed here, please [send us an email](mailto:hello@wpshop.io).
 
 ## Products not showing
 

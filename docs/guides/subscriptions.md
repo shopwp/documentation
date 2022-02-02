@@ -4,7 +4,7 @@ sidebar_position: 2
 
 # Subscriptions
 
-Starting in version `4.0`, ShopWP now integrates with [Recharge](https://apps.shopify.com/subscription-payments) to provide support for subscription products. This allows you to display and sell subscriptions like you would on a Shopify theme.
+ShopWP integrates with the [Recharge app](https://apps.shopify.com/subscription-payments), enabling you to display and sell subscription products on any WordPress site.
 
 ## Getting started
 

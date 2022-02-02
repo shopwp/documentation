@@ -4,7 +4,7 @@ sidebar_position: 6
 
 # [wps_products_buy_button]
 
-The `[wps_products_buy_button]` shortcode allows you to display one or more product buy buttons in a list or grid. This is useful if you only want to show the product buy button without title, pricing, etc.
+The buy button shortcode allows you to display one or more product buy buttons in a list or grid. Useful for only showing the buy button.
 
 Will output three different elements:
 

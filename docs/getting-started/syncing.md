@@ -4,13 +4,13 @@ sidebar_position: 3
 
 # Syncing
 
+ShopWP allows you to sync your products and collections to WordPress. ShopWP will create a detail page for each product assigned to the ShopWP sales channel.
+
 :::info
 Only products assigned to the ShopWP sales channel will be synced.
 :::
 
-ShopWP implements a "syncing process" for creating product and collection detail pages. When you sync your Shopify store, the plugin will attempt to create a dedicated post page for each product that is assigned to the ShopWP sales channel.
-
-The term "syncing" should be understood to mean creating product and collection detail pages. The actual data—such as prices and descriptions—are fetched on each page load, and subsequently cached by the plugin. This is to ensure that the product info shown is accurate.
+The term "syncing" should be understood to mean creating product and collection detail pages only. The actual data—such as product title, descriptions, etc—are fetched on each page load and subsequently cached by the plugin. This is to ensure that the product info shown is accurate.
 
 If you don't want to enable product detail pages—for example because you're linking directly to checkout—you can skip the syncing feature all together and jump directly to [displaying products](/getting-started/displaying) instead.
 

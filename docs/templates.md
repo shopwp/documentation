@@ -1,6 +1,6 @@
 # Templates
 
-These action hooks can be added to your theme's functions.php file.
+ShopWP Pro comes with four main template files. You can override these inside your WordPress theme to customize the product layouts.
 
 ### products-all.php
 

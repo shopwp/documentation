@@ -1,10 +1,10 @@
 # Default Pages
 
+ShopWP comes with two default pages: `ShopWP Products` and `ShopWP Collections`. These two pages are created when the plugin is first installed.
+
 ## Listing Pages
 
-ShopWP comes with two default listing pages: `ShopWP Products` and `ShopWP Collections`. These two pages are created when the plugin is first installed. The purpose of these pages is to display a list of your products or collections.
-
-If you don't want to use these pages, you can turn them off within the plugin settings. You can also choose a different page to be used instead.
+The purpose of these default pages is to display your products and collections without needing to configure anything. If you don't want to use them, you can turn them off within the plugin settings. You can also choose a different page to be used instead.
 
 ### Changing the listing pages
 

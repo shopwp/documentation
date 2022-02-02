@@ -1,8 +1,8 @@
 # Fix SG Optimizer Conflict
 
-If you're using the SG Optimizer plugin because you're using [SiteGround web hosting](https://www.siteground.com/index.htm?afcode=6f709cddc22520adccecb68901d1eb80), you'll need to add a PHP snippet to your `functions.php` file to fix loading issues.
+The SG Optimizer plugin will attempt to modify the ShopWP JavaScript to improve performance. However, we can safely turn this off.
 
-By default, the SG Optimizer plugin will attempt to modify the ShopWP JavaScript to improve performance. However, since these improvements are already made in ShopWP itself, we can turn the SG optimizations off.
+If you're using the SG Optimizer plugin because you're using [SiteGround web hosting](https://www.siteground.com/index.htm?afcode=6f709cddc22520adccecb68901d1eb80), you'll need to add a PHP snippet to your `functions.php` file to fix loading issues.
 
 ## Add snippet to functions.php
 

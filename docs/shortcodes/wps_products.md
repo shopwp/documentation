@@ -4,7 +4,7 @@ sidebar_position: 1
 
 # [wps_products]
 
-The `[wps_products]` shortcode allows you to display one or more products in a list or grid.
+The ShopWP products shortcode allows you to display one or more products in a list or grid. This is perfect for filtering and sorting products.
 
 While you _can_ show a single product using this shortcode, the real power comes from showing a general list of products. You can filter and sort your products in various combinations. For example, you can choose to display products from a single collection using the [collection](#collection) attribute. Or, combine different filtering groups to search for very a specific combination such as [tag](#tag) and [vendor](#vendor).
 

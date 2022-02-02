@@ -1,6 +1,10 @@
 # Template Overriding
 
-[ShopWP Pro](https://wpshop.io/purchase?utm_medium=docs&utm_source=features&utm_campaign=upgrade) comes with PHP templates that you can use to override various parts of the plugin's layout. Our templates are very similar to how WooCommerce templates work.
+[ShopWP Pro](https://wpshop.io/purchase?utm_medium=docs&utm_source=features&utm_campaign=upgrade) comes with PHP templates that you can use to override various parts of the plugin's layout. Our templates work similar to WooCommerce.
+
+:::info
+This feature is only available in [ShopWP Pro](https://wpshop.io/purchase?utm_medium=docs&utm_source=features&utm_campaign=upgrade).
+:::
 
 ## Setting up your theme
 

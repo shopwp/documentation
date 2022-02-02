@@ -4,9 +4,11 @@ sidebar_position: 4
 
 # Upgrading to ShopWP Pro
 
-Welcome to our ShopWP Pro upgrade guide! 👍
+Before we get started, keep in mind that ShopWP and ShopWP Pro are _separate_, independent plugins. As a result, you should never have both activated at once.
 
-Before we get started, keep in mind that ShopWP and ShopWP Pro are _separate_, independent plugins. As a result, you should never have both activated at once. You'll want to either use one or the other. Also, rest assured that the upgrade process will _not_ remove any content you may have added, including synced product posts, updated settings, etc.
+You'll want to use one or the other.
+
+Also, the upgrade process will _not_ remove any content you may have added, including synced product posts, updated settings, etc.
 
 ### 1. Purchase a License Key
 

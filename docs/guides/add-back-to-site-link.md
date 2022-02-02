@@ -1,6 +1,6 @@
 # Add back to site link to checkout page
 
-One very common requirement is to add a "back to site" link to the Shopify checkout confirmation page. Unfortunately Shopify doesn't provide something like this out of the box, so you need to add it yourself. Thankfully it's fairly easy to do!
+Shopify doesn't provide a "back to site" link out of the box, so you need to add it yourself. Thankfully it's fairly easy to do with ShopWP!
 
 :::info
 This will only show on the checkout confirmation / order status page.

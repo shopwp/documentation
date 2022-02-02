@@ -1,6 +1,7 @@
 ---
 sidebar_position: 1
 slug: /
+description: The official ShopWP documentation site demonstrating how to use the plugin, and tutorial guides for solving common plugin issues.
 ---
 
 # Introduction

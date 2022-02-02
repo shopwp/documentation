@@ -1,6 +1,6 @@
 # JavaScript Filters
 
-The below JavaScript filters allow you to customize various aspects of the plugin. You can do things such as modify the checkout url, add custom HTML into the layout, and more.
+ShopWP comes with JavaScript filters that allow you to customize things product links or adding custom HTML into the layout.
 
 To get started, follow our [Using JavaScript Hooks](/guides/javascript-hooks) guide first.
 
@@ -29,7 +29,7 @@ wp.hooks.addFilter(
 
 ### product.optionName
 
-Allows for customizing the name of a product option. For example, `Color` or `Size`. This will run for both [variant styles](/wps_products#variant_style).
+Allows for customizing the name of a product option. For example, `Color` or `Size`. This will run for both [variant styles](/shortcodes/wps_products#variant_style).
 
 | Parameter                     | Description                                                                            |
 | :---------------------------- | :------------------------------------------------------------------------------------- |

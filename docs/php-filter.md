@@ -1,6 +1,6 @@
 # PHP Filters
 
-These PHP filters can be added to your theme's functions.php file to customize the plugin.
+ShopWP comes with a variety of PHP filter hooks can be used to customize the plugin. Simply add these to your WordPress theme's functions.php file.
 
 ### shopwp_products_all_args
 

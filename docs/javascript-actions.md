@@ -1,6 +1,6 @@
 # JavaScript Actions
 
-The below JavaScript actions allow you to hook into various events that run inside the plugin. You can do things such as run code after a product is added to the cart, or manually open / close the cart.
+ShopWP allows you to hook into various plugin events with the built-in JavaScript actions. For example, detect a variant selection or manually open the cart.
 
 To get started, follow our [Using JavaScript Hooks](/guides/javascript-hooks) guide first.
 

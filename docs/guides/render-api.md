@@ -1,6 +1,8 @@
 # Render API
 
-ShopWP allows you to display your Shopify data programmatically. We call this the "Render API". The Render API is a set of PHP classes that you can leverage inside your own files. Each class has various methods which allow you to display your data. Let's see how it's done.
+ShopWP allows you to display your Shopify products and collections programmatically with PHP. We call this the "Render API".
+
+The Render API is a set of PHP classes that you can leverage inside your own files. Each class has various methods which allow you to display your data. Let's see how it's done.
 
 Watch our [quick video tutorial](https://www.youtube.com/watch?v=v3AC2SPK40o&t=0s) to learn how to use this.
 

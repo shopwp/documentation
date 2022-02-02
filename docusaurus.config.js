@@ -4,7 +4,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula')
 // With JSDoc @type annotations, IDEs can provide config autocompletion
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
-	title: 'ShopWP Docs',
+	title: 'Official ShopWP Plugin Documentation',
 	tagline: 'Sell and build custom Shopify experiences on WordPress',
 	url: 'https://shopwp.io',
 	baseUrl: '/',

@@ -4,7 +4,9 @@ sidebar_position: 6
 
 # Tools
 
-ShopWP comes with various tools to help with things like syncing detail pages and managing the plugin's cache. These can be found within the settings page under the `Tools` tab.
+ShopWP comes with various tools to help with things like syncing detail pages, and managing the plugin's cache, and connecting webhooks.
+
+You can find these tools within the settings page under the `Sync` tab.
 
 ## Sync Detail Pages
 

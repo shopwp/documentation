@@ -1,6 +1,6 @@
 # PHP Actions
 
-These PHP actions can be added to your theme's functions.php file to customize the plugin.
+ShopWP comes with a variety of PHP action hooks can be used to customize the plugin. Simply add these to your WordPress theme's functions.php file.
 
 ### shopwp_breadcrumbs
 

@@ -1,6 +1,8 @@
 # Exclude from search
 
-Exclude products from WordPress search:
+ShopWP allows you to exclude the product and collection detail pages from the native WordPress search results.
+
+Simply add the below code snippets to your WordPress theme's `functions.php` file.
 
 ```php
 add_filter('wps_register_products_args', function($args) {

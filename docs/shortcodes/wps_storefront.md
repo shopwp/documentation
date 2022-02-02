@@ -4,9 +4,11 @@ sidebar_position: 10
 
 # [wps_storefront]
 
-Displays the "storefront" component containing filtering, pagination, and sorting. Only available in [ShopWP Pro](https://wpshop.io/purchase?utm_medium=docs&utm_source=features&utm_campaign=upgrade). Take note that this shortcode contains three required attributes.
+The ShopWP Storefront shortcode displays a grid of products along with filtering and sorting options in a convenient side nav.
 
-Watch our [quick video tutorial](https://www.youtube.com/watch?v=v3AC2SPK40o&t=0s) to learn how to use this.
+:::info
+This feature is only available in [ShopWP Pro](https://wpshop.io/purchase?utm_medium=docs&utm_source=features&utm_campaign=upgrade).
+:::
 
 ## Example Usage
 

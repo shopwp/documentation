@@ -4,7 +4,7 @@ sidebar_position: 7
 
 # [wps_collections]
 
-Displays the main collections component. Useful for showing a general list of collections.
+The ShopWP collections shortcode displays a list of collections. Each collection will link to a detail page listing the products that belong to it.
 
 Watch our [quick video tutorial](https://www.youtube.com/watch?v=v3AC2SPK40o&t=0s) to learn how to use this.
 

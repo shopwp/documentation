@@ -4,7 +4,7 @@ sidebar_position: 3
 
 # [wps_products_pricing]
 
-The `[wps_products_pricing]` shortcode allows you to display one or more product prices in a list or grid. This is useful if you only want to show the product pricing without title, description, etc.
+The ShopWP pricing shortcode allows you to display one or more product prices in a list or grid. Useful for only showing product pricing.
 
 :::info
 

@@ -4,7 +4,7 @@ sidebar_position: 4
 
 # Displaying
 
-ShopWP comes with various methods for displaying your products and collections:
+ShopWP allows you to display your Shopify products in many different ways including shortcodes, Elementor widgets, and more.
 
 - [Default pages](/guides/default-pages)
 - [Shortcodes](/shortcodes/wps_products)

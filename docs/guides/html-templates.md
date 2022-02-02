@@ -1,8 +1,8 @@
 # HTML Templates
 
-The HTML Templates feature allows you to specify a custom template to be used for product output. This can be done by using the `html_template` shortcode attribute either with a shortcode or through the Render API.
+The ShopWP HTML templates feature allows you to specify a custom HTML template to be used for the product layout.
 
-This is different from the `products-single.php` and `products-all.php` templates in that **it will only apply to the product itself**. If displaying more than one product, this template will be ran for each product in the list.
+This can be done by using the `html_template` attribute, either with a shortcode or through the Render API. This is different from the `products-single.php` and `products-all.php` templates in that **it will only apply to the product itself**. If displaying more than one product, this template will be ran for each product in the list.
 
 It's also different because of the [specific rules of when using it](#rules-of-using-html-templates).
 

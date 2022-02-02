@@ -4,9 +4,7 @@ sidebar_position: 8
 
 # [wps_cart_icon]
 
-Displays the cart icon component.
-
-Watch our [quick video tutorial](https://www.youtube.com/watch?v=v3AC2SPK40o&t=0s) to learn how to use this.
+The ShopWP cart icon shortcode displays a cart icon anywhere it's placed. It will open the slide-in cart experience when a user clicks on it.
 
 ## Example Usage
 
