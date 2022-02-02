@@ -32,3 +32,11 @@ When you see this error, it's usually because a previous sync failed which resul
 2. Once that’s done, use the `Sync Product & Collection Detail Pages` button once more.
 
 Note: this will remove any custom fields applied to your product posts, and any product post menu items.
+
+## Elememtor widgets disappear after updating to ShopWP 4.0
+
+Run this sql query in your database to make your widgets appear again:
+
+```msql
+UPDATE wp_postmeta SET meta_value = replace( meta_value, 'wpshopify', 'shopwp' ) WHERE (CONVERT(`meta_id` USING utf8) LIKE '%wpshopify%' OR CONVERT(`post_id` USING utf8) LIKE '%wpshopify%' OR CONVERT(`meta_key` USING utf8) LIKE '%wpshopify%' OR CONVERT(`meta_value` USING utf8) LIKE '%wpshopify%') AND meta_key <> "_wp_attachment_metadata";
+```
