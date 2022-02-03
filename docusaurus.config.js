@@ -6,7 +6,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula')
 module.exports = {
 	title: 'Official ShopWP Plugin Documentation',
 	tagline: 'Sell and build custom Shopify experiences on WordPress',
-	url: 'https://shopwp.io',
+	url: 'https://docs.wpshop.io',
 	baseUrl: '/',
 	onBrokenLinks: 'ignore',
 	onBrokenMarkdownLinks: 'warn',
@@ -125,7 +125,7 @@ module.exports = {
 						],
 					},
 				],
-				copyright: `Copyright © ${new Date().getFullYear()} ShopWP. Built with Docusaurus.`,
+				copyright: `Copyright © ${new Date().getFullYear()} ShopWP.`,
 			},
 			prism: {
 				theme: lightCodeTheme,

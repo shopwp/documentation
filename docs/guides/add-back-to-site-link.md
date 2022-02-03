@@ -1,4 +1,4 @@
-# Add back to site link to checkout page
+# Add back to site link
 
 Shopify doesn't provide a "back to site" link out of the box, so you need to add it yourself. Thankfully it's fairly easy to do with ShopWP!
 
