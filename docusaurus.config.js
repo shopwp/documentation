@@ -35,6 +35,7 @@ module.exports = {
 	themeConfig:
 		/** @type {import('@docusaurus/preset-classic').ThemeConfig} */
 		({
+			image: 'https://wpshop.io/live/latest/banners/banner-1544x500.png',
 			colorMode: {
 				defaultMode: 'dark',
 			},
