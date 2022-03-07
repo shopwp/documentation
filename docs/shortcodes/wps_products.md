@@ -182,6 +182,8 @@ Display products based on one or more WordPress post id(s).
 
 Determines the sort order when displaying multiple products.
 
+Corresponds to the [ProductSortKeys inside the Shopify API](https://shopify.dev/api/storefront/2022-01/enums/productsortkeys)
+
 | Possible values                                |
 | :--------------------------------------------- |
 | title `Default`                                |

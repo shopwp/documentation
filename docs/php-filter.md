@@ -216,3 +216,23 @@ add_filter('shopwp_skip_compatibility', function($should_skip) {
    return true;
 });
 ```
+
+### shopwp_get_collections_query_params
+
+Allows for customizing the query params used when fetching collections for the Storefront component
+
+| Parameter | Description                 |
+| :-------- | :-------------------------- |
+| $settings | Represents the query params |
+
+**Example**
+
+```php
+add_filter('shopwp_get_collections_query_params', function($settings) {
+
+    $settings['first'] = 40;
+
+    return $settings;
+
+});
+```

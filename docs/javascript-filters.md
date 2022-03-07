@@ -203,6 +203,30 @@ wp.hooks.addFilter('product.modalSettings', 'shopwp', function (modalSettings) {
 })
 ```
 
+### product.addToCart.text
+
+Allows you to customize the add to cart button text.
+
+| Parameter              | Description                                      |
+| :--------------------- | :----------------------------------------------- |
+| defaultText - (string) | Represents the default add to cart text          |
+| state - (object)       | Represents the state of the buy button component |
+
+**Example**
+
+```js
+wp.hooks.addFilter(
+	'product.addToCart.text',
+	'shopwp',
+	function (defaultText, state) {
+		console.log('defaultText', defaultText)
+		console.log('state', state)
+
+		return 'Custom add to cart text'
+	}
+)
+```
+
 ### cart.checkoutUrl
 
 Allows you to customize the final checkout url. Useful for adding tracking parameters or customizations to the final checkout page.
@@ -333,6 +357,8 @@ wp.hooks.addFilter(
 
 ### storefront.availablePricing
 
+### storefront.collectionsToFetch
+
 ### before.cartCheckoutButton
 
 ### after.cartCheckoutButton
@@ -349,6 +375,26 @@ wp.hooks.addFilter(
 
 ### after.productBuyButton
 
+Allows you add custom HTML after the product buy button. You must return HTML as a string.
+
+| Parameter    | Description                                                    |
+| :----------- | :------------------------------------------------------------- |
+| defaultValue | will be false                                                  |
+| props        | Represents the data passed to the product buy button component |
+
+**Example**
+
+```js
+// Show the total product quantity below the buy button
+wp.hooks.addFilter(
+	'after.productBuyButton',
+	'shopwp',
+	function (defaultValue, props) {
+		return '<p>Total left: ' + props.payload.totalInventory + '</p>'
+	}
+)
+```
+
 ### before.productThumbnail
 
 ### after.productThumbnail
@@ -358,6 +404,13 @@ wp.hooks.addFilter(
 ### after.productPricing
 
 ### before.productTitle
+
+Allows you add custom HTML before the product title. You must return HTML as a string.
+
+| Parameter    | Description                                               |
+| :----------- | :-------------------------------------------------------- |
+| defaultValue | will be false                                             |
+| props        | Represents the data passed to the product title component |
 
 **Example**
 

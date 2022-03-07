@@ -16,6 +16,8 @@ Both versions come bundled with a ready-to-use cart experience. This cart is pow
 
 Displaying your products and collections is the most powerful feature of ShopWP. The plugin provides 10+ Shortcodes, [Subscriptions via Recharge](/guides/subscriptions), [Gutenberg Blocks](/guides/gutenberg-blocks), [Elementor](/guides/elementor-extension) and [Beaver Builder](/guides/beaver-builder-extension) extensions, and tons of customization flexibility.
 
+ShopWP does not handle any portion of the checkout process. Instead, the plugin sends users to the default Shopify checkout page to finish the purchase. Your WordPress domain will be _separate_ from the Shopify domain used for checkout. However you can use subdomains such as `shop.mysite.com` or `checkout.mysite.com`.
+
 **A short list of ShopWP features:**
 
 - [Subscription Products](/guides/subscriptions)
