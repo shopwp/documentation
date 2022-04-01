@@ -236,29 +236,37 @@ wp.hooks.addAction(
 
 ### do.addToCart
 
-Allows you to manually add a product variant to the cart
+Allows you to programmatically add a variant to the ShopWP cart.
 
-| Parameter       | Description                                                                                                     |
-| :-------------- | :-------------------------------------------------------------------------------------------------------------- |
-| params (object) | Represents the product configuration to be added. Must contain a lineItems property with quantity and variantId |
+| Parameter                                                              | Description                                                                                                                                                                                                                                                                 |
+| :--------------------------------------------------------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **lines** (array)                                                      | Represents the line items to add. Corresponds to the available fields on the [Shopify CartLineInput](https://shopify.dev/api/storefront/2022-04/mutations/cartLinesAdd) object. Must be an array of objects which contain the required fields: `quantity`, `merchandiseId`. |
+|                                                                        | `quantity` - (Required) - How many items to add                                                                                                                                                                                                                             |
+|                                                                        | `merchandiseId` - (Required) - The variant id to add                                                                                                                                                                                                                        |
+|                                                                        | `sellingPlanId` - (optional) - (Optional) - The selling plan id if a subscription product                                                                                                                                                                                   |
+|                                                                        | `attributes` - (optional) - Any attributes to add to the line item. Must be an array of objects containing `key` and `value` properties.                                                                                                                                    |
+| **language** (string) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | (Optional) - Represents the ISO language code for the line items. Allows for translating product content.                                                                                                                                                                   |
+| **country** (string)                                                   | (Optional) - Represents the ISO country code for the line items. Allows for converting the product currency.                                                                                                                                                                |
+| **extras** (object)                                                    | (Optional) - Contains a variety of extra features when adding to cart. The following parameters are available:                                                                                                                                                              |
+|                                                                        | `openCartAfterAdding` - (boolean) - Determines whether the cart opens after adding                                                                                                                                                                                          |
 
 **Example**
 
 ```js
 var params = {
-	lineItemOptions: {
-		minQuantity: false,
-		maxQuantity: false,
-		subscription: false,
-		attributes: false,
-		variantId: 'Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0VmFyaWFudC8zMTc0MTYyNzA3MjU2MA==',
-	},
-	lineItems: [
+	lines: [
 		{
 			quantity: 2,
-			variantId: 'Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0VmFyaWFudC8zMTc0MTYyNzA3MjU2MA==',
+			merchandiseId: 22221680050224,
+			sellingPlanId: 449118256, // optional
+			attributes: [], // optional
 		},
 	],
+	language: 'EN', // optional
+	country: 'US', // optional
+	extras: {
+		openCartAfterAdding: true, // optional
+	},
 }
 
 wp.hooks.doAction('do.addToCart', params)
@@ -289,11 +297,13 @@ Allows for adding / updating custom attributes to the checkout. This will merge 
 | Parameter           | Description                                                                                                                                               |
 | :------------------ | :-------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | attributes (object) | Represents the cart attributes to be added. Must be an array containing objects with `key` and `value` properties. The `value` property must be a string. |
+| options (object)    | An optional configuration object that allows you to specify certain settings such as opening the cart while updating. Available keys are:                 |
+|                     | `openCartAfter` - (boolean) - Whether the ShopWP cart opens during the update                                                                             |
 
 **Example**
 
 ```js
-var attributes = [
+const attributes = [
 	{
 		key: 'keyOne',
 		value: 'valueOne',
@@ -307,18 +317,15 @@ var attributes = [
 wp.hooks.doAction('do.updateCheckoutAttributes', attributes)
 ```
 
-### do.setCheckoutAttributes
-
-Allows for setting custom attributes to the checkout. This will overwrite all existing attributes that have been already added.
-
-| Parameter           | Description                                                                                                                                               |
-| :------------------ | :-------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| attributes (object) | Represents the cart attributes to be added. Must be an array containing objects with `key` and `value` properties. The `value` property must be a string. |
-
-**Example**
-
 ```js
-var attributes = [
+/* 
+
+You can also pass a second parameter to the action which specifies an options object.
+For example, here we tell the action to open the cart while the attributes are being 
+added to the cart.
+
+*/
+const attributes = [
 	{
 		key: 'keyOne',
 		value: 'valueOne',
@@ -329,8 +336,14 @@ var attributes = [
 	},
 ]
 
-wp.hooks.doAction('do.setCheckoutAttributes', attributes)
+wp.hooks.doAction('do.updateCheckoutAttributes', attributes, {
+	openCart: true,
+})
 ```
+
+### do.setCheckoutAttributes
+
+As of version `4.2.0`, this action has been aliased to [do.updateCheckoutAttributes](#doupdatecheckoutattributes). You can use this instead.
 
 ### do.removeLineItems
 
@@ -344,8 +357,7 @@ Allows for manually removing line items from the cart. The line item id is a bas
 
 ```js
 var lineItemIds = [
-	'Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0VmFyaWFudC8zMTc0MTYyNzEwNTMyOA==',
-	'Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0VmFyaWFudC8zMTc0MTYyNzEzODA5Ng==',
+	'gid://shopify/CartLine/a4262343d0aab7ebd9b4362e57b78b10?cart=e1e0b7762fe633e708e0dd7de67852f0',
 ]
 
 wp.hooks.doAction('do.removeLineItems', lineItemIds)

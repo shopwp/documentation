@@ -25,6 +25,8 @@ page_size
 reverse
 sort_by
 schema
+language
+country
 ```
 
 :::info
@@ -101,6 +103,8 @@ Allows you to fetch multiple products by using a Shopify [search query](https://
 | reverse   | Whether to reverse the order of the results                                                                                                                                                                            |
 | sort_by   | Determines how the returned products should be sorted. Uses the same values from the [`sort_by` shortcode attribute](/shortcodes/wps_products#sort_by).                                                                |
 | schema    | Allows for determining which product fields are returned. Useful if you only need a couple fields like `id` or `title`.                                                                                                |
+| language  | Allows for receiving translated content. Accepts a language code, e.g.: `EN`, `ES`, etc.                                                                                                                               |
+| country   | Allows for converting product prices. Accepts a country code, e.g.: `US`, `MX`, etc.                                                                                                                                   |
 
 :::info
 Note: If you pass the `schema` key, you can explicitly choose which product fields to return during the request. By default, all product fields will be returned. The full list of available fields can be [found here](https://shopify.dev/api/storefront/reference/products/product#fields-2021-10).

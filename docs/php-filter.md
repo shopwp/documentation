@@ -4,7 +4,7 @@ ShopWP comes with a variety of PHP filter hooks can be used to customize the plu
 
 ### shopwp_products_all_args
 
-Allows you to customize the "default" settings used by the product shortcodes.
+Allows you to customize the settings used by the default products listing page.
 
 | Parameter       | Description                                                  |
 | :-------------- | :----------------------------------------------------------- |
@@ -122,7 +122,7 @@ add_filter('shopwp_cart_default_payload_settings', function($payloadSettings) {
 
 ### shopwp_collections_default_payload_settings
 
-Allows you to customize the "default" settings used by collection shortcodes.
+Allows you to customize the default collections settings.
 
 For a full list of available settings, reference the [attributes of the [wps_collections] shortcode](/shortcodes/wps_collections.md).
 
@@ -146,7 +146,7 @@ add_filter('shopwp_collections_default_payload_settings', function($payloadSetti
 
 ### shopwp_products_default_payload_settings
 
-Allows you to customize the "default" settings used by product shortcodes.
+Allows you to customize default product settings.
 
 For a full list of available settings, reference the [attributes of the [wps_products] shortcode](/shortcodes/wps_products.md).
 

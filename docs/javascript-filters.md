@@ -227,6 +227,26 @@ wp.hooks.addFilter(
 )
 ```
 
+### product.thumbnails
+
+Allows you to filter a product's thumbnail images. Useful if you want to hide or customize certain thumbnails.
+
+| Parameter                   | Description                               |
+| :-------------------------- | :---------------------------------------- |
+| defaultThumbnails - (array) | Represents the default product thumbnails |
+
+**Example**
+
+```js
+wp.hooks.addFilter(
+	'product.thumbnails',
+	'shopwp',
+	function (defaultThumbnails) {
+		return defaultThumbnails
+	}
+)
+```
+
 ### cart.checkoutUrl
 
 Allows you to customize the final checkout url. Useful for adding tracking parameters or customizations to the final checkout page.
@@ -305,6 +325,81 @@ wp.hooks.addFilter(
 ### cart.lineItemVariantTitleText
 
 ### cart.lineItemTitleText
+
+### cart.lineItemThumbnailUrl
+
+Allows you to customize the URL for each line item thumbnail inside the ShopWP cart.
+
+| Parameter           | Description                        |
+| :------------------ | :--------------------------------- |
+| imageSrc - (string) | Represents the thumbnail image src |
+| lineItem - (object) | Represents the line item data      |
+
+**Example**
+
+```js
+wp.hooks.addFilter(
+	'cart.lineItemThumbnailUrl',
+	'shopwp',
+	function (imageSrc, lineItem) {
+		return imageSrc
+	}
+)
+```
+
+### cart.directCheckoutSettings
+
+Allows you to customize the cart settings when using the direct checkout feature. Useful for adding things like a custom note, cart attributes, or discount codes. Also provides the ShopWP `cartState` object within the callback.
+
+The available keys on the `cartSettings` parameter correspond to Shopify's [CartInput](https://shopify.dev/api/storefront/2022-04/input-objects/CartInput) object.
+
+| Parameter               | Description                                                                                                                                |
+| :---------------------- | :----------------------------------------------------------------------------------------------------------------------------------------- |
+| cartSettings - (object) | Represents cart settings. Corresponds to Shopify's [CartInput](https://shopify.dev/api/storefront/2022-04/input-objects/CartInput) object. |
+| cartState - (object)    | Represents ShopWP cart state                                                                                                               |
+| lineItemData - (object) | Represents the lineItemData being added                                                                                                    |
+
+**Example**
+
+```js
+// Add a custom note
+wp.hooks.addFilter(
+	'cart.directCheckoutSettings',
+	'shopwp',
+	function (cartSettings, cartState, lineItemData) {
+		cartSettings.note = 'This is a custom note'
+
+		return cartSettings
+	}
+)
+```
+
+### cart.createSettings
+
+Allows you to customize the default cart settings when creating a new cart. Useful for adding things like a custom note, cart attributes, or discount codes. Also provides the ShopWP `cartState` object within the callback.
+
+The available keys on the `cartSettings` parameter correspond to Shopify's [CartInput](https://shopify.dev/api/storefront/2022-04/input-objects/CartInput) object.
+
+| Parameter               | Description                                                                                                                                |
+| :---------------------- | :----------------------------------------------------------------------------------------------------------------------------------------- |
+| cartSettings - (object) | Represents cart settings. Corresponds to Shopify's [CartInput](https://shopify.dev/api/storefront/2022-04/input-objects/CartInput) object. |
+| cartState - (object)    | Represents ShopWP cart state                                                                                                               |
+| shopState - (object)    | Represents ShopWP shop state                                                                                                               |
+
+**Example**
+
+```js
+// Add a custom note
+wp.hooks.addFilter(
+	'cart.createSettings',
+	'shopwp',
+	function (cartSettings, cartState, shopState) {
+		cartSettings.note = 'This is a custom note'
+
+		return cartSettings
+	}
+)
+```
 
 ### misc.linkHref
 
