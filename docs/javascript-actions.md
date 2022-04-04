@@ -18,7 +18,7 @@ Detect when the cart is opened and closed.
 
 ```js
 wp.hooks.addAction('on.cartToggle', 'shopwp', function (isOpen) {
-	console.log('on.cartToggle​', isOpen)
+	console.log('on.cartToggle', isOpen)
 })
 ```
 
@@ -34,13 +34,13 @@ Detect when the cart is done loading. Useful if you wish to hook into any cart s
 
 ```js
 wp.hooks.addAction('on.cartLoad', 'shopwp', function (cartState) {
-	console.log('on.cartLoad​', cartState)
+	console.log('on.cartLoad', cartState)
 })
 ```
 
-### on.checkoutUpdate
+### on.cartUpdate
 
-Detect when the cart state changes. Useful if you need to know when the user adds a line item, removes a line item, changes quantity, etc.
+This hook will fire whenever the cart state changes. Useful if you need to know when the user adds a line item, removes a line item, changes quantity, etc.
 
 | Parameter          | Description                    |
 | :----------------- | :----------------------------- |
@@ -49,8 +49,8 @@ Detect when the cart state changes. Useful if you need to know when the user add
 **Example**
 
 ```js
-wp.hooks.addAction('on.checkoutUpdate', 'shopwp', function (cartState) {
-	console.log('on.checkoutUpdate​', cartState)
+wp.hooks.addAction('on.cartUpdate', 'shopwp', function (cartState) {
+	console.log('on.cartUpdate', cartState)
 })
 ```
 
@@ -66,11 +66,11 @@ This action runs when the checkout redirect begins.
 
 ```js
 wp.hooks.addAction('on.checkout', 'shopwp', function (cartState) {
-	console.log('on.checkout​', cartState)
+	console.log('on.checkout', cartState)
 })
 ```
 
-### on.checkoutNoteChange
+### on.cartNoteChange
 
 This action will fire when the user types inside the note field. The action is debounced by `250ms`.
 
@@ -81,8 +81,8 @@ This action will fire when the user types inside the note field. The action is d
 **Example**
 
 ```js
-wp.hooks.addAction('on.checkoutNoteChange', 'shopwp', function (note) {
-	console.log('on.checkoutNoteChange', note)
+wp.hooks.addAction('on.cartNoteChange', 'shopwp', function (note) {
+	console.log('on.cartNoteChange', note)
 })
 ```
 
@@ -290,9 +290,9 @@ wp.hooks.doAction('do.cartToggle', 'open')
 wp.hooks.doAction('do.cartToggle', 'close')
 ```
 
-### do.updateCheckoutAttributes
+### do.updateCartAttributes
 
-Allows for adding / updating custom attributes to the checkout. This will merge the attributes you set with any existing attributes that have been applied already. Useful if you have multiple different attributes that you want to set.
+Allows for adding / updating custom attributes to the cart. This will merge the attributes you set with any existing attributes that have been applied already. Useful if you have multiple different attributes that you want to set.
 
 | Parameter           | Description                                                                                                                                               |
 | :------------------ | :-------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -314,7 +314,7 @@ const attributes = [
 	},
 ]
 
-wp.hooks.doAction('do.updateCheckoutAttributes', attributes)
+wp.hooks.doAction('do.updateCartAttributes', attributes)
 ```
 
 ```js
@@ -336,14 +336,10 @@ const attributes = [
 	},
 ]
 
-wp.hooks.doAction('do.updateCheckoutAttributes', attributes, {
+wp.hooks.doAction('do.updateCartAttributes', attributes, {
 	openCart: true,
 })
 ```
-
-### do.setCheckoutAttributes
-
-As of version `4.2.0`, this action has been aliased to [do.updateCheckoutAttributes](#doupdatecheckoutattributes). You can use this instead.
 
 ### do.removeLineItems
 
@@ -363,23 +359,23 @@ var lineItemIds = [
 wp.hooks.doAction('do.removeLineItems', lineItemIds)
 ```
 
-### do.setCheckoutNote
+### do.setCartNote
 
-Allows for manually setting the checkout note.
+Allows for manually setting the cart note.
 
-| Parameter           | Description                                     |
-| :------------------ | :---------------------------------------------- |
-| customNote (string) | Represents the checkout note. Must be a string. |
+| Parameter           | Description                                 |
+| :------------------ | :------------------------------------------ |
+| customNote (string) | Represents the cart note. Must be a string. |
 
 **Example**
 
 ```js
 var customNote = 'This is a custom note'
 
-wp.hooks.doAction('do.setCheckoutNote', customNote)
+wp.hooks.doAction('do.setCartNote', customNote)
 ```
 
-### do.setCheckoutDiscount
+### do.setCartDiscount
 
 Allows for manually setting a discount code to the cart.
 
@@ -392,7 +388,7 @@ Allows for manually setting a discount code to the cart.
 ```js
 var discountCode = 'CUSTOM_DISCOUNT_CODE'
 
-wp.hooks.doAction('do.setCheckoutDiscount', discountCode)
+wp.hooks.doAction('do.setCartDiscount', discountCode)
 ```
 
 ### do.shopRender

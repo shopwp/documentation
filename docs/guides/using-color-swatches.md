@@ -14,7 +14,7 @@ If you wish to disable color swatches, add the below code to your theme's JavaSc
 ```js
 wp.hooks.addFilter(
 	'product.variant.styles.colorSwatch.names',
-	'wpshopify',
+	'shopwp',
 	function (defaultNames) {
 		return []
 	}
@@ -28,7 +28,7 @@ If you want to use a custom Option name you can add it to the list of names that
 ```js
 wp.hooks.addFilter(
 	'product.variant.styles.colorSwatch.names',
-	'wpshopify',
+	'shopwp',
 	function (defaultNames) {
 		defaultNames.push('material')
 
@@ -46,7 +46,7 @@ If you're unable to name your variant to match a [valid HTML color name](https:/
 ```js
 wp.hooks.addFilter(
 	'product.colorSwatchValue',
-	'wpshopify',
+	'shopwp',
 	function (variantValue) {
 		if (variantValue === 'some variant value') {
 			// Here any valid CSS color value will work
@@ -65,7 +65,7 @@ If you want to customize the entire variant style, you can filter all of the CSS
 ```js
 wp.hooks.addFilter(
 	'product.variantStyles',
-	'wpshopify',
+	'shopwp',
 	function (defaultCustomStyles, variant, isSelected, isAvailableToSelect) {
 		return `
       margin: 0 10px 10px 0;

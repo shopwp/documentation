@@ -61,6 +61,11 @@ module.exports = {
 						label: 'WordPress.org Plugin',
 						position: 'right',
 					},
+					{
+						href: 'https://github.com/shopwp',
+						label: 'Github',
+						position: 'right',
+					},
 				],
 			},
 			footer: {
@@ -95,8 +100,16 @@ module.exports = {
 						title: 'Community',
 						items: [
 							{
+								label: 'Github',
+								href: 'https://github.com/wpshopify',
+							},
+							{
 								label: 'Twitter',
 								href: 'https://twitter.com/wpshopify',
+							},
+							{
+								label: 'Youtube',
+								href: 'https://www.youtube.com/c/WPShopify',
 							},
 							{
 								label: 'Slack',

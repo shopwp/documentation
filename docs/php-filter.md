@@ -51,7 +51,7 @@ Allows you to turn off the default products single template. Useful if you want 
 **Example**
 
 ```php
-add_filter('wpshopify_use_products_single_template', function($use_plugin_template) {
+add_filter('shopwp_use_products_single_template', function($use_plugin_template) {
    return false;
 });
 ```
@@ -73,7 +73,7 @@ Allows you to turn off the default collections archive template. Useful if you w
 **Example**
 
 ```php
-add_filter('wpshopify_use_collections_all_template', function($use_plugin_template) {
+add_filter('shopwp_use_collections_all_template', function($use_plugin_template) {
    return false;
 });
 ```
@@ -89,7 +89,7 @@ Allows you to turn off the default collections single template. Useful if you wa
 **Example**
 
 ```php
-add_filter('wpshopify_use_collections_single_template', function($use_plugin_template) {
+add_filter('shopwp_use_collections_single_template', function($use_plugin_template) {
    return false;
 });
 ```
