@@ -1,7 +1,3 @@
----
-sidebar_position: 1
----
-
 # Migrating Guide 4.0
 
 :::info
