@@ -11,6 +11,13 @@ ShopWP 5.0 is a major update to the plugin which _may_ require some migration st
 - There are a handful of JavaScript and PHP hooks that have changed names. [Scroll to the list of breaking changes](#full-list-of-breaking-changes) to review.
 - The response object has changed when using internal PHP functions
 - Renamed the global JavaScript variable from `wpshopify` to `shopwp`.
+- Language and currency settings have been revamped
+
+## Language and currency settings
+
+Version `5.0` has improved the language and currency settings of the plugin. In order to use these new settings, you must [reconnect your Shopify store](https://docs.wpshop.io/getting-started/connecting).
+
+These new language settings will allow you to easily show products in a different language / currency. This is not a switcher that users can use on the front-end, that feature will be here shortly!
 
 ## Internal PHP functions
 
