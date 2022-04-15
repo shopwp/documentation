@@ -1135,6 +1135,8 @@ Determines whether to show out of stock variants or not. By default, the plugin 
 
 Determines whether to show the inventory levels notice or not.
 
+This works best if your variant has the [Track quantity](https://help.shopify.com/en/manual/products/inventory/getting-started-with-inventory/set-up-inventory-tracking#:~:text=Tap%20Inventory.,for%20the%20product%20or%20variant.) feature enabled.
+
 | Possible values |
 | :-------------- |
 | true `Default`  |
@@ -1150,6 +1152,8 @@ Determines whether to show the inventory levels notice or not.
 ### left_in_stock_threshold
 
 Determines the threshold for showing the "left in stock" inventory notice. For example, if set to `10`, the plugin will not show the left in stock notice until the variant's inventory drops to `9`.
+
+This works best if your variant has the [Track quantity](https://help.shopify.com/en/manual/products/inventory/getting-started-with-inventory/set-up-inventory-tracking#:~:text=Tap%20Inventory.,for%20the%20product%20or%20variant.) feature enabled.
 
 | Possible values                   |
 | :-------------------------------- |

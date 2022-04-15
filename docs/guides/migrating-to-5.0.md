@@ -12,6 +12,7 @@ ShopWP 5.0 is a major update to the plugin which _may_ require some migration st
 - The response object has changed when using internal PHP functions
 - Renamed the global JavaScript variable from `wpshopify` to `shopwp`.
 - Language and currency settings have been revamped
+- The `get_product_by_id()` method changed to `api_get_product_by_id()`
 
 ## Language and currency settings
 
