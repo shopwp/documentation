@@ -14,13 +14,9 @@
 		"write-heading-ids": "export NODE_OPTIONS=--openssl-legacy-provider; docusaurus write-heading-ids"
 	},
 	"dependencies": {
-		"@babel/plugin-syntax-import-meta": "^7.10.4",
 		"@docusaurus/core": "2.0.0-beta.18",
 		"@docusaurus/preset-classic": "2.0.0-beta.18",
-		"@emotion/babel-plugin": "^11.9.2",
 		"@mdx-js/react": "^1.6.22",
-		"babel-plugin-lodash": "^3.3.4",
-		"babel-plugin-transform-imports": "^2.0.0",
 		"clsx": "^1.1.1",
 		"prism-react-renderer": "^1.3.1",
 		"react": "^17.0.2",
