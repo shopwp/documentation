@@ -92,6 +92,17 @@ html[class*='docs-doc-id-shortcodes'] h3.anchor {
 	position: relative;
 }
 
+html[class*='docs-doc-id-templates'][data-theme='light'] h3.anchor,
+html[class*='docs-doc-id-php-functions'][data-theme='light'] h3.anchor,
+html[class*='docs-doc-id-php-actions'][data-theme='light'] h3.anchor,
+html[class*='docs-doc-id-php-filters'][data-theme='light'] h3.anchor,
+html[class*='docs-doc-id-javascript-actions'][data-theme='light'] h3.anchor,
+html[class*='docs-doc-id-javascript-filters'][data-theme='light'] h3.anchor,
+html[class*='docs-doc-id-shortcodes'][data-theme='light'] h3.anchor {
+	background: #4367ff;
+	color: white;
+}
+
 html[class*='docs-doc-id-templates'] h3.anchor .hash-link,
 html[class*='docs-doc-id-php-functions'] h3.anchor .hash-link,
 html[class*='docs-doc-id-php-actions'] h3.anchor .hash-link,

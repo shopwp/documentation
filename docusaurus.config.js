@@ -30,7 +30,7 @@ module.exports = {
 			}),
 		],
 	],
-	scripts: ['https://wpshop.io/testing/shopwp-components.js'],
+	// scripts: ['https://wpshop.io/testing/shopwp-components.js'],
 	themeConfig:
 		/** @type {import('@docusaurus/preset-classic').ThemeConfig} */
 		({
@@ -100,7 +100,7 @@ module.exports = {
 						items: [
 							{
 								label: 'Github',
-								href: 'https://github.com/wpshopify',
+								href: 'https://github.com/shopwp',
 							},
 							{
 								label: 'Twitter',
