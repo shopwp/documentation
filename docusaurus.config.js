@@ -13,7 +13,6 @@ module.exports = {
 	favicon: 'img/favicon.ico',
 	organizationName: 'shopwp', // Usually your GitHub org/user name.
 	projectName: 'shopwp', // Usually your repo name.
-
 	presets: [
 		[
 			'@docusaurus/preset-classic',
@@ -31,7 +30,7 @@ module.exports = {
 			}),
 		],
 	],
-
+	scripts: ['https://wpshop.io/testing/shopwp-components.js'],
 	themeConfig:
 		/** @type {import('@docusaurus/preset-classic').ThemeConfig} */
 		({

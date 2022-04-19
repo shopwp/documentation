@@ -401,6 +401,55 @@ wp.hooks.addFilter(
 )
 ```
 
+### cart.lineItemAttributes
+
+Allows you to add custom attributes to any product variant added to the ShopWP cart. The attributes you pass will be attached to the order data and viewable within the Shopify admin interface.
+
+This filter will run right before a product variant is added to the cart.
+
+In order for this to work properly, you must return an array of objects. Each object must have a `key` and `value` property, like this:
+
+```js
+return [
+	{
+		key: 'Key one',
+		value: 'Value one',
+	},
+]
+```
+
+| Parameter                        | Description                                                               |
+| :------------------------------- | :------------------------------------------------------------------------ |
+| attributes - (array)             | Represents the custom attributes to add. Defaults to an empty array `[]`. |
+| variant - (object)               | Represents product variant information like title, price, etc.            |
+| quantity - (int)                 | Represents the total quantity being added                                 |
+| productBuyButtonState - (object) | Represents the React buy button state                                     |
+
+**Example**
+
+```js
+// Add special instructions for a specific line item
+wp.hooks.addFilter(
+	'cart.lineItemAttributes',
+	'shopwp',
+	function (defaultAttributes, variant, quantity, buyButtonState) {
+		if (
+			variant.node.product.product === 'My special product' &&
+			variant.node.title === 'Large'
+		) {
+			return [
+				{
+					key: 'Special instructions',
+					value: 'This could be user input',
+				},
+			]
+		}
+
+		return defaultAttributes
+	}
+)
+```
+
 ### misc.linkHref
 
 Allows you to filter product or collection links. This filter will run whether you link products to WordPress or Shopify.
@@ -420,6 +469,23 @@ wp.hooks.addFilter('misc.linkHref', 'shopwp', function (linkHref, linkTo) {
 ```
 
 ### misc.linkTarget
+
+Allows you to change the HTML target value of all ShopWP products links. Useful if you want your products to open in a new tab.
+
+| Parameter             | Description                                                 |
+| :-------------------- | :---------------------------------------------------------- |
+| linkTarget - (string) | Represents the link's target value. Defaults to `_self`     |
+| type - (string)       | Represents the link type, e.g.: `Products` or `Collections` |
+| payload - (object)    | Represents the product data                                 |
+
+**Example**
+
+```js
+// Added utm params to product links
+wp.hooks.addFilter('misc.linkTarget', 'shopwp', function (linkHref, linkTo) {
+	return '_blank'
+})
+```
 
 ### misc.carouselSettings
 

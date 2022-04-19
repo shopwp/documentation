@@ -70,14 +70,38 @@ html[data-theme='dark'] .navbar {
 Code block Overrides
 
 */
-p
-	+ .codeBlockContainer_node_modules-\@docusaurus-theme-classic-lib-next-theme-CodeBlock-styles-module {
-	margin-top: -10px;
+/* p + h3.anchor:first-of-type {
+	margin-top: 20px;
+} */
+
+html[class*='docs-doc-id-templates'] h3.anchor,
+html[class*='docs-doc-id-php-functions'] h3.anchor,
+html[class*='docs-doc-id-php-actions'] h3.anchor,
+html[class*='docs-doc-id-php-filters'] h3.anchor,
+html[class*='docs-doc-id-javascript-actions'] h3.anchor,
+html[class*='docs-doc-id-javascript-filters'] h3.anchor,
+html[class*='docs-doc-id-shortcodes'] h3.anchor {
+	margin-top: 20px;
+	background: #6c45dd;
+	padding: 1px 10px 3px 12px;
+	border-radius: 8px;
+	display: inline-block;
+	font-size: 19px;
+	margin-right: 0;
+	font-family: monospace;
+	position: relative;
 }
 
-.codeBlockContainer_node_modules-\@docusaurus-theme-classic-lib-next-theme-CodeBlock-styles-module
-	+ h3 {
-	margin-top: 60px;
+html[class*='docs-doc-id-templates'] h3.anchor .hash-link,
+html[class*='docs-doc-id-php-functions'] h3.anchor .hash-link,
+html[class*='docs-doc-id-php-actions'] h3.anchor .hash-link,
+html[class*='docs-doc-id-php-filters'] h3.anchor .hash-link,
+html[class*='docs-doc-id-javascript-actions'] h3.anchor .hash-link,
+html[class*='docs-doc-id-javascript-filters'] h3.anchor .hash-link,
+html[class*='docs-doc-id-shortcodes'] h3.anchor .hash-link {
+	position: absolute;
+	right: -35px;
+	padding: 0 15px;
 }
 
 .docusaurus-highlight-code-line {
