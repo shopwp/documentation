@@ -1,6 +1,6 @@
 {
 	"name": "shopwp-docs",
-	"version": "0.0.0",
+	"version": "5.0.3",
 	"private": true,
 	"scripts": {
 		"docusaurus": "docusaurus",
@@ -27,10 +27,6 @@
 		"@emotion/react": "^11.9.0",
 		"@mdx-js/loader": "^2.1.1",
 		"@mdx-js/react": "^1.6.22",
-		"@shopwp/api": "^2.0.9",
-		"@shopwp/components": "^2.0.14",
-		"@shopwp/hooks": "^2.0.9",
-		"@shopwp/utils": "^2.0.12",
 		"@svgr/webpack": "^6.2.1",
 		"clsx": "^1.1.1",
 		"esbuild-loader": "^2.18.0",
