@@ -16,7 +16,7 @@ To get around this, be sure to set `shopwp-public` as a dependency in your theme
 
 ```php
 function theme_assets() {
-	wp_enqueue_script( 'your-js', '<your-path>/scripts.js', ['shopwp-public'], '', true);
+	wp_enqueue_script( 'your-js', get_stylesheet_directory_uri() . '/scripts.js', ['shopwp-public'], '', true);
 }
 
 add_action('wp_enqueue_scripts', 'theme_assets');

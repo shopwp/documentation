@@ -30,7 +30,7 @@ module.exports = {
 			}),
 		],
 	],
-	// scripts: ['https://wpshop.io/testing/shopwp-components.js'],
+	scripts: ['https://wpshop.io/testing/shopwp-components.js'],
 	themeConfig:
 		/** @type {import('@docusaurus/preset-classic').ThemeConfig} */
 		({
