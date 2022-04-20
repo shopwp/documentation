@@ -2102,10 +2102,10 @@
     react-query "^3.34.19"
     store "^2.0.12"
 
-"@shopwp/components@^2.0.20":
-  version "2.0.20"
-  resolved "https://registry.yarnpkg.com/@shopwp/components/-/components-2.0.20.tgz#f47458113659e6f05040d2dbfab7ea9836551acb"
-  integrity sha512-ebI4UddMI3OgQmZuZEitLMhvQPHFKgzTZ/meJ3SyBXtMEaQ8XDnzvrygy9lPtUUg3bLV4L5rB2hmpeWfPHDemA==
+"@shopwp/components@^2.0.21":
+  version "2.0.21"
+  resolved "https://registry.yarnpkg.com/@shopwp/components/-/components-2.0.21.tgz#b3ea9bd064d92e2f6040e5f5c732f9a73f5722dd"
+  integrity sha512-0RjKzXpt2cWs7Cf0lyE90qEC8nuO+pUKcyAM29GAmhuE4zhL9kWn3FKi5qkKTbMMGIQWyru/FvdVIwZLCMoR1w==
   dependencies:
     "@emotion/react" "^11.9.0"
     "@shopwp/api" "^2.0.3"
@@ -2136,9 +2136,7 @@
     mixitup "^3.3.1"
     money "^0.2.0"
     node-notifier "^10.0.1"
-    react "^17.0.2"
     react-content-loader "^6.2.0"
-    react-dom "^17.0.2"
     react-error-boundary "^3.1.4"
     react-intersection-observer "^8.34.0"
     react-jsx-parser "^1.29.0"
