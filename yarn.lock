@@ -2073,7 +2073,7 @@
     "@react-spring/shared" "~9.4.4"
     "@react-spring/types" "~9.4.4"
 
-"@shopwp/api@^2.0.3":
+"@shopwp/api@^2.0.10":
   version "2.0.10"
   resolved "https://registry.yarnpkg.com/@shopwp/api/-/api-2.0.10.tgz#415d4d1476dd2c924852369c526f6d2683605bb3"
   integrity sha512-nauV9j3JzeF5nCe5BqJJ7hYimcWDuoEYvQkc6OpjOpYnnOCWGykYrbSuTdz4sv0WqSy0SrbRe4Z5iW6wnPclwA==
@@ -2102,15 +2102,15 @@
     react-query "^3.34.19"
     store "^2.0.12"
 
-"@shopwp/components@^2.0.21":
-  version "2.0.21"
-  resolved "https://registry.yarnpkg.com/@shopwp/components/-/components-2.0.21.tgz#b3ea9bd064d92e2f6040e5f5c732f9a73f5722dd"
-  integrity sha512-0RjKzXpt2cWs7Cf0lyE90qEC8nuO+pUKcyAM29GAmhuE4zhL9kWn3FKi5qkKTbMMGIQWyru/FvdVIwZLCMoR1w==
+"@shopwp/components@^2.0.29":
+  version "2.0.29"
+  resolved "https://registry.yarnpkg.com/@shopwp/components/-/components-2.0.29.tgz#6c90c7ce5c440714e741e1ae4c534d2ac625f6ff"
+  integrity sha512-kE5qQH2gbA5fbamfU1eoNq7t5OtJiPYjo8vxvdpvudJ++KXGKPcaevd/hn5KBIIkDQ9GRkhFchsh1T1LwGap6A==
   dependencies:
     "@emotion/react" "^11.9.0"
-    "@shopwp/api" "^2.0.3"
-    "@shopwp/hooks" "^2.0.4"
-    "@shopwp/utils" "^2.0.5"
+    "@shopwp/api" "^2.0.10"
+    "@shopwp/hooks" "^2.0.10"
+    "@shopwp/utils" "^2.0.13"
     "@testing-library/jest-dom" "^5.16.4"
     "@tippy.js/react" "^3.1.1"
     "@tippyjs/react" "^4.2.6"
@@ -2159,7 +2159,7 @@
     tippy.js "^6.3.7"
     use-debounce "^7.0.1"
 
-"@shopwp/hooks@^2.0.4":
+"@shopwp/hooks@^2.0.10":
   version "2.0.10"
   resolved "https://registry.yarnpkg.com/@shopwp/hooks/-/hooks-2.0.10.tgz#c3e504e02e66f83f665b4b59f4936bc52c3610ec"
   integrity sha512-mgdOACfYLKWGJ6N6UmtMVYLhfC/HmXS98kGUb/HP9EP7cuT9iIUfHOXfhzpaXKg36tKtkb4X7ry/8JYYPkTNKg==
@@ -2170,7 +2170,7 @@
     react "^17.0.2"
     react-dom "^17.0.2"
 
-"@shopwp/utils@^2.0.5", "@shopwp/utils@^2.0.6":
+"@shopwp/utils@^2.0.13", "@shopwp/utils@^2.0.6":
   version "2.0.13"
   resolved "https://registry.yarnpkg.com/@shopwp/utils/-/utils-2.0.13.tgz#4bba651d8815589c2f0d94628342d5c95d14edb5"
   integrity sha512-FYIMyZLrnvVS3y1ROSxB9ywST6TqRwJlloT+Bl9JhWWY3tEbJIKz3a7M+rWIR+mzaoOyGw8T6ernnA8Y5RaWrg==

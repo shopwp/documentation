@@ -187,3 +187,52 @@ $result = $Products->get_products_by_collection_ids([
    '
 ]);
 ```
+
+### get_orders()
+
+Allows for fetching multiple Shopify orders at once using a Shopify [search query](https://shopify.dev/api/admin-graphql/2022-04/objects/Order#queries).
+
+`get_orders()` takes a single configuration parameter as an array. This parameter accepts the below keys:
+
+| Keys      | Description                                                                                                                                                                                                         |
+| :-------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| query     | (Required) Determines which orders to search for. You can pass any complex search query that follows the [Order filter syntax](https://shopify.dev/api/admin-graphql/2022-04/objects/Order#query-orders-arguments). |
+| page_size | Determines how many orders to return.                                                                                                                                                                               |
+| reverse   | Whether to reverse the order of the results                                                                                                                                                                         |
+| sort_by   | Determines how the orders should be sorted. Refer to the [OrderSortKeys](https://shopify.dev/api/admin-graphql/2022-04/enums/OrderSortKeys) for a full list.                                                        |
+| schema    | Allows for customizing which [order fields](https://shopify.dev/api/admin-graphql/2022-04/objects/Order#fields) are returned. Useful if you only need a couple fields like `id` or `lineItems`.                     |
+
+:::info
+Note: If you pass the `schema` key, you can explicitly choose which order fields to return during the request. By default, a curated list of order fields will be returned. The full list of available fields can be [found here](https://shopify.dev/api/admin-graphql/2022-04/objects/Order#fields).
+:::
+
+**Example**:
+Get orders from a specific user email.
+
+```php
+$Orders = ShopWP\Factories\API\Items\Orders_Factory::build();
+
+$params = [
+   'query' => 'email:asda@asdasdad.com'
+];
+
+$result = $Orders->get_orders($params);
+```
+
+**Example**:
+Get orders from a specific user email and only return the fields `name`, `email`, and `tags`.
+
+```php
+$Orders = ShopWP\Factories\API\Items\Orders_Factory::build();
+
+$params = [
+   'query' => 'email:asda@asdasdad.com',
+   'schema' => '
+      name
+      email
+      tags
+   '
+];
+
+$result = $Orders->get_orders($params);
+```

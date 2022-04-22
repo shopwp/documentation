@@ -534,55 +534,166 @@ wp.hooks.addFilter(
 
 ### before.productBuyButton
 
-### after.productBuyButton
+Allows you add custom HTML before the product buy button. You must return HTML as a string.
 
-Allows you add custom HTML after the product buy button. You must return HTML as a string.
-
-| Parameter    | Description                                                    |
-| :----------- | :------------------------------------------------------------- |
-| defaultValue | will be false                                                  |
-| props        | Represents the data passed to the product buy button component |
+| Parameter    | Description                  |
+| :----------- | :--------------------------- |
+| defaultValue | An empty string by default   |
+| productState | Represents the product state |
 
 **Example**
 
 ```js
-// Show the total product quantity below the buy button
+// Show the total product inventory amount before the buy button
+wp.hooks.addFilter(
+	'before.productBuyButton',
+	'shopwp',
+	function (defaultValue, productState) {
+		return '<p>Total left: ' + productState.payload.totalInventory + '</p>'
+	}
+)
+```
+
+### after.productBuyButton
+
+Allows you add custom HTML after the product buy button. You must return HTML as a string.
+
+| Parameter    | Description                  |
+| :----------- | :--------------------------- |
+| defaultValue | An empty string by default   |
+| productState | Represents the product state |
+
+**Example**
+
+```js
+// Show the total product inventory amount after the buy button
 wp.hooks.addFilter(
 	'after.productBuyButton',
 	'shopwp',
-	function (defaultValue, props) {
-		return '<p>Total left: ' + props.payload.totalInventory + '</p>'
+	function (defaultValue, productState) {
+		return '<p>Total left: ' + productState.payload.totalInventory + '</p>'
 	}
 )
 ```
 
 ### before.productThumbnail
 
+Allows you add custom HTML above each product thumbnail. You must return HTML as a string.
+
+| Parameter                    | Description                          |
+| :--------------------------- | :----------------------------------- |
+| defaultValue (string)        | An empty string by default           |
+| productGalleryState (object) | Represents the product gallery state |
+
+```js
+wp.hooks.addFilter(
+	'before.productThumbnail',
+	'shopwp',
+	function (defaultValue, productGalleryState) {
+		return '<p>Test</p>'
+	}
+)
+```
+
 ### after.productThumbnail
+
+Allows you add custom HTML below each product thumbnail. You must return HTML as a string.
+
+| Parameter                    | Description                          |
+| :--------------------------- | :----------------------------------- |
+| defaultValue (string)        | An empty string by default           |
+| productGalleryState (object) | Represents the product gallery state |
+
+```js
+wp.hooks.addFilter(
+	'after.productThumbnail',
+	'shopwp',
+	function (defaultValue, productGalleryState) {
+		return '<p>Test</p>'
+	}
+)
+```
 
 ### before.productPricing
 
+Allows you add custom HTML before the product price. You must return HTML as a string.
+
+| Parameter             | Description                  |
+| :-------------------- | :--------------------------- |
+| defaultValue (string) | An empty string by default   |
+| productState (object) | Represents the product state |
+
+```js
+// Adds the product vendor name before price
+wp.hooks.addFilter(
+	'before.productPricing',
+	'shopwp',
+	function (defaultValue, props) {
+		return '<p>Vendor: ' + productState.product.vendor + '</p>'
+	}
+)
+```
+
 ### after.productPricing
+
+Allows you add custom HTML after the product price. You must return HTML as a string.
+
+| Parameter             | Description                  |
+| :-------------------- | :--------------------------- |
+| defaultValue (string) | An empty string by default   |
+| productState (object) | Represents the product state |
+
+```js
+// Adds the product vendor name below price
+wp.hooks.addFilter(
+	'after.productPricing',
+	'shopwp',
+	function (defaultValue, props) {
+		return '<p>Vendor: ' + productState.product.vendor + '</p>'
+	}
+)
+```
 
 ### before.productTitle
 
 Allows you add custom HTML before the product title. You must return HTML as a string.
 
-| Parameter    | Description                                               |
-| :----------- | :-------------------------------------------------------- |
-| defaultValue | will be false                                             |
-| props        | Represents the data passed to the product title component |
+| Parameter             | Description                  |
+| :-------------------- | :--------------------------- |
+| defaultValue (string) | will be false                |
+| productState (object) | Represents the product state |
 
 **Example**
 
 ```js
+// Adds the product vendor name before title
 wp.hooks.addFilter(
 	'before.productTitle',
 	'shopwp',
-	function (defaultValue, props) {
-		return '<p>Vendor: ' + props.product.vendor + '</p>'
+	function (defaultValue, productState) {
+		return '<p>Vendor: ' + productState.product.vendor + '</p>'
 	}
 )
 ```
 
 ### after.productTitle
+
+Allows you add custom HTML after the product title. You must return HTML as a string.
+
+| Parameter             | Description                  |
+| :-------------------- | :--------------------------- |
+| defaultValue (string) | Will be an empty string      |
+| productState (object) | Represents the product state |
+
+**Example**
+
+```js
+// Adds the product vendor name after title
+wp.hooks.addFilter(
+	'after.productTitle',
+	'shopwp',
+	function (defaultValue, productState) {
+		return '<p>Vendor: ' + productState.product.vendor + '</p>'
+	}
+)
+```

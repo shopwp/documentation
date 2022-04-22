@@ -67,6 +67,96 @@ html[data-theme='dark'] .navbar {
 
 /*
 
+Product dark theme
+
+*/
+html[data-theme='dark'] .wps-products-title,
+html[data-theme='dark'] .wps-pricing-range-wrapper *,
+html[data-theme='dark'] .wps-component-products-description,
+html[data-theme='dark'] .wpshopify-variant-buttons button,
+html[data-theme='dark'] [class*='SellingGroupLabelCSS'] p {
+	color: white;
+}
+
+html[data-theme='dark'] .wpshopify-variant-buttons button:hover {
+	background-color: #414141;
+}
+
+html[data-theme='dark'] .wpshopify-variant-buttons button:hover {
+	background-color: #414141;
+}
+
+html[data-theme='dark'] [class*='ThumbnailCSS']:hover img,
+html[data-theme='dark'] [data-wps-is-active='true'] img {
+	outline-color: #d7d7d7;
+}
+
+html[data-theme='dark']
+	.wpshopify-variant-buttons
+	button[data-option-name='Color']:hover {
+	background-color: initial;
+}
+
+html[data-theme='dark'] [class*='SellingGroupCSS'] {
+	border-radius: 0px;
+}
+
+html[data-theme='dark'] [class*='SellingGroupLabelCSS'] {
+	background-color: rgb(0 0 0 / 84%);
+}
+
+html[data-theme='dark'] [class*='SellingGroupLabelCSS'] .shopwp-radio-control {
+	border-color: #989898;
+	top: 24px;
+}
+
+html[data-theme='dark'] [class*='quantityInputCSS'],
+html[data-theme='dark'] [class*='quantityContainer-Quantity'] {
+	background: rgb(38 38 38);
+	color: white;
+}
+
+html[data-theme='dark']
+	[class*='QuantityIncDecCSS-QuantityDecCSS-Quantity']:hover,
+html[data-theme='dark']
+	[class*='QuantityIncDecCSS-QuantityIncCSS-Quantity']:hover {
+	background: #494949;
+}
+html[data-theme='dark'] [class*='quantityContainer-Quantity'] span {
+	background: white;
+	color: white;
+}
+
+html[data-theme='dark'] [class*='quantityContainer-Quantity'] span:after {
+	background: white;
+	color: white;
+}
+
+html[data-theme='dark'] [class*='SubscriptionBuyButtonNoticeCSS-Notice'],
+html[data-theme='dark'] [class*='noticeStyles-Notice'] {
+	color: black;
+}
+
+html[data-theme='dark']
+	[class*='SellingGroupLabelCSS']
+	input[type='radio']
+	+ .shopwp-radio-control::before {
+	box-shadow: inset 0.5em 0.5em white;
+}
+
+html[data-theme='dark']
+	.wpshopify-variant-buttons-group
+	[class*='selectStyles'] {
+	color: #ff9494;
+}
+
+html[data-theme='dark']
+	[data-is-variant-selected='true'][class*='ProductVariantButtonValueButtonCSS'][data-option-name='Color'] {
+	box-shadow: outset 0 0 0px 2px white;
+}
+
+/*
+
 Code block Overrides
 
 */
@@ -82,11 +172,16 @@ html[class*='docs-doc-id-javascript-actions'] h3.anchor,
 html[class*='docs-doc-id-javascript-filters'] h3.anchor,
 html[class*='docs-doc-id-shortcodes'] h3.anchor {
 	margin-top: 20px;
-	background: #6c45dd;
-	padding: 1px 10px 3px 12px;
+	background: rgb(118, 41, 204);
+	background: linear-gradient(
+		0deg,
+		rgba(118, 41, 204, 1) 0%,
+		rgba(108, 69, 221, 1) 100%
+	);
+	padding: 2px 10px 3px 11px;
 	border-radius: 8px;
 	display: inline-block;
-	font-size: 19px;
+	font-size: 18px;
 	margin-right: 0;
 	font-family: monospace;
 	position: relative;
