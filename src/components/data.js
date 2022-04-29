@@ -4556,7 +4556,7 @@ const shopwpGlobal = {
 	},
 	api: {
 		namespace: 'shopwp/v1',
-		restUrl: 'https://shopwp.loc/wp-json/',
+		restUrl: 'https://wpshopifydemo.wpengine.com/wp-json/',
 	},
 	misc: {
 		latestVersion: '5.0.2',

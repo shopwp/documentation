@@ -2102,10 +2102,10 @@
     react-query "^3.34.19"
     store "^2.0.12"
 
-"@shopwp/components@^2.0.29":
-  version "2.0.29"
-  resolved "https://registry.yarnpkg.com/@shopwp/components/-/components-2.0.29.tgz#6c90c7ce5c440714e741e1ae4c534d2ac625f6ff"
-  integrity sha512-kE5qQH2gbA5fbamfU1eoNq7t5OtJiPYjo8vxvdpvudJ++KXGKPcaevd/hn5KBIIkDQ9GRkhFchsh1T1LwGap6A==
+"@shopwp/components@^2.0.37":
+  version "2.0.37"
+  resolved "https://registry.yarnpkg.com/@shopwp/components/-/components-2.0.37.tgz#6a3596cb3d53ac8cdf584777d110ad7732cb8cbd"
+  integrity sha512-BXfGQ34clQMqsNIWbOK798KZMZkjgCuhGhujJ/4McpDWWBC0gfDevKGKshN8oTeu2a+4ldQZIG0Dw3NtnyzZ2Q==
   dependencies:
     "@emotion/react" "^11.9.0"
     "@shopwp/api" "^2.0.10"

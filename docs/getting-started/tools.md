@@ -32,7 +32,7 @@ This will connect the auto post syncing feature of ShopWP Pro. This is responsib
 
 This tool will use the values you select within the `Auto post syncing` plugin setting. You'll also want to make sure the `Webhooks URL` is set to your WordPress domain. If you're using localhost, you'll need to publicly expose your network using something like [ngrok](https://ngrok.com/).
 
-Each webhook comes with a unique "callback" PHP file that you can customize. The code in this template file will be ran anytime an update occurs on the given webhook. For example, if you connect the `Product Create` webhook, the callback file `product-create.php` will run. Inside this file you will have access to a PHP variable called `$data`. This variable contains the new information from Shopify—which in this case the the newly created product.
+Each webhook comes with a unique "callback" PHP file that you can customize. The code in this template file will run anytime an update occurs on the given webhook. For example, if you connect the `Product Create` webhook, the callback file `product-create.php` will run. Inside this file you will have access to a PHP variable called `$data`. This variable contains the new information from Shopify—which in this case the the newly created product.
 
 You can customize the `product-create.php` file by adding the below folder structure to your WordPress theme:
 

@@ -1,36 +1,93 @@
 # PHP Filters
 
-ShopWP comes with a variety of PHP filter hooks can be used to customize the plugin. Simply add these to your WordPress theme's functions.php file.
+ShopWP comes with filter hooks that can be used to customize the plugin. Simply add these to your WordPress theme's `functions.php` file.
 
 ### shopwp_products_all_args
 
-Allows you to customize the settings used by the default products listing page.
+Allows you to customize the settings used by the default products listing (PLP) page.
 
-| Parameter       | Description                                                  |
-| :-------------- | :----------------------------------------------------------- |
-| payloadSettings | Represents all available settings for the products shortcode |
+| Parameter | Description                                                                                           |
+| :-------- | :---------------------------------------------------------------------------------------------------- |
+| $settings | Represents all available product settings. A full list can be [found here](/shortcodes/wps_products). |
 
 **Example**
 
 ```php
-add_filter('shopwp_use_products_all_template', function($use_plugin_template) {
-   return false;
+// Sort products by newest first
+add_filter('shopwp_products_all_args', function($settings) {
+
+   $settings['sort_by'] = 'created_at';
+
+   return $settings;
+
 });
 ```
 
 ### shopwp_products_single_args
 
+Allows you to customize the settings used by the product detail (PDP) pages.
+
+| Parameter | Description                                                                                           |
+| :-------- | :---------------------------------------------------------------------------------------------------- |
+| $settings | Represents all available product settings. A full list can be [found here](/shortcodes/wps_products). |
+
+**Example**
+
+```php
+// Link products to Shopify on the detail pages only
+add_filter('shopwp_products_single_args', function($settings) {
+
+   $settings['link_to'] = 'shopify';
+
+   return $settings;
+
+});
+```
+
 ### shopwp_register_products_args
 
+Allows you to customize the custom post type settings of ShopWP products.
+
+| Parameter | Description                                                                                                                                                 |
+| :-------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| $settings | Represents the default custom post type settings. A full list can be [found here](https://developer.wordpress.org/reference/functions/register_post_type/). |
+
+**Example**
+
+```php
+// Turn off the archive pages for ShopWP Products
+add_filter('shopwp_register_products_args', function($settings) {
+
+   $settings['has_archive'] = false;
+
+   return $settings;
+
+});
+```
+
 ### shopwp_products_show_sidebar
+
+Allows you to toggle the WordPress sidebar on the products listing page.
+
+| Parameter            | Description                                                                       |
+| :------------------- | :-------------------------------------------------------------------------------- |
+| $show_sidebar (bool) | Whether to show a WordPress sidebar on the products listing page. Default: `true` |
+
+**Example**
+
+```php
+add_filter('shopwp_products_show_sidebar', function($use_plugin_template) {
+   return false;
+});
+```
 
 ### shopwp_use_products_all_template
 
 Allows you to turn off the default products archive template. Useful if you want to use your own wordpress templates.
 
-| Parameter           | Description                                                                  |
-| :------------------ | :--------------------------------------------------------------------------- |
-| use_plugin_template | Represents whether to use default products archive template. Default: `true` |
+| Parameter                   | Description                                                                  |
+| :-------------------------- | :--------------------------------------------------------------------------- |
+| $use_plugin_template (bool) | Represents whether to use default products archive template. Default: `true` |
 
 **Example**
 
@@ -44,9 +101,9 @@ add_filter('shopwp_use_products_all_template', function($use_plugin_template) {
 
 Allows you to turn off the default products single template. Useful if you want to use your own wordpress templates.
 
-| Parameter           | Description                                                                 |
-| :------------------ | :-------------------------------------------------------------------------- |
-| use_plugin_template | Represents whether to use default products single template. Default: `true` |
+| Parameter            | Description                                                                 |
+| :------------------- | :-------------------------------------------------------------------------- |
+| $use_plugin_template | Represents whether to use default products single template. Default: `true` |
 
 **Example**
 
@@ -56,19 +113,92 @@ add_filter('shopwp_use_products_single_template', function($use_plugin_template)
 });
 ```
 
+### shopwp_admin_rest_api_version
+
+Allows you to specify a custom API version for the [Shopify Admin REST API](https://shopify.dev/api/admin-rest)
+
+| Parameter    | Description                        |
+| :----------- | :--------------------------------- |
+| $api_version | Represents the default API version |
+
+**Example**
+
+```php
+add_filter('shopwp_admin_rest_api_version', function($api_version) {
+   return '2022-07';
+});
+```
+
 ### shopwp_collections_all_args
+
+Allows you to customize the settings used by the default collections listing page.
+
+| Parameter | Description                                                                                                 |
+| :-------- | :---------------------------------------------------------------------------------------------------------- |
+| $settings | Represents all available collection settings. A full list can be [found here](/shortcodes/wps_collections). |
+
+**Example**
+
+```php
+// Don't show collection images or products on listing page
+add_filter('shopwp_collections_all_args', function($settings) {
+
+   $settings['excludes'] = ['images', 'products'];
+
+   return $settings;
+
+});
+```
 
 ### shopwp_collections_single_args
 
+Allows you to customize the settings used by the collection detail pages.
+
+| Parameter | Description                                                                                                 |
+| :-------- | :---------------------------------------------------------------------------------------------------------- |
+| $settings | Represents all available collection settings. A full list can be [found here](/shortcodes/wps_collections). |
+
+**Example**
+
+```php
+// Sort products by price
+add_filter('shopwp_collections_single_args', function($settings) {
+
+   $settings['products_sort_by'] = 'price';
+
+   return $settings;
+
+});
+```
+
 ### shopwp_register_collections_args
+
+Allows you to customize the custom post type settings of ShopWP collections.
+
+| Parameter | Description                                                                                                                                                 |
+| :-------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| $settings | Represents the default custom post type settings. A full list can be [found here](https://developer.wordpress.org/reference/functions/register_post_type/). |
+
+**Example**
+
+```php
+// Turn off the archive pages for ShopWP Products
+add_filter('shopwp_register_collections_args', function($settings) {
+
+   $settings['has_archive'] = false;
+
+   return $settings;
+
+});
+```
 
 ### shopwp_use_collections_all_template
 
 Allows you to turn off the default collections archive template. Useful if you want to use your own wordpress templates.
 
-| Parameter           | Description                                                                     |
-| :------------------ | :------------------------------------------------------------------------------ |
-| use_plugin_template | Represents whether to use default collections archive template. Default: `true` |
+| Parameter            | Description                                                                     |
+| :------------------- | :------------------------------------------------------------------------------ |
+| $use_plugin_template | Represents whether to use default collections archive template. Default: `true` |
 
 **Example**
 
@@ -82,9 +212,9 @@ add_filter('shopwp_use_collections_all_template', function($use_plugin_template)
 
 Allows you to turn off the default collections single template. Useful if you want to use your own wordpress templates.
 
-| Parameter           | Description                                                                    |
-| :------------------ | :----------------------------------------------------------------------------- |
-| use_plugin_template | Represents whether to use default collections single template. Default: `true` |
+| Parameter            | Description                                                                    |
+| :------------------- | :----------------------------------------------------------------------------- |
+| $use_plugin_template | Represents whether to use default collections single template. Default: `true` |
 
 **Example**
 
@@ -94,11 +224,11 @@ add_filter('shopwp_use_collections_single_template', function($use_plugin_templa
 });
 ```
 
-### shopwp_cart_default_payload_settings
+### shopwp_cart_default_settings
 
-Allows you to customize the "default" settings for the global cart.
+Allows you to customize the default settings for the ShopWP cart.
 
-For a full list of available settings, reference the [attributes of the [wps_collections] shortcode](/shortcodes/wps_collections.md).
+For a full list of available settings, reference the attributes of the [[wps_cart_icon]](/shortcodes/wps_cart_icon) shortcode.
 
 | Parameter               | Description                                       |
 | :---------------------- | :------------------------------------------------ |
@@ -108,43 +238,45 @@ For a full list of available settings, reference the [attributes of the [wps_col
 | :---------------------- | :------------------------------------------------ |
 | payloadSettings (array) | Represents all available settings for collections |
 
-#### Example
+**Example**
 
 ```php
 // Exclude the collection descriptions from the layout
-add_filter('shopwp_cart_default_payload_settings', function($payloadSettings) {
+add_filter('shopwp_cart_default_settings', function($payloadSettings) {
 
    $payloadSettings['excludes'] = ['description'];
 
    return $payloadSettings;
+
 });
 ```
 
-### shopwp_collections_default_payload_settings
+### shopwp_collections_default_settings
 
 Allows you to customize the default collections settings.
 
 For a full list of available settings, reference the [attributes of the [wps_collections] shortcode](/shortcodes/wps_collections.md).
 
-This filter will be applied "globally" to every instance of a collection whether single or in a list.
+This filter will be applied "globally" to every instance of a collection, whether single or in a list.
 
-| Parameter               | Description                                       |
-| :---------------------- | :------------------------------------------------ |
-| payloadSettings (array) | Represents all available settings for collections |
+| Parameter        | Description                                       |
+| :--------------- | :------------------------------------------------ |
+| settings (array) | Represents all available settings for collections |
 
-#### Example
+**Example**
 
 ```php
 // Exclude the collection descriptions from the layout
-add_filter('shopwp_collections_default_payload_settings', function($payloadSettings) {
+add_filter('shopwp_collections_default_settings', function($settings) {
 
-   $payloadSettings['excludes'] = ['description'];
+   $settings['excludes'] = ['description'];
 
-   return $payloadSettings;
+   return $settings;
+
 });
 ```
 
-### shopwp_products_default_payload_settings
+### shopwp_products_default_settings
 
 Allows you to customize default product settings.
 
@@ -152,54 +284,115 @@ For a full list of available settings, reference the [attributes of the [wps_pro
 
 This filter will be applied "globally" to every instance of a product whether single or in a list.
 
-| Parameter               | Description                                    |
-| :---------------------- | :--------------------------------------------- |
-| payloadSettings (array) | Represents all available settings for products |
+| Parameter        | Description                                    |
+| :--------------- | :--------------------------------------------- |
+| settings (array) | Represents all available settings for products |
 
-#### Example
+**Example**
 
 ```php
 // Set the product title to "green"
-add_filter('shopwp_products_default_payload_settings', function($payloadSettings) {
+add_filter('shopwp_products_default_settings', function($settings) {
 
-   $payloadSettings['title_color'] = 'green';
+   $settings['title_color'] = 'green';
 
-   return $payloadSettings;
+   return $settings;
+
 });
 ```
 
-### shopwp_search_default_payload_settings
+### shopwp_search_default_settings
 
-### shopwp_storefront_default_payload_settings
+Allows you to customize default search settings.
+
+For a full list of available settings, reference the attributes of the [[wps_search] shortcode](/shortcodes/wps_search.md).
+
+| Parameter        | Description                                                           |
+| :--------------- | :-------------------------------------------------------------------- |
+| settings (array) | Represents all available [search settings](/shortcodes/wps_search.md) |
+
+**Example**
+
+```php
+// Set the product title to "green"
+add_filter('shopwp_search_default_settings', function($settings) {
+
+   $settings['title_color'] = 'green';
+
+   return $settings;
+});
+```
+
+### shopwp_storefront_default_settings
 
 Allows you to customize the default storefront options.
 
 | Parameter | Description                               |
 | :-------- | :---------------------------------------- |
-| $options  | Represents the default storefront options |
+| $settings | Represents the default storefront options |
 
 **Example**
 
 ```php
-add_filter('shopwp_storefront_default_payload_settings', function($options) {
+add_filter('shopwp_storefront_default_settings', function($settings) {
 
-    $options['collections_heading'] = 'New collections heading';
-    $options['price_heading'] = 'New price heading';
-    $options['tags_heading'] = 'New tags heading';
-    $options['types_heading'] = 'New type heading';
-    $options['vendors_heading'] = 'New vendors heading';
+    $settings['collections_heading'] = 'New collections heading';
+    $settings['price_heading'] = 'New price heading';
+    $settings['tags_heading'] = 'New tags heading';
+    $settings['types_heading'] = 'New type heading';
+    $settings['vendors_heading'] = 'New vendors heading';
 
-    return $options;
+    return $settings;
+});
+```
+
+### shopwp_translator_default_settings
+
+Allows you to customize the default translator settings
+
+| Parameter | Description                                |
+| :-------- | :----------------------------------------- |
+| $settings | Represents the default translator settings |
+
+**Example**
+
+```php
+add_filter('shopwp_translator_default_settings', function($settings) {
+    return $settings;
 });
 ```
 
 ### shopwp_show_breadcrumbs
 
-### shopwp_cart_data
+Allows you to hide / show the ShopWP breadcrumbs.
 
-### shopwp_compatibility_enable_theme
+| Parameter                | Description                                   |
+| :----------------------- | :-------------------------------------------- |
+| $show_breadcrumbs (bool) | Whether to show breadcrumbs. Default: `false` |
+
+**Example:**
+
+```php
+add_filter('shopwp_show_breadcrumbs', function($show_breadcrumbs) {
+   return false;
+});
+```
 
 ### shopwp_flush_permalinks_after_sync
+
+Determines whether to flush permalinks after syncing.
+
+| Parameter            | Description                                                     |
+| :------------------- | :-------------------------------------------------------------- |
+| $should_flush (bool) | Represents whether to skip compatibility mode. Default: `false` |
+
+**Example**
+
+```php
+add_filter('shopwp_flush_permalinks_after_sync', function($should_flush) {
+   return false;
+});
+```
 
 ### shopwp_skip_compatibility
 
@@ -235,4 +428,22 @@ add_filter('shopwp_get_collections_query_params', function($settings) {
     return $settings;
 
 });
+```
+
+### shopwp_show_dashboard
+
+Allows for customizing whether the ShopWP admin settings are visible or not
+
+| Parameter           | Description                          |
+| :------------------ | :----------------------------------- |
+| $should_show (bool) | Whether to show the ShopWP dashboard |
+| $user (object)      | The current WordPress user           |
+
+**Example**
+
+```php
+// Hides the ShopWP dashboard
+add_filter('shopwp_show_dashboard', function($should_show, $user) {
+    return false;
+}, 10, 2);
 ```

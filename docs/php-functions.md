@@ -1,10 +1,10 @@
 # PHP Functions
 
-The below PHP functions allow you to programmatically fetch raw product data. There are two important things to know:
+The below PHP functions will allow you to programmatically fetch raw Shopify data. There are two important things to know:
 
 1. These functions will make a network request the first time they run. The payload will then be cached for any consecutive calls.
 
-2. If a cached payload is found, these functions will return the cached version instead, skipping the network request. This is usually ok, but if you're noticing that the product data is stale you'll need to clear the plugin cache within the plugin settings under the "Sync" menu.
+2. If a cached payload is found, these functions will return the cached version instead, skipping the network request. This is usually ok, but if you're noticing that the data is stale you'll need to clear the plugin cache within the plugin settings under the "Sync" menu.
 
 ### get_product()
 
@@ -68,7 +68,7 @@ $result = $Products->get_product([
 ]);
 ```
 
-**Example**
+**Example**:
 Get a list of collections that belong to a product, by post id
 
 ```php

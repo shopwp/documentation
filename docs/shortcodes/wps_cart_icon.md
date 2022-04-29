@@ -75,7 +75,7 @@ Whether to display the icon as inline or fixed. Default: `inline`.
 
 Allows for customizing the cart title. Default: `Shopping Cart`.
 
-#### Example
+**Example**
 
 ```php
 add_filter('shopwp_cart_default_payload_settings', function($cart_settings) {

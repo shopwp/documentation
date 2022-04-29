@@ -324,7 +324,47 @@ wp.hooks.addFilter(
 
 ### cart.lineItemVariantTitleText
 
+Allows you to customize the line item's product variant title
+
+| Parameter               | Description                                 |
+| :---------------------- | :------------------------------------------ |
+| variantTitle - (string) | Represents the line item variant title text |
+| lineItem - (object)     | Represents the line item data               |
+
+**Example**
+
+```js
+// Append the word test to every line item variant title
+wp.hooks.addFilter(
+	'cart.lineItemVariantTitleText',
+	'shopwp',
+	function (variantTitle, lineItem) {
+		return variantTitle + '-test'
+	}
+)
+```
+
 ### cart.lineItemTitleText
+
+Allows you to customize the line item's product title
+
+| Parameter           | Description                         |
+| :------------------ | :---------------------------------- |
+| title - (string)    | Represents the line item title text |
+| lineItem - (object) | Represents the line item data       |
+
+**Example**
+
+```js
+// Append the word test to every line item title
+wp.hooks.addFilter(
+	'cart.lineItemTitleText',
+	'shopwp',
+	function (title, lineItem) {
+		return title + '-test'
+	}
+)
+```
 
 ### cart.lineItemThumbnailUrl
 
@@ -489,6 +529,23 @@ wp.hooks.addFilter('misc.linkTarget', 'shopwp', function (linkHref, linkTo) {
 
 ### misc.carouselSettings
 
+Allows you to customize the product carousel settings.
+
+| Parameter           | Description                                                                                                       |
+| :------------------ | :---------------------------------------------------------------------------------------------------------------- |
+| settings - (object) | Represents the carousel settings. Corresponds to the [Slick Slider settings](https://kenwheeler.github.io/slick/) |
+
+**Example**
+
+```js
+// Show 4 slides at once
+wp.hooks.addFilter('misc.carouselSettings', 'shopwp', function (settings) {
+	settings.slidesToShow = 4
+
+	return settings
+})
+```
+
 ### storefront.availableCollections
 
 Allows you to filter the available collections that the user is shown. Useful for preventing users from filtering certain collections. You must return the same collections data structure from the callback.
@@ -512,25 +569,230 @@ wp.hooks.addFilter(
 
 ### storefront.availableTags
 
+Allows you to customize the available filtering product tag options for the Storefront component.
+
+| Parameter     | Description                         |
+| :------------ | :---------------------------------- |
+| availableTags | The available tag filtering options |
+
+**Example**
+
+```js
+wp.hooks.addFilter(
+	'storefront.availableTags',
+	'shopwp',
+	function (availableTags) {
+		return availableTags
+	}
+)
+```
+
 ### storefront.availableVendors
+
+Allows you to customize the available filtering product vendor options for the Storefront component.
+
+| Parameter        | Description                            |
+| :--------------- | :------------------------------------- |
+| availableVendors | The available vendor filtering options |
+
+**Example**
+
+```js
+wp.hooks.addFilter(
+	'storefront.availableVendors',
+	'shopwp',
+	function (availableVendors) {
+		return availableVendors
+	}
+)
+```
 
 ### storefront.availableTypes
 
+Allows you to customize the available filtering product type options for the Storefront component.
+
+| Parameter      | Description                                  |
+| :------------- | :------------------------------------------- |
+| availableTypes | The available product type filtering options |
+
+**Example**
+
+```js
+wp.hooks.addFilter(
+	'storefront.availableTypes',
+	'shopwp',
+	function (availableTypes) {
+		return availableTypes
+	}
+)
+```
+
 ### storefront.availablePricing
+
+Allows you to customize the available filtering price options for the Storefront component.
+
+| Parameter      | Description                           |
+| :------------- | :------------------------------------ |
+| pricingOptions | The available price filtering options |
+
+**Example**
+
+```js
+wp.hooks.addFilter(
+	'storefront.availablePricing',
+	'shopwp',
+	function (pricingOptions) {
+		return pricingOptions
+	}
+)
+```
 
 ### storefront.collectionsToFetch
 
+Determines how many collections to fetch on page load for the Storefront filtering functionality. Default `8`.
+
+| Parameter        | Description                                     |
+| :--------------- | :---------------------------------------------- |
+| numOfCollections | The number of collections to fetch on page load |
+
+**Example**
+
+```js
+// Load 20 collections to filter instead of 8
+wp.hooks.addFilter(
+	'storefront.collectionsToFetch',
+	'shopwp',
+	function (numOfCollections) {
+		return 20
+	}
+)
+```
+
 ### before.cartCheckoutButton
+
+Allows you add custom HTML before the cart checkout button. You must return HTML as a string.
+
+| Parameter    | Description                |
+| :----------- | :------------------------- |
+| defaultValue | An empty string by default |
+| cartState    | Represents the cart state  |
+
+**Example**
+
+```js
+wp.hooks.addFilter(
+	'before.cartCheckoutButton',
+	'shopwp',
+	function (defaultValue, cartState) {
+		return '<p>Test</p>'
+	}
+)
+```
 
 ### after.cartCheckoutButton
 
+Allows you add custom HTML after the cart checkout button. You must return HTML as a string.
+
+| Parameter    | Description                |
+| :----------- | :------------------------- |
+| defaultValue | An empty string by default |
+| cartState    | Represents the cart state  |
+
+**Example**
+
+```js
+wp.hooks.addFilter(
+	'after.cartCheckoutButton',
+	'shopwp',
+	function (defaultValue, cartState) {
+		return '<p>Test</p>'
+	}
+)
+```
+
 ### before.lineItemTitle
+
+Allows you add custom HTML before each lineitem title inside the cart. You must return HTML as a string.
+
+| Parameter    | Description                |
+| :----------- | :------------------------- |
+| defaultValue | An empty string by default |
+| cartState    | Represents the cart state  |
+
+**Example**
+
+```js
+wp.hooks.addFilter(
+	'before.lineItemTitle',
+	'shopwp',
+	function (defaultValue, cartState) {
+		return '<p>Test</p>'
+	}
+)
+```
 
 ### after.lineItemTitle
 
+Allows you add custom HTML after each lineitem title inside the cart. You must return HTML as a string.
+
+| Parameter    | Description                |
+| :----------- | :------------------------- |
+| defaultValue | An empty string by default |
+| cartState    | Represents the cart state  |
+
+**Example**
+
+```js
+wp.hooks.addFilter(
+	'after.lineItemTitle',
+	'shopwp',
+	function (defaultValue, cartState) {
+		return '<p>Test</p>'
+	}
+)
+```
+
 ### before.cartTitle
 
+Allows you add custom HTML before the cart title. You must return HTML as a string.
+
+| Parameter    | Description                |
+| :----------- | :------------------------- |
+| defaultValue | An empty string by default |
+| cartState    | Represents the cart state  |
+
+**Example**
+
+```js
+wp.hooks.addFilter(
+	'before.cartTitle',
+	'shopwp',
+	function (defaultValue, cartState) {
+		return '<p>Test</p>'
+	}
+)
+```
+
 ### after.cartTitle
+
+Allows you add custom HTML after the cart title. You must return HTML as a string.
+
+| Parameter    | Description                |
+| :----------- | :------------------------- |
+| defaultValue | An empty string by default |
+| cartState    | Represents the cart state  |
+
+**Example**
+
+```js
+wp.hooks.addFilter(
+	'after.cartTitle',
+	'shopwp',
+	function (defaultValue, cartState) {
+		return '<p>Test</p>'
+	}
+)
+```
 
 ### before.productBuyButton
 

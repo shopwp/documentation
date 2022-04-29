@@ -1244,6 +1244,21 @@ Determines whether to reset the variant selections after adding to cart.
 [wps_products reset_variants_after_adding="false"]
 ```
 
+### with_sorting
+
+Determines whether to show a sorting / filtering dropdown with the products. This will allow users to filter the products similar to the [Storefront](/shortcodes/wps_storefront) component.
+
+| Possible values |
+| :-------------- |
+| true            |
+| false `Default` |
+
+**Example**
+
+```js
+[wps_products with_sorting="true"]
+```
+
 ### after_added_text
 
 Determines the button text that shows after adding to cart. By default, the text says: `We like that one too!`.
