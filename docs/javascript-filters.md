@@ -959,3 +959,47 @@ wp.hooks.addFilter(
 	}
 )
 ```
+
+### before.productImages
+
+Allows you add custom HTML before the product images. You must return HTML as a string.
+
+| Parameter             | Description                    |
+| :-------------------- | :----------------------------- |
+| defaultValue (string) | Will be an empty string        |
+| payload (object)      | Represents the product payload |
+
+**Example**
+
+```js
+// Adds the product vendor before the images
+wp.hooks.addFilter(
+	'before.productImages',
+	'shopwp',
+	function (defaultValue, payload) {
+		return '<p>Vendor: ' + payload.vendor + '</p>'
+	}
+)
+```
+
+### after.productImages
+
+Allows you add custom HTML after the product images. You must return HTML as a string.
+
+| Parameter             | Description                    |
+| :-------------------- | :----------------------------- |
+| defaultValue (string) | Will be an empty string        |
+| payload (object)      | Represents the product payload |
+
+**Example**
+
+```js
+// Adds the product vendor after the images
+wp.hooks.addFilter(
+	'after.productImages',
+	'shopwp',
+	function (defaultValue, payload) {
+		return '<p>Vendor: ' + payload.vendor + '</p>'
+	}
+)
+```

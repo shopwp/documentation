@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkshopwpComponents=self.webpackChunkshopwpComponents||[]).push([[4134],{9547:function(e,n,t){t.r(n);var u=t(885),s=t(4639),l=t(4639);n.default=function(e){var n=e.delay,t=e.children,o=(wp.element,s.useState),c=s.useEffect,p=o(!0),a=(0,u.Z)(p,2),f=a[0],r=a[1];return c((function(){setTimeout((function(){r(!1)}),n)}),[n]),f?l.createElement(s.Fragment,null,t):null}}}]);
+//# sourceMappingURL=4134.shopwp-components.js.map

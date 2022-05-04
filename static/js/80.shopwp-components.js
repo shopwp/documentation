@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkshopwpComponents=self.webpackChunkshopwpComponents||[]).push([[80],{1730:function(e,n,o){o.r(n);var r=o(1724),t=o(7944),s=o(4639),u=o(4639),a=s.lazy((function(){return o.e(6949).then(o.bind(o,6831))}));n.default=function(e){var n=e.settings,o=(0,t.aX)(n,"vendors"),s=n.noFilterGroupFoundText;return u.createElement(a,{openOnLoad:o,noFilterGroupFoundText:s,queryFn:r.ie,groupType:"vendors",filterName:"storefront.availableVendors",heading:n.vendorsHeading})}}}]);
+//# sourceMappingURL=80.shopwp-components.js.map

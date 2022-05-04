@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkshopwpComponents=self.webpackChunkshopwpComponents||[]).push([[4275],{4679:function(e,n,t){t.r(n);var o=t(1724),p=t(7944),r=t(4639),u=t(4639),s=r.lazy((function(){return t.e(6949).then(t.bind(t,6831))}));n.default=function(e){var n=e.settings,t=(0,p.aX)(n,"productTypes"),r=n.noFilterGroupFoundText;return u.createElement(s,{openOnLoad:t,noFilterGroupFoundText:r,queryFn:o.ZH,groupType:"types",filterName:"storefront.availableTypes",heading:n.typesHeading})}}}]);
+//# sourceMappingURL=4275.shopwp-components.js.map

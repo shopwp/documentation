@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkshopwpComponents=self.webpackChunkshopwpComponents||[]).push([[121],{6240:function(e,n,t){t.r(n);var a=t(917),s=t(4639).lazy((function(){return Promise.resolve().then(t.bind(t,9676))})),r={name:"1ypy7m0-extraCSS",styles:"font-size:13px;label:extraCSS;"};n.default=function(e){var n=e.noticeUnavailableText,t=r;return(0,a.tZ)(s,{status:"warning",extraCSS:t},n)}}}]);
+//# sourceMappingURL=121.shopwp-components.js.map

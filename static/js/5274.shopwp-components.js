@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkshopwpComponents=self.webpackChunkshopwpComponents||[]).push([[5274],{4562:function(e,s,a){a.r(s);var t=a(917),n=a(4639),o={name:"1sxijs2-ProductImageOnSaleLabelCSS",styles:"position:absolute;background:#b62907;color:white;text-transform:uppercase;font-size:13px;padding:4px 10px;label:ProductImageOnSaleLabelCSS;"};s.default=n.memo((function(e){var s=e.text,a=o;return(0,t.tZ)("span",{className:"wps-product-image-on-sale-label",css:a},s)}))}}]);
+//# sourceMappingURL=5274.shopwp-components.js.map

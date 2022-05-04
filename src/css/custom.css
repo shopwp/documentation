@@ -31,6 +31,7 @@ table thead tr {
 
 .container {
 	padding-left: 35px;
+	margin-left: 0;
 }
 
 .footer__copyright {
@@ -65,6 +66,10 @@ html[data-theme='dark'] .navbar {
 	background-color: #1a212e;
 }
 
+.shopwp-radio-text [class*='SaveInlineCSS'] {
+	margin-top: -3px;
+}
+
 /*
 
 Product dark theme
@@ -72,14 +77,33 @@ Product dark theme
 */
 html[data-theme='dark'] .wps-products-title,
 html[data-theme='dark'] .wps-pricing-range-wrapper *,
+html[data-theme='dark'] .wps-component-products-pricing *,
 html[data-theme='dark'] .wps-component-products-description,
 html[data-theme='dark'] .wpshopify-variant-buttons button,
+html[data-theme='dark'] .wps-add-to-cart span,
 html[data-theme='dark'] [class*='SellingGroupLabelCSS'] p {
 	color: white;
 }
 
+html[data-theme='dark'] .wps-modal-inner .wps-products-title,
+html[data-theme='dark'] .wps-modal-inner .wps-pricing-range-wrapper *,
+html[data-theme='dark'] .wps-modal-inner .wps-component-products-description,
+html[data-theme='dark'] .wps-modal-inner .wpshopify-variant-buttons button,
+html[data-theme='dark'] .wps-modal-inner [class*='SellingGroupLabelCSS'] p,
+html[data-theme='dark'] .wps-modal-inner [class*='labelStyles'] {
+	color: black;
+}
+
 html[data-theme='dark'] .wpshopify-variant-buttons button:hover {
 	background-color: #414141;
+}
+
+html[data-theme='dark'] [class*='SellingPlansListCSS'] {
+	margin-top: 15px;
+}
+
+html[data-theme='dark'] [class*='SellingPlansListCSS'] * {
+	color: black;
 }
 
 html[data-theme='dark'] .wpshopify-variant-buttons button:hover {
@@ -102,7 +126,7 @@ html[data-theme='dark'] [class*='SellingGroupCSS'] {
 }
 
 html[data-theme='dark'] [class*='SellingGroupLabelCSS'] {
-	background-color: rgb(0 0 0 / 84%);
+	background-color: #282828;
 }
 
 html[data-theme='dark'] [class*='SellingGroupLabelCSS'] .shopwp-radio-control {
@@ -110,30 +134,104 @@ html[data-theme='dark'] [class*='SellingGroupLabelCSS'] .shopwp-radio-control {
 	top: 24px;
 }
 
-html[data-theme='dark'] [class*='quantityInputCSS'],
-html[data-theme='dark'] [class*='quantityContainer-Quantity'] {
-	background: rgb(38 38 38);
+html[data-theme='dark']
+	.wps-component-products-add-button
+	[class*='quantityInputCSS'],
+html[data-theme='dark']
+	.wps-component-products-add-button
+	[class*='quantityContainer-Quantity'] {
+	background: transparent;
 	color: white;
 }
 
 html[data-theme='dark']
+	.wps-modal-inner
+	.wps-component-products-add-button
+	[class*='quantityInputCSS'],
+html[data-theme='dark']
+	.wps-modal-inner
+	.wps-component-products-add-button
+	[class*='quantityContainer-Quantity'] {
+	color: black;
+}
+
+html[data-theme='dark']
+	.wps-modal-inner
+	.wps-component-products-add-button
+	[class*='quantityContainer-Quantity']
+	span:after,
+html[data-theme='dark']
+	.wps-modal-inner
+	.wps-component-products-add-button
+	[class*='quantityContainer-Quantity']
+	span {
+	background: black;
+}
+
+html[data-theme='dark']
+	.wps-component-products-add-button
 	[class*='QuantityIncDecCSS-QuantityDecCSS-Quantity']:hover,
 html[data-theme='dark']
+	.wps-component-products-add-button
 	[class*='QuantityIncDecCSS-QuantityIncCSS-Quantity']:hover {
 	background: #494949;
 }
-html[data-theme='dark'] [class*='quantityContainer-Quantity'] span {
+
+html[data-theme='dark'] .wps-btn.wps-icon-dropdown.wps-modal-trigger {
+	background-color: rgb(69 69 69);
+}
+
+html[data-theme='dark'] [class*='customCounterCSS-CartCounter'],
+html[data-theme='dark'] [class*='cartIconFixedCSS-CartIconFixed'],
+html[data-theme='dark'] [class*='cartIconFixedCSS-CartIconFixed']:hover {
+	background: rgb(58 58 58);
+}
+
+html[data-theme='dark']
+	.wps-modal-inner
+	.wpshopify-variant-buttons
+	button:hover,
+html[data-theme='dark']
+	.wps-modal-inner
+	.wps-component-products-add-button
+	[class*='QuantityIncDecCSS-QuantityDecCSS-Quantity']:hover,
+html[data-theme='dark']
+	.wps-modal-inner
+	.wps-component-products-add-button
+	[class*='QuantityIncDecCSS-QuantityIncCSS-Quantity']:hover {
+	background: #e5e5e5;
+}
+
+[class*='noticeStyles-Notice'] {
+	color: black;
+}
+
+html[data-theme='dark']
+	.wps-component-products-add-button
+	[class*='quantityContainer-Quantity']
+	span {
 	background: white;
 	color: white;
 }
 
-html[data-theme='dark'] [class*='quantityContainer-Quantity'] span:after {
+html[data-theme='dark']
+	.wps-component-products-add-button
+	[class*='quantityContainer-Quantity']
+	span:after {
 	background: white;
 	color: white;
 }
 
-html[data-theme='dark'] [class*='SubscriptionBuyButtonNoticeCSS-Notice'],
-html[data-theme='dark'] [class*='noticeStyles-Notice'] {
+[class*='CartLoadingContents'] {
+	color: black !important;
+}
+
+html[data-theme='dark']
+	.wps-component-products-add-button
+	[class*='SubscriptionBuyButtonNoticeCSS-Notice'],
+html[data-theme='dark']
+	.wps-component-products-add-button
+	[class*='noticeStyles-Notice'] {
 	color: black;
 }
 
@@ -157,6 +255,15 @@ html[data-theme='dark']
 
 html[data-theme='dark'] [class*='unavailableNoticeCSS-Notice'] {
 	color: black;
+}
+
+[class*='CartTextareaCSS'] {
+	background: transparent;
+}
+
+.wps-cart-terms input[type='checkbox'] {
+	accent-color: transparent;
+	background: transparent;
 }
 
 /*
@@ -268,6 +375,63 @@ Media Query Overrides
 */
 @media (min-width: 1600px) {
 	.container {
-		max-width: 1490px;
+		max-width: 1600px;
 	}
+}
+
+@keyframes shimmer {
+	0% {
+		opacity: 0.5;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+.shopwp-skeleton-component {
+	margin-bottom: 13px;
+	border-radius: 15px;
+	background: #313131;
+	animation: shimmer 0.4s ease-out 0s alternate infinite none running;
+}
+
+html[data-theme='light'] .shopwp-skeleton-component {
+	background: #eee;
+}
+
+.shopwp-skeleton-row {
+	display: flex;
+	justify-content: space-between;
+}
+
+.shopwp-skeleton-product-image {
+	width: 300px;
+	height: 150px;
+}
+
+.shopwp-skeleton-product-title {
+	width: 200px;
+	height: 20px;
+}
+
+.shopwp-skeleton-product-price {
+	width: 160px;
+	height: 20px;
+}
+
+.shopwp-skeleton-product-buy-button {
+	width: 300px;
+}
+
+.shopwp-skeleton-product-buy-button-value {
+	width: 30%;
+	max-width: 30%;
+	flex: 0 0 30%;
+	height: 20px;
+}
+
+.shopwp-skeleton-product-buy-button-cta {
+	width: 300px;
+	height: 40px;
 }

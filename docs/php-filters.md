@@ -228,25 +228,42 @@ add_filter('shopwp_use_collections_single_template', function($use_plugin_templa
 
 Allows you to customize the default settings for the ShopWP cart.
 
-For a full list of available settings, reference the attributes of the [[wps_cart_icon]](/shortcodes/wps_cart_icon) shortcode.
+| Parameter                  | Description                                                                              | Default                                                     | Type   |
+| :------------------------- | :--------------------------------------------------------------------------------------- | :---------------------------------------------------------- | :----- |
+| `icon`                     | Specified the cart icon.                                                                 | `false`                                                     | string |
+| `show_counter`             | Whether to show the cart icon counter.                                                   | `true`                                                      | bool   |
+| `icon_color`               | The color of the default cart icon.                                                      | `#000`                                                      | string |
+| `background_color`         | The background color of the fixed cart icon tab.                                         | `#000`                                                      | string |
+| `counter_background_color` | The background color of the cart counter.                                                | `#6ae06a`                                                   | string |
+| `counter_text_color`       | The text color of the cart counter.                                                      | `#FFF`                                                      | string |
+| `show_inventory_levels`    | Whether to show the inventory levels of each cart line item.                             | `true`                                                      | bool   |
+| `left_in_stock_threshold`  | If showing inventory levels, determines the threshold before a "low stock" notice shows. | `10`                                                        | int    |
+| `cart_title`               | The shopping cart title.                                                                 | `Shopping cart`                                             | string |
+| `checkout_text`            | The text of the checkout button.                                                         | `Begin checkout`                                            | string |
+| `updating_text`            | The text shown during cart updates.                                                      | `Updating...`                                               | string |
+| `checkout_failed_message`  | The text shown when the checkout fails.                                                  | `Unable to checkout. Please reload the page and try again.` | string |
+| `lineitem_remove_text`     | The text shown for removing a lineitem.                                                  | `Remove`                                                    | string |
+| `lineitem_sale_label_text` | The sale text shown for lineitems.                                                       | `Sale`                                                      | string |
+| `lineitems_disable_link`   | Whether to disable linking line items to their PDP pages.                                | `false`                                                     | bool   |
+| `lineitems_link_target`    | Determines how line item links should open.                                              | `_self`                                                     | string |
+| `lineitems_max_quantity`   | The maximum number of items you can purchase per line item.                              | `false`                                                     | int    |
+| `lineitems_min_quantity`   | The minimum number of items you can purchase per line item.                              | `false`                                                     | bool   |
+| `lineitems_quantity_step`  | The number by which the quantity changes in increments.                                  | `false`                                                     | int    |
+| `notes_label`              | The label above the cart notes field.                                                    | `Checkout notes`                                            | string |
+| `notes_placeholder`        | The placeholder text shown within the cart notes field.                                  | `Enter note for checkout`                                   | string |
+| `empty_cart_text`          | The text to show when the cart is empty                                                  | `Your cart is empty`                                        | string |
+| `subtotal_label_text`      | The text to show next to the cart subtotal amount.                                       | `Subtotal:`                                                 | string |
+| `show_cart_close_icon`     | Whether to show the close icon within the ShopWP cart                                    | `true`                                                      | bool   |
+| `show_cart_title`          | Whether to show the cart title within the ShopWP cart                                    | `true`                                                      | bool   |
 
-| Parameter               | Description                                       |
-| :---------------------- | :------------------------------------------------ |
-| payloadSettings (array) | Represents all available settings for collections |
-
-| Available settings      | Description                                       |
-| :---------------------- | :------------------------------------------------ |
-| payloadSettings (array) | Represents all available settings for collections |
-
-**Example**
+**Example**: Customize the shopping cart title
 
 ```php
-// Exclude the collection descriptions from the layout
-add_filter('shopwp_cart_default_settings', function($payloadSettings) {
+add_filter('shopwp_cart_default_settings', function($settings) {
 
-   $payloadSettings['excludes'] = ['description'];
+   $settings['show_cart_title'] = 'Custom cart title';
 
-   return $payloadSettings;
+   return $settings;
 
 });
 ```

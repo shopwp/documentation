@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkshopwpComponents=self.webpackChunkshopwpComponents||[]).push([[4967],{966:function(e,t,o){o.r(t);var s=o(917),a=o(4639),p={name:"1g7ucmu-ProductImageSoldOutLabelCSS",styles:"position:absolute;background:#da641c;color:white;text-transform:uppercase;font-size:13px;padding:4px 10px;label:ProductImageSoldOutLabelCSS;"};t.default=a.memo((function(e){var t=e.text,o=p;return(0,s.tZ)("span",{className:"wps-product-image-sold-out-label",css:o},t)}))}}]);
+//# sourceMappingURL=4967.shopwp-components.js.map
