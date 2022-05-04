@@ -4,6 +4,7 @@ sidebar_position: 1
 
 import ShopWP from '@site/src/components/shop'
 import { ProductsSubscriptions } from '@site/src/components/products'
+import BrowserOnly from '@docusaurus/BrowserOnly'
 
 # [wps_products]
 
@@ -323,9 +324,11 @@ Subscription functionality is only available with [ShopWP Pro](https://wpshop.io
 [wps_products subscriptions="true"]
 ```
 
-<ShopWP showCart={true}>
-	<ProductsSubscriptions />
-</ShopWP>
+<BrowserOnly>
+	<ShopWP showCart={true}>
+		<ProductsSubscriptions />
+	</ShopWP>
+</BrowserOnly>
 
 ### subscriptions_select_on_load
 

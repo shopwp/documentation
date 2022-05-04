@@ -3,7 +3,6 @@ import { jsx, css } from '@emotion/react'
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { Shop, Cart } from '@shopwp/components'
-import BrowserOnly from '@docusaurus/BrowserOnly'
 
 window.React = React
 window.ReactDOM = ReactDOM
@@ -15,12 +14,10 @@ const jwt =
 
 function ShopWP({ children, showCart = false }) {
 	return (
-		<BrowserOnly>
-			<Shop country='US' language='EN' currency='USD' jwt={jwt}>
-				{children}
-				{showCart && <Cart />}
-			</Shop>
-		</BrowserOnly>
+		<Shop country='US' language='EN' currency='USD' jwt={jwt}>
+			{children}
+			{showCart && <Cart />}
+		</Shop>
 	)
 }
 

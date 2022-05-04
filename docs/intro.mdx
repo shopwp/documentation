@@ -6,6 +6,7 @@ description: The official ShopWP documentation site demonstrating how to use the
 
 import ShopWP from '@site/src/components/shop'
 import { ProductsSingle } from '@site/src/components/products'
+import BrowserOnly from '@docusaurus/BrowserOnly'
 
 # Introduction
 
@@ -37,6 +38,8 @@ ShopWP does not handle any portion of the checkout process. Instead, the plugin 
 
 Whether you want to show a single buy button or a product list with filters, ShopWP can handle it.
 
-<ShopWP showCart={true}>
-	<ProductsSingle customSettings={{ limit: 3, itemsPerRow: 3 }} />
-</ShopWP>
+<BrowserOnly>
+	<ShopWP showCart={true}>
+		<ProductsSingle customSettings={{ limit: 3, itemsPerRow: 3 }} />
+	</ShopWP>
+</BrowserOnly>
