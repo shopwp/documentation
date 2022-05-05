@@ -297,7 +297,7 @@ add_filter('shopwp_collections_default_settings', function($settings) {
 
 Allows you to customize default product settings.
 
-For a full list of available settings, reference the [attributes of the [wps_products] shortcode](/shortcodes/wps_products.md).
+For a full list of available settings, reference the [attributes of the [wps_products] shortcode](/shortcodes/wps_products.mdx).
 
 This filter will be applied "globally" to every instance of a product whether single or in a list.
 

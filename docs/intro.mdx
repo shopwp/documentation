@@ -15,7 +15,7 @@ When using ShopWP, you can think of WordPress as the frontend and Shopify as the
 
 Formerly known as ~~WP Shopify~~, ShopWP comes in two versions; a [free version](https://wordpress.org/plugins/wpshopify/) and a [Pro version](https://wpshop.io/purchase/).
 
-Both versions come bundled with a ready-to-use <a href="#!" class="shopwp-cart-trigger">cart experience</a>. This cart is powered by JavaScript, and "slides in" to view without needing additional page loads. When a user is ready to checkout, they're redirected to the default Shopify checkout page to place the order.
+Both versions come bundled with a ready-to-use <a href="#!" className="shopwp-cart-trigger">cart experience</a>. This cart is powered by JavaScript, and "slides in" to view without needing additional page loads. When a user is ready to checkout, they're redirected to the default Shopify checkout page to place the order.
 
 ShopWP does not handle any checkout functionality. Instead, it redirects customers to the default Shopify checkout flow when they're ready to purchase.
 
@@ -38,5 +38,5 @@ ShopWP does not handle any portion of the checkout process. Instead, the plugin 
 Whether you want to show a single buy button or a product list with filters, ShopWP can handle it.
 
 <ShopWP showCart={true}>
-	<ProductsSingle customSettings={{ limit: 3, itemsPerRow: 3 }} />
+	<ProductsSingle />
 </ShopWP>

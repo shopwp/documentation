@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx, css } from '@emotion/react'
-import { Products } from '@shopwp/components'
 import Loader from './loader'
+import BrowserOnly from '@docusaurus/BrowserOnly'
 
 const settings = {
 	collection: false,
@@ -16,35 +16,36 @@ const settings = {
 	limit: 1,
 }
 
-function mergeSettings(customSettings) {
-	return {
-		...settings,
-		...customSettings,
-	}
-}
-
 function ProductsSingle() {
-	// console.log('customSettings', customSettings)
-
-	// const settings = mergeSettings(customSettings)
-
 	const id = btoa(JSON.stringify(settings))
 
-	return <Products settings={settings} id={id} loader={<Loader />} />
+	return (
+		<BrowserOnly>
+			{() => {
+				const { Products } = require('@shopwp/components')
+				console.log('ProductsSingle', Products)
+				return <Products settings={settings} id={id} loader={<Loader />} />
+			}}
+		</BrowserOnly>
+	)
 }
 
 function ProductsSubscriptions() {
-	// console.log('customSettings', customSettings)
-
-	// const settings = mergeSettings(customSettings)
-
 	var newSettings = settings
 	newSettings.subscriptions = true
 	newSettings.query = 'title:"Super awesome sunglasses"'
 
 	const id = btoa(JSON.stringify(newSettings))
 
-	return <Products settings={newSettings} id={id} loader={<Loader />} />
+	return (
+		<BrowserOnly>
+			{() => {
+				const { Products } = require('@shopwp/components')
+				console.log('ProductsSubscriptions', Products)
+				return <Products settings={newSettings} id={id} loader={<Loader />} />
+			}}
+		</BrowserOnly>
+	)
 }
 
 export { ProductsSingle, ProductsSubscriptions }
