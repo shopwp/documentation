@@ -46,6 +46,16 @@ table thead tr {
 
 /*
 
+Cart
+
+*/
+
+html[data-theme='dark'] .cart-icon-custom + div img {
+	filter: invert(1);
+}
+
+/*
+
 Dark Theme Overrides
 
 */
@@ -181,10 +191,20 @@ html[data-theme='dark'] .wps-btn.wps-icon-dropdown.wps-modal-trigger {
 	background-color: rgb(69 69 69);
 }
 
-html[data-theme='dark'] [class*='customCounterCSS-CartCounter'],
+html[data-theme='dark']
+	[class*='cartIconFixedCSS-CartIconFixed']
+	[class*='customCounterCSS-CartCounter'],
 html[data-theme='dark'] [class*='cartIconFixedCSS-CartIconFixed'],
 html[data-theme='dark'] [class*='cartIconFixedCSS-CartIconFixed']:hover {
-	background: rgb(58 58 58);
+	background: #555555;
+}
+
+html[data-theme='light']
+	.live-example-heading-default-cart
+	+ div
+	.wps-icon.wps-icon-cart
+	g {
+	fill: black;
 }
 
 html[data-theme='dark']
@@ -366,6 +386,20 @@ html[data-theme='light'] .table-of-contents__link--active {
 
 .table-of-contents ul {
 	padding-left: 20px;
+}
+
+.theme-doc-markdown .shopwp-root {
+	margin-bottom: 35px;
+}
+
+.theme-doc-markdown .live-example-heading {
+	margin-bottom: 15px;
+}
+
+html[class*='shortcodes/wps_cart_icon']
+	.theme-doc-markdown
+	.live-example-heading {
+	margin-bottom: 35px;
 }
 
 /*

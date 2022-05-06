@@ -2287,10 +2287,10 @@
     react-query "^3.34.19"
     store "^2.0.12"
 
-"@shopwp/components@^5.0.3":
-  version "5.0.3"
-  resolved "https://registry.yarnpkg.com/@shopwp/components/-/components-5.0.3.tgz#4aadbecd42628d93637af4cc42f40d7b7973b06e"
-  integrity sha512-U81+7K9XxTZlNaRQEFNYLI/N9Vw62jZYb9rDhJTq8cK8XKVxgdzJwNL17PXCfo4xkeC/dou43gnMoA1KDG3cjg==
+"@shopwp/components@^5.0.4":
+  version "5.0.4"
+  resolved "https://registry.yarnpkg.com/@shopwp/components/-/components-5.0.4.tgz#70537704ee8c38569fd1988776528adebdb6cabb"
+  integrity sha512-ub39LROAF+6cOpjvZNTMeLLdBnqT5qj3X9JhGuYcVZZ91aiNM8KgFkRUbunrLD2RBMKWate26qw7he9xzM10ZA==
   dependencies:
     "@emotion/react" "^11.9.0"
     "@shopwp/api" "^2.0.10"

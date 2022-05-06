@@ -2,6 +2,8 @@
 sidebar_position: 8
 ---
 
+import { CartIcon } from '@site/src/components/cart'
+
 # [wps_cart_icon]
 
 The `[wps_cart_icon]` shortcode displays a cart icon anywhere it's placed. It will open the slide-in cart when clicked.
@@ -23,60 +25,74 @@ The `[wps_cart_icon]` shortcode displays a cart icon anywhere it's placed. It wi
 
 ### icon
 
-Changes the actual cart icon. Takes a URL to an icon image. Default: `false`.
+Changes the actual cart icon. Takes a URL to an icon image.
 
-**Example**:
+While you _can_ use any type of image (.jpg, .png, etc) it's best to use an .svg.
+
+**Example**: Customize the actual cart icon
 
 ```js
-[wps_cart_icon icon="https://yoursite.com/icon.svg"]
+[wps_cart_icon icon="https://wpshop.io/assets/basket-shopping-light.svg"]
 ```
+
+<p class="live-example-heading cart-icon-custom"><strong>Live Example:</strong></p>
+
+<CartIcon settings={{ icon: "https://wpshop.io/assets/basket-shopping-light.svg" }} />
 
 ### icon_color
 
-Changes the color of the cart icon. Only works when not using the [icon](#icon) attribute. Default: `#000`.
+Changes the color of the cart icon itself. Default: `#000`.
 
-**Example**:
+Only works when not using the [icon](#icon) attribute.
+
+**Shortcode Example**: Changes the icon color to `#ff891e`
 
 ```js
-[wps_cart_icon icon_color="#FFF"]
+[wps_cart_icon icon_color="#ff891e"]
 ```
+
+<p class="live-example-heading"><strong>Live Example:</strong></p>
+
+<CartIcon settings={{ iconColor: "#ff891e" }} />
 
 ### counter_background_color
 
 Changes the background color of the cart counter. Default: `#6ae06a`.
 
-**Example**:
+**Example**: Change the counter background color to red
 
 ```js
-[wps_cart_icon counter_background_color="#FFF"]
+[wps_cart_icon counter_background_color="red"]
 ```
+
+<p class="live-example-heading live-example-heading-default-cart"><strong>Live Example:</strong></p>
+
+<CartIcon settings={{ counterBackgroundColor: "red" }} />
 
 ### counter_text_color
 
-Changes the text color of the cart counter. Default: `#000`.
+Changes the text color of the cart counter.
 
-**Example**:
-
-```js
-[wps_cart_icon counter_text_color="#FFF"]
-```
-
-### background_color
-
-Changes the background color of the cart icon. Default: `#000`.
-
-**Example**:
+**Example**: Change the counter text color to black
 
 ```js
-[wps_cart_icon background_color="#FFF"]
+[wps_cart_icon counter_text_color="black"]
 ```
+
+<p class="live-example-heading live-example-heading-default-cart"><strong>Live Example:</strong></p>
+
+<CartIcon settings={{ counterBackgroundColor: "red", counterTextColor: 'black' }} />
 
 ### show_counter
 
 Whether to display a "counter" next to the icon indicating the cart quantity. Default: `true`.
 
-**Example**:
+**Example**: Hide the cart counter
 
 ```js
 [wps_cart_icon show_counter="false"]
 ```
+
+<p class="live-example-heading live-example-heading-default-cart"><strong>Live Example:</strong></p>
+
+<CartIcon settings={{ showCounter: false }} />
