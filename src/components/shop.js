@@ -5,27 +5,19 @@ import ReactDOM from 'react-dom'
 import BrowserOnly from '@docusaurus/BrowserOnly'
 import ExecutionEnvironment from '@docusaurus/ExecutionEnvironment'
 
+if (ExecutionEnvironment.canUseDOM) {
+	window.React = React
+	window.ReactDOM = ReactDOM
+	window.wp = {}
+	window.wp.element = React
+}
+
 function ShopWP({ children, showCart = false }) {
-	useEffect(() => {
-		console.log('Made it', ExecutionEnvironment)
-
-		if (ExecutionEnvironment.canUseDOM) {
-			console.log('Can access')
-			window.React = React
-			window.ReactDOM = ReactDOM
-			window.wp = {}
-			window.wp.element = React
-		} else {
-			console.log('Can NOT access')
-		}
-	}, [])
-
 	return (
 		<BrowserOnly>
 			{() => {
 				const { Shop, Cart } = require('@shopwp/components')
-				console.log('Shop', Shop)
-				console.log('Cart', Cart)
+
 				return (
 					<Shop
 						country='US'

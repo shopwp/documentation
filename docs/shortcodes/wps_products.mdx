@@ -2,8 +2,7 @@
 sidebar_position: 1
 ---
 
-import ShopWP from '@site/src/components/shop'
-import { ProductsSubscriptions } from '@site/src/components/products'
+import { Products } from '@site/src/components/products'
 
 # [wps_products]
 
@@ -323,9 +322,9 @@ Subscription functionality is only available with [ShopWP Pro](https://wpshop.io
 [wps_products subscriptions="true"]
 ```
 
-<ShopWP showCart={true}>
-	<ProductsSubscriptions />
-</ShopWP>
+<Products
+	settings={{ subscriptions: true, query: 'title:"Super awesome sunglasses"' }}
+/>
 
 ### subscriptions_select_on_load
 
@@ -376,6 +375,8 @@ Allows for linking customers directly to the Shopify checkout process. This will
 ```js
 [wps_products direct_checkout="true"]
 ```
+
+<Products settings={{ directCheckout: true }} showCart={true} />
 
 ### align_height
 

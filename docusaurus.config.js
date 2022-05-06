@@ -46,24 +46,14 @@ module.exports = {
 				},
 				items: [
 					{
-						href: 'https://wpshop.io/features',
-						label: 'Demo',
+						href: 'https://wpshop.io/purchase',
+						label: 'Buy ShopWP Pro',
 						position: 'right',
 					},
 					{
 						href: 'https://wpshop.io',
-						label: 'Website',
-						position: 'right',
-					},
-					{
-						href: 'https://wordpress.org/plugins/wpshopify/',
-						label: 'WordPress.org Plugin',
-						position: 'right',
-					},
-					{
-						href: 'https://github.com/shopwp',
-						label: 'Github',
-						position: 'right',
+						label: 'Main site',
+						position: 'left',
 					},
 				],
 			},
