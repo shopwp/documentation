@@ -12,9 +12,11 @@ First, create a folder inside your theme (or child theme) called `wps-templates`
 
 ## How to override
 
-Once you've created the `wps-templates` folder, you need to figure which template to override. Have a look at our full [list of available templates](#list-of-available-templates).
+Once you've created the `wps-templates` folder inside your theme, you need to figure which template to override. Have a look at our full [list of available templates](#list-of-available-templates).
 
-The plugin templates can be found within the `plugins/wp-shopify-pro/public/templates/` directory. Once you find the template you want, copy the file from the plugin into your `wps-templates` folder. It's important that you keep the same folder structure that the plugin uses. The plugin's "templates" folder acts as the root, similar to the "wps-templates" folder that you create.
+The plugin templates can be found within the `wp-content/plugins/wp-shopify-pro/public/templates/` directory. Once you find the template you want, copy the file from the plugin into your `wps-templates` folder.
+
+It's important that you keep the same folder structure that the plugin uses. The plugin's "templates" folder acts as the root, similar to the "wps-templates" folder that you create.
 
 For example, if your intention is to customize the product single pages you’ll need to ...
 
@@ -137,8 +139,8 @@ You cannot currently modify the HTML contents of the template components.
 
 ## List of available templates
 
-- [products-single](templates.md)
-- [products-all](templates.md)
-- [collections-single](templates.md)
-- [collections-all](templates.md)
+- [products-single.php](templates.md)
+- [products-all.php](templates.md)
+- [collections-single.php](templates.md)
+- [collections-all.php](templates.md)
 - [custom](#html_template)

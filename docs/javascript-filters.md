@@ -794,6 +794,48 @@ wp.hooks.addFilter(
 )
 ```
 
+### before.cartLineItems
+
+Allows you add custom HTML before the cart line items. You must return HTML as a string.
+
+| Parameter    | Description                |
+| :----------- | :------------------------- |
+| defaultValue | An empty string by default |
+| cartData     | Represents the cart data   |
+
+**Example**
+
+```js
+wp.hooks.addFilter(
+	'before.cartTitle',
+	'shopwp',
+	function (defaultValue, cartData) {
+		return '<p>Test</p>'
+	}
+)
+```
+
+### after.cartLineItems
+
+Allows you add custom HTML after the cart line items. You must return HTML as a string.
+
+| Parameter    | Description                |
+| :----------- | :------------------------- |
+| defaultValue | An empty string by default |
+| cartData     | Represents the cart data   |
+
+**Example**
+
+```js
+wp.hooks.addFilter(
+	'after.cartTitle',
+	'shopwp',
+	function (defaultValue, cartData) {
+		return '<p>Test</p>'
+	}
+)
+```
+
 ### before.productBuyButton
 
 Allows you add custom HTML before the product buy button. You must return HTML as a string.

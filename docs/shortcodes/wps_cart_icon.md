@@ -35,7 +35,7 @@ While you _can_ use any type of image (.jpg, .png, etc) it's best to use an .svg
 [wps_cart_icon icon="https://wpshop.io/assets/basket-shopping-light.svg"]
 ```
 
-<p class="live-example-heading cart-icon-custom"><strong>Live Example:</strong></p>
+<p className="live-example-heading cart-icon-custom"><strong>Live Example:</strong></p>
 
 <CartIcon settings={{ icon: "https://wpshop.io/assets/basket-shopping-light.svg" }} />
 
@@ -51,7 +51,7 @@ Only works when not using the [icon](#icon) attribute.
 [wps_cart_icon icon_color="#ff891e"]
 ```
 
-<p class="live-example-heading"><strong>Live Example:</strong></p>
+<p className="live-example-heading"><strong>Live Example:</strong></p>
 
 <CartIcon settings={{ iconColor: "#ff891e" }} />
 
@@ -65,7 +65,7 @@ Changes the background color of the cart counter. Default: `#6ae06a`.
 [wps_cart_icon counter_background_color="red"]
 ```
 
-<p class="live-example-heading live-example-heading-default-cart"><strong>Live Example:</strong></p>
+<p className="live-example-heading live-example-heading-default-cart"><strong>Live Example:</strong></p>
 
 <CartIcon settings={{ counterBackgroundColor: "red" }} />
 
@@ -79,7 +79,7 @@ Changes the text color of the cart counter.
 [wps_cart_icon counter_text_color="black"]
 ```
 
-<p class="live-example-heading live-example-heading-default-cart"><strong>Live Example:</strong></p>
+<p className="live-example-heading live-example-heading-default-cart"><strong>Live Example:</strong></p>
 
 <CartIcon settings={{ counterBackgroundColor: "red", counterTextColor: 'black' }} />
 
@@ -93,6 +93,6 @@ Whether to display a "counter" next to the icon indicating the cart quantity. De
 [wps_cart_icon show_counter="false"]
 ```
 
-<p class="live-example-heading live-example-heading-default-cart"><strong>Live Example:</strong></p>
+<p className="live-example-heading live-example-heading-default-cart"><strong>Live Example:</strong></p>
 
 <CartIcon settings={{ showCounter: false }} />

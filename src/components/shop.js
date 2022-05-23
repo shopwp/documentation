@@ -23,7 +23,7 @@ function ShopWP({ children, showCart = false }) {
 						country='US'
 						language='EN'
 						currency='USD'
-						jwt='eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvd3BzaG9waWZ5ZGVtby53cGVuZ2luZS5jb20iLCJpYXQiOjE2NTA5MDQxMzIsIm5iZiI6MTY1MDkwNDEzMiwiZXhwIjoxNjUxNTA4OTMyLCJkYXRhIjp7InVzZXIiOnsiaWQiOiIxIn19fQ.i6l6vE-mgzY-6r4-SRCZGpoRcjsGeRVWOs665v97z08'>
+						jwt='eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvd3BzaG9waWZ5ZGVtby53cGVuZ2luZS5jb20iLCJpYXQiOjE2NTMzMTI3ODksIm5iZiI6MTY1MzMxMjc4OSwiZXhwIjoxNjUzOTE3NTg5LCJkYXRhIjp7InVzZXIiOnsiaWQiOiIxIn19fQ.eDd0_PL2WOFiPX9QxW7Vl8_Hb9Hjt88Bsh909dRRdEs'>
 						{children}
 						{showCart && <Cart fallback='weee cart' />}
 					</Shop>

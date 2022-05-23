@@ -30,6 +30,8 @@ We continue to try our best to ensure that the syncing process works across mult
 8. Make sure you have a working SSL certificate on your WordPress site
 9. Ensure you meet the ShopWP [minimum requirements](/getting-started/requirements).
 
+- If you notice that the text of the buttons are missing from the Sync section, chances are you need to update WordPress to the latest version. If that doesn't work, ensure that you have the [correct permissions](https://www.malcare.com/blog/wordpress-file-permissions/) set on the `/wp-content/plugins/shopwp-pro` folder.
+
 If none of these steps resolve your syncing issues, [please send us an email](mailto:hello@wpshop.io) and we'll be happy to debug with you.
 
 ### BasicAuth

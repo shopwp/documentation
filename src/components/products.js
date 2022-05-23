@@ -207,7 +207,7 @@ function Products(props) {
 								country='US'
 								language='EN'
 								currency='USD'
-								jwt='eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvd3BzaG9waWZ5ZGVtby53cGVuZ2luZS5jb20iLCJpYXQiOjE2NTE3NzYxNTMsIm5iZiI6MTY1MTc3NjE1MywiZXhwIjoxNjUyMzgwOTUzLCJkYXRhIjp7InVzZXIiOnsiaWQiOiIxIn19fQ._lNzUp9fzOjNZFxc9O1VSCGCTEEwA1Lk-3lwep_TES4'>
+								jwt='eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvd3BzaG9waWZ5ZGVtby53cGVuZ2luZS5jb20iLCJpYXQiOjE2NTMzMTI3ODksIm5iZiI6MTY1MzMxMjc4OSwiZXhwIjoxNjUzOTE3NTg5LCJkYXRhIjp7InVzZXIiOnsiaWQiOiIxIn19fQ.eDd0_PL2WOFiPX9QxW7Vl8_Hb9Hjt88Bsh909dRRdEs'>
 								<Prods settings={finalSettings} id={id} />
 								{props.showCart && <Cart />}
 							</Shop>
