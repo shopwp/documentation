@@ -309,11 +309,12 @@ html[class*='docs-doc-id-shortcodes'] h3.anchor {
 		rgba(118, 41, 204, 1) 0%,
 		rgba(108, 69, 221, 1) 100%
 	);
-	padding: 2px 10px 3px 11px;
+	padding: 1px 7px 2px 8px;
 	border-radius: 8px;
 	display: inline-block;
-	font-size: 18px;
+	font-size: 17px;
 	margin-right: 0;
+	margin-bottom: 12px;
 	font-family: monospace;
 	position: relative;
 }

@@ -4583,9 +4583,13 @@ const shopwpGlobal = {
 	},
 }
 
+const jwt =
+	'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvd3BzaG9waWZ5ZGVtby53cGVuZ2luZS5jb20iLCJpYXQiOjE2NTQxMTIyODcsIm5iZiI6MTY1NDExMjI4NywiZXhwIjo5OTk5OTk5OTk5LCJkYXRhIjp7InVzZXIiOnsiaWQiOiIxIn19fQ.445x8GPcsP5ENRl-Mnay2zygCIWGzPTMUkloDlUuCj0'
+
 export {
 	singleProductMultiVariants,
 	singleProductOneVariant,
 	multipleProducts,
 	shopwpGlobal,
+	jwt,
 }

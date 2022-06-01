@@ -32,6 +32,8 @@ We continue to try our best to ensure that the syncing process works across mult
 
 - If you notice that the text of the buttons are missing from the Sync section, chances are you need to update WordPress to the latest version. If that doesn't work, ensure that you have the [correct permissions](https://www.malcare.com/blog/wordpress-file-permissions/) set on the `/wp-content/plugins/shopwp-pro` folder.
 
+- The error: `Unexpected token < in JSON at position 0` is generally caused by a conflict with a WordPress translator plugin. This happens if the REST API endpoints are change from `/wp-json/` to `/es/wp-json/`.
+
 If none of these steps resolve your syncing issues, [please send us an email](mailto:hello@wpshop.io) and we'll be happy to debug with you.
 
 ### BasicAuth

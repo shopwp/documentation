@@ -6,6 +6,23 @@ To get started, follow our [Using JavaScript Hooks](/guides/javascript-hooks) gu
 
 Any action name that begins with `on` are events that you can listen to. When the event happens, the code you provide in the callback function will run. Any action name that begins with `do`, will allow you to make an event "happen".
 
+### on.itemsLoad
+
+Detect when the items (products, or collections) are finished loading
+
+| Parameter         | Description                                    |
+| :---------------- | :--------------------------------------------- |
+| payload (object)  | Represents the product or collection data      |
+| settings (object) | Represents the settings used for the component |
+
+**Example**
+
+```js
+wp.hooks.addAction('on.itemsLoad', 'shopwp', function (payload, settings) {
+	console.log('on.itemsLoad', payload)
+})
+```
+
 ### on.cartToggle
 
 Detect when the cart is opened and closed.

@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx, css } from '@emotion/react'
 import Loader from './loader'
-
+import { jwt } from './data'
 import React, { useEffect, useState, useRef } from 'react'
 import ReactDOM from 'react-dom'
 
@@ -44,11 +44,7 @@ function CartIcon(props) {
 
 					return (
 						<>
-							<Shop
-								country='US'
-								language='EN'
-								currency='USD'
-								jwt='eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvd3BzaG9waWZ5ZGVtby53cGVuZ2luZS5jb20iLCJpYXQiOjE2NTMzMTI3ODksIm5iZiI6MTY1MzMxMjc4OSwiZXhwIjoxNjUzOTE3NTg5LCJkYXRhIjp7InVzZXIiOnsiaWQiOiIxIn19fQ.eDd0_PL2WOFiPX9QxW7Vl8_Hb9Hjt88Bsh909dRRdEs'>
+							<Shop country='US' language='EN' currency='USD' jwt={jwt}>
 								<CI settings={finalSettings} element={ref.current} id={id} />
 								<Cart id={id} />
 							</Shop>
