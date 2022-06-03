@@ -46,8 +46,13 @@ module.exports = {
 				},
 				items: [
 					{
+						href: 'https://shopify.pxf.io/5bPL0L',
+						label: 'Try Shopify for free',
+						position: 'right',
+					},
+					{
 						href: 'https://wpshop.io/purchase',
-						label: 'Buy ShopWP Pro',
+						label: 'Get ShopWP Pro',
 						position: 'right',
 					},
 					{
@@ -124,6 +129,10 @@ module.exports = {
 							{
 								href: 'https://wordpress.org/plugins/wpshopify/',
 								label: 'WordPress.org Plugin',
+							},
+							{
+								href: 'https://shopify.pxf.io/5bPL0L',
+								label: 'Try Shopify for free',
 							},
 						],
 					},

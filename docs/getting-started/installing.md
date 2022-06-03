@@ -4,15 +4,15 @@ sidebar_position: 1
 
 # Installing
 
-ShopWP comes in two versions; a [free version](https://wordpress.org/plugins/wpshopify/) and a [Pro version](https://wpshop.io/purchase/). They are two separate plugins and only one should be activated at any given time.
+ShopWP comes in two versions; a [free version](https://wordpress.org/plugins/wpshopify/) and a [Pro version](https://wpshop.io/purchase/). They are two separate plugins and only one should be activated.
 
 :::caution
-Before you can install any version of ShopWP, you must have an active Shopify store. The plugin is compatible with any Shopify plan including [14-day free trials](https://www.shopify.com/?ref=wps) and the more affordable $9 [Lite plan](https://www.shopify.com/lite).
+Before you can install any version of ShopWP, you must have an active Shopify store. The plugin is compatible with any [Shopify plan](https://shopify.pxf.io/b39yJv) including [14-day free trials](https://shopify.pxf.io/5bPL0L) _and_ the more affordable $9 [Lite plan](https://shopify.pxf.io/vnqbrj).
 :::
 
 Installing is like any other WordPress plugin, but there are some specific steps that need to be taken for the Pro version. If you're upgrading from free to Pro please read the [Upgrading](#upgrading) section.
 
-We recommended the [Shopify Lite plan](https://www.shopify.com/lite) if you intend to only sell on WordPress and other sales channels such as Facebook or Instagram. All plugin features will work with Shopify Lite and is a great option if want to save money!
+We recommended the [Shopify Lite plan](https://shopify.pxf.io/vnqbrj) if you intend to only sell on WordPress and other sales channels such as Facebook or Instagram. All plugin features will work with Shopify Lite and is a great option if want to save money!
 
 Okay, let's get started! 🙌
 

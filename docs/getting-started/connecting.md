@@ -4,7 +4,7 @@ sidebar_position: 2
 
 # Connecting
 
-Connecting your Shopify store to WordPress is the first step in using ShopWP and takes just a few moments. Let's begin so you can start selling online!
+Connecting your [Shopify](https://shopify.pxf.io/5bPL0L) store to WordPress is the first step in using ShopWP and takes just a few moments. Let's begin so you can start selling online!
 
 ## How to connect
 

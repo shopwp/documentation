@@ -14,28 +14,29 @@ We believe that one of the best ways to make WordPress more secure is by requiri
 
 With this in mind, our minimum requirements for ShopWP are:
 
-## Minimum Requirements
+## Minimum requirements
 
+- An active [Shopify store](https://shopify.pxf.io/5bPL0L)
 - PHP 7.3 or greater
 - WordPress 5.0 or greater
 - PHP `memory_limit` of `64MB` (256 MB if running into syncing timeout issues)
 - PHP `max_execution_time` of `100` (300 if running into syncing timeout issues)
 - Valid HTTPS certificate
 
-## Incompatible Themes
+## Incompatible themes
 
 Below are some of the currently unsupported themes:
 
 - [Pro Photo 7](https://pro.photo)
 
-## Incompatible Plugins
+## Incompatible plugins
 
 Below are some of the currently unsupported plugins:
 
 - [Async JavaScript](https://wordpress.org/plugins/async-javascript)
 - [TheGem Theme Elements (for WPBakery)](https://codex-themes.com/thegem/)
 
-## Plugin conflicts
+## Known plugin conflicts
 
 - [WP-Optimize](https://wordpress.org/plugins/async-javascript)
   WP-Optimize will try to minify and merge the JavaScript from the plugin. You'll need to manually exclude the plugin's JavaScript from this process since ShopWP already optimizes things. You can [follow this guide](https://getwpo.com/faqs/#How-do-I-exclude-individual-JavaScript-scripts-from-being-minified-and-merged-).
@@ -51,5 +52,5 @@ Below are some of the currently unsupported plugins:
     return 31536000;
   }
 
-  // add_filter('nonce_life', 'thegem_nonce_life');
+  add_filter('nonce_life', 'thegem_nonce_life');
   ```
