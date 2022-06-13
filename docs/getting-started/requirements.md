@@ -38,13 +38,22 @@ Below are some of the currently unsupported plugins:
 
 ## Known plugin conflicts
 
-- [WP-Optimize](https://wordpress.org/plugins/async-javascript)
+- [WP-Optimize](https://wordpress.org/plugins/async-javascript):
   WP-Optimize will try to minify and merge the JavaScript from the plugin. You'll need to manually exclude the plugin's JavaScript from this process since ShopWP already optimizes things. You can [follow this guide](https://getwpo.com/faqs/#How-do-I-exclude-individual-JavaScript-scripts-from-being-minified-and-merged-).
 
-- [OptimizeBuilder](https://www.optimizepress.com/)
+- [OptimizeBuilder](https://www.optimizepress.com/):
   If you're using the OptimizeBuilder plugin from OptimizePress, you'll need to manually "enable" the ShopWP JavaScript and CSS. OptimizeBuilder turns these off by default. To do this, open the OptimizeBuilder plugin settings and go to the scripts and styles tab. From there, find the ShopWP plugin and enable `Js` and `Css` for both the frontend and backend. Then click save.
 
-- [TheGem Theme Elements (for WPBakery)](https://codex-themes.com/thegem/)
+- Caching plugins:
+  If you're using a WordPress caching plugin, you may run into a JavaScript error that looks like this:
+
+  ```js
+  403 Error: Cookie check failed
+  ```
+
+  This happens if a caching plugin caches the WordPress REST API too aggressively. You can either try deactivating the caching plugin altogether, or adjust the settings so the plugin doesn't cache the WordPress REST API at all.
+
+- [TheGem Theme Elements (for WPBakery)](https://codex-themes.com/thegem/):
   This plugin uses a WordPress filter called `nonce_life`, and sets it to 1 year. This causes all ShopWP REST Endpoints to fail with a 403 error. To fix, open the plugin and comment out the below function:
 
   ```php
