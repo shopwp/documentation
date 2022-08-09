@@ -464,3 +464,24 @@ add_filter('shopwp_show_dashboard', function($should_show, $user) {
     return false;
 }, 10, 2);
 ```
+
+### shopwp_settings
+
+Allows for customizing the main ShopWP settings object. Useful for customizing things like language / currency, etc.
+
+| Parameter         | Description         |
+| :---------------- | :------------------ |
+| $settings (array) | The ShopWP settings |
+
+**Example**
+
+```php
+// Change the language to German
+add_filter('shopwp_settings', function($settings) {
+
+   $settings['general']['language_code'] = 'de';
+
+   return $settings;
+
+}, 10, 2);
+```

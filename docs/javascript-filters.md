@@ -107,27 +107,22 @@ wp.hooks.addFilter('product.variantValue', 'shopwp', function (variantValue) {
 
 ### product.preSelectVariantById
 
-Allows for selecting a product variant on page load, based on variant id. You must return a valid [GraphQL product variant ID](https://shopify.dev/api/admin-graphql/2021-10/scalars/ID).
+Allows you to automatically select a specific variant on page load. Must return the product variant ID.
 
-The GraphQL product id is a base64-encoded string in this format: `gid://shopify/ProductVariant/40323659989183`. To create the GraphQL id, append the _numeric_ product id to this string: `gid://shopify/ProductVariant/`, like this:
-
-```js
-var graphId = 'gid://shopify/ProductVariant/' + '40323659989183'
-```
-
-| Parameter                 | Description               |
-| :------------------------ | :------------------------ |
-| variantId - (bool)        | This will always be false |
-| productPayload - (object) | The product payload data  |
+| Parameter                 | Description                                                       |
+| :------------------------ | :---------------------------------------------------------------- |
+| defaultId - (bool)        | This will always be false                                         |
+| productPayload - (object) | The product payload data. You can use this to find the variant id |
 
 **Example**
 
 ```js
+// Select the first variant automatically
 wp.hooks.addFilter(
 	'product.preSelectVariantById',
 	'shopwp',
-	function (variantId, payload) {
-		return 'Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0VmFyaWFudC80MDMyMzY1OTk4OTE4Mw=='
+	function (defaultId, payload) {
+		return payload.variants.edges[0].node.id
 	}
 )
 ```
@@ -807,7 +802,7 @@ Allows you add custom HTML before the cart line items. You must return HTML as a
 
 ```js
 wp.hooks.addFilter(
-	'before.cartTitle',
+	'before.cartLineItems',
 	'shopwp',
 	function (defaultValue, cartData) {
 		return '<p>Test</p>'

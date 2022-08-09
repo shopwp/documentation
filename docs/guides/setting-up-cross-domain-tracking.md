@@ -37,7 +37,9 @@ linker: {
 You'll want to replace `yoursite.com` and `checkout.yoursite.com` with your WordPress and Shopify domains. The Shopify domain is usually the `.myshopify.com` domain unless you have a custom domain configured. If you have a custom domain, then you'll want to add both. Like this:
 
 ```js
-;['wordpresssite.com', 'checkout.myshopify.com', 'customshopify.com']
+'linker': {
+   'domains': ['wordpresssite.com', 'checkout.myshopify.com', 'customshopify.com']
+}
 ```
 
 ## Add domains to the referral exclusion list
