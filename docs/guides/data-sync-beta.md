@@ -21,8 +21,8 @@ As it stands, Data Sync is a separate plugin that must be installed along side t
 
 To get started,
 
-1. Install and activate ShopWP Pro 6.0 - [Download ShopWP Pro 6.0](https://wpshop.io/screenshots/_add_cart_icon_2.jpg) ⬇️
-2. Install and activate the separate Data Sync plugin - [Download ShopWP Pro Data Sync 0.1.0](https://wpshop.io/screenshots/_add_cart_icon_2.jpg) ⬇️
+1. Install and activate ShopWP Pro 6.0 - [Download ShopWP Pro 6.0](https://wpshop.io/data-sync/shopwp-pro.6.0-beta.zip) ⬇️
+2. Install and activate the separate Data Sync plugin - [Download ShopWP Pro Data Sync 0.1.0](https://wpshop.io/data-sync/shopwp-data-sync-beta.zip) ⬇️
 
 ## Syncing
 
