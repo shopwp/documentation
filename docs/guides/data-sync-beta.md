@@ -12,17 +12,24 @@ The syncing functionality of ShopWP has been rebuilt from the ground up!
 
 ## Before you start
 
-- I highly recommend that you **do not try testing Data Sync on your live site**. Create a staging site and test everything there instead.
-- This is still beta so expect to see a few bugs here and there :)
+:::info
+I highly recommend that you **do not try testing Data Sync on your live site**. Create a staging site and test everything there instead.
+:::
+
+Thank you for offering to test Data Sync. It helps me iron out any lingering issues and improve the overall project. You're awesome!
 
 ## Installation
 
-As it stands, Data Sync is a separate plugin that must be installed along side the main ShopWP plugin. I haven't committed to this approach yet so if you have opinions about whether it should be bundled in the main plugin, please let me know!
+:::info
+If you're installing this on a site that already has ShopWP installed, please make sure to deactivate the old ShopWP before installing this beta version.
+:::
+
+As it stands, Data Sync is a separate plugin that must be installed along side the main ShopWP plugin. I haven't committed to this approach yet so if you have opinions about whether it should be bundled in the main plugin or not, let me know!
 
 To get started,
 
-1. Install and activate ShopWP Pro 6.0 - [Download ShopWP Pro 6.0](https://wpshop.io/data-sync/shopwp-pro.6.0-beta.zip) ⬇️
-2. Install and activate the separate Data Sync plugin - [Download ShopWP Pro Data Sync 0.1.0](https://wpshop.io/data-sync/shopwp-data-sync-beta.zip) ⬇️
+1. Install and activate ShopWP Pro 6.0 - [Download ShopWP Pro 6.0](https://wpshop.io/data-sync/shopwp-pro.zip) ⬇️
+2. Install and activate the separate Data Sync plugin - [Download ShopWP Pro Data Sync 0.1.0](https://wpshop.io/data-sync/shopwp-datasync.zip) ⬇️
 
 ## Syncing
 
