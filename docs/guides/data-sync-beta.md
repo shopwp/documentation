@@ -2,7 +2,7 @@
 sidebar_position: 1
 ---
 
-# Data sync (beta guide)
+# Data sync (beta) guide
 
 ![Syncing](./assets/data-sync/marquee.jpg)
 
@@ -24,12 +24,12 @@ Thank you for offering to test Data Sync. It helps me iron out any lingering iss
 If you're installing this on a site that already has ShopWP installed, please make sure to deactivate the old ShopWP before installing this beta version.
 :::
 
-As it stands, Data Sync is a separate plugin that must be installed along side the main ShopWP plugin. I haven't committed to this approach yet so if you have opinions about whether it should be bundled in the main plugin or not, let me know!
+Data Sync is a **separate** plugin that must be installed along side the main ShopWP plugin. I haven't committed to this approach yet so if you have opinions about whether it should be bundled in the main plugin or not, let me know!
 
-To get started,
+**To get started:**
 
-1. Install and activate ShopWP Pro 6.0 - [Download ShopWP Pro 6.0](https://wpshop.io/data-sync/shopwp-pro.zip) ⬇️
-2. Install and activate the separate Data Sync plugin - [Download ShopWP Pro Data Sync 0.1.0](https://wpshop.io/data-sync/shopwp-datasync.zip) ⬇️
+1. Install and activate ShopWP Pro 6.0 - [Download ShopWP Pro 6.0](https://wpshop.io/datasync/shopwp-pro.zip) ⬇️
+2. Install and activate the separate Data Sync plugin - [Download ShopWP Pro Data Sync 0.1.0](https://wpshop.io/datasync/shopwp-datasync.zip) ⬇️
 
 ## Syncing
 
