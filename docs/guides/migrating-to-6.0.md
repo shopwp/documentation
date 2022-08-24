@@ -2,7 +2,7 @@
 sidebar_position: 2
 ---
 
-# Migrating Guide 5.0
+# Migrating Guide 6.0
 
 ShopWP 5.0 is a major update to the plugin which _may_ require some migration steps on your end depending on whether you're using deprecated features or not.
 

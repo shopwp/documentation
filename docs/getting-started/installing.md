@@ -16,46 +16,24 @@ We recommended the [Shopify Lite plan](https://shopify.pxf.io/vnqbrj) if you int
 
 Okay, let's get started! 🙌
 
-## Installing the free version
+## Getting started
 
-### 1. Open the plugins page
+Installing ShopWP Pro comes with a few steps. If you've already purchased ShopWP Pro, please skip to step 2.
 
-Within the WordPress dashboard open the plugins page.
+### 1. Purchase ShopWP Pro
 
-![Installing free plugin step one](./assets/install-free-1.png)
-
-### 2. Search for ShopWP
-
-While on the plugins page search for ShopWP. It should be the first result. You can also try searching for the old name, ShopWP.
-
-![Installing free plugin step one](./assets/install-free-2.png)
-
-### 3. Install and activate the plugin
-
-Click the "Install Now" button. Once it's finished installing click the "Activate" button. When it's done, you'll be redirected to the main plugin page where you'll see the ShopWP plugin listed with your other plugins.
-
-You're all set!
-
-![Installing free plugin step one](./assets/install-free-3.png)
-
-## Installing the Pro version
-
-Installing the Pro version comes with a few more steps. If you've already purchased ShopWP Pro, please skip to step 2.
-
-### 1. Purchase the Pro version
-
-Before you can install the Pro version you must [purchase it](https://wpshop.io/purchase). Simply select the subscription you want and finish the checkout process.
+Before you can install ShopWP Pro version you must [purchase it](https://wpshop.io/purchase). Simply select the subscription you want and finish the checkout process.
 
 ![Installing free plugin step one](./assets/install-pro-1.png)
 
-### 2. Download the Pro version
+### 2. Download plugin
 
 After purchasing, you should be redirected to a confirmation page. Here you can download the plugin directly. You can also download the Pro version from your [account dashboard](https://wpshop.io/login/) (see below). If you can't access your account dashboard, try [resetting your password](https://wpshop.io/wp-login.php?action=lostpassword&redirect_to=https%3A%2F%2Fwpshop.io%2Flogin%3Fcheckemail%3Dconfirm%26edd_reset_password%3Dconfirm%26edd_redirect%3Dhttps%253A%252F%252Fwpshop.io%252Flogin%252F). If that still doesn't work, please send us an email and we can help you directly. [hello@wpshop.io](mailto:hello@wpshop.io)
 
 ![ShopWP Pro receipt](./assets/install-pro-receipt.png)
 ![ShopWP account dashboard](./assets/install-pro-2.png)
 
-### 3. Install and activate the Pro version
+### 3. Install and activate plugin
 
 After downloading the Pro version open your WordPress dashboard and go to `Plugins - Add New`. From there, click the `Upload Plugin` button toward the top of the screen. Click `Choose File` and select the downloaded .zip file from Step 2. Finally, click `Install Now`.
 
