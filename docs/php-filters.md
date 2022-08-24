@@ -379,6 +379,27 @@ add_filter('shopwp_translator_default_settings', function($settings) {
 });
 ```
 
+### shopwp_reviews_default_settings
+
+Allows for customizing the default reviews settings.
+
+| Parameter         | Description                        |
+| :---------------- | :--------------------------------- |
+| $settings (array) | The default Yotpo reviews settings |
+
+**Example**
+
+```php
+// Change the language to German
+add_filter('shopwp_reviews_default_settings', function($settings) {
+
+   $settings['reviews_shown'] = 60;
+
+   return $settings;
+
+}, 10, 2);
+```
+
 ### shopwp_show_breadcrumbs
 
 Allows you to hide / show the ShopWP breadcrumbs.
@@ -469,9 +490,9 @@ add_filter('shopwp_show_dashboard', function($should_show, $user) {
 
 Allows for customizing the main ShopWP settings object. Useful for customizing things like language / currency, etc.
 
-| Parameter         | Description         |
-| :---------------- | :------------------ |
-| $settings (array) | The ShopWP settings |
+| Parameter         | Description                 |
+| :---------------- | :-------------------------- |
+| $settings (array) | The default ShopWP settings |
 
 **Example**
 
