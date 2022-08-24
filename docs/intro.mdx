@@ -8,21 +8,22 @@ import { Products } from '@site/src/components/products'
 
 # Introduction
 
-ShopWP is a WordPress plugin that allows you to display and sell [Shopify](https://shopify.pxf.io/5bPL0L) products on any WordPress site.
+ShopWP is a premium WordPress plugin that enables you to display and sell [Shopify](https://shopify.pxf.io/5bPL0L) products on any WordPress site.
 
 When using ShopWP, you can think of WordPress as the frontend and Shopify as the backend. All store management such as editing prices, changing product images, etc will occur inside Shopify. This data can then be shown in unique and powerful ways on WordPress.
 
-Formerly known as ~~WP Shopify~~, ShopWP comes in two versions; a [free version](https://wordpress.org/plugins/wpshopify/) and a [Pro version](https://wpshop.io/purchase/).
+Formerly known as ~~WP Shopify~~, ShopWP comes bundled with a ready-to-use <a href="#!" className="shopwp-cart-trigger">cart experience</a>. This cart is powered by JavaScript and "slides in" without any additional page loads. <a href="#!" className="shopwp-cart-trigger">Try it out!</a> When a user is ready to checkout, ShopWP sends them to the default Shopify checkout page to place the order and provide the payment.
 
-Both versions come bundled with a ready-to-use <a href="#!" className="shopwp-cart-trigger">cart experience</a>. This cart is powered by JavaScript, and "slides in" to view without needing additional page loads. When a user is ready to checkout, they're redirected to the default Shopify checkout page to place the order.
+## Live Demo
 
-ShopWP does not handle any checkout functionality. Instead, it redirects customers to the default Shopify checkout flow when they're ready to purchase.
+<Products
+	settings={{ linkTo: 'none', query: 'title:"Super awesome t-shirt"' }}
+	showCart={true}
+/>
 
 Displaying your products and collections is the most powerful feature of ShopWP. The plugin provides 10+ Shortcodes, [Subscriptions via Recharge](/guides/subscriptions), [Gutenberg Blocks](/guides/gutenberg-blocks), [Elementor](/guides/elementor-extension) and [Beaver Builder](/guides/beaver-builder-extension) extensions, and tons of customization flexibility.
 
-ShopWP does not handle any portion of the checkout process. Instead, the plugin sends users to the default [Shopify](https://shopify.pxf.io/5bPL0L) checkout page to finish the purchase. Your WordPress domain will be _separate_ from the Shopify domain used for checkout. However you can use subdomains such as `shop.mysite.com` or `checkout.mysite.com`.
-
-**A short list of ShopWP features:**
+## Features
 
 - [Subscriptions](/guides/subscriptions)
 - [Single buy button](/shortcodes/wps_products_buy_button)
@@ -35,10 +36,3 @@ ShopWP does not handle any portion of the checkout process. Instead, the plugin 
 - [Works with Shopify Lite](https://shopify.pxf.io/vnqbrj)
 
 ... and much more!
-
-Whether you want to show a single buy button or a product list with filters, ShopWP can handle it.
-
-<Products
-	settings={{ linkTo: 'none', query: 'title:"Super awesome t-shirt"' }}
-	showCart={true}
-/>
