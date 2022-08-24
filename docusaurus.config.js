@@ -46,19 +46,15 @@ module.exports = {
 				},
 				items: [
 					{
-						href: 'https://shopify.pxf.io/5bPL0L',
-						label: 'Try Shopify for free',
-						position: 'right',
-					},
-					{
-						href: 'https://wpshop.io/purchase',
-						label: 'Get ShopWP Pro',
-						position: 'right',
+						value:
+							'<span style="margin-left:-20px;">Latest release: v6.0.0</span>',
+						type: 'html',
+						position: 'left',
 					},
 					{
 						href: 'https://wpshop.io',
-						label: 'Main site',
-						position: 'left',
+						label: 'https://wpshop.io',
+						position: 'right',
 					},
 				],
 			},
@@ -115,6 +111,10 @@ module.exports = {
 						title: 'More',
 						items: [
 							{
+								href: 'https://wpshop.io/purchase',
+								label: 'Pricing',
+							},
+							{
 								label: 'Plugin Extensions',
 								href: 'https://wpshop.io/extensions',
 							},
@@ -125,14 +125,6 @@ module.exports = {
 							{
 								href: 'https://wpshop.io/faq',
 								label: 'FAQ',
-							},
-							{
-								href: 'https://wordpress.org/plugins/wpshopify/',
-								label: 'WordPress.org Plugin',
-							},
-							{
-								href: 'https://shopify.pxf.io/5bPL0L',
-								label: 'Try Shopify for free',
 							},
 						],
 					},
