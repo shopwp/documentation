@@ -21,6 +21,21 @@
 General Overrides
 
 */
+
+main p {
+	font-size: 19px;
+	line-height: 29px;
+}
+
+main li {
+	font-size: 19px;
+}
+
+main code span {
+	font-size: 17px;
+	line-height: 26px;
+}
+
 table {
 	margin-bottom: 30px;
 }
@@ -66,14 +81,15 @@ html[data-theme='dark'] .docusaurus-highlight-code-line {
 html[data-theme='dark'] {
 	--ifm-color-primary: #c5cbff;
 	--ifm-color-primary-dark: #5a91ea;
+	--ifm-background-color: #03061c;
 }
 
 html[data-theme='dark'] .footer {
-	background-color: #1a212e;
+	background-color: #09162d;
 }
 
 html[data-theme='dark'] .navbar {
-	background-color: #1a212e;
+	background-color: #09162d;
 }
 
 .shopwp-radio-text [class*='SaveInlineCSS'] {
@@ -196,7 +212,7 @@ html[data-theme='dark']
 	[class*='customCounterCSS-CartCounter'],
 html[data-theme='dark'] [class*='cartIconFixedCSS-CartIconFixed'],
 html[data-theme='dark'] [class*='cartIconFixedCSS-CartIconFixed']:hover {
-	background: #555555;
+	background: #154ba0;
 }
 
 html[data-theme='light']
