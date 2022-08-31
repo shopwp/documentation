@@ -69,6 +69,39 @@ $product_data = $Products->get_product($post_id);
 
 There will be more functions exposed before the main launch.
 
+## Using localhost
+
+For the syncing to work properly, ShopWP requires a publicly accessible WordPress site. Because of this, if you're using localhost you'll need to proxy your web server with a service like [ngrok](https://ngrok.com/). This will allow the syncing to work like normal.
+
+### Setup
+
+After installing [ngrok](https://ngrok.com/), you can run this command:
+
+```
+ngrok http 8000
+```
+
+If you're using a dedicated domain such as `.local`, you can run the below command instead. (Replace yoursite.local with your domain)
+
+```
+ngrok http -host-header=yoursite.local 80
+```
+
+ngrok also has a WordPress specific guide that you can view here: [https://ngrok.com/docs/using-ngrok-with#wordpress](https://ngrok.com/docs/using-ngrok-with#wordpress)
+
+### Find the public URL
+
+Once you have ngrok running, copy the `https` Forwarding URL and paste it into the ShopWP `Syncing URL` setting like below:
+
+![Setting up ngrok step 1](./assets/data-sync/ngrok1.jpg)
+![Setting up ngrok step 2](./assets/data-sync/ngrok2.jpg)
+
+After saving the plugin settings the syncing should work like normal. You can keep ngrok running in the background for as long as you'd like.
+
+### Deploying
+
+After deploying your site to a live web server, make sure to change the Syncing URL to the real domain instead of ngrok.
+
 ## Common syncing issues
 
 We continue to try our best to ensure that the syncing process works across multiple different environments. However if you're running into trouble, try going through the below steps one by one.
