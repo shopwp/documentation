@@ -2,7 +2,7 @@
 sidebar_position: 7
 ---
 
-# ShopWP Pro License
+# License Key
 
 When you purchase [ShopWP Pro](https://wpshop.io/purchase?utm_medium=docs&utm_source=license&utm_campaign=upgrade), you'll receive a license key that gives you access to all ShopWP Pro features.
 

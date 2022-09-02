@@ -6,41 +6,79 @@ sidebar_position: 3
 
 ![Syncing](./assets/data-sync/marquee.jpg)
 
-ShopWP allows you to sync your products and collections into WordPress. This allows you to sync things like featured images, metafields, collections as categories, etc. You can also create detail pages for each product or collection assigned to the ShopWP sales channel.
+One of the main features of ShopWP is the ability to sync your Shopify data into WordPress. This includes things like:
+
+- Collections
+- Tags
+- Variants
+- Images
+- Metafields
+- etc ...
+
+You can also choose to create detail pages for each product / collection assigned to the ShopWP sales channel.
 
 :::info
 Only products assigned to the ShopWP sales channel will be synced into WordPress.
 :::
 
-Starting in version `6.0`, there is now a clear distinction between a single or "one-time" sync and auto syncing.
+## Tools
 
-You will only be able to sync using one of these two methods.
-
-Let's talk about each.
+ShopWP comes with various syncing-related tools. You can find these tools within the settings page under the `Sync` tab.
 
 ### One-time sync
 
-![One-time sync image](./assets/data-sync/1-sync-one-time-sync.jpg)
+![One-time sync image](./assets/tools/tools-sync-1.png)
 
-As the name implies, the one-time sync tool will sync your Shopify data just once. It's a great way to manually sync things if you want more control over how data is pushed to WordPress.
+As the name implies, one-time sync will sync your Shopify data only once. It's a great way to manually sync data if you want more control over when the data is pushed to WordPress.
 
-This **will not keep things updated automatically**. If you change anything inside Shopify, you'll need to manually sync again to pull the changes down.
+This **will not keep things updated automatically**. If you change anything inside Shopify, you'll need to manually sync again to pull the changes back into WordPress.
+
+The syncing process will use the settings that you have configured under `ShopWP Pro - Settings - Syncing`. This includes whether to create product detail pages, syncing feature images, etc. Depending on your syncing settings ShopWP will attempt to create a "product post" for each Shopify product that you have assigned to the ShopWP sales channel.
 
 ### Auto sync
 
-![Auto sync image](./assets/data-sync/1-sync-auto-sync.jpg)
+![Auto sync image](./assets/tools/tools-sync-2.png)
 
-The auto sync feature has been completely rebuilt from the ground up.
+The auto sync tool is basically a one-time sync repeated at a specified interval. Starting in version 6.0, this feature has been completely rebuilt from the ground up using WordPress cron jobs.
 
-When auto sync is "connected", you will see a countdown timer displayed within the `Sync` tab. This timer counts down to the next sync. The interval that the timer uses can be set within the plugin's syncing settings. `ShopWP - Settings - Syncing - Auto sync cron interval`.
+When auto sync is "connected", you will see a countdown timer displayed within the `Sync` tab. This timer counts down to the next sync. The interval that the timer uses can be set within the plugin's syncing settings under:
+
+`ShopWP - Settings - Syncing - Auto sync cron interval`
 
 Auto sync uses a WordPress cron job to keep things on track. Because of this, it may require that you occasionally navigate to the Sync tab to ensure the cron continues to fire.
 
-### Products sync query
+### Remove all synced data
+
+![Remove all synced data screenshot](./assets/tools/tools-sync-3.png)
+
+This tool will delete all synced data including:
+
+- Product and collection detail pages
+- Data saved in custom tables
+- Custom fields
+
+**Nothing will be changed or deleted from Shopify**.
+
+This tool is useful for "clearing everything out" so you can resync with a fresh start. This also can fix possible permalink or 404 errors.
+
+### Clear Cache
+
+![Clear cache screenshot](./assets/tools/tools-sync-4.png)
+
+ShopWP stores it's own cache to help speed things up. If you're noticing that your product information is not showing up correctly, or the plugin isn't behaving as expected, try clearing the cache with this tool.
+
+Things stored in the cache are:
+
+1. Product and collection data
+2. Tags, vendors, product types and collections. This info is primarily used with the Storefront component
+3. Product listing page queries
+4. Product detail page queries
+
+## Products sync query
 
 ![Auto sync image](./assets/data-sync/1-sync-products-query.jpg)
 
-A brand new syncing option called `Products sync query` has been added. This field tells ShopWP which products to sync. By default, the `*` character is used which means "sync all products". You can leverage the [Shopify Search syntax](https://shopify.dev/api/usage/search-syntax#examples) to customize this however you wish.
+The `Products sync query` tells ShopWP which products to sync. By default, the `*` character is used which means "sync all products". You can leverage the [Shopify Search syntax](https://shopify.dev/api/usage/search-syntax#examples) to customize this in powerful ways.
 
 For example, if you only want to sync product with the tag `Apple`, you can use this:
 
