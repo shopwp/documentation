@@ -8,9 +8,9 @@ ShopWP allows you to display your [Shopify](https://shopify.pxf.io/5bPL0L) produ
 
 - [Default pages](/guides/default-pages)
 - [Shortcodes](/shortcodes/wps_products)
-- [Gutenberg Blocks](/guides/gutenberg-blocks) (Requires ShopWP Pro)
-- [Elementor Extension](/guides/elementor-extension) (Requires ShopWP Pro)
-- Beaver Builder Extension (Requires ShopWP Pro)
+- [Gutenberg Blocks](/guides/gutenberg-blocks)
+- [Elementor Extension](/guides/elementor-extension)
+- [Beaver Builder Extension](https://wpshop.io/extensions/beaver-builder/)
 - [Render API](/guides/render-api)
 
 ## Caching

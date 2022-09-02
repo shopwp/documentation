@@ -1,6 +1,6 @@
 # Templates
 
-ShopWP Pro comes with four main template files. You can override these inside your WordPress theme to customize the product layouts.
+ShopWP comes with four main template files. You can override these inside your WordPress theme to customize the product layouts.
 
 ### products-all.php
 
