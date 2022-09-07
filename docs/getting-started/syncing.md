@@ -157,6 +157,18 @@ We continue to try our best to ensure that the syncing process works across mult
 
 If none of these steps resolve your syncing issues, [please send us an email](mailto:hello@wpshop.io) and we'll be happy to debug with you.
 
+### "Address cannot be any of the domains..."
+
+This error will show up if the value for the ShopWP `Syncing URL` setting does not point to your WordPress site URL. This setting must be set to the same domain that you're using for the WordPress site.
+
+It will be the domain Shopify uses to send data to during the syncing process. Below is a screenshot of how it should look:
+
+![Syncing issue Address cannot be any of the domains...](./assets/syncing-issue-2.png)
+
+:::info
+If you're a developer trying to sync on localhost, this Syncing URL must be made public to the internet via a proxy like ngrok
+:::
+
 ### Fixing BasicAuth
 
 If your site is behind BasicAuth, the syncing process will probably fail to complete. This is because ShopWP relies on the WordPress HTTP API, which requires you to attach your BasicAuth credentials to each request. The easiest way to do this is using the following filter:
