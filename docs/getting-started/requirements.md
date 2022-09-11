@@ -23,6 +23,10 @@ With this in mind, our minimum requirements for ShopWP are:
 - PHP `max_execution_time` of `100` (300 if running into syncing timeout issues)
 - Valid HTTPS certificate
 
+## Subdirectories
+
+ShopWP does not currently work when WordPress is installed in a subdirectory. Please consider a subdomain or it's own domain for now.
+
 ## Incompatible themes
 
 Below are some of the currently unsupported themes:
