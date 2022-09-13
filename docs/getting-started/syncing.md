@@ -169,6 +169,12 @@ It will be the domain Shopify uses to send data to during the syncing process. B
 If you're a developer trying to sync on localhost, this Syncing URL must be made public to the internet via a proxy like ngrok
 :::
 
+### "Variable $id of type ID! was provided invalid value"
+
+This error seems to be a result of a sync staying in limbo. Opening a browser and entering `<yourdomain>?shopify_bulk_webhook=true` should force the sync to clear. At that point you can try re-syncing again.
+
+Another thing to try: inside Shopify, remove the ShopWP app manually, disconnecting ShopWP within WordPress and reconnect again.
+
 ### Fixing BasicAuth
 
 If your site is behind BasicAuth, the syncing process will probably fail to complete. This is because ShopWP relies on the WordPress HTTP API, which requires you to attach your BasicAuth credentials to each request. The easiest way to do this is using the following filter:
