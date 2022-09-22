@@ -344,6 +344,23 @@ Determines whether to auto select the subscription option when the product loads
 [wps_products subscriptions_select_on_load="true"]
 ```
 
+### subscriptions_autoload
+
+Determines whether the subscription data will show on page load or not. Useful if you wish to show subscription prices without forcing the user to click on the subscription tab first.
+
+**_This feature is only available with [ShopWP Pro](https://wpshop.io/pricing)._**
+
+| Possible values |
+| :-------------- |
+| true            |
+| false `Default` |
+
+**Example**
+
+```js
+[wps_products subscriptions_autoload="true"]
+```
+
 ### keep_commas
 
 By default, if you have a product with commas in the title, ShopWP will treat this as multiple different product titles. Setting `keep_commas` to true will allow you to search products with commas in their title.
