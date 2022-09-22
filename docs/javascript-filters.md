@@ -242,6 +242,30 @@ wp.hooks.addFilter(
 )
 ```
 
+### product.imageSrc
+
+Allows for filtering a product images src. Useful if you want to customize the image location or load a specific image.
+
+| Parameter              | Description                                                 |
+| :--------------------- | :---------------------------------------------------------- |
+| defaultSrc - (string)  | Represents the default product image src                    |
+| image - (object)       | Represents the full image object including width and height |
+| isFeatured - (boolean) | Whether this image is the featured image or not             |
+| isVideo - (boolean)    | Whether this is a video or not                              |
+| payload - (object)     | Represents the full product payload                         |
+
+**Example**
+
+```js
+wp.hooks.addFilter(
+	'product.imageSrc',
+	'shopwp',
+	function (defaultSrc, image, isFeatured, isVideo, payload) {
+		return defaultSrc
+	}
+)
+```
+
 ### cart.checkoutUrl
 
 Allows you to customize the final checkout url. Useful for adding tracking parameters or customizations to the final checkout page.
