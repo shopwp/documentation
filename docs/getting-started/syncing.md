@@ -169,6 +169,10 @@ It will be the domain Shopify uses to send data to during the syncing process. B
 If you're a developer trying to sync on localhost, this Syncing URL must be made public to the internet via a proxy like ngrok
 :::
 
+Another reason this error can show is if you have a redirect setup within the Shopify domain settings. To check for this, login to Shopify and go to Settings. From there, click the `Domains` section.
+
+You should see your `.myshopify.com` domain listed. This should set as your primary domain. If you see your WordPress domain make sure it's not being redirected to `.myshopify.com` OR set as your primary domain. You are ok to delete these.
+
 ### "Variable $id of type ID! was provided invalid value"
 
 This error seems to be a result of a sync staying in limbo. Opening a browser and entering `<yourdomain>?shopify_bulk_webhook=true` should force the sync to clear. At that point you can try re-syncing again.
