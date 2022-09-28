@@ -179,6 +179,10 @@ This error seems to be a result of a sync staying in limbo. Opening a browser an
 
 Another thing to try: inside Shopify, remove the ShopWP app manually, disconnecting ShopWP within WordPress and reconnect again.
 
+### "[API] Invalid API key or access token (unrecognized login or wrong password)"
+
+This can be fixed by disconnecting and reconnecting your Shopify store. You can do this from the "Connect" tab inside ShopWP.
+
 ### Fixing BasicAuth
 
 If your site is behind BasicAuth, the syncing process will probably fail to complete. This is because ShopWP relies on the WordPress HTTP API, which requires you to attach your BasicAuth credentials to each request. The easiest way to do this is using the following filter:

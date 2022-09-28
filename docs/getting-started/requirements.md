@@ -39,6 +39,7 @@ Below are some of the currently unsupported plugins:
 
 - [Async JavaScript](https://wordpress.org/plugins/async-javascript)
 - [TheGem Theme Elements (for WPBakery)](https://codex-themes.com/thegem/)
+- [qTranslate-XT](https://github.com/qtranslate/qtranslate-xt)
 
 ## Known plugin conflicts
 
