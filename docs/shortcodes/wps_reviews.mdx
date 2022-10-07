@@ -1,0 +1,52 @@
+---
+sidebar_position: 1
+---
+
+# [wps_reviews]
+
+The ShopWP reviews shortcode is the companion to the [ShopWP Yotpo Reviews extension](https://wpshop.io/extensions/yotpo-product-reviews/). It allows you to display reviews as well as provide an option "write a new review" form.
+
+## Shortcode Examples
+
+```js
+// Display reviews from products with id of "123"
+[wps_reviews product_id="123"]
+
+// Show reviews with star ratings
+[wps_reviews product_id="123" show_rating="true"]
+
+// Only display the star ratings for a specific product
+[wps_reviews product_id="123" show_rating="true" show_listing="false" show_create_new="false"]
+```
+
+## Available Attributes
+
+### product_id
+
+Show reviews for a specific product id.
+
+| Possible values              |
+| :--------------------------- |
+| Any valid Shopify product id |
+
+**Example**
+
+```js
+[wps_reviews product_id="123"]
+```
+
+### show_rating
+
+### show_listing
+
+### show_create_new
+
+### reviews_shown
+
+### reviews_shown_increment
+
+### reviews_list_heading
+
+### dropzone_rating
+
+### reviews

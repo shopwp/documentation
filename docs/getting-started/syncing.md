@@ -47,6 +47,10 @@ When auto sync is "connected", you will see a countdown timer displayed within t
 
 Auto sync uses a WordPress cron job to keep things on track. Because of this, it may require that you occasionally navigate to the Sync tab to ensure the cron continues to fire.
 
+::: warning
+Auto sync will not work if you have WP CRON turned off.
+:::
+
 ### Remove all synced data
 
 ![Remove all synced data screenshot](./assets/tools/tools-sync-3.png)
@@ -147,12 +151,12 @@ We continue to try our best to ensure that the syncing process works across mult
 **Things to check:**
 
 1. The most common reason for syncing issues are conflicts with other plugins. The first thing you should try doing is temporarily deactivating every other plugin and re-syncing. If the issue persists, we can rule out any plugin conflicts.
-2. Make sure your site is not password protected. Sometimes managed hosts like WP Engine or Flywheel will have this turned on by default.
-3. Make sure your site is not using BasicAuth. If it is, skip to the [BasicAuth section](/getting-started/syncing#basicauth) below for a workaround.
-4. If you're seeing a "timeout" error message, try adding this to your `wp-config.php` file: `ini_set( 'default_socket_timeout', 300 )`;
-5. Check your PHP and Apache/Nginx logs for any errors. If you don't know how to do this, contact your web host and ask them to look on your behalf. If you find any errors, [please send them to us by email](mailto:hello@wpshop.io) or in the private Slack channel for further help.
-6. Ask your web host if they have a firewall enabled that restricts numerous third-party API requests during a short period of time. If they do have a firewall, ask them to make an exception for requests sent to ".myshopify.com".
-7. Make sure you have a working SSL certificate on your WordPress site
+2. Make sure you have a **valid** SSL certificate on your WordPress site. Syncing will not work without one.
+3. Make sure your site is not password protected. Sometimes managed hosts like WP Engine or Flywheel will have this turned on by default.
+4. Make sure your site is not using BasicAuth. If it is, skip to the [BasicAuth section](/getting-started/syncing#basicauth) below for a workaround.
+5. If you're seeing a "timeout" error message, try adding this to your `wp-config.php` file: `ini_set( 'default_socket_timeout', 300 )`;
+6. Check your PHP and Apache/Nginx logs for any errors. If you don't know how to do this, contact your web host and ask them to look on your behalf. If you find any errors, [please send them to us by email](mailto:hello@wpshop.io) or in the private Slack channel for further help.
+7. Ask your web host if they have a firewall enabled that restricts numerous third-party API requests during a short period of time. If they do have a firewall, ask them to make an exception for requests sent to ".myshopify.com".
 8. Ensure you meet the ShopWP [minimum requirements](/getting-started/requirements).
 
 If none of these steps resolve your syncing issues, [please send us an email](mailto:hello@wpshop.io) and we'll be happy to debug with you.
@@ -182,6 +186,10 @@ Another thing to try: inside Shopify, remove the ShopWP app manually, disconnect
 ### "[API] Invalid API key or access token (unrecognized login or wrong password)"
 
 This can be fixed by disconnecting and reconnecting your Shopify store. You can do this from the "Connect" tab inside ShopWP.
+
+### "Due to an unexpected technical problem, Shopify is temporarily unavailable"
+
+This can sometimes happen if you try connecting your Shopify store using a staff account without the correct permissions. Try logging into your Shopify store using the owner account instead, and then go through the ShopWP connection process again.
 
 ### Fixing BasicAuth
 
