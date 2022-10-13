@@ -33,7 +33,7 @@ When you see this error, it's usually because a previous sync failed which resul
 
 Note: this will remove any custom fields applied to your product posts, and any product post menu items.
 
-## Elememtor widgets disappear after updating to ShopWP 4.0
+## Elememtor widgets disappear after updating ShopWP
 
 Run this sql query in your database to make your widgets appear again:
 

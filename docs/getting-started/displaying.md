@@ -42,3 +42,9 @@ RewriteRule . /index.php [L]
 
 # END WordPress
 ```
+
+## Custom CSS
+
+Many customizations can be made by adding a minor about of custom CSS to your WordPress theme.
+
+I recommend adding any CSS to the WordPress Customizer. You can do this by [following this tutorial](https://wpastra.com/guides-and-tutorials/custom-css-wordpress#add-custom-css-using-the-wordpress-customizer). I like this method because it works across all themes and doesn't require another plugin.
