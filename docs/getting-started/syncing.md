@@ -146,18 +146,19 @@ After deploying your site to a live web server, make sure to change the Syncing 
 
 ## Common syncing issues
 
-We continue to try our best to ensure that the syncing process works across multiple different environments. However if you're running into trouble, try going through the below steps one by one.
+We've done our best to make the syncing process work across different environments. However, if you're running into issues try going through the below steps one by one.
 
 **Things to check:**
 
-1. The most common reason for syncing issues are conflicts with other plugins. The first thing you should try doing is temporarily deactivating every other plugin and re-syncing. If the issue persists, we can rule out any plugin conflicts.
-2. Make sure you have a **valid** SSL certificate on your WordPress site. Syncing will not work without one.
-3. Make sure your site is not password protected. Sometimes managed hosts like WP Engine or Flywheel will have this turned on by default.
-4. Make sure your site is not using BasicAuth. If it is, skip to the [BasicAuth section](/getting-started/syncing#basicauth) below for a workaround.
-5. If you're seeing a "timeout" error message, try adding this to your `wp-config.php` file: `ini_set( 'default_socket_timeout', 300 )`;
-6. Check your PHP and Apache/Nginx logs for any errors. If you don't know how to do this, contact your web host and ask them to look on your behalf. If you find any errors, [please send them to us by email](mailto:hello@wpshop.io) or in the private Slack channel for further help.
-7. Ask your web host if they have a firewall enabled that restricts numerous third-party API requests during a short period of time. If they do have a firewall, ask them to make an exception for requests sent to ".myshopify.com".
-8. Ensure you meet the ShopWP [minimum requirements](/getting-started/requirements).
+1. Make sure your "Syncing URL" setting matches the domain of your WordPress site. This is the domain where Shopify will "send" the data to during sync. So if it's not correct, the syncing process will hang indefinitely. This should be set correctly by default, but can sometimes change during database migrations (e.g., staging to production).
+2. The most common reason for syncing issues are conflicts with other plugins. The first thing you should try doing is temporarily deactivating every other plugin and re-syncing. If the issue persists, we can rule out any plugin conflicts.
+3. Make sure you have a **valid** SSL certificate on your WordPress site. Syncing will not work without one.
+4. Make sure your site is not password protected. Sometimes managed hosts like WP Engine or Flywheel will have this turned on by default.
+5. Make sure your site is not using BasicAuth. If it is, skip to the [BasicAuth section](/getting-started/syncing#basicauth) below for a workaround.
+6. If you're seeing a "timeout" error message, try adding this to your `wp-config.php` file: `ini_set( 'default_socket_timeout', 300 )`;
+7. Check your PHP and Apache/Nginx logs for any errors. If you don't know how to do this, contact your web host and ask them to look on your behalf. If you find any errors, [please send them to us by email](mailto:hello@wpshop.io) or in the private Slack channel for further help.
+8. Ask your web host if they have a firewall enabled that restricts numerous third-party API requests during a short period of time. If they do have a firewall, ask them to make an exception for requests sent to ".myshopify.com".
+9. Ensure you meet the ShopWP [minimum requirements](/getting-started/requirements).
 
 If none of these steps resolve your syncing issues, [please send us an email](mailto:hello@wpshop.io) and we'll be happy to debug with you.
 

@@ -417,3 +417,23 @@ Allows for manually rendering a component
 ```js
 wp.hooks.doAction('do.shopRender')
 ```
+
+### do.toggleCartTerms
+
+Allows for manually checking / unchecking the cart terms checkbox. Can also be used to enable / disable the checkout button based on your own criteria.
+
+| Parameter           | Description                                                   |
+| :------------------ | :------------------------------------------------------------ |
+| isChecked (boolean) | Whether the terms checkbox should be checked. Default `false` |
+
+**Example**
+
+```js
+// Check the terms box
+wp.hooks.doAction('do.toggleCartTerms', true)
+```
+
+```js
+// Uncheck the terms box
+wp.hooks.doAction('do.toggleCartTerms', false)
+```
