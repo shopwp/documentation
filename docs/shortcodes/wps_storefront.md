@@ -483,3 +483,13 @@ add_filter(
 	}
 )
 ```
+
+### show_search
+
+Allows for showing the search component with the Storefront component
+
+**Example**
+
+```js
+[wps_storefront show_search="true"]
+```

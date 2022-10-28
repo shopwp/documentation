@@ -266,6 +266,54 @@ wp.hooks.addFilter(
 )
 ```
 
+### product.modalLayout
+
+Allows for customizing the product modal HTML. Useful for creating a custom layout or design. Note: you must return a valid HTML string.
+
+| Parameter                | Description                                           |
+| :----------------------- | :---------------------------------------------------- |
+| defaultLayout - (string) | Represents the default modal layout in an HTML string |
+| settings - (object)      | The product settings being used                       |
+
+In the example below, you'll notice custom HTML elements such as `<ProductImages />`.
+
+**Example**
+
+```js
+wp.hooks.addFilter(
+	'product.modalLayout',
+	'shopwp',
+	function (defaultLayout, settings) {
+		return `
+			<div class="wps-modal-row" style="display: flex;">
+				<div style="width: 50%;padding: 0px 2em 0px 1em;">
+					<ProductImages />
+				</div>
+				<div style="width: 50%;padding-right: 1em;">
+					<ProductTitle />
+					<ProductDescription />
+					<ProductPricing />
+					<ProductBuyButton />
+				</div>
+			</div>
+    	`
+	}
+)
+```
+
+These are "React JS components" that you can use within your layout. When you use them, they will output the desired component inside your layout. This means you can move them around to create your desired look.
+
+**Full list of React components**
+
+```
+<ProductImages />
+<ProductTitle />
+<ProductDescription />
+<ProductPricing />
+<ProductBuyButton />
+<Reviews />
+```
+
 ### cart.checkoutUrl
 
 Allows you to customize the final checkout url. Useful for adding tracking parameters or customizations to the final checkout page.

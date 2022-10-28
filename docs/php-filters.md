@@ -251,6 +251,7 @@ Allows you to customize the default settings for the ShopWP cart.
 | `lineitems_quantity_step`  | The number by which the quantity changes in increments.                                  | `false`                                                     | int    |
 | `notes_label`              | The label above the cart notes field.                                                    | `Checkout notes`                                            | string |
 | `notes_placeholder`        | The placeholder text shown within the cart notes field.                                  | `Enter note for checkout`                                   | string |
+| `notes_update_frequency`   | How quickly the cart should update when entering a note                                  | `450`                                                       | int    |
 | `empty_cart_text`          | The text to show when the cart is empty                                                  | `Your cart is empty`                                        | string |
 | `subtotal_label_text`      | The text to show next to the cart subtotal amount.                                       | `Subtotal:`                                                 | string |
 | `show_cart_close_icon`     | Whether to show the close icon within the ShopWP cart                                    | `true`                                                      | bool   |
