@@ -2,6 +2,10 @@
 
 ShopWP Pro comes with the ability to enable GA cross-domain tracking. The process has a few components to it, let's get started!
 
+:::info
+As of GA4, you should [follow this guide](https://www.optimizesmart.com/how-to-set-up-cross-domain-tracking-in-google-analytics-4/)
+:::
+
 ## Adding the snippets
 
 First, you’ll need to add the GTM tracking code to **both** your WordPress and Shopify sites. To add it within Shopify, you’ll need to place the embed code within the "Additional scripts" section of the Shopify checkout settings.
