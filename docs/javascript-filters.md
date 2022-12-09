@@ -48,6 +48,45 @@ wp.hooks.addFilter(
 )
 ```
 
+### product.labelHtml
+
+Allows for customizing the HTML of the product option label.
+
+| Parameter                       | Description                                    |
+| :------------------------------ | :--------------------------------------------- |
+| defaultVal                      | Empty string, always `false` by default        |
+| option - (object)               | Represent the product option with name / value |
+| productOptionState - (object)   | Represent the entire product option state      |
+| allSelectableOptions - (object) | Represent which product options are selectable |
+| settings - (object)             | Represent the user settings                    |
+
+**Example**
+
+```js
+wp.hooks.addFilter(
+	'product.labelHtml',
+	'shopwp',
+	function (
+		defaultVal,
+		option,
+		productOptionState,
+		allSelectableOptions,
+		settings
+	) {
+		console.log('defaultVal', defaultVal)
+		console.log('option', option)
+		console.log('productOptionState', productOptionState)
+		console.log('allSelectableOptions', allSelectableOptions)
+		console.log('settings', settings)
+		return `
+            <div>
+                ${option.name}
+            </div>
+        `
+	}
+)
+```
+
 ### product.subscriptionsInfoHTML
 
 Allows for customizing the HTML inside the subscription info tooltip. Must return a string of HTML.
