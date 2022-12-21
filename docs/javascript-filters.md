@@ -87,6 +87,34 @@ wp.hooks.addFilter(
 )
 ```
 
+### product.variantButtonHtml
+
+Allows for customizing the HTML of the product variant button
+
+| Parameter          | Description                                 |
+| :----------------- | :------------------------------------------ |
+| defaultVal         | Empty string, always `false` by default     |
+| options - (object) | Represent all the options with name / value |
+
+**Example**
+
+```js
+wp.hooks.addFilter(
+	'product.variantButtonHtml',
+	'shopwp',
+	function (defaultVal, options) {
+		console.log('defaultVal', defaultVal)
+		console.log('options', options)
+
+		return `
+            <div>
+                ${options.variantValue}
+            </div>
+        `
+	}
+)
+```
+
 ### product.subscriptionsInfoHTML
 
 Allows for customizing the HTML inside the subscription info tooltip. Must return a string of HTML.
