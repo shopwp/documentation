@@ -47,7 +47,7 @@ module.exports = {
 				items: [
 					{
 						value:
-							'<span style="margin-left:-20px;">Latest release: v6.2.4</span>',
+							'<span style="margin-left:-20px;">Latest release: v6.3.0</span>',
 						type: 'html',
 						position: 'left',
 					},

@@ -162,6 +162,16 @@ We've done our best to make the syncing process work across different environmen
 
 If none of these steps resolve your syncing issues, [please send us an email](mailto:hello@wpshop.io) and we'll be happy to debug with you.
 
+### "The webhook from Shopify is either invalid or expired"
+
+This error will occur if your `Syncing URL` setting does not match your WordPress domain. These two values **must** match for the syncing to work properly.
+
+To check, open your ShopWP settings and open the `Syncing` section. Scroll down and find the `Syncing URL` field. Make sure this matches your WordPress domain exactly. It should only be the top-level domain, like this:
+
+```
+https://mysite.org
+```
+
 ### "Address cannot be any of the domains..."
 
 This error will show up if the value for the ShopWP `Syncing URL` setting does not point to your WordPress site URL. This setting must be set to the same domain that you're using for the WordPress site.
