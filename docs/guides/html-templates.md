@@ -35,7 +35,7 @@ wp-content/my-theme/wps-templates/custom/product.php
 ```
 
 :::info
-If you're using a page builder you don't need to worry about this. The builder's module will handle the actual template content so you don't have to.
+If you're using the [ShopWP Beaver Builder](https://wpshop.io/extensions/beaver-builder/) or [Elementor extensions](https://wpshop.io/extensions/elementor/), you don't need to worry about this. The builder's module will handle the actual template content so you don't have to.
 :::
 
 ### Rules of using HTML Templates
