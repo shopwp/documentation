@@ -14,6 +14,18 @@ When your products are failing to show, it usually means that you need to assign
 
 ![ShopWP Pro Common Issues 1](./assets/common-issues/visible-2.png)
 
+## Checkout redirects to page not found
+
+Issue: Clicking the "Begin checkout" button inside the ShopWP cart takes you to a page not found error.
+
+Explanation: This can occur if your Shopify online store is password protected. The solution is to remove the password protection so that the checkout page can be reached by non-logged in users.
+
+## Cookie nonce expiration
+
+When this JavaScript error shows, it's usually due to another plugin caching the WordPress REST API too aggressively. WordPress uses a [cookie nonce to authenticate the REST API](https://developer.wordpress.org/rest-api/using-the-rest-api/authentication/), which ShopWP in turns also uses.
+
+Please try temporarily deactivating your other plugins to see if that fixes the issue. You may also need to disable any host-level cache.
+
 ## Error: while calling undefined
 
 When you receive this error, there's a good chance it's because your web server is running out of memory, OR it has hit the max execution time during the syncing process. Both of these things can be increased below:
@@ -40,3 +52,13 @@ Run this sql query in your database to make your widgets appear again:
 ```msql
 UPDATE wp_postmeta SET meta_value = replace( meta_value, 'wpshopify', 'shopwp' ) WHERE (CONVERT(`meta_id` USING utf8) LIKE '%wpshopify%' OR CONVERT(`post_id` USING utf8) LIKE '%wpshopify%' OR CONVERT(`meta_key` USING utf8) LIKE '%wpshopify%' OR CONVERT(`meta_value` USING utf8) LIKE '%wpshopify%') AND meta_key <> "_wp_attachment_metadata";
 ```
+
+## Internal error. Looks like something went wrong on our end.
+
+This error can sometimes happen if the product or collection in Shopify is saved incorrectly. The easiest fix is to open the product in Shopify and set it to "draft". Then republish it again. After doing this check the WordPress site again.
+
+## Update failed: Download failed. Unauthorized
+
+Usually this error shows up when attempting to update the plugin. the main culprit is usually a license key issue.
+
+If you see this error, open your ShopWP settings and find the `License` tab. From there, either add your ShopWP Pro license key, or remove it and add it back. This should solve the issue.
