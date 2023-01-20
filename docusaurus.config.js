@@ -46,7 +46,7 @@ module.exports = {
 				},
 				items: [
 					{
-						value: '<span class="version-num">v6.3.5</span>',
+						value: '<span class="version-num">v6.3.6</span>',
 						type: 'html',
 						position: 'left',
 					},
