@@ -74,6 +74,11 @@ html[data-theme='dark'] .cart-icon-custom + div img {
 Dark Theme Overrides
 
 */
+
+html[data-theme='dark'] pre {
+	background-color: #141624;
+}
+
 html[data-theme='dark'] .docusaurus-highlight-code-line {
 	background-color: rgba(0, 0, 0, 0.3);
 }
@@ -426,6 +431,15 @@ html[class*='shortcodes/wps_cart_icon']
 
 /*
 
+Images
+
+*/
+[alt='Starting new Shopify sync...'] {
+	max-width: 600px;
+}
+
+/*
+
 Media Query Overrides
 
 */
@@ -507,16 +521,28 @@ html[data-theme='light'] .shopwp-skeleton-component {
 	cursor: pointer;
 }
 
-.theme-doc-sidebar-item-link-level-2:before {
+.theme-doc-sidebar-item-link-level-2 a:before {
 	content: '✦';
 	position: absolute;
 	left: 8px;
-	top: 2px;
+	top: 6px;
 	color: #293650;
 }
 
-html[data-theme='light'] .theme-doc-sidebar-item-link-level-2:before {
+html[data-theme='dark']
+	.theme-doc-sidebar-item-link-level-2
+	a.menu__link.menu__link--active:before {
+	color: #5c62bb;
+}
+
+html[data-theme='light'] .theme-doc-sidebar-item-link-level-2 a:before {
 	color: #d2d2d2;
+}
+
+html[data-theme='light']
+	.theme-doc-sidebar-item-link-level-2
+	a.menu__link.menu__link--active:before {
+	color: #222222;
 }
 
 .version-num {
@@ -524,7 +550,6 @@ html[data-theme='light'] .theme-doc-sidebar-item-link-level-2:before {
 	font-family: monospace;
 	font-size: 16px;
 	color: white;
-	font-weight: bold;
 	position: relative;
 	top: -1px;
 }

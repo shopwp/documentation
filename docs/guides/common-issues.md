@@ -62,3 +62,13 @@ This error can sometimes happen if the product or collection in Shopify is saved
 Usually this error shows up when attempting to update the plugin. the main culprit is usually a license key issue.
 
 If you see this error, open your ShopWP settings and find the `License` tab. From there, either add your ShopWP Pro license key, or remove it and add it back. This should solve the issue.
+
+## ReferenceError: shopwp is not defined
+
+![JavaScript error shopwp is not defined](./assets/common-issues/js-error-shopwp-not-defined.png)
+
+This JavaScript error is usually a result of a theme or plugin conflict. The first thing to do is check for this conflict.
+
+Start by temporarily switching themes. Does the error go away? If so, turn off all your other plugins besides ShopWP. Does the error go away?
+
+Some users have reported this error showing up due to the [Soil plugin](https://roots.io/products/soil/). If you're using this plugin, make sure you're on the latest version.
