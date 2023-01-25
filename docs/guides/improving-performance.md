@@ -22,3 +22,11 @@ In the example below, we're using both `rel="preconnect"` and `rel="dns-prefetch
 <link rel="preconnect" href="https://<your-store>.myshopify.com" crossorigin />
 <link rel="dns-prefetch" href="https://<your-store>.myshopify.com" />
 ```
+
+## Remove unnecessary plugins
+
+The less plugins you have installed the faster your WordPress site will be.
+
+The WordPress lifecycle will initialize each plugin on every page load. This is part of the issue that causes your site to be slow. Some plugins are built to be faster than others. However, even the fastest plugin will need to be loaded and it's files parsed, which can, over time, drastically slow down your site.
+
+We always recommend _installing only the plugins that you need to run your site_. Don't use a plugin if you can avoid it!

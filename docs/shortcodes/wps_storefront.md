@@ -4,7 +4,7 @@ sidebar_position: 10
 
 # [wps_storefront]
 
-The ShopWP Storefront shortcode displays a grid of products along with filtering and sorting options in a convenient side nav.
+The ShopWP Storefront shortcode displays a grid of products with filtering and sorting options.
 
 :::info
 This feature is only available in [ShopWP Pro](https://wpshop.io/purchase?utm_medium=docs&utm_source=features&utm_campaign=upgrade).

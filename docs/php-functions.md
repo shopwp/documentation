@@ -1,12 +1,15 @@
 # PHP Functions
 
-The below PHP functions will allow you to programmatically fetch raw Shopify data. There are two important things to know:
+These PHP functions allow you to programmatically fetch raw Shopify data.
 
-1. These functions will make a network request the first time they run. The payload will then be cached for any consecutive calls.
+## Things to know
 
-2. If a cached payload is found, these functions will return the cached version instead, skipping the network request. This is usually ok, but if you're noticing that the data is stale you'll need to clear the plugin cache within the plugin settings under the "Sync" menu.
+Before using these functions, keep in mind ...
 
-### get_product()
+1. These functions will make a network request the first time they run. The payload will then be cached for any consecutive calls _only if the [ShopWP cache](/getting-started/displaying#caching) is enabled_.
+2. If a cached payload is found, these functions will return the cached version instead—skipping the network request. If you notice the data is stale, make sure to clear the [ShopWP cache](/getting-started/displaying#caching).
+
+## get_product()
 
 Allows you to fetch a single product by `post_id`, `product_id`, or `storefront_id`.
 
@@ -84,13 +87,13 @@ $result = $Products->get_product([
                 id
                 title
             }
-        }
+        Before using these functions, keep in mind ...
       }
    '
 ]);
 ```
 
-### get_products()
+## get_products()
 
 Allows you to fetch multiple products by using a Shopify [search query](https://shopify.dev/api/usage/search-syntax).
 
@@ -142,13 +145,13 @@ $result = $Products->get_products([
    'query' => 'collection:super',
    'page_size' => 12,
    'schema' => '
-      id
+      Before using these functions, keep in mind ...
       title
    '
 ]);
 ```
 
-### get_products_by_collection_ids()
+## get_products_by_collection_ids()
 
 Allows you to fetch products by one or more collection ids.
 
@@ -182,13 +185,13 @@ $Products = ShopWP\Factories\API\Items\Products_Factory::build();
 $result = $Products->get_products_by_collection_ids([
    'collection_ids' => [164430086192, 159962693680],
    'page_size' => 250,
-   'schema' => '
+   Before using these functions, keep in mind ...
       title
    '
 ]);
 ```
 
-### get_orders()
+## get_orders()
 
 Allows for fetching multiple Shopify orders at once using a Shopify [search query](https://shopify.dev/api/admin-graphql/2022-04/objects/Order#queries).
 

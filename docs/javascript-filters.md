@@ -265,7 +265,7 @@ wp.hooks.addFilter('product.modalSettings', 'shopwp', function (modalSettings) {
 })
 ```
 
-### product.addToCart.text
+### product.addToCartText
 
 Allows you to customize the add to cart button text.
 
@@ -278,7 +278,7 @@ Allows you to customize the add to cart button text.
 
 ```js
 wp.hooks.addFilter(
-	'product.addToCart.text',
+	'product.addToCartText',
 	'shopwp',
 	function (defaultText, state) {
 		console.log('defaultText', defaultText)
@@ -1272,7 +1272,7 @@ wp.hooks.addFilter(
 )
 ```
 
-### block.products.attributes
+### block.productsAttributes
 
 Allows for customizing the attributes of the ShopWP Products block registration
 
@@ -1284,24 +1284,20 @@ Allows for customizing the attributes of the ShopWP Products block registration
 
 ```js
 // Lock the ShopWP Products block so users can't remove it
-wp.hooks.addFilter(
-	'block.products.attributes',
-	'shopwp',
-	function (attributes) {
-		attributes.lock = {
-			type: 'object',
-			default: {
-				move: false,
-				remove: true,
-			},
-		}
-
-		return attributes
+wp.hooks.addFilter('block.productsAttributes', 'shopwp', function (attributes) {
+	attributes.lock = {
+		type: 'object',
+		default: {
+			move: false,
+			remove: true,
+		},
 	}
-)
+
+	return attributes
+})
 ```
 
-### block.products.supports
+### block.productsSupports
 
 Allows for customizing the supports property of the ShopWP Products block registration
 
@@ -1313,7 +1309,7 @@ Allows for customizing the supports property of the ShopWP Products block regist
 
 ```js
 // Only allow one ShopWP products block to be added
-wp.hooks.addFilter('block.products.supports', 'shopwp', function (defaultVal) {
+wp.hooks.addFilter('block.productsSupports', 'shopwp', function (defaultVal) {
 	return {
 		multiple: false,
 	}

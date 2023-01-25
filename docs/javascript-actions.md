@@ -71,22 +71,6 @@ wp.hooks.addAction('on.cartUpdate', 'shopwp', function (cartState) {
 })
 ```
 
-### on.checkout
-
-This action runs when the checkout redirect begins.
-
-| Parameter          | Description                    |
-| :----------------- | :----------------------------- |
-| cartState (object) | Represents the full cart state |
-
-**Example**
-
-```js
-wp.hooks.addAction('on.checkout', 'shopwp', function (cartState) {
-	console.log('on.checkout', cartState)
-})
-```
-
 ### on.cartNoteChange
 
 This action will fire when the user types inside the note field. The action is debounced by `250ms`.
@@ -100,6 +84,22 @@ This action will fire when the user types inside the note field. The action is d
 ```js
 wp.hooks.addAction('on.cartNoteChange', 'shopwp', function (note) {
 	console.log('on.cartNoteChange', note)
+})
+```
+
+### on.checkout
+
+This action runs when the checkout redirect begins.
+
+| Parameter          | Description                    |
+| :----------------- | :----------------------------- |
+| cartState (object) | Represents the full cart state |
+
+**Example**
+
+```js
+wp.hooks.addAction('on.checkout', 'shopwp', function (cartState) {
+	console.log('on.checkout', cartState)
 })
 ```
 
@@ -249,6 +249,24 @@ wp.hooks.addAction(
 		console.log('on.variantDropdownToggle', productOptionState)
 	}
 )
+```
+
+### on.syncStatus
+
+Allows for hooking into the ShopWP syncing status. Will run every three seconds.
+
+Will only run in the backend.
+
+| Parameter          | Description                         |
+| :----------------- | :---------------------------------- |
+| syncState (object) | Contains the full state of the sync |
+
+**Example**
+
+```js
+wp.hooks.addAction('on.syncStatus', 'shopwp', function (syncState) {
+	console.log('syncState', syncState)
+})
 ```
 
 ### do.addToCart
@@ -436,24 +454,6 @@ wp.hooks.doAction('do.toggleCartTerms', true)
 ```js
 // Uncheck the terms box
 wp.hooks.doAction('do.toggleCartTerms', false)
-```
-
-### on.syncStatus
-
-Allows for hooking into the ShopWP syncing status. Will run every three seconds.
-
-Will only run in the backend.
-
-| Parameter          | Description                         |
-| :----------------- | :---------------------------------- |
-| syncState (object) | Contains the full state of the sync |
-
-**Example**
-
-```js
-wp.hooks.addAction('on.syncStatus', 'shopwp', function (syncState) {
-	console.log('syncState', syncState)
-})
 ```
 
 ### do.directCheckout

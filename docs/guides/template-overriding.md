@@ -1,9 +1,9 @@
 # Template Overriding
 
-[ShopWP Pro](https://wpshop.io/purchase?utm_medium=docs&utm_source=features&utm_campaign=upgrade) comes with PHP templates that you can use to override various parts of the plugin's layout. Our templates work similar to WooCommerce.
+[ShopWP Pro](https://wpshop.io/purchase?utm_medium=docs&utm_source=features&utm_campaign=upgrade) allows you to customize the templates used for the product detail pages and product listing pages. The process works very similar to WooCommerce.
 
 :::info
-This feature is only available in [ShopWP Pro](https://wpshop.io/purchase?utm_medium=docs&utm_source=features&utm_campaign=upgrade).
+This is not the same as the [HTML Templates feature](/guides/html-templates)
 :::
 
 ## Setting up your theme
@@ -54,93 +54,73 @@ Notice how you need also create the `webhooks` and `products` sub-folders in the
 Do not edit the core plugin template files. If you do, your changes will be overwritten when the plugin updates and any customizations will be lost.
 :::
 
-## HTML Templates
+## Available templates
 
-Starting in version `3.2.0`, you can now specify a custom template to be used for product html. This can be done by using the `html_template` attribute either with a shortcode or through the Render API.
+- [products-all.php](#products-allphp)
+- [products-single.php](#products-singlephp)
+- [collections-all.php](#collections-allphp)
+- [collections-single.php](#collections-singlephp)
 
-This is different from the `products-single.php` and `products-all.php` templates in that **it will only apply to the product itself**. If displaying more than one product, this template will be ran for each product in the list.
+### products-all.php
 
-It's also different because of the [specific rules of when using it](#rules-of-using-html-templates).
+This template controls the default products listing page.
 
-### Using the html_template attribute
+**Copy from:**
 
-When using `html_template` you must specify the name of a valid .php file you wish to use, like this:
-
-Shortcode:
-
-```php
-[wps_products html_template="product.php"]
+```
+shopwp-pro/public/templates/products-all.php
 ```
 
-Render API:
+**Copy to:**
 
-```php
-$Products = ShopWP\Factories\Render\Products\Products_Factory::build();
-
-$Products->products([ 'html_template' => 'product.php' ]);
+```
+<your-theme>/wps-templates/products-all.php
 ```
 
-### Locating the custom html_template files
+### products-single.php
 
-Because you can specify any file to be used, you'll need to add your files to a special folder so the plugin can look for them. This special folder is called `custom`, and must be placed directly inside the `wps-templates` folder.
+This template controls the product detail pages.
 
-For example, if your template file is called `product.php`, the folder structure must look like this:
+**Copy from:**
 
-```php
-wp-content/my-theme/wps-templates/custom/product.php
+```
+shopwp-pro/public/templates/products-single.php
 ```
 
-:::info
-If you're using a page builder you don't need to worry about this. The builder's module will handle the actual template content so you don't have to.
-:::
+**Copy to:**
 
-### Rules of using HTML Templates
-
-There are a couple rules when using HTML Templates.
-
-1. Any PHP that you use must output valid HTML. For example, if you have a PHP function called `doStuff()`, this function must return HTML and therefore you must echo it.
-
-2. Any HTML syntax errors can cause render issues so be sure your HTML is valid.
-
-3. In order to output the various product components (Title, Pricing, etc), you must use them like this:
-
-```js
-<ProductImages />
-<ProductTitle />
-<ProductPricing />
-<ProductDescription />
-<ProductBuyButton />
+```
+<your-theme>/wps-templates/products-single.php
 ```
 
-For example, to create a two column layout with images on the left and product title on the right, you could do something like this:
+### collections-all.php
 
-```js
-<div class='row'>
-	<div class='col-2'>
-		<ProductImages />
-	</div>
-	<div class='col-2'>
-		<ProductTitle />
-	</div>
-</div>
+This template controls the default collection listing page.
+
+**Copy from:**
+
+```
+shopwp-pro/public/templates/collections-all.php
 ```
 
-You cannot currently modify the HTML contents of the template components.
+**Copy to:**
 
-### Available HTML Template components
-
-```js
-<ProductImages />
-<ProductTitle />
-<ProductPricing />
-<ProductDescription />
-<ProductBuyButton />
+```
+<your-theme>/wps-templates/collections-all.php
 ```
 
-## List of available templates
+### collections-single.php
 
-- [products-single.php](templates.md)
-- [products-all.php](templates.md)
-- [collections-single.php](templates.md)
-- [collections-all.php](templates.md)
-- [custom](#html_template)
+This template controls the collection detail pages.
+
+**Copy from:**
+
+```
+shopwp-pro/public/templates/collections-single.php
+```
+
+**Copy to:**
+
+```
+<your-theme>/wps-templates/collections-single.php
+```
