@@ -335,7 +335,11 @@ wp.hooks.addFilter(
 
 ### product.modalLayout
 
-Allows for customizing the product modal HTML. Useful for creating a custom layout or design. Note: you must return a valid HTML string.
+Allows for customizing the product modal HTML. Useful for creating a custom layout or design.
+
+:::info
+You must return a valid HTML string.
+:::
 
 | Parameter                | Description                                           |
 | :----------------------- | :---------------------------------------------------- |
@@ -379,6 +383,94 @@ These are "React JS components" that you can use within your layout. When you us
 <ProductPricing />
 <ProductBuyButton />
 <Reviews />
+```
+
+### product.subscriptionLabel
+
+Allows for customizing the label found within the subscriptions widget.
+
+Must return a string of text.
+
+| Parameter                        | Description                                                          |
+| :------------------------------- | :------------------------------------------------------------------- |
+| text - (string)                  | Represents the default subscription label text as a string           |
+| sellingGroup - (object)          | The subscription details of the selected option                      |
+| isSelected - (boolean)           | Whether the subscription is selected or not                          |
+| saveAmount - (int or boolean)    | The amount saved if purchased, `false` otherwise                     |
+| regularPrice - (int)             | The price of the subscription                                        |
+| discountPrice - (int or boolean) | The discounted price (if any) of the subscription, `false` otherwise |
+
+In the example below, you'll notice custom HTML elements such as `<ProductImages />`.
+
+**Example**
+
+```js
+wp.hooks.addFilter(
+	wp.hooks.addFilter(
+		'product.subscriptionLabel',
+		'shopwp',
+		function (
+			text,
+			sellingGroup,
+			isSelected,
+			saveAmount,
+			regularPrice,
+			discountPrice
+		) {
+			if (isSelected) {
+				return text + ' (Good choice!)'
+			} else {
+				return text
+			}
+		}
+	)
+)
+```
+
+### product.unavailableHtml
+
+Allows for customizing the HTML of the out of stock notice. This notice replaces the buy button.
+
+Useful for creating things like "Notify me when back in stock" functionality.
+
+| Parameter               | Description                                                                                    |
+| :---------------------- | :--------------------------------------------------------------------------------------------- |
+| defaultVal - (boolean)  | Represents the default value, always false                                                     |
+| productState - (object) | The full product state. Contains info such as product data, is selected, the DOM element, etc. |
+
+**Example**
+
+```js
+wp.hooks.addFilter(
+	'product.unavailableHtml',
+	'shopwp',
+	function (defaultVal, productState) {
+		console.log('productState', productState)
+		return '<h1>Nothin here ...</h1>'
+	}
+)
+```
+
+### product.titleHtml
+
+Allows for customizing the product title HTML.
+
+| Parameter               | Description                                                                                    |
+| :---------------------- | :--------------------------------------------------------------------------------------------- |
+| defaultVal - (boolean)  | Represents the default value, always false                                                     |
+| productState - (object) | The full product state. Contains info such as product data, is selected, the DOM element, etc. |
+
+**Example**
+
+```js
+wp.hooks.addFilter(
+	'product.titleHtml',
+	'shopwp',
+	function (defaultVal, productState) {
+		console.log('productState', productState)
+		return '<h1>Custom product title goes here</h1>'
+	}
+)
 ```
 
 ### cart.checkoutUrl
@@ -1178,4 +1270,52 @@ wp.hooks.addFilter(
 		return '<p>Vendor: ' + payload.vendor + '</p>'
 	}
 )
+```
+
+### block.products.attributes
+
+Allows for customizing the attributes of the ShopWP Products block registration
+
+| Parameter           | Description                  |
+| :------------------ | :--------------------------- |
+| attributes (object) | The default block attributes |
+
+**Example**
+
+```js
+// Lock the ShopWP Products block so users can't remove it
+wp.hooks.addFilter(
+	'block.products.attributes',
+	'shopwp',
+	function (attributes) {
+		attributes.lock = {
+			type: 'object',
+			default: {
+				move: false,
+				remove: true,
+			},
+		}
+
+		return attributes
+	}
+)
+```
+
+### block.products.supports
+
+Allows for customizing the supports property of the ShopWP Products block registration
+
+| Parameter         | Description                                     |
+| :---------------- | :---------------------------------------------- |
+| defaultVal (bool) | The default supports value. `false` by default. |
+
+**Example**
+
+```js
+// Only allow one ShopWP products block to be added
+wp.hooks.addFilter('block.products.supports', 'shopwp', function (defaultVal) {
+	return {
+		multiple: false,
+	}
+})
 ```

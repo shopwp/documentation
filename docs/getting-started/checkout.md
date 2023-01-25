@@ -4,11 +4,11 @@ sidebar_position: 5
 
 # Checkout
 
+ShopWP does not handle _any_ portion of the checkout process. Instead, we send customers to the default Shopify checkout page to finish the purchase process.
+
 ![Checkout example screenshot](./assets/checkout-1.png)
 
-ShopWP does not handle any portion of the checkout process.
-
-Instead, the plugin sends customers to the default Shopify checkout page to finish the purchase. This has it's pros and cons, but we believe it makes for a much better ecommerce experience.
+This has it's pros and cons, but overall we believe it makes for a much faster and more secure checkout experience.
 
 One of the main benefits is that you can lean on Shopify to handle the important security and performance considerations for your checkout page. You can also leverage any third-party apps that may modify the Shopify checkout page.
 

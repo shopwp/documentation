@@ -44,6 +44,27 @@ add_filter('shopwp_products_single_args', function($settings) {
 });
 ```
 
+### shopwp_products_single_reviews_args
+
+Allows for customizing the settings used by the reviews component on product detail pages.
+
+| Parameter | Description                                                                                                  |
+| :-------- | :----------------------------------------------------------------------------------------------------------- |
+| $settings | Represents all available product reviews settings. A full list can be [found here](/shortcodes/wps_reviews). |
+
+**Example**
+
+```php
+// Disable the ability for users to add new reviews
+add_filter('shopwp_products_single_reviews_args', function($settings) {
+
+   $settings['show_create_new'] = false;
+
+   return $settings;
+
+});
+```
+
 ### shopwp_register_products_args
 
 Allows you to customize the custom post type settings of ShopWP products.
@@ -177,17 +198,38 @@ Allows you to customize the custom post type settings of ShopWP collections.
 
 | Parameter | Description                                                                                                                                                 |
 | :-------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| $settings | Represents the default custom post type settings. A full list can be [found here](https://developer.wordpress.org/reference/functions/register_post_type/). |
+| $args     | Represents the default custom post type settings. A full list can be [found here](https://developer.wordpress.org/reference/functions/register_post_type/). |
 
 **Example**
 
 ```php
 // Turn off the archive pages for ShopWP Products
-add_filter('shopwp_register_collections_args', function($settings) {
+add_filter('shopwp_register_collections_args', function($args) {
 
-   $settings['has_archive'] = false;
+   $args['has_archive'] = false;
 
-   return $settings;
+   return $args;
+
+});
+```
+
+### shopwp_register_shopify_collections_tax
+
+Allows for customizing the collections taxonomy registration.
+
+| Parameter | Description                                                                                                                                        |
+| :-------- | :------------------------------------------------------------------------------------------------------------------------------------------------- |
+| $args     | Represents the default taxonomy settings. A full list can be [found here](https://developer.wordpress.org/reference/functions/register_taxonomy/). |
+
+**Example**
+
+```php
+// Turn off the archive pages for ShopWP Products
+add_filter('shopwp_register_shopify_collections_tax', function($args) {
+
+   $args['description'] = 'Custom taxonomy description';
+
+   return $args;
 
 });
 ```
@@ -256,6 +298,10 @@ Allows you to customize the default settings for the ShopWP cart.
 | `subtotal_label_text`      | The text to show next to the cart subtotal amount.                                       | `Subtotal:`                                                 | string |
 | `show_cart_close_icon`     | Whether to show the close icon within the ShopWP cart                                    | `true`                                                      | bool   |
 | `show_cart_title`          | Whether to show the cart title within the ShopWP cart                                    | `true`                                                      | bool   |
+| `max_quantity`             | Controls the total max quantity that users can add                                       | `false`                                                     | bool   |
+| `language`                 | The language of the cart                                                                 | `EN`                                                        | bool   |
+| `country`                  | The country of the cart                                                                  | `US`                                                        | bool   |
+| `currency`                 | The currency of the cart                                                                 | `USD`                                                       | bool   |
 
 **Example**: Customize the shopping cart title
 

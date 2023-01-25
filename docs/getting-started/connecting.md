@@ -4,31 +4,31 @@ sidebar_position: 2
 
 # Connecting
 
-Connecting your [Shopify](https://shopify.pxf.io/5bPL0L) store to WordPress is the first step in using ShopWP and takes just a few moments. Let's begin so you can start selling online!
+Connecting your [Shopify](https://shopify.pxf.io/5bPL0L) store to WordPress is the first step in using ShopWP.
+
+It takes just a few moments, so let's begin!
 
 ## How to connect
 
 ### 1. Start the connection
 
-To begin, navigate to the "Connect" tab within the plugin Settings. You should see a screen that says "Disconnected". Click the button that says `Begin the connection process`. This will open a wizard to guide you through the process.
+To begin, navigate to the "Connect" tab within the plugin Settings. You should see a screen that says "Disconnected". Click the button that says `Connect your Shopify store`. This will open a wizard to guide you through the process.
 
-![ShopWP Disconnect page](./assets/connecting-1.png)
+![ShopWP Disconnect page](./assets/connecting-1.jpg)
 
 ### 2. Enter your Shopify domain
 
-Once you're on the wizard page, enter your `store.myshopify.com` domain and click the `Connect your Shopify store` button.
+Once you're on the wizard page, enter your `.myshopify.com` domain and click the `Connect your Shopify store` button.
 
 :::info
 
-The myshopify.com is what you use to login to Shopify with. It can also be found inside the Shopify admin. It will be the domain that's displayed in the address bar.
+The `.myshopify.com` domain is what you use to login to Shopify. It can be found inside the Shopify admin. It will be the domain that's displayed in the address bar.
 
-By default, your domain uses the format: `store.myshopify.com`. Please do not include "https://" or "www".
-
-If you're having trouble, please refer to this [Shopify guide](https://help.shopify.com/en/manual/online-store/domains/managing-domains#myshopify-com-urls) or send us an email: hello@wpshop.io
+By default, your domain uses the format: `abc.myshopify.com`.
 
 :::
 
-![ShopWP Disconnect page](./assets/connecting-2.png)
+![ShopWP Disconnect page](./assets/connecting-2.jpg)
 
 ### 3. Authorize the connection
 
@@ -36,23 +36,29 @@ If this is your first time connecting, you will be asked to authorize the connec
 
 ![ShopWP Disconnect page](./assets/connecting-3.png)
 
+If you see a Shopify notice that says something like, `ShopWP is currently unsupported ...` you can ignore this and install anyway.
+
+The notice will show to some users incorrectly and we're currently working with Shopify to have this removed.
+
+![ShopWP not supported notice](./assets/connecting-3-5.jpg)
+
 ### 4. Finish the wizard
 
-After authorizing the connection you'll be redirected back to WordPress in order to finish the wizard process.
+After authorizing the connection you'll be redirected back to WordPress in order to finish the wizard process. You can either skip the wizard at this point or continue to set some basic plugin settings.
 
-![ShopWP Disconnect page](./assets/connecting-4.png)
+![ShopWP Disconnect page](./assets/connecting-4.jpg)
 
 Once you finish the wizard you're done! You're now connected to Shopify and can begin [displaying](/getting-started/displaying) your products.
 
-![ShopWP Disconnect page](./assets/connecting-5.png)
+![ShopWP Disconnect page](./assets/connecting-5.jpg)
 
 ## Disconnecting
 
-Disconnecting your Shopify store is very easy. Simply open the `Connect` tab within the plugin settings and click the disconnect button. After the process finishes, your store will no longer be connected to WordPress.
+Disconnecting your Shopify store is very easy. Simply open the `Connect` tab within the plugin settings and click the `Disconnect your Shopify store` button. After the process finishes, your store will no longer be connected to WordPress.
 
-When disconnected, you won't be able to display products or use the cart.
+You won't be able to display products or use the cart when disconnected.
 
-![ShopWP Disconnect page](./assets/disconnecting-1.png)
+![ShopWP Disconnect page](./assets/disconnecting-1.jpg)
 
 ## The Shopify App
 

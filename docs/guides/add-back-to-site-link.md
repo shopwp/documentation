@@ -1,34 +1,40 @@
 # Add back to site link
 
-Shopify doesn't provide a "back to site" link out of the box, so you need to add it yourself. Thankfully it's fairly easy to do with ShopWP!
+Shopify does not provide a "back to site" link out of the box so you'll need to add it yourself.
+
+Thankfully, it's fairly easy to do with ShopWP!
 
 :::info
-This will only show on the checkout confirmation / order status page.
+This will only show on the checkout confirmation (order status) page.
 :::
 
 ## Find the checkout settings
 
-Within the Shopify dashboard, go to your store Settings and open the Checkout section. From there, find the "Order processing" area.
+Within the Shopify dashboard, open your Settings page and click the "Checkout and accounts" section.
 
-![ShopWP Sync the Detail Pages](https://wpshop.io/wp-content/uploads/2021/02/back-to-cart-1.jpg)
+![ShopWP Sync the Detail Pages](./assets/add-back-to-site-link/0.jpg)
 
-![ShopWP Sync the Detail Pages](https://wpshop.io/wp-content/uploads/2021/02/back-to-cart-2.jpg)
+![ShopWP Sync the Detail Pages](./assets/add-back-to-site-link/1.jpg)
 
-![ShopWP Sync the Detail Pages](https://wpshop.io/wp-content/uploads/2021/02/back-to-cart-4.jpg)
+From there, find the "Order status page" area.
+
+![Shopify order status page section](./assets/add-back-to-site-link/3.jpg)
 
 ## Add the custom JavaScript
 
-Within Order processing, find the _**Additional scripts**_ section. Any customizations you add here will show on the checkout page. You can add any valid HTML (including script tags), liquid code, etc. Shopify does a great job of explaining how this works in detail [here](https://help.shopify.com/en/manual/orders/status-tracking/customize-order-status#add-additional-scripts).
+Within Order status section there will be an _**Additional scripts**_ input box. Any customizations you add here will show on the order status page. You can add any valid HTML (including script tags), liquid code, etc. Shopify does a great job of explaining how this works in detail [here](https://help.shopify.com/en/manual/orders/status-tracking/customize-order-status#add-additional-scripts).
 
 For our purposes, we want to add a piece of JavaScript that will add a little HTML to the page for us. This HTML will contain a link pointing back to our WordPress site.
 
-![ShopWP Sync the Detail Pages](https://wpshop.io/wp-content/uploads/2021/02/back-to-cart-3.jpg)
+![Additional scripts settings input](./assets/add-back-to-site-link/4.jpg)
 
 :::info
 If you have existing code inside Additional scripts, place this at the very bottom below everything else.
 :::
 
 Place the below code inside Additional scripts (including the script tags) and click save.
+
+Make sure to change `https://google.com` in the below snippet to your WordPress domain.
 
 ```html
 <script>

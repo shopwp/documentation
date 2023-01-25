@@ -437,3 +437,53 @@ wp.hooks.doAction('do.toggleCartTerms', true)
 // Uncheck the terms box
 wp.hooks.doAction('do.toggleCartTerms', false)
 ```
+
+### on.syncStatus
+
+Allows for hooking into the ShopWP syncing status. Will run every three seconds.
+
+Will only run in the backend.
+
+| Parameter          | Description                         |
+| :----------------- | :---------------------------------- |
+| syncState (object) | Contains the full state of the sync |
+
+**Example**
+
+```js
+wp.hooks.addAction('on.syncStatus', 'shopwp', function (syncState) {
+	console.log('syncState', syncState)
+})
+```
+
+### do.directCheckout
+
+Allows for programmatically sending customers to the Shopify checkout page. You can pass a configurable checkout object to customize which products are added, quantities, etc. See below.
+
+| Parameter              | Description                                                           |
+| :--------------------- | :-------------------------------------------------------------------- |
+| checkoutState (object) | A JavaScript object containing details about what should be purchased |
+
+| checkoutState Key     | Description                                                                                                                     |
+| :-------------------- | :------------------------------------------------------------------------------------------------------------------------------ |
+| lines (array)         | A JavaScript array containing information about each lineitem. Should be an array of objects with this format:                  |
+| note (string)         | Represents a note added to the order.                                                                                           |
+| discountCodes (array) | You can optionally pass one or more discount codes to the order. The discounts need to be already added inside Shopify to work. |
+| attributes (array)    | A JavaScript array containing a list of custom attributes in this format:                                                       |
+
+**Example**
+
+```js
+wp.hooks.doAction('do.directCheckout', {
+	lines: [
+		{
+			attributes: [],
+			merchandiseId: 'gid://shopify/ProductVariant/31741651517488',
+			quantity: 2,
+		},
+	],
+	note: 'This is a custom note',
+	discountCodes: ['FREE'],
+	attributes: false,
+})
+```

@@ -27,12 +27,19 @@ main p {
 	line-height: 29px;
 }
 
+.theme-admonition p {
+	font-size: 17px;
+}
+
 main li {
 	font-size: 19px;
 }
 
+code {
+	font-size: 16px;
+}
 main code span {
-	font-size: 17px;
+	font-size: 16px;
 	line-height: 26px;
 }
 
@@ -57,6 +64,10 @@ table thead tr {
 .footer__link-item {
 	display: block;
 	width: 100%;
+}
+
+.markdown > h4 {
+	font-size: 22px;
 }
 
 /*
@@ -94,7 +105,7 @@ html[data-theme='dark'] .footer {
 }
 
 html[data-theme='dark'] .navbar {
-	background-color: #09162d;
+	background-color: #0a0d25;
 }
 
 .shopwp-radio-text [class*='SaveInlineCSS'] {
@@ -106,6 +117,10 @@ html[data-theme='dark'] .navbar {
 Product dark theme
 
 */
+html[data-theme='dark'] .theme-admonition-info.alert {
+	background: #12203a;
+}
+
 html[data-theme='dark'] .wps-products-title,
 html[data-theme='dark'] .wps-pricing-range-wrapper *,
 html[data-theme='dark'] .wps-component-products-pricing *,
@@ -114,6 +129,11 @@ html[data-theme='dark'] .wpshopify-variant-buttons button,
 html[data-theme='dark'] .wps-add-to-cart span,
 html[data-theme='dark'] [class*='SellingGroupLabelCSS'] p {
 	color: white;
+}
+
+html[data-theme='dark'] .markdown > h3 {
+	border-bottom: 1px solid #1e2237;
+	padding-bottom: 10px;
 }
 
 html[data-theme='dark'] .wps-modal-inner .wps-products-title,
@@ -434,8 +454,14 @@ html[class*='shortcodes/wps_cart_icon']
 Images
 
 */
-[alt='Starting new Shopify sync...'] {
+[alt='Starting new Shopify sync...'],
+[alt='ShopWP not supported notice'],
+[alt='JavaScript error shopwp is not defined'] {
 	max-width: 600px;
+}
+
+[alt='The ShopWP syncing process'] {
+	width: 100%;
 }
 
 /*
@@ -532,7 +558,7 @@ html[data-theme='light'] .shopwp-skeleton-component {
 html[data-theme='dark']
 	.theme-doc-sidebar-item-link-level-2
 	a.menu__link.menu__link--active:before {
-	color: #5c62bb;
+	color: #3edda0;
 }
 
 html[data-theme='light'] .theme-doc-sidebar-item-link-level-2 a:before {
@@ -546,12 +572,17 @@ html[data-theme='light']
 }
 
 .version-num {
-	margin-left: -20px;
+	display: flex;
+	position: relative;
 	font-family: monospace;
 	font-size: 16px;
 	color: white;
-	position: relative;
-	top: -1px;
+	margin: 0;
+}
+
+.version-num .num {
+	margin-left: -20px;
+	margin-right: 10px;
 }
 
 html[data-theme='light'] .version-num {

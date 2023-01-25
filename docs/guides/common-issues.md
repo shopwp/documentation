@@ -18,32 +18,35 @@ When your products are failing to show, it usually means that you need to assign
 
 Issue: Clicking the "Begin checkout" button inside the ShopWP cart takes you to a page not found error.
 
-Explanation: This can occur if your Shopify online store is password protected. The solution is to remove the password protection so that the checkout page can be reached by non-logged in users.
+This can occur if your Shopify online store is password protected. The solution is to remove the password protection so that the checkout page can be reached by non-logged in users.
 
 ## Cookie nonce expiration
 
-When this JavaScript error shows, it's usually due to another plugin caching the WordPress REST API too aggressively. WordPress uses a [cookie nonce to authenticate the REST API](https://developer.wordpress.org/rest-api/using-the-rest-api/authentication/), which ShopWP in turns also uses.
+When this JavaScript error shows, it's usually due to another plugin caching the WordPress REST API too aggressively. WordPress uses a [cookie nonce to authenticate the REST API](https://developer.wordpress.org/rest-api/using-the-rest-api/authentication/).
 
-Please try temporarily deactivating your other plugins to see if that fixes the issue. You may also need to disable any host-level cache.
+Try temporarily deactivating your other plugins and check again. You may also need to disable any host-level cache.
 
 ## Error: while calling undefined
 
-When you receive this error, there's a good chance it's because your web server is running out of memory, OR it has hit the max execution time during the syncing process. Both of these things can be increased below:
+When you receive this error, there's a good chance it's because your web server is running out of memory. Or it has hit the max execution time during the syncing process.
 
-```
-To increase the Max Execution Time: https://wpastra.com/docs/increase-php-time-limit-wordpress-sites
-To increase the Memory Limit: https://wpastra.com/docs/increasing-php-memory-limit-website/
-```
+Both of these things can be increased by following the tutorials below:
+
+[Tutorial: Increase the Max Execution Time](https://wpastra.com/docs/increase-php-time-limit-wordpress-sites)
+
+[Tutorial: Increase the Memory Limit](https://wpastra.com/docs/increasing-php-memory-limit-website/)
 
 ## Error: Failed to assign Shopify ID 0
 
-When you see this error, it's usually because a previous sync failed which resulted in stale data. To fix, you can follow these two steps:
+This error usually occurs because a previously failed sync. To fix, follow the below steps:
 
 1. First, go to the Tools tab within the plugin settings and use the `Remove all synced data` button
 
 2. Once that’s done, use the `Sync Product & Collection Detail Pages` button once more.
 
-Note: this will remove any custom fields applied to your product posts, and any product post menu items.
+:::info
+This will remove any custom fields applied to your product posts as well as any product post menu items.
+:::
 
 ## Elememtor widgets disappear after updating ShopWP
 
@@ -55,7 +58,7 @@ UPDATE wp_postmeta SET meta_value = replace( meta_value, 'wpshopify', 'shopwp' )
 
 ## Internal error. Looks like something went wrong on our end.
 
-This error can sometimes happen if the product or collection in Shopify is saved incorrectly. The easiest fix is to open the product in Shopify and set it to "draft". Then republish it again. After doing this check the WordPress site again.
+This error can sometimes happen if the product or collection in Shopify is saved incorrectly. The easiest fix is to open the product in Shopify and set it to `draft`. Then republish. After doing this check the WordPress site again.
 
 ## Update failed: Download failed. Unauthorized
 
@@ -67,8 +70,30 @@ If you see this error, open your ShopWP settings and find the `License` tab. Fro
 
 ![JavaScript error shopwp is not defined](./assets/common-issues/js-error-shopwp-not-defined.png)
 
-This JavaScript error is usually a result of a theme or plugin conflict. The first thing to do is check for this conflict.
+This JavaScript error can can happen if a theme or plugin is preventing the ShopWP JavaScript from loading, or loading in the correct order. The first thing to do is check for a theme or plugin conflict.
 
-Start by temporarily switching themes. Does the error go away? If so, turn off all your other plugins besides ShopWP. Does the error go away?
+Start by temporarily switching themes. Does the error go away?
 
-Some users have reported this error showing up due to the [Soil plugin](https://roots.io/products/soil/). If you're using this plugin, make sure you're on the latest version.
+If not, turn off all your other plugins besides ShopWP. Does the error go away?
+
+Some users have also reported this error showing up due to the [Soil plugin](https://roots.io/products/soil/). If you're using this plugin, make sure you're on the latest version.
+
+## <!DOCTYPE "... is not valid JSON
+
+This issue is usually caused by a misconfigured `.htaccess` file. Some plugins, like All In One WP Security, will add additional lines of code to your `.htaccess` file. However this can sometimes conflict with ShopWP.
+
+The easiest way to check for a conflict is by manually editing your `.htaccess` file. Open it up in a text editor and replace the entire contents with the default WordPress values below:
+
+```
+# BEGIN WordPress
+
+RewriteEngine On
+RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+
+# END WordPress
+```

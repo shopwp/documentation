@@ -38,3 +38,15 @@ add_action('shopwp_on_plugin_deactivate', function() {
     error_log('Plugin is deactivated!');
 });
 ```
+
+### shopwp_is_ready
+
+This action will fire after ShopWP has fully loaded during the WordPress lifecycle. Useful for building other plugins that depend on ShopWP.
+
+**Examples**
+
+```php
+add_action('shopwp_is_ready', function() {
+    error_log('Plugin is ready and loaded!');
+});
+```

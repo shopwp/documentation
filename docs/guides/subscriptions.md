@@ -41,7 +41,7 @@ First, you must meet the below requirements and install _both_ [ShopWP Pro](http
 
 ![Finding the Recharge app](./assets/subscriptions/recharge-install-5.png)
 
-6. Give your token a name. This can be anything you want, but something to easily identify your site would be useful such as your wordpress domain. Next, add your contact email address (probably the same as your WordPress user email). For the permissions, set the `Subscriptions` and `Products` to read and write. Finally, click the terms of service checkbox and save.
+6. Give your token a name. This can be anything you want, but something easy to identify your site would be useful such as your wordpress domain. Next, add your contact email address (probably the same as your WordPress user email). For the permissions, set the `Subscriptions` and `Products` to read and write. Finally click the terms of service checkbox and save.
 
 ![Finding the Recharge app](./assets/subscriptions/recharge-install-6.png)
 
@@ -81,8 +81,8 @@ One of the coolest aspects of the subscriptions feature is the seamless integrat
 
 Traditionally, Shopify subscription products required developers to create their own checkout pages. This was cumbersome for many reasons. Thankfully, we're now able to use the _same_ checkout page that your customers are used to. This also means that you should be able to continue using any third-party Shopify apps that may customize the checkout experience.
 
-The checkout process will work the same way is does with non-subscription products. In fact, your customers can even add subscription and non-subscription products to the same cart, and purchase them together.
+The checkout process will work the same way it does with non-subscription products. In fact, your customers can even add subscription and non-subscription products to the same cart and purchase together.
 
 ### Additional questions
 
-If you have additional question or need extra support, make a comment in the Slack channel or send us an email: [hello@wpshop.io](mailto:hello@wpshop.io)
+If you have additional question, make a comment in the Slack channel or send us an email: [hello@wpshop.io](mailto:hello@wpshop.io)

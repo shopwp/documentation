@@ -4,10 +4,11 @@ sidebar_position: 3
 
 # Syncing
 
-![Syncing](./assets/data-sync/marquee.jpg)
+![The ShopWP syncing process](./assets/data-sync/marquee.jpg)
 
 One of the main features of ShopWP is the ability to sync your Shopify data into WordPress. This includes things like:
 
+- Products
 - Collections
 - Tags
 - Variants
@@ -21,13 +22,13 @@ You can also choose to create detail pages for each product / collection assigne
 Only products assigned to the ShopWP sales channel will be synced into WordPress.
 :::
 
-## Tools
+## Syncing Tools
 
-ShopWP comes with various syncing-related tools. You can find these tools within the settings page under the `Sync` tab.
+ShopWP comes with various syncing tools. You can find these tools within the settings page under the `Sync` tab.
 
 ### One-time sync
 
-![One-time sync image](./assets/tools/tools-sync-1.png)
+![One-time sync image](./assets/tools/tools-sync-new-1.jpg)
 
 As the name implies, one-time sync will sync your Shopify data only once. It's a great way to manually sync data if you want more control over when the data is pushed to WordPress.
 
@@ -35,9 +36,9 @@ This **will not keep things updated automatically**. If you change anything insi
 
 The syncing process will use the settings that you have configured under `ShopWP Pro - Settings - Syncing`. This includes whether to create product detail pages, syncing feature images, etc. Depending on your syncing settings ShopWP will attempt to create a "product post" for each Shopify product that you have assigned to the ShopWP sales channel.
 
-### Auto sync
+### Automatic syncing
 
-![Auto sync image](./assets/tools/tools-sync-2.png)
+![Auto sync image](./assets/tools/tools-sync-new-2.jpg)
 
 The auto sync tool is basically a one-time sync repeated at a specified interval. Starting in version 6.0, this feature has been completely rebuilt from the ground up using WordPress cron jobs.
 
@@ -53,7 +54,7 @@ Auto sync will not work if you have WP CRON turned off.
 
 ### Remove all synced data
 
-![Remove all synced data screenshot](./assets/tools/tools-sync-3.png)
+![Remove all synced data screenshot](./assets/tools/tools-sync-new-3.jpg)
 
 This tool will delete all synced data including:
 
@@ -63,11 +64,17 @@ This tool will delete all synced data including:
 
 **Nothing will be changed or deleted from Shopify**.
 
-This tool is useful for "clearing everything out" so you can resync with a fresh start. This also can fix possible permalink or 404 errors.
+This tool is useful for "clearing everything out" so you can resync with a fresh start. This also also can fix possible permalink or 404 errors.
+
+### Remove all synced images
+
+![Remove all synced data screenshot](./assets/tools/tools-sync-new-4.jpg)
+
+This tool will delete all images that have been synced using ShopWP. **Only ShopWP related images will be removed. Nothing else from the media library will be deleted**.
 
 ### Clear Cache
 
-![Clear cache screenshot](./assets/tools/tools-sync-4.png)
+![Clear cache screenshot](./assets/tools/tools-sync-new-5.jpg)
 
 ShopWP stores it's own cache to help speed things up. If you're noticing that your product information is not showing up correctly, or the plugin isn't behaving as expected, try clearing the cache with this tool.
 

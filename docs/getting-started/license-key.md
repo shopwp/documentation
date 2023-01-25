@@ -4,11 +4,12 @@ sidebar_position: 7
 
 # License Key
 
-When you purchase [ShopWP Pro](https://wpshop.io/purchase?utm_medium=docs&utm_source=license&utm_campaign=upgrade), you'll receive a license key that gives you access to all ShopWP Pro features.
+When you purchase [ShopWP Pro](https://wpshop.io/purchase?utm_medium=docs&utm_source=license&utm_campaign=upgrade), you'll receive a license key that gives you access to ...
 
 - Pro-only features
+- Plugin support
 - Plugin updates
-- Live support (private Slack channel)
+- Access to the private Slack channel
 
 :::info
 
@@ -29,7 +30,7 @@ Your license key is listed in your ShopWP account under the `Licenses` tab. You 
 
 ## Activating your license key
 
-Once you've found your key, open the plugin settings and navigate to the `License` tab. Add the key here and click the "Activate License" button.
+Once you have your ShopWP license key, open the plugin settings and navigate to the `License` tab. Add the key here and click the "Activate License" button.
 
 ![License page](./assets/license-blank.png)
 

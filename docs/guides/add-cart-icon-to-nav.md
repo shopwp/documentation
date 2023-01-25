@@ -1,15 +1,16 @@
-# Add cart icon to WordPress menu
+# Add cart icon menu
 
-ShopWP comes with a custom menu item called `Cart`. You can add this to any WordPress menu to easily enable a cart icon in your nav.
+ShopWP comes with a custom menu item called `Cart`. You can add this to any menu to easily enable a cart icon in your WordPress nav.
 
 ## Ensure the menu is enabled
 
 Go to `Apperance - Menus` and click the button in the top right corner called `Screen Options`. Once open, ensure that the Cart menu item is enabled.
 
-![ShopWP Creating Product Detail Pages](https://wpshop.io/screenshots/_add_cart_icon_1.jpg)
+![WordPress screen options button](./assets/add-cart-icon/cart-icon-1.jpg)
 
 ## Use the cart menu item
 
 Once enabled, you should see a section called Cart under the menu items. You can open this and add the cart icon into any WordPress menu.
 
-![ShopWP Creating Product Detail Pages](https://wpshop.io/screenshots/_add_cart_icon_2.jpg)
+![The ShopWP cart icon within the screen options sections](./assets/add-cart-icon/cart-icon-2.jpg)
+![The ShopWP cart icon added to a custom WordPress menu](./assets/add-cart-icon/cart-icon-3.jpg)
