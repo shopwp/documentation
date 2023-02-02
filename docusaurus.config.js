@@ -1,5 +1,6 @@
 const lightCodeTheme = require('prism-react-renderer/themes/github')
 const darkCodeTheme = require('prism-react-renderer/themes/dracula')
+const path = require('path')
 
 // With JSDoc @type annotations, IDEs can provide config autocompletion
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
@@ -30,7 +31,27 @@ module.exports = {
 			}),
 		],
 	],
-	scripts: ['https://wpshop.io/testing/shopwp-components.js'],
+	// scripts: ['https://wpshop.io/testing/shopwp-components.js'],
+	plugins: [
+		[
+			'docusaurus-plugin-module-alias',
+			{
+				alias: {
+					Utils:
+						'/Users/andrew/_www/shopwp-docs/node_modules/@shopwp/components/src/utils',
+					Api: '/Users/andrew/_www/shopwp-docs/node_modules/@shopwp/components/src/api',
+					Common:
+						'/Users/andrew/_www/shopwp-docs/node_modules/@shopwp/components/src/common',
+					Hooks:
+						'/Users/andrew/_www/shopwp-docs/node_modules/@shopwp/components/src/hooks',
+					Blocks:
+						'/Users/andrew/_www/shopwp-docs/node_modules/@shopwp/components/src/blocks',
+					Components:
+						'/Users/andrew/_www/shopwp-docs/node_modules/@shopwp/components/index.js',
+				},
+			},
+		],
+	],
 	themeConfig:
 		/** @type {import('@docusaurus/preset-classic').ThemeConfig} */
 		({
@@ -47,7 +68,7 @@ module.exports = {
 				items: [
 					{
 						value:
-							'<p class="version-num"><span class="num">v6.3.12</span><span class="emoji">🎉</span></p>',
+							'<p class="version-num"><span class="num">v6.3.13</span><span class="emoji">🎉</span></p>',
 						type: 'html',
 						position: 'left',
 					},

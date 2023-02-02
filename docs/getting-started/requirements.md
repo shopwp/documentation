@@ -63,6 +63,21 @@ Below are some of the currently unsupported plugins:
   add_filter('nonce_life', 'thegem_nonce_life');
   ```
 
+- [GeotargetingWP](https://geotargetingwp.com/)
+  This plugin can sometimes prevent the ShopWP products (and cart) from "functioning". Meaning, it will render products but clicking on them will do nothing.
+
+  The main culprit seems to be [Geotargeting's AJAX mode](https://geotargetingwp.com/docs/geotargetingwp/ajax-mode#ajax-mode). Try turning this off first.
+
+  In case you need to turn it back on, you'll need to run a little piece of ShopWP JavaScript to "render" the products. This piece of code will run after Geotargeting loads.
+
+  Geotrageting provides a callback function that you can use.
+
+  ```js
+  $(document).on('geotwp_ajax_success', function (e, data) {
+  	wp.hooks.doAction('do.shopRender')
+  })
+  ```
+
 - Caching plugins:
   If you're using a WordPress caching plugin, you may run into a JavaScript error that looks like this:
 

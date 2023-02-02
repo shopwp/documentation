@@ -57,6 +57,10 @@ If you don't wish to sync all of your products you can [adjust the syncing setti
 
 We've tried to make ShopWP as fast as possible. Caching is key to this, and the plugin comes pre-built with it's own caching system. There is no need to use third-party plugins to speed up ShopWP.
 
+:::info
+ShopWP will automatically clear it's cache after every sync
+:::
+
 ### How caching works in ShopWP
 
 When products first load, a network request is made to Shopify to fetch the product info. ShopWP then cache's this data to prevent additional network requests on consecutive page loads. How the long the cache lasts is determined by the `Cache length` setting. See below:

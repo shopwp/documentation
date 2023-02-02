@@ -4,7 +4,7 @@ ShopWP comes with JavaScript filters that allow you to customize things product 
 
 To get started, follow our [Using JavaScript Hooks](/guides/javascript-hooks) guide first.
 
-Any filter name that begins with `before` or `after` will allow you to insert custom HTML directly into the product layout.
+Any filter name that begins with `before` or `after` will allow you to insert custom HTML directly into the product layout
 
 ### product.titleText
 

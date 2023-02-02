@@ -8,18 +8,24 @@ sidebar_position: 3
 
 One of the main features of ShopWP is the ability to sync your Shopify data into WordPress. This includes things like:
 
+```
 - Products
 - Collections
 - Tags
 - Variants
 - Images
 - Metafields
-- etc ...
+etc
+```
 
 You can also choose to create detail pages for each product / collection assigned to the ShopWP sales channel.
 
 :::info
 Only products assigned to the ShopWP sales channel will be synced into WordPress.
+:::
+
+:::info
+ShopWP will automatically clear it's cache after every sync
 :::
 
 ## Syncing Tools

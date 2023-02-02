@@ -42,6 +42,10 @@ One quick way to ensure that your templates contain the latest changes is to cop
 
 ## Disconnect webhooks (recommended)
 
+:::info
+As of February 2, 2023 Webhooks can now be disconnected with the new [ShopWP Webhooks extension](https://wpshop.io/extensions/webhooks/)
+:::
+
 If you're upgrading from ShopWP `4.x` or `5.x`, chances are you're using the old webhooks syncing method.
 
 To avoid a torrent of emails from Shopify claiming that your webhook is failing, you'll want to manually disconnect these webhooks before updating to version `6.0`. ShopWP `6.0` does not provide a tool to disconnect old webhooks at this time, so you'll need to do it before updating.
