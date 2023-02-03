@@ -6,7 +6,7 @@ This guide is only applicable if you have this extension installed.
 
 ## Available events
 
-There are currently 12 events that you can list to. Here's a full list:
+There are currently 12 events that you can listen to. Here is the full list:
 
 ```
 Product create
