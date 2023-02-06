@@ -1,6 +1,6 @@
 # Visual Builder
 
-Visually create product layouts that automatically generate shortcodes.
+Visually create product layouts that automatically generate shortcodes. As you build your layout, a shortcode will be created to copy and paste throughout your WordPress site.
 
 ![ShopWP Visual Builder listing page](https://wpshop.io/wp-content/uploads/2023/01/screen1.jpg)
 
@@ -8,7 +8,9 @@ Visually create product layouts that automatically generate shortcodes.
 
 First, make sure you're on [ShopWP Pro `6.3` or greater](https://wpshop.io/pricing).
 
-The Visual Builder allows you to create layouts using a customized Gutenberg editor. As you build your layout, a shortcode will be created to copy and paste throughout your WordPress site.
+:::info
+The Visual Builder requires the Gutenberg block editor. If you have the [Classic Editor](https://wordpress.org/plugins/classic-editor/) plugin installed, you'll need to [manually enable Gutenberg](#using-with-classic-editor) specifically for the Visual Builder.
+:::
 
 ### Open Visual Builder
 
@@ -43,3 +45,11 @@ As you build your layout, this generated shortcode will change automatically for
 You can also find the shortcode within the listing page here:
 
 ![ShopWP Visual Builder shortcode field](https://wpshop.io/wp-content/uploads/2023/01/screen6.jpg)
+
+## Using with Classic Editor
+
+To use Visual Builder with the Classic Editor plugin, you'll need to turn on the `Allow users to switch editors` option. This allows you to enable the block editor for the visual builder, while using the classic editor for your other posts / pages.
+
+You can access this setting within: `WordPress Dashboard - Settings - Writing`
+
+![Classic editor settings page](./assets/visual-builder/classic-editor.jpg)

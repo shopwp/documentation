@@ -26,6 +26,8 @@ When this JavaScript error shows, it's usually due to another plugin caching the
 
 Try temporarily deactivating your other plugins and check again. You may also need to disable any host-level cache.
 
+Another thing to look for is whether your website has a CDN enabled. If it does, try temporarily disabling this to see if the error goes away.
+
 ## Error: while calling undefined
 
 When you receive this error, there's a good chance it's because your web server is running out of memory. Or it has hit the max execution time during the syncing process.
