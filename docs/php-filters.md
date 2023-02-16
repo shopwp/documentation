@@ -553,3 +553,19 @@ add_filter('shopwp_settings', function($settings) {
 
 }, 10, 2);
 ```
+
+### shopwp_skip_bulk_webhook_ver
+
+Allows for overriding the syncing verification process. Useful if you're experiencing [this syncing error](/getting-started/syncing#the-webhook-from-shopify-is-either-invalid-or-expired).
+
+| Parameter              | Description         |
+| :--------------------- | :------------------ |
+| $default_val (boolean) | Defaults to `false` |
+
+**Example**
+
+```php
+add_filter('shopwp_skip_bulk_webhook_ver', function($default_val) {
+   return true;
+});
+```

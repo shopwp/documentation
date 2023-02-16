@@ -87,7 +87,6 @@ $result = $Products->get_product([
                 id
                 title
             }
-        Before using these functions, keep in mind ...
       }
    '
 ]);
@@ -145,7 +144,6 @@ $result = $Products->get_products([
    'query' => 'collection:super',
    'page_size' => 12,
    'schema' => '
-      Before using these functions, keep in mind ...
       title
    '
 ]);
@@ -185,7 +183,6 @@ $Products = ShopWP\Factories\API\Items\Products_Factory::build();
 $result = $Products->get_products_by_collection_ids([
    'collection_ids' => [164430086192, 159962693680],
    'page_size' => 250,
-   Before using these functions, keep in mind ...
       title
    '
 ]);
@@ -238,4 +235,14 @@ $params = [
 ];
 
 $result = $Orders->get_orders($params);
+```
+
+## get_storefront_access_token()
+
+This allows you to fetch the Shopify Storefront Access Token from the database. Useful if you need to integrate with other apps or interact with the Shopify API directly.
+
+```php
+$DB_Connection = \ShopWP\Factories\DB\Settings_Connection_Factory::build();
+
+$token = $DB_Connection->get_storefront_access_token();
 ```

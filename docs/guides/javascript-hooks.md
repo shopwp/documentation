@@ -59,8 +59,8 @@ For example, let's say we want to add the product vendor name before the product
 wp.hooks.addFilter(
 	'before.productTitle',
 	'shopwp',
-	function (defaultValue, props) {
-		return '<p>Vendor: ' + props.product.vendor + '</p>'
+	function (defaultValue, productState) {
+		return '<p>Vendor: ' + productState.payload.vendor + '</p>'
 	}
 )
 ```

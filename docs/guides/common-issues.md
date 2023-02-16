@@ -50,7 +50,7 @@ This error usually occurs because a previously failed sync. To fix, follow the b
 This will remove any custom fields applied to your product posts as well as any product post menu items.
 :::
 
-## Elememtor widgets disappear after updating ShopWP
+## Elementor widgets disappear after updating ShopWP
 
 Run this sql query in your database to make your widgets appear again:
 
@@ -99,3 +99,9 @@ RewriteRule . /index.php [L]
 
 # END WordPress
 ```
+
+## Missing languages within the Pricing settings
+
+If you're missing the "Currency" and "Language" dropdowns in the below screenshot, try logging out of WordPress and logging back in. The REST API nonce could very well be expired.
+
+![ShopWP Pro Pricing Settings](./assets/common-issues/missing-langs.png)

@@ -1159,7 +1159,7 @@ wp.hooks.addFilter(
 	'before.productPricing',
 	'shopwp',
 	function (defaultValue, props) {
-		return '<p>Vendor: ' + productState.product.vendor + '</p>'
+		return '<p>Vendor: ' + productState.payload.vendor + '</p>'
 	}
 )
 ```
@@ -1178,8 +1178,8 @@ Allows you add custom HTML after the product price. You must return HTML as a st
 wp.hooks.addFilter(
 	'after.productPricing',
 	'shopwp',
-	function (defaultValue, props) {
-		return '<p>Vendor: ' + productState.product.vendor + '</p>'
+	function (defaultValue, productState) {
+		return '<p>Vendor: ' + productState.payload.vendor + '</p>'
 	}
 )
 ```
@@ -1201,7 +1201,7 @@ wp.hooks.addFilter(
 	'before.productTitle',
 	'shopwp',
 	function (defaultValue, productState) {
-		return '<p>Vendor: ' + productState.product.vendor + '</p>'
+		return '<p>Vendor: ' + productState.payload.vendor + '</p>'
 	}
 )
 ```
@@ -1223,7 +1223,7 @@ wp.hooks.addFilter(
 	'after.productTitle',
 	'shopwp',
 	function (defaultValue, productState) {
-		return '<p>Vendor: ' + productState.product.vendor + '</p>'
+		return '<p>Vendor: ' + productState.payload.vendor + '</p>'
 	}
 )
 ```

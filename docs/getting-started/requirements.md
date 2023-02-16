@@ -25,11 +25,32 @@ With this in mind, our minimum requirements for ShopWP are:
 
 ShopWP does not currently work when WordPress is installed in a subdirectory. Please consider a subdomain or it's own domain for now.
 
-## Incompatible themes
+## Known hosting issues
+
+### [Kinsta](https://kinsta.com)
+
+Kinsta's caching system is known to prevent the ShopWP products from loading correctly. This is because they aggressively cache your entire WordPress site. From what I can tell, the only thing you can do is ask Kinsta to exclude the ShopWP pages from their caching system.
+
+You should be able to ask them to exclude any sub page of your main `/products` page. That should act as a catch all.
+
+You can reach out to their support team to do this: https://kinsta.com/kinsta-support/
+
+## Known theme issues
 
 Below are some of the currently unsupported themes:
 
-- [Pro Photo 7](https://pro.photo)
+- [Pro Photo 7](https://pro.photo) (Unsupported)
+- [Sage](https://wpshop.io)
+
+  - When using Sage with the Soil plugin, you must have the following edits made inside the `setup.php` file:
+
+  ```php
+    // Need to remove:
+    // add_theme_support('soil-clean-up');
+
+    // Need to add:
+    add_theme_support('soil-js-to-footer');
+  ```
 
 ## Incompatible plugins
 

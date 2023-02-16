@@ -14,3 +14,11 @@ Once enabled, you should see a section called Cart under the menu items. You can
 
 ![The ShopWP cart icon within the screen options sections](./assets/add-cart-icon/cart-icon-2.jpg)
 ![The ShopWP cart icon added to a custom WordPress menu](./assets/add-cart-icon/cart-icon-3.jpg)
+
+## Create a custom cart toggle
+
+You can turn any HTML element into a cart toggle button by adding the CSS class: `shopwp-cart-trigger`, like this:
+
+```html
+<div class="shopwp-cart-trigger"></div>
+```

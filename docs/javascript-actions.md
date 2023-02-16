@@ -217,7 +217,7 @@ This action runs after a product is added to the cart
 | Parameter          | Description                                           |
 | :----------------- | :---------------------------------------------------- |
 | lineItems (object) | Represents the line items that were added to the cart |
-| variant (object)   | Represents the product variant data                   |
+| cartState (object) | Represents the new cart state                         |
 
 **Example**
 
@@ -225,8 +225,8 @@ This action runs after a product is added to the cart
 wp.hooks.addAction(
 	'on.afterAddToCart',
 	'shopwp',
-	function (lineItems, variant) {
-		console.log('on.afterAddToCart', lineItems, variant)
+	function (lineItems, cartState) {
+		console.log('on.afterAddToCart', lineItems, cartState)
 	}
 )
 ```
@@ -486,4 +486,14 @@ wp.hooks.doAction('do.directCheckout', {
 	discountCodes: ['FREE'],
 	attributes: false,
 })
+```
+
+### do.shopHydrate
+
+Allows for manually fetching new product data
+
+**Example**
+
+```js
+wp.hooks.doAction('do.shopHydrate')
 ```
