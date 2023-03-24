@@ -12,8 +12,6 @@ There are currently 12 events that you can listen to. Here is the full list:
 Product create
 Product update
 Product delete
-Product added to sales channel
-Product removed from sales channel
 Collection create
 Collection update
 Collection delete
@@ -34,8 +32,6 @@ Each hook below is linked to an example of how to use it.
 - [shopwp_webhook_after_product_update](/php-actions#shopwp_webhook_after_product_update)
 - [shopwp_webhook_after_product_create](/php-actions#shopwp_webhook_after_product_create)
 - [shopwp_webhook_after_product_delete](/php-actions#shopwp_webhook_after_product_delete)
-- [shopwp_webhook_after_product_listings_remove](/php-actions#shopwp_webhook_after_product_listings_remove)
-- [shopwp_webhook_after_product_listings_add](/php-actions#shopwp_webhook_after_product_listings_add)
 - [shopwp_webhook_after_collection_create](/php-actions#shopwp_webhook_after_collection_create)
 - [shopwp_webhook_after_collection_update](/php-actions#shopwp_webhook_after_collection_update)
 - [shopwp_webhook_after_collection_delete](/php-actions#shopwp_webhook_after_collection_delete)

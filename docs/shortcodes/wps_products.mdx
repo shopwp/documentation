@@ -36,6 +36,151 @@ Every attribute below can also be used with the following shortcodes:
 
 ## Available Attributes
 
+| Attribute                                                                           | Default       | Description                                                                                |
+| :---------------------------------------------------------------------------------- | :------------ | :----------------------------------------------------------------------------------------- |
+| [title](#title)                                                                     | `false`       | Display products based on one or more product titles                                       |
+| [tag](#tag)                                                                         | `false`       | Display products based on one or more product tags                                         |
+| [vendor](#vendor)                                                                   | `false`       | Display products based on one or more product vendors                                      |
+| [collection](#collection)                                                           | `false`       | Display products from one or more collections                                              |
+| [product_type](#product_type)                                                       | `false`       | Display products based on one or more product types                                        |
+| [available_for_sale](#available_for_sale)                                           | `false`       | Display products based on their availability                                               |
+| [product_id](#product_id)                                                           | `false`       | Display products based on one or more product ids                                          |
+| [post_id](#post_id)                                                                 | `false`       | Display products based on one or more WordPress post id(s)                                 |
+| [sort_by](#sort_by)                                                                 | `false`       | Determines the sort order when displaying multiple products                                |
+| [reverse](#reverse)                                                                 | `false`       | Reverse the order of products                                                              |
+| [page_size](#page_size)                                                             | `10`          | Determines the number of products to show per page                                         |
+| [limit](#limit)                                                                     | `false`       | Limits the overall number of products that show                                            |
+| [connective](#connective)                                                           | `false`       | Determines how the products are found when filtering                                       |
+| [subscriptions](#subscriptions)                                                     | `false`       | Determines whether to enable subscriptions for the specific product                        |
+| [subscriptions_select_on_load](#subscriptions_select_on_load)                       | `false`       | Determines whether to auto select the subscription option when the product loads           |
+| [subscriptions_autoload](#subscriptions_autoload)                                   | `false`       | Determines whether the subscription data will show on page load or not                     |
+| [keep_commas](#keep_commas)                                                         | `false`       | Whether to search products with commas in their title                                      |
+| [direct_checkout](#direct_checkout)                                                 | `false`       | Allows for linking customers directly to the Shopify checkout process                      |
+| [align_height](#align_height)                                                       | `false`       | Attempts to "align" the height of products when displayed in a grid                        |
+| [grid_column_gap](#grid_column_gap)                                                 | `false`       | Specifies the space between products This is useful when showing products in a grid layout |
+| [html_template](#html_template)                                                     | `false`       | Specifies a custom template to be used for the product html                                |
+| [show_price_under_variant_button](#show_price_under_variant_button)                 | `false`       | Show the price under each variant button                                                   |
+| [show_images_carousel](#show_images_carousel)                                       | `false`       | Determines whether to show the product images as a carousel                                |
+| [image_carousel_thumbs](#image_carousel_thumbs)                                     | `false`       | Determines whether to show the product thumbnails within an images carousel                |
+| [variant_style](#variant_style)                                                     | `false`       | Determines the visual style of the product variant controls                                |
+| [hide_quantity](#hide_quantity)                                                     | `false`       | Determines whether to hide the product quantity input                                      |
+| [show_quantity_label](#show_quantity_label)                                         | `false`       | Determines whether to show or hide the "label" to the quantity selection element           |
+| [min_quantity](#min_quantity)                                                       | `false`       | Sets a "minimum" number to the quantity field                                              |
+| [max_quantity](#max_quantity)                                                       | `false`       | Sets a "maximum" number to the quantity field                                              |
+| [excludes](#excludes)                                                               | `false`       | Allows for excluding certain product components like the title, description, etc           |
+| [items_per_row](#items_per_row)                                                     | `false`       | Determines how many products will appear in each row                                       |
+| [show_price_range](#show_price_range)                                               | `false`       | Determines whether to show price ranges for each product                                   |
+| [show_compare_at](#show_compare_at)                                                 | `false`       | Determines whether to show the compare at price for each product                           |
+| [quantity_label_text](#quantity_label_text)                                         | `false`       | Customizes the label text next to the quantity input field                                 |
+| [show_featured_only](#show_featured_only)                                           | `false`       | Determines whether to only show the product feature image                                  |
+| [show_zoom](#show_zoom)                                                             | `false`       | Determines whether to enable product image zooming                                         |
+| [pagination](#pagination)                                                           | `false`       | Determines whether to hide or show pagination                                              |
+| [no_results_text](#no_results_text)                                                 | `false`       | The text to show when no products are found                                                |
+| [description_length](#description_length)                                           | `false`       | Determines how long the product description should be in characters                        |
+| [infinite_scroll](#infinite_scroll)                                                 | `false`       | When turned on, the next page of items will automatically append to the container          |
+| [infinite_scroll_offset](#infinite_scroll_offset)                                   | `false`       | Determines the offset from the edge of the items container                                 |
+| [full_width](#full_width)                                                           | `false`       | When set to `true`, will force the product to span the width of its container              |
+| [link_to](#link_to)                                                                 | `false`       | Allows for determining where products link to, if anywhere                                 |
+| [link_target](#link_target)                                                         | `false`       | Allows for determining whether links open in a new tab or not Default: `_self`             |
+| [link_with_buy_button](#link_with_buy_button)                                       | `false`       | Determines whether to show the buy button controls when linking                            |
+| [carousel](#carousel)                                                               | `false`       | Allows for showing products in a carousel style                                            |
+| [carousel_dots](#carousel_dots)                                                     | `false`       | Determines whether to show the carousel dots or not                                        |
+| [carousel_infinite](#carousel_infinite)                                             | `false`       | Determines whether to continue sliding through products endlessly                          |
+| [carousel_speed](#carousel_speed)                                                   | `500`         | Determines the carousel speed                                                              |
+| [carousel_slides_to_show](#carousel_slides_to_show)                                 | `4`           | Determines the number of carousel slides to show at once                                   |
+| [carousel_slides_to_scroll](#carousel_slides_to_scroll)                             | `4`           | Determines the number of carousel slides to scroll at once                                 |
+| [carousel_prev_arrow](#carousel_prev_arrow)                                         | `false`       | Allows to specifying a custom "previous slide" arrow icon                                  |
+| [carousel_next_arrow](#carousel_next_arrow)                                         | `false`       | Allows to specifying a custom "next slide" arrow icon                                      |
+| [images_align](#images_align)                                                       | `false`       | Allows for determining how the featured image is positioned horizontally                   |
+| [images_show_next_on_hover](#images_show_next_on_hover)                             | `false`       | Determines whether to show the next image when hovering over the featured image            |
+| [images_sizing_toggle](#images_sizing_toggle)                                       | `false`       | Determines whether to enable custom image sizing                                           |
+| [images_sizing_width](#images_sizing_width)                                         | `false`       | Sets the width when using custom image sizing                                              |
+| [images_sizing_height](#images_sizing_height)                                       | `false`       | Sets the height when using custom image sizing                                             |
+| [images_sizing_scale](#images_sizing_scale)                                         | `false`       | Sets a custom "scale" for the product images                                               |
+| [images_sizing_crop](#images_sizing_crop)                                           | `false`       | Specifies a "crop" position for the image                                                  |
+| [thumbnail_images_sizing_toggle](#thumbnail_images_sizing_toggle)                   | `false`       | Whether to size the product thumbnails                                                     |
+| [thumbnail_images_sizing_width](#thumbnail_images_sizing_width)                     | `false`       | Sets the width of the product thumbnails                                                   |
+| [thumbnail_images_sizing_height](#thumbnail_images_sizing_height)                   | `false`       | The product thumbnail height                                                               |
+| [thumbnail_images_sizing_scale](#thumbnail_images_sizing_scale)                     | `false`       | Sets a custom "scale" for the product thumbnails                                           |
+| [thumbnail_images_sizing_crop](#thumbnail_images_sizing_crop)                       | `false`       | Specifies a "crop" position for the thumbnail image                                        |
+| [show_out_of_stock_variants](#show_out_of_stock_variants)                           | `false`       | Determines whether to show out of stock variants or not                                    |
+| [show_inventory_levels](#show_inventory_levels)                                     | `false`       | Determines whether to show the inventory levels notice or not                              |
+| [left_in_stock_threshold](#left_in_stock_threshold)                                 | `false`       | Determines the threshold for showing the "left in stock" inventory notice                  |
+| [cache_templates](#cache_templates)                                                 | `false`       | Determines whether to cache the html template response                                     |
+| [container_width](#container_width)                                                 | `false`       | Determines the product's max container width                                               |
+| [mobile_columns](#mobile_columns)                                                   | `false`       | Determines the number of columns to show on mobile                                         |
+| [select_first_variant](#select_first_variant)                                       | `false`       | Allows for selecting the first product variant on page load                                |
+| [reset_variants_after_adding](#reset_variants_after_adding)                         | `false`       | Determines whether to reset the variant selections after adding to cart                    |
+| [with_sorting](#with_sorting)                                                       | `false`       | Determines whether to show a sorting / filtering dropdown with the products                |
+| [after_added_text](#after_added_text)                                               | `false`       | Determines the button text that shows after adding to cart                                 |
+| [clear_selections_text](#clear_selections_text)                                     | `false`       | Allows for customizing the "clear selections" text                                         |
+| [quantity_step](#quantity_step)                                                     | `false`       | Allows for customizing the "quantity step" for the product quantity input                  |
+| [color_swatch_names](#color_swatch_names)                                           | `false`       | Set the CSS color swatch names                                                             |
+| [image_zoom_options](#image_zoom_options)                                           | `false`       | Allows for customizing the image zoom options                                              |
+| [show_sale_notice](#show_sale_notice)                                               | `false`       | Determines whether to show the "sale" notice on product images                             |
+| [show_out_of_stock_notice](#show_out_of_stock_notice)                               | `false`       | Determines whether to show the "out of stock" notice on products                           |
+| [image_placeholder](#image_placeholder)                                             | `false`       | Allows for customizing the product placeholder image                                       |
+| [title_class_name](#title_class_name)                                               | `false`       | Allows for adding a custom class name to the product title                                 |
+| [notice_unavailable_text](#notice_unavailable_text)                                 | `false`       | Allows for customizing the text shown when a product is unavailable to purchase            |
+| [pagination_load_more_text](#pagination_load_more_text)                             | `false`       | Allows for customizing the "load more" button text shown for product pagination            |
+| [out_of_stock_notice_text](#out_of_stock_notice_text)                               | `false`       | Allows for customizing the "out of stock" message shown                                    |
+| [sale_label_text](#sale_label_text)                                                 | `Sale!`       | Allows for customizing the "sale" label text displayed on the product images               |
+| [sold_out_image_label_text](#sold_out_image_label_text)                             | `Sold out`    | Allows for customizing the "sold out" label text                                           |
+| [title_color](#title_color)                                                         | `#111111`     | Customizes the background-color of an add to cart button                                   |
+| [title_type_font_family](#title_type_font_family)                                   | `false`       | Customizes the font-family of an add to cart button                                        |
+| [title_type_font_size](#title_type_font_size)                                       | `false`       | Customizes the font-size of an add to cart button                                          |
+| [title_type_font_style](#title_type_font_style)                                     | `false`       | Customizes the font-style of an add to cart button                                         |
+| [title_type_font_weight](#title_type_font_weight)                                   | `false`       | Customizes the font-weight of an add to cart button                                        |
+| [title_type_letter_spacing](#title_type_letter_spacing)                             | `false`       | Customizes the letter-spacing of an add to cart button                                     |
+| [title_type_line_height](#title_type_line_height)                                   | `false`       | Customizes the line-height of an add to cart button                                        |
+| [title_type_text_decoration](#title_type_text_decoration)                           | `false`       | Customizes the text-decoration of an add to cart button                                    |
+| [title_type_text_transform](#title_type_text_transform)                             | `false`       | Customizes the text-transform of the product's add to cart button                          |
+| [pricing_color](#pricing_color)                                                     | `false`       | Customizes the background-color of an add to cart button                                   |
+| [pricing_type_font_family](#pricing_type_font_family)                               | `false`       | Customizes the font-family of an add to cart button                                        |
+| [pricing_type_font_size](#pricing_type_font_size)                                   | `false`       | Customizes the font-size of an add to cart button                                          |
+| [pricing_type_font_style](#pricing_type_font_style)                                 | `false`       | Customizes the font-style of an add to cart button                                         |
+| [pricing_type_font_weight](#pricing_type_font_weight)                               | `false`       | Customizes the font-weight of an add to cart button                                        |
+| [pricing_type_letter_spacing](#pricing_type_letter_spacing)                         | `false`       | Customizes the letter-spacing of an add to cart button                                     |
+| [pricing_type_line_height](#pricing_type_line_height)                               | `false`       | Customizes the line-height of an add to cart button                                        |
+| [pricing_type_text_decoration](#pricing_type_text_decoration)                       | `false`       | Customizes the text-decoration of an add to cart button                                    |
+| [pricing_type_text_transform](#pricing_type_text_transform)                         | `false`       | Customizes the text-transform of the product's add to cart button                          |
+| [description_color](#description_color)                                             | `#111111`     | Customizes the background-color of an add to cart button                                   |
+| [description_type_font_family](#description_type_font_family)                       | `false`       | Customizes the font-family of an add to cart button                                        |
+| [description_type_font_size](#description_type_font_size)                           | `false`       | Customizes the font-size of an add to cart button                                          |
+| [description_type_font_style](#description_type_font_style)                         | `false`       | Customizes the font-style of an add to cart button                                         |
+| [description_type_font_weight](#description_type_font_weight)                       | `false`       | Customizes the font-weight of an add to cart button                                        |
+| [description_type_letter_spacing](#description_type_letter_spacing)                 | `false`       | Customizes the letter-spacing of the description                                           |
+| [description_type_line_height](#description_type_line_height)                       | `false`       | Customizes the line-height of an add to cart button                                        |
+| [description_type_text_decoration](#description_type_text_decoration)               | `false`       | Customizes the text-decoration of the description                                          |
+| [description_type_text_transform](#description_type_text_transform)                 | `false`       | Customizes the text-transform of the description                                           |
+| [variant_dropdown_text_color](#variant_dropdown_text_color)                         | `#FFFFFF`     | Customizes the text color of the variant dropdown                                          |
+| [variant_dropdown_type_font_family](#variant_dropdown_type_font_family)             | `false`       | Customizes the font-family of the variant dropdown                                         |
+| [variant_dropdown_type_font_size](#variant_dropdown_type_font_size)                 | `false`       | Customizes the font-size of the variant dropdown                                           |
+| [variant_dropdown_type_font_style](#variant_dropdown_type_font_style)               | `false`       | Customizes the font-style of the variant dropdown                                          |
+| [variant_dropdown_type_font_weight](#variant_dropdown_type_font_weight)             | `false`       | Customizes the font-weight of the variant dropdown                                         |
+| [variant_dropdown_type_letter_spacing](#variant_dropdown_type_letter_spacing)       | `false`       | Customizes the letter-spacing of the variant dropdown                                      |
+| [variant_dropdown_type_line_height](#variant_dropdown_type_line_height)             | `false`       | Customizes the line-height of the variant dropdown                                         |
+| [variant_dropdown_type_text_decoration](#variant_dropdown_type_text_decoration)     | `false`       | Customizes the text-decoration of the variant dropdown                                     |
+| [variant_dropdown_type_text_transform](#variant_dropdown_type_text_transform)       | `false`       | Customizes the text-transform of the variant dropdown                                      |
+| [variant_dropdown_button_color](#variant_dropdown_button_color)                     | `#52a7a6`     | Determines the variant dropdown color                                                      |
+| [add_to_cart_button_text](#add_to_cart_button_text)                                 | `Add to cart` | Determines the buy button text                                                             |
+| [add_to_cart_button_text_color](#add_to_cart_button_text_color)                     | `#FFFFFF`     | Determines the buy button text color                                                       |
+| [add_to_cart_button_color](#add_to_cart_button_color)                               | `false`       | Customizes the background-color of an add to cart button                                   |
+| [add_to_cart_button_type_font_family](#add_to_cart_button_type_font_family)         | `false`       | Customizes the font-family of an add to cart button                                        |
+| [add_to_cart_button_type_font_size](#add_to_cart_button_type_font_size)             | `false`       | Customizes the font-size of an add to cart button                                          |
+| [add_to_cart_button_type_font_style](#add_to_cart_button_type_font_style)           | `false`       | Customizes the font-style of an add to cart button                                         |
+| [add_to_cart_button_type_font_weight](#add_to_cart_button_type_font_weight)         | `false`       | Customizes the font-weight of an add to cart button                                        |
+| [add_to_cart_button_type_letter_spacing](#add_to_cart_button_type_letter_spacing)   | `false`       | Customizes the letter-spacing of an add to cart button                                     |
+| [add_to_cart_button_type_line_height](#add_to_cart_button_type_line_height)         | `false`       | Customizes the line-height of an add to cart button                                        |
+| [add_to_cart_button_type_text_decoration](#add_to_cart_button_type_text_decoration) | `false`       | Customizes the text-decoration of an add to cart button                                    |
+| [add_to_cart_button_type_text_transform](#add_to_cart_button_type_text_transform)   | `false`       | Customizes the text-transform of an add to cart button                                     |
+| [dropzone_product_title](#dropzone_product_title)                                   | `false`       | Customizes where the product title should display                                          |
+| [dropzone_product_pricing](#dropzone_product_pricing)                               | `false`       | Customizes where the product pricing component should display                              |
+| [dropzone_product_description](#dropzone_product_description)                       | `false`       | Customizes where the product description component should display                          |
+| [dropzone_product_gallery](#dropzone_product_gallery)                               | `false`       | Customizes where the product images component should display                               |
+| [dropzone_product_buy_button](#dropzone_product_buy_button)                         | `false`       | Customizes where the product buy button component should display                           |
+| [dropzone_load_more](#dropzone_load_more)                                           | `false`       | Allows for specifying a custom location in the DOM to place the pagination                 |
+
 ### title
 
 Display products based on one or more product titles. Comma-separate to display products with multiple titles.
@@ -114,7 +259,7 @@ Pagination will only work when filtering by **one** collection. If you want to f
 
 ### product_type
 
-Display products based on one or more product type(s). Comma-separate to display products from multiple product types.
+Display products based on one or more product types. Comma-separate to display products from multiple product types.
 
 | Possible values           |
 | :------------------------ |

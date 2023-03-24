@@ -184,6 +184,10 @@ To check, open your ShopWP settings and open the `Syncing` section. Scroll down 
 https://mysite.org
 ```
 
+You can also try enabling the `Allow alternative webhook auth` setting. You can find this within the ShopWP settings
+
+![Syncing issue Address cannot be any of the domains...](./assets/syncing-issue-4.jpg)
+
 ### "Address cannot be any of the domains..."
 
 This error will show up if the value for the ShopWP `Syncing URL` setting does not point to your WordPress site URL. This setting must be set to the same domain that you're using for the WordPress site.

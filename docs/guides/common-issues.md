@@ -105,3 +105,37 @@ RewriteRule . /index.php [L]
 If you're missing the "Currency" and "Language" dropdowns in the below screenshot, try logging out of WordPress and logging back in. The REST API nonce could very well be expired.
 
 ![ShopWP Pro Pricing Settings](./assets/common-issues/missing-langs.png)
+
+## Recharge request failed with error message: You do not have sufficient permissions (scopes) for this object
+
+This error is due to incorrect permissions on your Recharge API key. This can happen when you accidentally forget to set `Subscriptions` and `Products` to "Read and write" when creating your Recharge API key.
+
+## Redirect product links to Shopify
+
+If you're trying to link all of your products to Shopify, you may need to add the below chunk of PHP to your WordPress theme's `functions.php` file:
+
+```php
+function shopwp_link_to_shopify($permalink, $post, $leavename) {
+
+	if ($post->post_type === 'wps_products') {
+		$shopify_url = get_post_meta($post->ID, 'product_shopify_url', true);
+
+		if (!empty($shopify_url)) {
+			return $shopify_url;
+		}
+	}
+
+	return $permalink;
+
+};
+
+add_filter( 'post_type_link', 'shopwp_link_to_shopify', 10, 3 );
+```
+
+This will essentially change the permalink of all synced product posts. It will change the link to point to the Shopify detail page instead.
+
+## Adding product programmatically does nothing
+
+Usually when this happens, the variant you're trying to add is out of stock. Open your product variant inside Shopify and make sure the "Available" inventory is greater than zero. Or turn off the "Track quantity" setting.
+
+![ShopWP Pro Pricing Settings](./assets/common-issues/do-addtocart.png)

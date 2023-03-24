@@ -1,4 +1,4 @@
-# Redirect Shopify pages to WordPress
+# Redirect Shopify pages
 
 Often times, you may not want to use Shopify's product detail pages that come with the Online Store theme. You might want to redirect these pages to the ShopWP detail pages on WordPress.
 

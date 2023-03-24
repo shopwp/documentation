@@ -1315,3 +1315,41 @@ wp.hooks.addFilter('block.productsSupports', 'shopwp', function (defaultVal) {
 	}
 })
 ```
+
+### shop.textContent
+
+Allows for customizing any text content within ShopWP.
+
+:::info
+This will override any dynamic translations made via the [Translator extension](https://wpshop.io/extensions/translator/).
+:::
+
+| Parameter            | Description                                              |
+| :------------------- | :------------------------------------------------------- |
+| textContent (object) | All text content in ShopWP, separated as key value pairs |
+| shopState (object)   | The global Shop state                                    |
+
+The `textContent` object contains sub objects with keys that represent the "type" of content. The available keys are:
+
+| key | Description |
+| :-- | :---------- |
+| e   | Errors      |
+| w   | Warnings    |
+| n   | Notices     |
+| l   | Labels      |
+| a   | Admin only  |
+
+**Example**
+
+```js
+wp.hooks.addFilter(
+	'shop.textContent',
+	'shopwp',
+	function (textContent, shopState) {
+		textContent.l.beginCheckout = 'Custom checkout button text'
+		textContent.l.cartTitle = 'Custom cart title'
+
+		return textContent
+	}
+)
+```

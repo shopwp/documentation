@@ -65,7 +65,7 @@ Below are some of the currently unsupported plugins:
 - [WP Rocket](https://wp-rocket.me/):
   WP Rocket will attempt to to minify and merge the JavaScript from ShopWP. This will prevent ShopWP from loading properly. To fix this, you need to add ShopWP to the WP Rocket exclusion list.
 
-  Within the File Optimization tab of WP Rocket, find the `Excludes` tab.
+  Within the File Optimization tab of WP Rocket, find the `Excludes` tab. [Learn more](https://docs.wp-rocket.me/article/54-exclude-pages-from-the-cache)
 
 - [WP-Optimize](https://wordpress.org/plugins/wp-optimize/):
   WP-Optimize will try to minify and merge the JavaScript from the plugin. You'll need to manually exclude the plugin's JavaScript from this process since ShopWP already optimizes things. You can [follow this guide](https://getwpo.com/faqs/#How-do-I-exclude-individual-JavaScript-scripts-from-being-minified-and-merged-).

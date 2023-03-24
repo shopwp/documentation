@@ -6,10 +6,6 @@ sidebar_position: 1
 
 ShopWP comes in two versions; a [free version](https://wordpress.org/plugins/wpshopify/) and a [Pro version](https://wpshop.io/purchase/). _The free version is no longer maintained_. They are two separate plugins and only one should be activated at once.
 
-:::caution
-Before you can install any version of ShopWP, you must have an active Shopify store. The plugin is compatible with any [Shopify plan](https://shopify.pxf.io/b39yJv) including [14-day free trials](https://shopify.pxf.io/5bPL0L) _and_ the more affordable $9 [Lite plan](https://shopify.pxf.io/vnqbrj).
-:::
-
 :::info
 If you're upgrading from free to Pro, please read the [Upgrading](/guides/upgrading-to-pro) guide.
 :::

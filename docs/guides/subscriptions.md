@@ -8,14 +8,12 @@ ShopWP integrates with the [Recharge app](https://apps.shopify.com/subscription-
 
 ## Getting started
 
-Before you can start showing your subscription products, there are a couple steps you must take.
-
-First, you must meet the below requirements and install _both_ [ShopWP Pro](https://wpshop.io/purchase) and the [ShopWP Pro Recharge](https://wpshop.io/extensions/recharge) extension. You also need to have the Recharge Shopify app installed. Once you have these requirements met, skip to the section ["Adding the Recharge API key"](#adding-the-recharge-api-key) to finish.
+Before you start, please make sure to meet the below requirements:
 
 ### Requirements
 
-1. [ShopWP Pro](https://wpshop.io/purchase)
-2. [ShopWP Pro Recharge Extension](https://wpshop.io/extensions/recharge)
+1. Purchase and install [ShopWP Pro](https://wpshop.io/purchase)
+2. Purchase and install [ShopWP Pro Recharge Extension](https://wpshop.io/extensions/recharge)
 3. [Recharge Shopify app](https://apps.shopify.com/subscription-payments) installed and configured
 4. Your [Recharge API key added](#adding-the-recharge-api-key) to the ShopWP settings
 

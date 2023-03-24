@@ -24,6 +24,7 @@ module.exports = {
 					// Please change this to your repo.
 					editUrl: 'https://github.com/facebook/docusaurus/edit/main/website/',
 					routeBasePath: '/',
+					showLastUpdateTime: true,
 				},
 				theme: {
 					customCss: require.resolve('./src/css/custom.css'),
@@ -68,7 +69,7 @@ module.exports = {
 				items: [
 					{
 						value:
-							'<p class="version-num"><span class="num">v6.3.14</span><span class="emoji">🎉</span></p>',
+							'<p class="version-num"><span class="num">v7.0.0</span><span class="emoji">🎉</span></p>',
 						type: 'html',
 						position: 'left',
 					},
