@@ -11,9 +11,7 @@ Watch our [quick video tutorial](https://www.youtube.com/watch?v=v3AC2SPK40o&t=0
 ## Example Usage
 
 ```js
-// Display the cheapest 10 collections
 [wps_collections sort_by="lowest_price" limit="10"]
-
 ```
 
 ## Available Attributes
@@ -26,8 +24,30 @@ Displays collections based on one or more collection title(s).
 | :--------------------------------- |
 | Any valid Shopify collection title |
 
+**Example**
+
 ```js
 [wps_collections title="Featured"]
+```
+
+:::info
+When filtering by title, ShopWP does not apply strict equality. It will return any collection that "contains" the word. So if you have more than one collection with the same group of words in the title, both will be returned.
+
+If you want to filter by a strict equality, use the query attribute instead and pass in the collection id.
+:::
+
+### query
+
+Allows you to construct your own query based on the [Shopify search syntax](https://shopify.dev/docs/api/usage/search-syntax).
+
+| Possible values                                                                       |
+| :------------------------------------------------------------------------------------ |
+| Any valid Shopify [search criteria](https://shopify.dev/docs/api/usage/search-syntax) |
+
+**Example**
+
+```js
+[wps_collections query="id:159099748452 OR id:159100010596"]
 ```
 
 ### updated_at

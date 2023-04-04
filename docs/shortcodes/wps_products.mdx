@@ -46,6 +46,7 @@ Every attribute below can also be used with the following shortcodes:
 | [available_for_sale](#available_for_sale)                                           | `false`       | Display products based on their availability                                               |
 | [product_id](#product_id)                                                           | `false`       | Display products based on one or more product ids                                          |
 | [post_id](#post_id)                                                                 | `false`       | Display products based on one or more WordPress post id(s)                                 |
+| [query](#query)                                                                     | `false`       | Use a [custom query](https://shopify.dev/docs/api/usage/search-syntax) to filter products  |
 | [sort_by](#sort_by)                                                                 | `false`       | Determines the sort order when displaying multiple products                                |
 | [reverse](#reverse)                                                                 | `false`       | Reverse the order of products                                                              |
 | [page_size](#page_size)                                                             | `10`          | Determines the number of products to show per page                                         |
@@ -183,7 +184,13 @@ Every attribute below can also be used with the following shortcodes:
 
 ### title
 
-Display products based on one or more product titles. Comma-separate to display products with multiple titles.
+Display products based on one or more product titles. Comma-separate to display multiple products by title.
+
+:::info
+When filtering by title, ShopWP does not apply strict equality. It will return any product that "contains" the word. So if you have more than one product with the same group of words in the title, both will be returned.
+
+If you want to filter with a strict equality use the [post_id](#post_id), [product_id](#product_id), or [query](<(#query)>) attributes instead.
+:::
 
 | Possible values                    |
 | :--------------------------------- |
@@ -332,6 +339,21 @@ Display products based on one or more WordPress post id(s).
 
 // Show products with post ids: "35421" or "35418"
 [wps_products post_id="35421, 35418"]
+```
+
+### query
+
+Allows you to construct your own query based on the [Shopify search syntax](https://shopify.dev/docs/api/usage/search-syntax).
+
+| Possible values                                                                       |
+| :------------------------------------------------------------------------------------ |
+| Any valid Shopify [search criteria](https://shopify.dev/docs/api/usage/search-syntax) |
+
+**Example**
+
+```js
+// List 5 products with the name "Caramel Apple", or products that have an inventory of over 500 items and less than or equal to 1000 items.
+[wps_products query="(title:Caramel Apple) OR (inventory_total:>500 inventory_total:<=1000)"]
 ```
 
 ### sort_by
