@@ -182,7 +182,9 @@ $Products = ShopWP\Factories\API\Items\Products_Factory::build();
 
 $result = $Products->get_products_by_collection_ids([
    'collection_ids' => [164430086192, 159962693680],
-   'page_size' => 250,
+   'page_size' => 40,
+   'sort_by' => 'collection_default',
+   'schema' => '
       title
    '
 ]);
