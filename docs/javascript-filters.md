@@ -201,6 +201,7 @@ Allows you to customize the line item options before they're added to the cart. 
 | Parameter                  | Description                                  |
 | :------------------------- | :------------------------------------------- |
 | lineItemOptions - (object) | Represents the line item options to be added |
+| variant - (object)         | Represents the variant data                  |
 
 **Example**
 
@@ -208,7 +209,7 @@ Allows you to customize the line item options before they're added to the cart. 
 wp.hooks.addFilter(
 	'product.lineItemOptions',
 	'shopwp',
-	function (lineItemOptions) {
+	function (lineItemOptions, variant) {
 		lineItemOptions.minQuantity = 2
 		return lineItemOptions
 	}
