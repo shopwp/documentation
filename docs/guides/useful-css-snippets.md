@@ -45,3 +45,19 @@ This CSS snippet will remove the red "Sale!" text over images, but keep the actu
 	display: none;
 }
 ```
+
+## Change color of subscription dropdowns
+
+This CSS snippet will customize the background color of the subscription dropdowns.
+
+```css
+[class*='SellingPlansListCSS'] [class*='MenuList'] [class*='option'] {
+	background-color: white;
+	color: black;
+}
+
+[class*='SellingPlansListCSS'] [class*='MenuList'] [class*='option']:hover {
+	background-color: black;
+	color: white;
+}
+```
