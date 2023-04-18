@@ -228,6 +228,16 @@ The best way to check for this is to deactivate the plugin and reactivate again.
 
 Another reason for this error is that the database column `enable_automatic_syncing` is set to `0`. Setting this to `1` can fix the issue. This database column is found inside the `wp_wps_settings_general` table.
 
+### "The webhook from Shopify is either invalid or expired"
+
+This can be fixed by turning on the "Use alternative webhook authentication" setting.
+
+1. Open the ShopWP settings admin page
+2. Open the "Syncing" section
+3. Make sure "Use alternative webhook authentication" is enabled
+4. Save the settings
+5. Try syncing again
+
 ### Fixing BasicAuth
 
 If your site is behind BasicAuth, the syncing process will probably fail to complete. This is because ShopWP relies on the WordPress HTTP API, which requires you to attach your BasicAuth credentials to each request. The easiest way to do this is using the following filter:

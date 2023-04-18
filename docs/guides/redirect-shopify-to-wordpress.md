@@ -57,3 +57,13 @@ After the edits, it should look something like this:
 :::info
 `{{product.handle}}` will change dynamically depending on which product page is loaded on the Shopify side.
 :::
+
+## Other code snippets
+
+Here are some other useful code snippets:
+
+**Detecting the homepage:**
+
+```html
+{% if template.name == "index" %} {% endif %}
+```
