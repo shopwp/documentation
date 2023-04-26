@@ -798,80 +798,64 @@ wp.hooks.addFilter(
 
 Allows you to customize the available filtering product tag options for the Storefront component.
 
-| Parameter     | Description                         |
-| :------------ | :---------------------------------- |
-| availableTags | The available tag filtering options |
+| Parameter | Description                         |
+| :-------- | :---------------------------------- |
+| tags      | The available tag filtering options |
 
 **Example**
 
 ```js
-wp.hooks.addFilter(
-	'storefront.availableTags',
-	'shopwp',
-	function (availableTags) {
-		return availableTags
-	}
-)
+wp.hooks.addFilter('storefront.availableTags', 'shopwp', function (tags) {
+	return tags.filter(tag => tag !== 'mytag')
+})
 ```
 
 ### storefront.availableVendors
 
 Allows you to customize the available filtering product vendor options for the Storefront component.
 
-| Parameter        | Description                            |
-| :--------------- | :------------------------------------- |
-| availableVendors | The available vendor filtering options |
+| Parameter | Description                            |
+| :-------- | :------------------------------------- |
+| vendors   | The available vendor filtering options |
 
 **Example**
 
 ```js
-wp.hooks.addFilter(
-	'storefront.availableVendors',
-	'shopwp',
-	function (availableVendors) {
-		return availableVendors
-	}
-)
+wp.hooks.addFilter('storefront.availableVendors', 'shopwp', function (vendors) {
+	return vendors.filter(vendor => vendor !== 'mytag')
+})
 ```
 
 ### storefront.availableTypes
 
 Allows you to customize the available filtering product type options for the Storefront component.
 
-| Parameter      | Description                                  |
-| :------------- | :------------------------------------------- |
-| availableTypes | The available product type filtering options |
+| Parameter | Description                                  |
+| :-------- | :------------------------------------------- |
+| types     | The available product type filtering options |
 
 **Example**
 
 ```js
-wp.hooks.addFilter(
-	'storefront.availableTypes',
-	'shopwp',
-	function (availableTypes) {
-		return availableTypes
-	}
-)
+wp.hooks.addFilter('storefront.availableTypes', 'shopwp', function (types) {
+	return types.filter(type => type !== 'mytag')
+})
 ```
 
 ### storefront.availablePricing
 
 Allows you to customize the available filtering price options for the Storefront component.
 
-| Parameter      | Description                           |
-| :------------- | :------------------------------------ |
-| pricingOptions | The available price filtering options |
+| Parameter | Description                           |
+| :-------- | :------------------------------------ |
+| prices    | The available price filtering options |
 
 **Example**
 
 ```js
-wp.hooks.addFilter(
-	'storefront.availablePricing',
-	'shopwp',
-	function (pricingOptions) {
-		return pricingOptions
-	}
-)
+wp.hooks.addFilter('storefront.availablePricing', 'shopwp', function (prices) {
+	return prices.filter(price => price !== 'mytag')
+})
 ```
 
 ### storefront.collectionsToFetch

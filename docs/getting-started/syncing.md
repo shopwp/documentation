@@ -174,6 +174,28 @@ We've done our best to make syncing work across different environments. However,
 
 If none of these steps resolve your syncing issues, [please send us an email](mailto:hello@wpshop.io) and we'll be happy to fix it for you.
 
+### Sync stuck at "Fetching Shopify data"
+
+This can happen if you have redirects placed inside your [`.htaccess`](https://wordpress.org/documentation/article/htaccess/) file.
+
+Try opening your `.htaccess` file and replacing the contents with the below. Save the file and try syncing again.
+
+```
+# BEGIN WordPress
+
+RewriteEngine On
+RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+
+# END WordPress
+```
+
+When the syncing process never gets passed the "Fetching Shopify data ..." step, this is usually because the
+
 ### "The webhook from Shopify is either invalid or expired"
 
 This error will occur if your `Syncing URL` setting does not match your WordPress domain. These two values **must** match for the syncing to work properly.

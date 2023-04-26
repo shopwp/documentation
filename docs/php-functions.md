@@ -101,7 +101,7 @@ Allows you to fetch multiple products by using a Shopify [search query](https://
 | Keys      | Description                                                                                                                                                                                                            |
 | :-------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | query     | Determines which products to search for. You can pass any complex search query as long as it follows the rules of the [Shopify search syntax](https://shopify.dev/api/usage/search-syntax). This property is required. |
-| page_size | Sets how many products to show per page of results. If more products exist than this number, a load more button will display at the bottom.                                                                            |
+| page_size | Sets how many products to show per page of results.                                                                                                                                                                    |
 | reverse   | Whether to reverse the order of the results                                                                                                                                                                            |
 | sort_by   | Determines how the returned products should be sorted. Uses the same values from the [`sort_by` shortcode attribute](/shortcodes/wps_products#sort_by).                                                                |
 | schema    | Allows for determining which product fields are returned. Useful if you only need a couple fields like `id` or `title`.                                                                                                |
@@ -167,7 +167,7 @@ schema
 ```
 
 :::info
-Note: If you pass the `schema` key, you can explicitly choose which product fields to return during the request. By default, all product fields will be returned. The full list of available fields can be [found here](https://shopify.dev/api/storefront/reference/products/product#fields-2021-10).
+Note: If you pass the `schema` key, you can explicitly choose which product fields to return during the request. By default, all product fields will be returned. The full list of available fields can be [found here](https://shopify.dev/docs/api/storefront/2023-04/objects/product).
 :::
 
 | Argument | Description               |
@@ -186,6 +186,51 @@ $result = $Products->get_products_by_collection_ids([
    'sort_by' => 'collection_default',
    'schema' => '
       title
+   '
+]);
+```
+
+## get_collections()
+
+Allows for fetching one or more collections using a Shopify [search query](https://shopify.dev/api/usage/search-syntax).
+
+`get_collections()` takes a single configuration parameter as an array. This parameter accepts the below keys:
+
+| Keys      | Description                                                                                                                                                                                                               |
+| :-------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| query     | Determines which collections to search for. You can pass any complex search query as long as it follows the rules of the [Shopify search syntax](https://shopify.dev/api/usage/search-syntax). This property is required. |
+| page_size | Sets how many collections to show per page of results.                                                                                                                                                                    |
+| reverse   | Whether to reverse the order of results                                                                                                                                                                                   |
+| sort_by   | Determines how the returned collections should be sorted. Uses the same values from the [`sort_by` shortcode attribute](/shortcodes/wps_collections#sort_by).                                                             |
+| schema    | Allows for determining which collection fields are returned. Useful if you only need a couple fields like `image` or `title`.                                                                                             |
+| language  | Allows for receiving translated content. Accepts a language code, e.g.: `EN`, `ES`, etc.                                                                                                                                  |
+| country   | Allows for converting collection prices. Accepts a country code, e.g.: `US`, `MX`, etc.                                                                                                                                   |
+
+:::info
+Note: If you pass the `schema` key, you can explicitly choose which collection fields to return. By default, all collection fields will be returned. The full list of available fields can be [found here](https://shopify.dev/docs/api/storefront/2023-04/objects/collection).
+:::
+
+**Example**:
+Get all collections.
+
+```php
+$Collections = ShopWP\Factories\API\Items\Collections_Factory::build();
+
+$result = $Collections->get_collections([
+   'query' => '*'
+]);
+```
+
+**Example**:
+Get collection with the title `Super` and only return the image.
+
+```php
+$Collections = ShopWP\Factories\API\Items\Collections_Factory::build();
+
+$result = $Collections->get_collections([
+   'query' => 'title:Super',
+   'schema' => '
+      image
    '
 ]);
 ```
