@@ -190,6 +190,14 @@ Default: `No results found`
 [wps_search no_results_text="Custom no results text with emojis 🚨"]
 ```
 
+### search_placeholder_text
+
+Specifies the placeholder text for the search input
+
+```js
+[wps_search search_placeholder_text="Try typing something special"]
+```
+
 ### dropzone_form
 
 Specifies where the search form should render. Takes any valid CSS selector.
