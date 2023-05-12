@@ -463,26 +463,7 @@ Allows for customizing the text shown when no filter group is found. Default: `N
 
 ### filterable_price_values
 
-Allows for customizing the available price values that users can select.
-
-**Example**
-
-```js
-add_filter(
-	'shopwp_storefront_default_payload_settings',
-	function ($storefront_settings) {
-		$storefront_settings['filterable_price_values'] = [
-			'$0.00 - $15.00',
-			'$15.00 - $25.00',
-			'$25.00 - $50.00',
-			'$50.00 - $100.00',
-			'$100.00 +',
-		]
-
-		return $storefront_settings
-	}
-)
-```
+This has been moved to the [storefront.availablePricing](https://docs.wpshop.io/javascript-filters#storefrontavailablepricing) JavaScript filter.
 
 ### show_search
 
