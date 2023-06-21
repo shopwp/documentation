@@ -124,15 +124,15 @@ html[data-theme='dark'] .docusaurus-highlight-code-line {
 html[data-theme='dark'] {
 	--ifm-color-primary: #c5cbff;
 	--ifm-color-primary-dark: #5a91ea;
-	--ifm-background-color: #03061c;
+	--ifm-background-color: #0c0e1b;
 }
 
 html[data-theme='dark'] .footer {
-	background-color: #09162d;
+	background-color: #0c0e1b;
 }
 
 html[data-theme='dark'] .navbar {
-	background-color: #0a0d25;
+	background-color: #0c0e1b;
 }
 
 .shopwp-radio-text [class*='SaveInlineCSS'] {

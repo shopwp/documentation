@@ -2,8 +2,6 @@
 sidebar_position: 1
 ---
 
-import { Products } from '@site/src/components/products'
-
 # [wps_products]
 
 The ShopWP products shortcode allows you to display one or more products in a list or grid. This is perfect for filtering and sorting products.
@@ -493,10 +491,6 @@ Subscription functionality is only available with [ShopWP Pro](https://wpshop.io
 [wps_products subscriptions="true"]
 ```
 
-<Products
-	settings={{ subscriptions: true, query: 'title:"Super awesome sunglasses"' }}
-/>
-
 ### subscriptions_select_on_load
 
 Determines whether to auto select the subscription option when the product loads. This is useful if you provide both "one-time" and subscription options for your products.
@@ -563,8 +557,6 @@ Allows for linking customers directly to the Shopify checkout process. This will
 ```js
 [wps_products direct_checkout="true"]
 ```
-
-<Products settings={{ directCheckout: true }} showCart={true} />
 
 ### align_height
 

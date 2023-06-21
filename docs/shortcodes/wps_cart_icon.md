@@ -2,8 +2,6 @@
 sidebar_position: 8
 ---
 
-import { CartIcon } from '@site/src/components/cart'
-
 # [wps_cart_icon]
 
 The `[wps_cart_icon]` shortcode displays a cart icon anywhere it's placed. It will open the slide-in cart when clicked.
@@ -36,8 +34,6 @@ While you _can_ use any type of image (.jpg, .png, etc) it's best to use an .svg
 ```
 
 <p className="live-example-heading cart-icon-custom"><strong>Live Example:</strong></p>
-
-<CartIcon settings={{ icon: "https://wpshop.io/assets/basket-shopping-light.svg" }} />
 
 ### icon_color
 

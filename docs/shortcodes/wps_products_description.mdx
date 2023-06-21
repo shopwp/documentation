@@ -2,8 +2,6 @@
 sidebar_position: 5
 ---
 
-import { Products } from '@site/src/components/products'
-
 # [wps_products_description]
 
 The description shortcode allows you to display one or more product descriptions in a list or grid. Useful if you only want to show the product description without other components like pricing or buy button.
@@ -21,16 +19,6 @@ For a full list of available shortcode attributes, refer to the [[wps_products]]
 [wps_products_description page_size="6"]
 ```
 
-<Products
-	settings={{
-		excludes: ['images', 'title', 'pricing', 'buy-button'],
-		query: 'Super*',
-		pageSize: 3,
-		limit: false,
-		pagination: true,
-	}}
-/>
-
 <p className='live-example-heading'>
 	<strong>Live Example:</strong> Show product pricing by product id
 </p>
@@ -38,13 +26,3 @@ For a full list of available shortcode attributes, refer to the [[wps_products]]
 ```js
 [wps_products_description product_id="2216876408880"]
 ```
-
-<Products
-	settings={{
-		excludes: ['images', 'title', 'pricing', 'buy-button'],
-		query: 'id:2216876408880',
-		pageSize: 3,
-		limit: false,
-		pagination: true,
-	}}
-/>

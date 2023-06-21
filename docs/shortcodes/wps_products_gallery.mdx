@@ -2,8 +2,6 @@
 sidebar_position: 4
 ---
 
-import { Products } from '@site/src/components/products'
-
 # [wps_products_gallery]
 
 The gallery shortcode allows you to display one or more product images in a list or grid. Useful if you only want to show the product images.
@@ -20,16 +18,6 @@ For a full list of available shortcode attributes, refer to the [[wps_products]]
 [wps_products_gallery page_size="6"]
 ```
 
-<Products
-	settings={{
-		excludes: ['pricing', 'title', 'description', 'buy-button'],
-		query: 'Super*',
-		pageSize: 3,
-		limit: false,
-		pagination: true,
-	}}
-/>
-
 <p className='live-example-heading'>
 	<strong>Live Example:</strong> Show product images by product id
 </p>
@@ -38,16 +26,6 @@ For a full list of available shortcode attributes, refer to the [[wps_products]]
 [wps_products_gallery product_id="2216876408880"]
 ```
 
-<Products
-	settings={{
-		excludes: ['pricing', 'title', 'description', 'buy-button'],
-		query: 'id:2216876408880',
-		pageSize: 3,
-		limit: false,
-		pagination: true,
-	}}
-/>
-
 <p className='live-example-heading'>
 	<strong>Live Example:</strong> Show image zoom
 </p>
@@ -55,15 +33,3 @@ For a full list of available shortcode attributes, refer to the [[wps_products]]
 ```js
 [wps_products_gallery product_id="2216876408880" show_featured_only="true" show_zoom="true"]
 ```
-
-<Products
-	settings={{
-		excludes: ['pricing', 'title', 'description', 'buy-button'],
-		query: 'id:2216876408880',
-		pageSize: 3,
-		limit: false,
-		pagination: true,
-		showFeaturedOnly: true,
-		showZoom: true,
-	}}
-/>
