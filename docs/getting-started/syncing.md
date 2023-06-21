@@ -194,7 +194,7 @@ RewriteRule . /index.php [L]
 # END WordPress
 ```
 
-When the syncing process never gets passed the "Fetching Shopify data ..." step, this is usually because the
+Another reason why the syncing never passes "Fetching Shopify data ..." step can be due to server-side or host level redirects. Some webhosts like WP Engine allow you to redirect bot traffic. Try turning this off. Also make sure you're not blocking XML-RPC requests.
 
 ### "The webhook from Shopify is either invalid or expired"
 

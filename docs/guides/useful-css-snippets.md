@@ -61,3 +61,23 @@ This CSS snippet will customize the background color of the subscription dropdow
 	color: white;
 }
 ```
+
+## Remove the border radius from all ShopWP elements
+
+Sometimes your theme design will conflict with the small "border radius" that ShopWP puts on all it's elements. You can remove this border radius with the below CSS:
+
+```css
+.wps-btn-cart,
+.wps-btn,
+.wps-btn-checkout,
+.wps-quantity-decrement,
+.wps-quantity-increment,
+.wps-input,
+.wpshopify-variant-buttons button,
+.wps-input-textarea,
+.wps-add-to-cart,
+.shopwp-selling-group,
+[class*='DropdownCSS'] {
+	border-radius: 0 !important;
+}
+```

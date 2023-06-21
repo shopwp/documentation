@@ -465,12 +465,12 @@ Allows for customizing the text shown when no filter group is found. Default: `N
 
 This has been moved to the [storefront.availablePricing](https://docs.wpshop.io/javascript-filters#storefrontavailablepricing) JavaScript filter.
 
-### show_search
+### with_search
 
 Allows for showing the search component with the Storefront component
 
 **Example**
 
 ```js
-[wps_storefront show_search="true"]
+[wps_storefront with_search="true"]
 ```

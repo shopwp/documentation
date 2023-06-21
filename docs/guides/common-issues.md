@@ -145,3 +145,17 @@ Usually when this happens, the variant you're trying to add is out of stock. Ope
 ## cURL 7 error
 
 This is usually due to your webhost blocking the Shopify domain or IP address. Please contact them and make sure they're not blocking these.
+
+## Direct checkout doesn't work
+
+If the direct checkout feature stalls on the redirect step&mdash;never sending users to checkout&mdash;this could be due to having the ShopWP cart disabled.
+
+Login to WordPress and open the ShopWP Cart settings. Make sure `Load cart?` is enabled.
+
+## Unexpected token ... is not valid JSON
+
+This error is usually due to a ShopWP network request returning a 403 or 404 error as HTML, and not a proper JSON response. See example below:
+
+![ShopWP Pro Pricing Settings](./assets/common-issues/html-error-example.png)
+
+The fix usually requires investigating why the network request is returning a 4xx response. This could be due to a plugin conflict, aggressive security settings, etc.
