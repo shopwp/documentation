@@ -2,8 +2,6 @@
 sidebar_position: 3
 ---
 
-import { Products } from '@site/src/components/products'
-
 # [wps_products_pricing]
 
 The ShopWP pricing shortcode allows you to display one or more product prices in a list or grid. Useful for only showing product pricing.
@@ -21,16 +19,6 @@ For a full list of available shortcode attributes, refer to the [[wps_products]]
 [wps_products_pricing page_size="6"]
 ```
 
-<Products
-	settings={{
-		excludes: ['images', 'title', 'description', 'buy-button'],
-		query: 'Super*',
-		pageSize: 3,
-		limit: false,
-		pagination: true,
-	}}
-/>
-
 <p className='live-example-heading'>
 	<strong>Live Example:</strong> Show product pricing by product id
 </p>
@@ -39,16 +27,6 @@ For a full list of available shortcode attributes, refer to the [[wps_products]]
 [wps_products_pricing product_id="2216876408880"]
 ```
 
-<Products
-	settings={{
-		excludes: ['images', 'title', 'description', 'buy-button'],
-		query: 'id:2216876408880',
-		pageSize: 3,
-		limit: false,
-		pagination: true,
-	}}
-/>
-
 <p className='live-example-heading'>
 	<strong>Live Example:</strong> Show sale pricing
 </p>
@@ -56,14 +34,3 @@ For a full list of available shortcode attributes, refer to the [[wps_products]]
 ```js
 [wps_products_pricing product_id="2216876408880" show_compare_at="true"]
 ```
-
-<Products
-	settings={{
-		excludes: ['images', 'title', 'description', 'buy-button'],
-		query: 'id:2216876408880',
-		pageSize: 3,
-		limit: false,
-		pagination: true,
-		showCompareAt: true,
-	}}
-/>
