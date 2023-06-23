@@ -4,7 +4,7 @@ sidebar_position: 3
 
 # Subscriptions
 
-ShopWP integrates with the [Recharge app](https://apps.shopify.com/subscription-payments), enabling you to display and sell subscription products on any WordPress site.
+ShopWP integrates with the [Recharge app](https://apps.shopify.com/subscription-payments), enabling you to display and sell subscription products.
 
 ## Getting started
 

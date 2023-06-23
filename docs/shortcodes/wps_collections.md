@@ -4,9 +4,9 @@ sidebar_position: 7
 
 # [wps_collections]
 
-The ShopWP collections shortcode displays a list of collections. Each collection will link to a detail page listing the products that belong to it.
+The `[wps_collections]` shortcode will display one or more collections in a grid. By default, each collection will link to a detail page containing the products that belong to it. You can optionally show the products that belong to each collection as well by using the [`collections_excludes`](#collections_excludes) attribute.
 
-Watch our [quick video tutorial](https://www.youtube.com/watch?v=v3AC2SPK40o&t=0s) to learn how to use this.
+If you wish to customize the products that show with a collection, just add any attribute from the [products shortcode](/shortcodes/wps_products).
 
 ## Example Usage
 
@@ -16,27 +16,33 @@ Watch our [quick video tutorial](https://www.youtube.com/watch?v=v3AC2SPK40o&t=0
 
 ## Available Attributes
 
-### title
+### collections_title
 
 Displays collections based on one or more collection title(s).
 
-| Possible values                    |
-| :--------------------------------- |
-| Any valid Shopify collection title |
+| Possible values                                        |
+| :----------------------------------------------------- |
+| Any valid Shopify collection title, separated by comma |
 
-**Example**
+**Example:** Filter collections by a single title
 
 ```js
-[wps_collections title="Featured"]
+[wps_collections collections_title="Featured"]
+```
+
+**Example:** Show two collections
+
+```js
+[wps_collections collections_title="Featured, Games"]
 ```
 
 :::info
 When filtering by title, ShopWP does not apply strict equality. It will return any collection that "contains" the word. So if you have more than one collection with the same group of words in the title, both will be returned.
 
-If you want to filter by a strict equality, use the query attribute instead and pass in the collection id.
+If you want to filter by a strict equality, use the `collections_query` attribute instead and pass in a Shopify collection id.
 :::
 
-### query
+### collections_query
 
 Allows you to construct your own query based on the [Shopify search syntax](https://shopify.dev/docs/api/usage/search-syntax).
 
@@ -47,10 +53,10 @@ Allows you to construct your own query based on the [Shopify search syntax](http
 **Example**
 
 ```js
-[wps_collections query="id:159099748452 OR id:159100010596"]
+[wps_collections collections_query="id:159099748452 OR id:159100010596"]
 ```
 
-### updated_at
+### collections_updated_at
 
 Display collections based on the date it was updated. Must use an [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format. Default: `false`. Example can be [found based on orders](https://help.shopify.com/en/api/reference/orders/order#created-at-property-2019-07).
 
@@ -61,10 +67,10 @@ Display collections based on the date it was updated. Must use an [ISO 8601](htt
 **Example**
 
 ```js
-[wps_collections updated_at="2019-02-21 03:16:41"]
+[wps_collections collections_updated_at="2019-02-21 03:16:41"]
 ```
 
-### connective
+### collections_connective
 
 The "connective" attribute determines how the collections are found when combining _other_ shortcode attributes. For example when set to `and`, every provided attribute must match the searched collections. With `or`, _any_ provided attribute will return the matched collections. Default: `or`.
 
@@ -77,10 +83,10 @@ The "connective" attribute determines how the collections are found when combini
 
 ```js
 // collections with either title will show
-[wps_collections title="Awesome collection, Even better collection" connective="or"]
+[wps_collections collections_title="Awesome collection, Even better collection" collections_connective="or"]
 ```
 
-### sort_by
+### collections_sort_by
 
 Determines the collections sort order. Corresponds to the [Shopify Storefront API](https://help.shopify.com/en/api/storefront-api/reference/enum/collectionsortkeys). Default: `title`
 
@@ -90,10 +96,10 @@ Determines the collections sort order. Corresponds to the [Shopify Storefront AP
 | updated_at |
 
 ```js
-[wps_collections sort_by="title"]
+[wps_collections collections_sort_by="title"]
 ```
 
-### reverse
+### collections_reverse
 
 Reverses the order that the collections are displayed in
 
@@ -101,11 +107,11 @@ Default: `false`
 
 ```js
 // Smallest to largest (A to Z) (old to new)
-[wps_collections sort_by="title" reverse="true"]
+[wps_collections collections_sort_by="title" collections_reverse="true"]
 
 ```
 
-### page_size
+### collections_page_size
 
 Determines the number of collections to show per page. Only applicable when pagination is turned on. Will default to the plugin's global "products per page" setting.
 
@@ -117,10 +123,10 @@ Determines the number of collections to show per page. Only applicable when pagi
 
 ```js
 // Shows 4 collections per page
-[wps_collections page_size="4"]
+[wps_collections collections_page_size="4"]
 ```
 
-### limit
+### collections_limit
 
 Limits the number of collections. Max allowed is `250`.
 
@@ -132,13 +138,13 @@ Default: `10`
 
 ```js
 // Shows up to 250 at any time
-[wps_collections limit="25"]
+[wps_collections collections_limit="25"]
 
 // Only show one
-[wps_collections limit="1"]
+[wps_collections collections_limit="1"]
 ```
 
-### items_per_row
+### collections_items_per_row
 
 Determines how many collections will appear in each row.
 
@@ -149,10 +155,10 @@ Determines how many collections will appear in each row.
 **Example**
 
 ```js
-[wps_collections items_per_row="5"]
+[wps_collections collections_items_per_row="5"]
 ```
 
-### excludes
+### collections_excludes
 
 Allows for excluding certain collection components like the title. Takes a comma separated string of values.
 
@@ -165,10 +171,10 @@ Allows for excluding certain collection components like the title. Takes a comma
 **Example**
 
 ```js
-[wps_collections excludes="title, description"]
+[wps_collections collections_excludes="title, description"]
 ```
 
-### single
+### collections_single
 
 Determines whether to show the collection products or not. Useful for only showing one collection with it's products. Enables the `products_` shortcode attributes.
 
@@ -180,10 +186,10 @@ Determines whether to show the collection products or not. Useful for only showi
 **Example**
 
 ```js
-[wps_collections single="true"]
+[wps_collections collections_single="true"]
 ```
 
-### pagination
+### collections_pagination
 
 Determines whether to hide or show pagination.
 
@@ -195,10 +201,10 @@ Determines whether to hide or show pagination.
 **Example**
 
 ```js
-[wps_collections pagination="false"]
+[wps_collections collections_pagination="false"]
 ```
 
-### dropzone_load_more
+### collections_dropzone_load_more
 
 When [pagination](#pagination) is set to true, this allows for specifying a custom location in the DOM to place the pagination "load more" control component for collections. Takes any valid CSS selector. When set to false, the load more button will be placed directly below the products output. Default: `false`.
 
@@ -209,10 +215,10 @@ The HTML element specified will be completely emptied and replaced with the load
 **Example**
 
 ```js
-[wps_collections dropzone_load_more="#my-custom-load-more-container"]
+[wps_collections collections_dropzone_load_more="#my-custom-load-more-container"]
 ```
 
-### dropzone_collection_title
+### collections_dropzone_collection_title
 
 When [single](#single) is set to true, this allows for specifying a custom location in the DOM to place the collection title. Takes any valid CSS selector.
 
@@ -223,10 +229,10 @@ The HTML element specified will be completely emptied and replaced with the load
 **Example**
 
 ```js
-[wps_collections single="true" dropzone_collection_title="#title-container"]
+[wps_collections single="true" collections_dropzone_collection_title="#title-container"]
 ```
 
-### dropzone_collection_image
+### collections_dropzone_collection_image
 
 When [single](#single) is set to true, this allows for specifying a custom location in the DOM to place the collection image. Takes any valid CSS selector.
 
@@ -237,10 +243,10 @@ The HTML element specified will be completely emptied and replaced with the load
 **Example**
 
 ```js
-[wps_collections single="true" dropzone_collection_image="#image-container"]
+[wps_collections single="true" collections_dropzone_collection_image="#image-container"]
 ```
 
-### dropzone_collection_description
+### collections_dropzone_collection_description
 
 When [single](#single) is set to true, this allows for specifying a custom location in the DOM to place the collection description. Takes any valid CSS selector.
 
@@ -251,10 +257,10 @@ The HTML element specified will be completely emptied and replaced with the load
 **Example**
 
 ```js
-[wps_collections single="true" dropzone_collection_description="#description-container"]
+[wps_collections single="true" collections_dropzone_collection_description="#description-container"]
 ```
 
-### dropzone_collection_products
+### collections_dropzone_collection_products
 
 When [single](#single) is set to true, this allows for specifying a custom location in the DOM to place the collection products. Takes any valid CSS selector.
 
@@ -265,10 +271,10 @@ The HTML element specified will be completely emptied and replaced with the load
 **Example**
 
 ```js
-[wps_collections single="true" dropzone_collection_products="#products-container"]
+[wps_collections single="true" collections_dropzone_collection_products="#products-container"]
 ```
 
-### infinite_scroll` (Pro only
+### collections_infinite_scroll` (Pro only
 
 When turned on, the next page of collections will automatically append to the container. Only works when pagination is used.
 
@@ -280,10 +286,10 @@ When turned on, the next page of collections will automatically append to the co
 **Example**
 
 ```js
-[wps_collections infinite_scroll="true"]
+[wps_collections collections_infinite_scroll="true"]
 ```
 
-### infinite_scroll_offset` (Pro only
+### collections_infinite_scroll_offset` (Pro only
 
 Determines the offset from the edge of the collections container. For example, a value of `-100` will begin loading additional collections 100px before the end of the collections container. Offset can be a positive or negative value.
 
@@ -294,344 +300,5 @@ Determines the offset from the edge of the collections container. For example, a
 **Example**
 
 ```js
-[wps_collections infinite_scroll_offset="-100"]
-```
-
-### products_sort_by
-
-Determines the products sort order within a collection. Corresponds to the [Shopify Storefront API](https://help.shopify.com/en/api/storefront-api/reference/enum/productcollectionsortkeys). Default: `collection_default`
-
-| Values             |
-| :----------------- |
-| title              |
-| collection_default |
-| created            |
-| id                 |
-| manual             |
-| price              |
-| relevance          |
-| best_selling       |
-
-```js
-[wps_collections products_sort_by="price"]
-```
-
-### products_reverse
-
-Reverses the order of products. Useful when used in combination with `sort_by`.
-
-| Possible values |
-| :-------------- |
-| true            |
-| false           |
-
-**Example**
-
-```js
-// Smallest to largest (A to Z) (old to new)
-[wps_collections products_reverse="true"]
-```
-
-### products_page_size
-
-Determines the number of products to show per page. Only applicable when pagination is turned on. Will default to the plugin's global "products per page" setting.
-
-| Possible values |
-| :-------------- |
-| Any number      |
-
-**Example**
-
-```js
-// Shows 4 products per page
-[wps_collections single="true" products_page_size="4"]
-```
-
-### products_limit
-
-Limits the overall number of products that show. Max limit is `250`.
-
-| Possible values |
-| :-------------- |
-| Any number      |
-
-**Example**
-
-```js
-// Show two products per page, up to 10
-[wps_collections single="true" products_page_size="2" products_limit="10"]
-
-// Only show one product
-[wps_collections single="true" products_limit="1"]
-```
-
-### products_add_to_cart_button_color
-
-Determines the buy button color. Default: `#14273b`.
-
-| Possible values     |
-| :------------------ |
-| Any valid CSS color |
-
-**Example**
-
-```js
-[wps_collections single="true" products_add_to_cart_button_color="#000"]
-```
-
-### products_variant_button_color
-
-Determines the variant dropdown color. Default: `#52a7a6`.
-
-| Possible values     |
-| :------------------ |
-| Any valid CSS color |
-
-**Example**
-
-```js
-[wps_collections single="true" products_variant_button_color="#000"]
-```
-
-### products_add_to_cart_button_text
-
-Determines the buy button text. Default: `Add to cart`.
-
-| Possible values |
-| :-------------- |
-| Any text string |
-
-**Example**
-
-```js
-[wps_collections single="true" products_add_to_cart_button_text="Add to bag"]
-```
-
-### products_hide_quantity
-
-Determines whether to hide the quantity input.
-
-| Possible values |
-| :-------------- |
-| true            |
-| false           |
-
-**Example**
-
-```js
-[wps_collections single="true" products_hide_quantity="true"]
-```
-
-### products_show_quantity_label
-
-Determines whether to show or hide the "label" to the quantity selection element. Shows the word "Quantity" when turned on.
-
-| Possible values |
-| :-------------- |
-| true            |
-| false           |
-
-**Example**
-
-```js
-[wps_collections single="true" products_show_quantity_label="false"]
-```
-
-### products_min_quantity
-
-Sets a "minimum" number to the quantity field. The user will not be able to add _less than_ this number to the cart at any given time.
-
-**Example**
-
-```js
-[wps_collections single="true" products_min_quantity="4"]
-```
-
-### products_max_quantity
-
-Sets a "maximum" number to the quantity field. The user will not be able to add _more than_ this number to the cart at any given time.
-
-**Example**
-
-```js
-[wps_collections single="true" products_max_quantity="20"]
-```
-
-### products_excludes
-
-Allows for excluding certain product components like the title, description, etc. Takes a comma separated string of values.
-
-| Possible values |
-| :-------------- |
-| images          |
-| title           |
-| pricing         |
-| description     |
-| buy-button      |
-
-**Example**
-
-```js
-// Don't show the title or pricing
-[wps_collections single="true" products_excludes="title, pricing"]
-```
-
-### products_items_per_row
-
-Determines how many products will appear in each row.
-
-| Possible values |
-| :-------------- |
-| Any text string |
-
-**Example**
-
-```js
-[wps_collections single="true" products_items_per_row="5"]
-```
-
-### products_show_price_range
-
-Determines whether to show price ranges for each product. Only applicable when `pricing` is not set within the [excludes](#excludes) attribute.
-
-| Possible values |
-| :-------------- |
-| true            |
-| false           |
-
-**Example**
-
-```js
-[wps_collections single="true" products_show_price_range="true"]
-```
-
-### products_show_compare_at
-
-Determines whether to show the compare at price for each product. Only applicable when `pricing` is not set within the [excludes](#excludes) attribute.
-
-| Possible values |
-| :-------------- |
-| true            |
-| false           |
-
-**Example**
-
-```js
-[wps_collections single="true" products_show_compare_at="true"]
-```
-
-### products_quantity_label_text
-
-Customizes the label text next to the quantity input field.
-
-| Possible values |
-| :-------------- |
-| Any text string |
-
-**Example**
-
-```js
-[wps_collections single="true" products_quantity_label_text="Custom quantity text"]
-```
-
-### products_show_featured_only
-
-Determines whether to only show the product feature image. By default, all product images will show as thumbnails below the featured image.
-
-| Possible values |
-| :-------------- |
-| true            |
-| false           |
-
-**Example**
-
-```js
-[wps_collections single="true" products_show_featured_only="true"]
-```
-
-### products_show_zoom` (Pro only
-
-Determines whether to enable product image zooming. When enabled, zoom will be triggered on the featured image. Only available in [ShopWP Pro](https://wpshop.io/purchase).
-
-| Possible values |
-| :-------------- |
-| true            |
-| false           |
-
-**Example**
-
-```js
-[wps_collections single="true" products_show_zoom="true"]
-```
-
-### products_pagination
-
-Determines whether to hide or show pagination.
-
-| Possible values |
-| :-------------- |
-| true            |
-| false           |
-
-**Example**
-
-```js
-[wps_collections single="true" products_pagination="false"]
-```
-
-### products_no_results_text
-
-The text to show when no products are found.
-
-| Possible values |
-| :-------------- |
-| Any text string |
-
-**Example**
-
-```js
-[wps_collections single="true" products_no_results_text="Nothing found! 🙃"]
-```
-
-### products_infinite_scroll` (Pro only
-
-When turned on, the next page of items will automatically append to the container. Only works when pagination is used.
-
-| Possible values |
-| :-------------- |
-| true            |
-| false           |
-
-**Example**
-
-```js
-[wps_collections single="true" products_infinite_scroll="true"]
-```
-
-### products_infinite_scroll_offset` (Pro only
-
-Determines the offset from the edge of the items container. For example, a value of `-100` will begin loading additional items 100px before the end of the items container. Offset can be a positive or negative value.
-
-| Possible values                 |
-| :------------------------------ |
-| Any positive or negative number |
-
-**Example**
-
-```js
-[wps_collections single="true" products_infinite_scroll_offset="-100"]
-```
-
-### products_dropzone_load_more
-
-When `pagination` is set to true, this allows for specifying a custom location in the DOM to place the pagination "load more" control component. Takes any valid CSS selector. When set to false, the load more button will be placed directly below the products output. Default: `false`.
-
-:::info
-The HTML element specified will be completely emptied and replaced with the load more component.
-:::
-
-**Example**
-
-```js
-[wps_collections single="true" products_dropzone_load_more="#my-custom-load-more-container"]
+[wps_collections collections_infinite_scroll_offset="-100"]
 ```

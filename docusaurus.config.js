@@ -56,7 +56,7 @@ module.exports = {
 	themeConfig:
 		/** @type {import('@docusaurus/preset-classic').ThemeConfig} */
 		({
-			image: 'https://wpshop.io/assets/banners/shopwp-banner-docs-tan.jpg',
+			image: 'https://wpshop.io/assets/banners/shopwp-banner-og-white.jpg',
 			colorMode: {
 				defaultMode: 'dark',
 			},
@@ -69,7 +69,7 @@ module.exports = {
 				items: [
 					{
 						value:
-							'<p class="version-num"><span class="num">v7.1.12</span><span class="emoji">🎉</span></p>',
+							'<p class="version-num"><span class="num">v8.0.0</span><span class="emoji">🎉</span></p>',
 						type: 'html',
 						position: 'left',
 					},
