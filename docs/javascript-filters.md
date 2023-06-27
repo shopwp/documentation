@@ -474,6 +474,29 @@ wp.hooks.addFilter(
 )
 ```
 
+### product.sortingOptions
+
+Allows for customizing the product sorting options.
+
+| Parameter                | Description                                                        |
+| :----------------------- | :----------------------------------------------------------------- |
+| sortingOptions - (array) | A JavaScript array containing a list of sorting options as objects |
+
+**Example**
+
+```js
+wp.hooks.addFilter(
+	'product.sortingOptions',
+	'shopwp',
+	function (sortingOptions) {
+		// Remove first sorting option
+		sortingOptions.slice(1)
+
+		return sortingOptions
+	}
+)
+```
+
 ### cart.checkoutUrl
 
 Allows you to customize the final checkout url. Useful for adding tracking parameters or customizations to the final checkout page.

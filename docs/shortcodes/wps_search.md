@@ -225,7 +225,7 @@ The HTML element specified will be completely emptied and replaced with the load
 Specifies where the products being searched should render. Takes any valid CSS selector.
 
 ```js
-[wps_search dropzone_payload="#search-form"]
+[wps_search dropzone_payload="#search-payload"]
 ```
 
 ### dropzone_loader
@@ -233,5 +233,5 @@ Specifies where the products being searched should render. Takes any valid CSS s
 Specifies where the search loading indicator should render. Takes any valid CSS selector.
 
 ```js
-[wps_search dropzone_loader="#search-form"]
+[wps_search dropzone_loader="#search-loader"]
 ```

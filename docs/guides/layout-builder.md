@@ -6,9 +6,7 @@ sidebar_position: 2
 
 The ShopWP Layout Builder allows you to visually design your products and collections in various ways.
 
-For example, design the template of your product detail page. Or create a simple layout with just a single buy button. Shortcodes will be generated for your automatically to use.
-
-![ShopWP Layout Builder listing page](./assets/visual-builder/screen1.jpg)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/YKIbiE_ZNsU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 ## How it works
 
@@ -29,6 +27,8 @@ The Shortcode layout type gives you five additional options to pick from. This d
 - **Cart icon** - [[wps_cart_icon]](/shortcodes/wps_cart_icon)
 
 As you build your layout, a shortcode will be created to copy and paste throughout your WordPress site. All available design options for the layout come from the core ShopWP blocks.
+
+![ShopWP Layout Builder listing page](./assets/visual-builder/screen1.jpg)
 
 ## Creating a layout
 
