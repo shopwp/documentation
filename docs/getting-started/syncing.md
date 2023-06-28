@@ -194,7 +194,11 @@ RewriteRule . /index.php [L]
 # END WordPress
 ```
 
-Another reason why the syncing never passes "Fetching Shopify data ..." step can be due to server-side or host level redirects. Some webhosts like WP Engine allow you to redirect bot traffic. Try turning this off. Also make sure you're not blocking XML-RPC requests.
+### Sync stuck at "Removing previously synced data ..."
+
+This can happen if you have overly aggressive security settings blocking access to the WordPress REST API.
+
+We've also seen this occur in sites that have their privacy settings set too high. Switching this from private to public can sometimes help.
 
 ### "The webhook from Shopify is either invalid or expired"
 
