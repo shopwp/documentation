@@ -62,7 +62,11 @@ This CSS snippet will customize the background color of the subscription dropdow
 }
 ```
 
-## Remove the border radius from all ShopWP elements
+## Remove border radius
+
+:::info
+A new plugin setting was introduced in ShopWP 8.0 to control the border radius
+:::
 
 Sometimes your theme design will conflict with the small "border radius" that ShopWP puts on all it's elements. You can remove this border radius with the below CSS:
 
