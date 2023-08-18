@@ -159,3 +159,7 @@ This error is usually due to a ShopWP network request returning a 403 or 404 err
 ![ShopWP Pro Pricing Settings](./assets/common-issues/html-error-example.png)
 
 The fix usually requires investigating why the network request is returning a 4xx response. This could be due to a plugin conflict, aggressive security settings, etc.
+
+### The Shopify connection disappears after connecting
+
+If your connection to Shopify "disappears" during the connection process you may need to install a valid SSL certificate on your website. Please ensure you have a valid HTTPS connection.

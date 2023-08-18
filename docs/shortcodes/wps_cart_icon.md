@@ -35,7 +35,7 @@ While you _can_ use any type of image (.jpg, .png, etc) it's best to use an .svg
 
 <p className="live-example-heading cart-icon-custom"><strong>Live Example:</strong></p>
 
-### icon_color
+### inline_icon_color
 
 Changes the color of the cart icon itself. Default: `#000`.
 
@@ -44,7 +44,7 @@ Only works when not using the [icon](#icon) attribute.
 **Shortcode Example**: Changes the icon color to `#ff891e`
 
 ```js
-[wps_cart_icon icon_color="#ff891e"]
+[wps_cart_icon inline_icon_color="#ff891e"]
 ```
 
 <p className="live-example-heading"><strong>Live Example:</strong></p>
