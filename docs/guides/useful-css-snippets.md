@@ -20,6 +20,24 @@ You can hide the fixed cart icon in various ways. To hide the icon when the cart
 }
 ```
 
+## Hide cart counter when empty
+
+You can hide the "counter" within the fixed cart icon&mdash;only when the cart is empty&mdash;with this CSS:
+
+```css
+.wps-cart-icon-fixed.wps-cart-is-empty .wps-cart-counter {
+	display: none;
+}
+```
+
+And to hide the counter within a standard cart icon (not fixed), use this CSS:
+
+```css
+.wps-btn-cart.wps-cart-is-empty .wps-cart-counter {
+	display: none;
+}
+```
+
 ## Change selected button colors
 
 The below CSS will customize the variant button selected colors, as well as the variant badge within the cart. Replace #000 with the color of your choice.

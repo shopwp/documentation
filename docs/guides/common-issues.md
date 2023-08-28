@@ -102,6 +102,8 @@ RewriteRule . /index.php [L]
 # END WordPress
 ```
 
+Another thing that can cause this issue is overly aggressive security settings. A common culprit can be Cloudflare at the DNS level. For developers, take a closer look at the Network tab. You should see a 403 error. Open the raw response and you should see an actual error message.
+
 ## Missing languages within the Pricing settings
 
 If you're missing the "Currency" and "Language" dropdowns in the below screenshot, try logging out of WordPress and logging back in. The REST API nonce could very well be expired.
@@ -145,6 +147,10 @@ Usually when this happens, the variant you're trying to add is out of stock. Ope
 ## cURL 7 error
 
 This is usually due to your webhost blocking the Shopify domain or IP address. Please contact them and make sure they're not blocking these.
+
+## cURL 6 error
+
+This has been found to be due to having a VPN enabled on your network. Try turning this off and checking again.
 
 ## Direct checkout doesn't work
 
