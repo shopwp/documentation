@@ -176,7 +176,11 @@ If none of these steps resolve your syncing issues, [please send us an email](ma
 
 ### Sync stuck at "Fetching Shopify data"
 
-This can happen if you have redirects placed inside your [`.htaccess`](https://wordpress.org/documentation/article/htaccess/) file.
+A common reason for this issue is not having any collections selected when choosing to sync collections. Open the ShopWP syncing settings and find the "Sync products from collections" setting. Make sure _at least one collection_ is selected. Try syncing again.
+
+If you don't want to sync collections, then uncheck the "Collections" option under "Which Shopify data do you want to sync"? You can then try syncing again.
+
+This can also happen if you have redirects placed inside your [`.htaccess`](https://wordpress.org/documentation/article/htaccess/) file.
 
 Try opening your `.htaccess` file and replacing the contents with the below. Save the file and try syncing again.
 
@@ -278,3 +282,11 @@ function wpbp_http_request_args( $r, $url ) {
 }
 add_filter( 'http_request_args', 'wpbp_http_request_args', 10, 2);
 ```
+
+### AccessDenied: We're sorry, but this service is not available in your location
+
+This error is usually a result of a bad CNAME entry.
+
+There might be a conflict in the CNAME being used twice for redirecting to shopify.
+
+Log in to your Shopify dashboard and go to the domain settings. From there, check if there are any warnings or errors. You may see an error such as `Your domain has no CNAME record`.

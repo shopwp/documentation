@@ -748,14 +748,19 @@ Allows you to filter product or collection links. This filter will run whether y
 | :------------------ | :--------------------------------------- |
 | linkHref - (string) | Represents the link's default href value |
 | linkTo - (string)   | Represents where the link goes           |
+| payload - (object)  | Represents all the product data          |
 
 **Example**
 
 ```js
 // Added utm params to product links
-wp.hooks.addFilter('misc.linkHref', 'shopwp', function (linkHref, linkTo) {
-	return linkHref + '?utm_campaign=123'
-})
+wp.hooks.addFilter(
+	'misc.linkHref',
+	'shopwp',
+	function (linkHref, linkTo, payload) {
+		return linkHref + '?utm_campaign=123'
+	}
+)
 ```
 
 ### misc.linkTarget

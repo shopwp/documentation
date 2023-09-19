@@ -166,6 +166,10 @@ This error is usually due to a ShopWP network request returning a 403 or 404 err
 
 The fix usually requires investigating why the network request is returning a 4xx response. This could be due to a plugin conflict, aggressive security settings, etc.
 
-### The Shopify connection disappears after connecting
+## Shopify connection disappears after connecting
 
 If your connection to Shopify "disappears" during the connection process you may need to install a valid SSL certificate on your website. Please ensure you have a valid HTTPS connection.
+
+## Required access: `unauthenticated_read_product_inventory` access scope.
+
+This can usually be fixed by reconnecting your Shopify store. Open the ShopWP Pro settings and find the "Connect" tab. From there, disconnect and reconnect your store. Then try again.

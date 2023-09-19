@@ -73,6 +73,9 @@ Below are some of the currently unsupported plugins:
 - [OptimizeBuilder](https://www.optimizepress.com/):
   If you're using the OptimizeBuilder plugin from OptimizePress, you'll need to manually "enable" the ShopWP JavaScript and CSS. OptimizeBuilder turns these off by default. To do this, open the OptimizeBuilder plugin settings and go to the scripts and styles tab. From there, find the ShopWP plugin and enable `Js` and `Css` for both the frontend and backend. Then click save.
 
+- [WPCode Lite](https://wphive.com/plugins/insert-headers-and-footers/):
+  There is a known issue that causes ShopWP to disappear completely when this plugin is installed.
+
 - [TheGem Theme Elements (for WPBakery)](https://codex-themes.com/thegem/):
   This plugin uses a WordPress filter called `nonce_life`, and sets it to 1 year. This causes all ShopWP REST Endpoints to fail with a 403 error. To fix, open the plugin and comment out the below function:
 

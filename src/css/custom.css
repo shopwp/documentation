@@ -585,7 +585,7 @@ html[data-theme='light'] .shopwp-skeleton-component {
 html[data-theme='dark']
 	.theme-doc-sidebar-item-link-level-2
 	a.menu__link.menu__link--active:before {
-	color: #3edda0;
+	color: #fe9b43;
 }
 
 html[data-theme='light'] .theme-doc-sidebar-item-link-level-2 a:before {
