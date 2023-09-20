@@ -13,7 +13,16 @@
 	--ifm-color-primary-light: #6176ff;
 	--ifm-color-primary-lighter: #7184ff;
 	--ifm-color-primary-lightest: #a1adff;
+	--ifm-menu-color-active: #ffb525;
 	--ifm-code-font-size: 95%;
+}
+
+[data-theme='light']:root {
+	--ifm-menu-color-active: #222222;
+}
+
+.menu__list-item-collapsible .menu__link--active {
+	color: var(--ifm-menu-color);
 }
 
 /*
@@ -275,6 +284,10 @@ html[data-theme='light']
 	fill: black;
 }
 
+html[data-theme='light'] .navbar__logo img {
+	filter: contrast(9) grayscale(1);
+}
+
 html[data-theme='dark']
 	.wps-modal-inner
 	.wpshopify-variant-buttons
@@ -491,6 +504,10 @@ Images
 	width: 100%;
 }
 
+[alt='Checkout example screenshot'] {
+	width: 320px;
+}
+
 /*
 
 Media Query Overrides
@@ -585,7 +602,7 @@ html[data-theme='light'] .shopwp-skeleton-component {
 html[data-theme='dark']
 	.theme-doc-sidebar-item-link-level-2
 	a.menu__link.menu__link--active:before {
-	color: #fe9b43;
+	color: #ffb525;
 }
 
 html[data-theme='light'] .theme-doc-sidebar-item-link-level-2 a:before {

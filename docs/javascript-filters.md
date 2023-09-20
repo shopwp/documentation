@@ -801,6 +801,39 @@ wp.hooks.addFilter('misc.carouselSettings', 'shopwp', function (settings) {
 })
 ```
 
+### misc.trackingParams
+
+Allows for specifying which tracking parameters ShopWP should pass to the Shopify checkout page.
+
+The default parameters to be tracked are:
+
+```
+utm_source
+utm_medium
+utm_campaign
+utm_term
+utm_content
+utm_keyword
+guid
+fbclid
+gclid
+li_fat_id
+```
+
+| Parameter            | Description                        |
+| :------------------- | :--------------------------------- |
+| parameters - (array) | Represents the tracking parameters |
+
+**Example**
+
+```js
+wp.hooks.addFilter('misc.trackingParams', 'shopwp', function (trackingParams) {
+	trackingParams.push('my_custom_tracking_param_1')
+	trackingParams.push('my_custom_tracking_param_2')
+	return trackingParams
+})
+```
+
 ### storefront.availableCollections
 
 Allows you to filter the available collections that the user is shown. Useful for preventing users from filtering certain collections. You must return the same collections data structure from the callback.

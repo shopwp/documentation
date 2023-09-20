@@ -458,18 +458,17 @@ wp.hooks.doAction('do.toggleCartTerms', false)
 
 ### do.directCheckout
 
-Allows for programmatically sending customers to the Shopify checkout page. You can pass a configurable checkout object to customize which products are added, quantities, etc. See below.
+Allows for creating a manual cart session and programmatically sending customers to the Shopify checkout page.
 
-| Parameter              | Description                                                           |
-| :--------------------- | :-------------------------------------------------------------------- |
-| checkoutState (object) | A JavaScript object containing details about what should be purchased |
+Simply pass a checkout object to customize which products are added, quantities, any discount codes, etc.
 
-| checkoutState Key     | Description                                                                                                                     |
-| :-------------------- | :------------------------------------------------------------------------------------------------------------------------------ |
-| lines (array)         | A JavaScript array containing information about each lineitem. Should be an array of objects with this format:                  |
-| note (string)         | Represents a note added to the order.                                                                                           |
-| discountCodes (array) | You can optionally pass one or more discount codes to the order. The discounts need to be already added inside Shopify to work. |
-| attributes (array)    | A JavaScript array containing a list of custom attributes in this format:                                                       |
+| Parameter             | Description                                                                                                                                                         |
+| :-------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| lines (array)         | A JavaScript array containing information about each lineitem. Should be an array of objects with this format:                                                      |
+| note (string)         | Represents a note added to the order.                                                                                                                               |
+| discountCodes (array) | You can optionally pass one or more discount codes to the order. The discounts need to be already added inside Shopify to work.                                     |
+| attributes (array)    | A JavaScript array containing a list of custom attributes in this format:                                                                                           |
+| settings (object)     | A JavaScript object containing a list of settings for the checkout. Available settings are `linkTarget` (Determines if the checkout should open in same tab or new) |
 
 **Example**
 
@@ -485,7 +484,22 @@ wp.hooks.doAction('do.directCheckout', {
 	note: 'This is a custom note',
 	discountCodes: ['FREE'],
 	attributes: false,
+	settings: {
+		linkTarget: '_blank',
+	},
 })
+```
+
+### do.checkout
+
+Unlike `do.directCheckout` above, this hook will redirect the browser to the Shopify checkout page.
+
+It simply uses the current state of the ShopWP cart at the moment of calling the hook.
+
+**Example**
+
+```js
+wp.hooks.doAction('do.checkout')
 ```
 
 ### do.shopHydrate
