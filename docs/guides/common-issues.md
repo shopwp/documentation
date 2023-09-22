@@ -170,6 +170,10 @@ The fix usually requires investigating why the network request is returning a 4x
 
 If your connection to Shopify "disappears" during the connection process you may need to install a valid SSL certificate on your website. Please ensure you have a valid HTTPS connection.
 
-## Required access: `unauthenticated_read_product_inventory` access scope.
+## Access denied. Required access: `unauthenticated_read_product_inventory` access scope.
+
+This can usually be fixed by reconnecting your Shopify store. Open the ShopWP Pro settings and find the "Connect" tab. From there, disconnect and reconnect your store. Then try again.
+
+## Access denied. Required access: `unauthenticated_read_sellings_plans` access scope.
 
 This can usually be fixed by reconnecting your Shopify store. Open the ShopWP Pro settings and find the "Connect" tab. From there, disconnect and reconnect your store. Then try again.
