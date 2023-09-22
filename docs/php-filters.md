@@ -4,7 +4,7 @@ ShopWP comes with filter hooks that can be used to customize the plugin. Simply 
 
 ### shopwp_products_all_args
 
-Allows you to customize the settings used by the default products listing (PLP) page.
+Allows you to customize the settings used by the default products listing (PLP) page
 
 | Parameter | Description                                                                                           |
 | :-------- | :---------------------------------------------------------------------------------------------------- |
