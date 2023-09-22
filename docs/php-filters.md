@@ -25,7 +25,7 @@ add_filter('shopwp_products_all_args', function($settings) {
 
 ### shopwp_products_single_args
 
-Allows you to customize the settings used by the product detail (PDP) pages.
+Allows you to customize the settings used by the product detail (PDP) pages
 
 | Parameter | Description                                                                                           |
 | :-------- | :---------------------------------------------------------------------------------------------------- |
