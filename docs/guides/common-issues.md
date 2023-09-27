@@ -12,11 +12,11 @@ Also, try temporarily deactivating your other plugins and check again. You may a
 
 Another thing to look for is whether your website has a CDN enabled. If it does, try temporarily disabling this to see if the error goes away.
 
-## Update failed: Unauthorized
+## Unauthorized
 
-Usually this error shows up when attempting to update the plugin. the main culprit is usually a license key issue.
+This can usually be fixed by reconnecting your Shopify store. Open the ShopWP Pro settings and find the "Connect" tab. From there, disconnect and reconnect your store.
 
-If you see this error, open your ShopWP settings and find the `License` tab. From there, either add your ShopWP Pro license key, or remove it and add it back. This should solve the issue.
+If this doesn't help the culprit could be a ShopWP license key issue. Open your ShopWP settings and find the `License` tab. From there, either add your ShopWP Pro license key or remove it and add it back.
 
 ## Error: while calling undefined
 
@@ -170,10 +170,22 @@ The fix usually requires investigating why the network request is returning a 4x
 
 If your connection to Shopify "disappears" during the connection process you may need to install a valid SSL certificate on your website. Please ensure you have a valid HTTPS connection.
 
-## Access denied. Required access: `unauthenticated_read_product_inventory` access scope.
+## Access denied. Required access: unauthenticated_read_product_inventory access scope.
 
 This can usually be fixed by reconnecting your Shopify store. Open the ShopWP Pro settings and find the "Connect" tab. From there, disconnect and reconnect your store. Then try again.
 
-## Access denied. Required access: `unauthenticated_read_sellings_plans` access scope.
+## Access denied. Required access: unauthenticated_read_sellings_plans access scope.
 
 This can usually be fixed by reconnecting your Shopify store. Open the ShopWP Pro settings and find the "Connect" tab. From there, disconnect and reconnect your store. Then try again.
+
+## Unexpected end of JSON input
+
+This error is usually the result of the WordPress REST API url containing a language code. For example:
+
+Working:
+`https://119c44085e74.ngrok.app/wp-json`
+
+Not working:
+`https://119c44085e74.ngrok.app/fr/wp-json`
+
+Usually this is because of a translation plugin changing your site URL

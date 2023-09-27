@@ -54,11 +54,12 @@ Below are some of the currently unsupported themes:
 
 ## Incompatible plugins
 
-Below are some of the currently unsupported plugins:
+The below plugins are not currently unsupported by ShopWP:
 
 - [Async JavaScript](https://wordpress.org/plugins/async-javascript)
 - [TheGem Theme Elements (for WPBakery)](https://codex-themes.com/thegem/)
 - [qTranslate-XT](https://github.com/qtranslate/qtranslate-xt)
+- [GTranslate version 2.9](https://wordpress.org/plugins/gtranslate/)
 
 ## Known plugin conflicts
 
