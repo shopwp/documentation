@@ -59,7 +59,7 @@ The below plugins are not currently unsupported by ShopWP:
 - [Async JavaScript](https://wordpress.org/plugins/async-javascript)
 - [TheGem Theme Elements (for WPBakery)](https://codex-themes.com/thegem/)
 - [qTranslate-XT](https://github.com/qtranslate/qtranslate-xt)
-- [GTranslate version 2.9](https://wordpress.org/plugins/gtranslate/)
+- [GTranslate version 2.9](https://wordpress.org/plugins/gtranslate/) (Update the Find and Replace section inside their admin to fix the REST URL issue)
 
 ## Known plugin conflicts
 
