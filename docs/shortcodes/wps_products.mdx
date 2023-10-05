@@ -74,6 +74,8 @@ Every attribute below can also be used with the following shortcodes:
 | [show_featured_only](#show_featured_only)                                           | `false`       | Determines whether to only show the product feature image                                  |
 | [show_zoom](#show_zoom)                                                             | `false`       | Determines whether to enable product image zooming                                         |
 | [pagination](#pagination)                                                           | `false`       | Determines whether to hide or show pagination                                              |
+| [pagination_load_more_button_color](#pagination_load_more_button_color)             | `#415aff`     | Determines the color of the load more button                                               |
+| [pagination_load_more_text](#pagination_load_more_text)                             | `Load more`   | Determines the text of the load more button                                                |
 | [no_results_text](#no_results_text)                                                 | `false`       | The text to show when no products are found                                                |
 | [description_length](#description_length)                                           | `false`       | Determines how long the product description should be in characters                        |
 | [infinite_scroll](#infinite_scroll)                                                 | `false`       | When turned on, the next page of items will automatically append to the container          |
@@ -121,7 +123,6 @@ Every attribute below can also be used with the following shortcodes:
 | [image_placeholder](#image_placeholder)                                             | `false`       | Allows for customizing the product placeholder image                                       |
 | [title_class_name](#title_class_name)                                               | `false`       | Allows for adding a custom class name to the product title                                 |
 | [notice_unavailable_text](#notice_unavailable_text)                                 | `false`       | Allows for customizing the text shown when a product is unavailable to purchase            |
-| [pagination_load_more_text](#pagination_load_more_text)                             | `false`       | Allows for customizing the "load more" button text shown for product pagination            |
 | [out_of_stock_notice_text](#out_of_stock_notice_text)                               | `false`       | Allows for customizing the "out of stock" message shown                                    |
 | [sale_label_text](#sale_label_text)                                                 | `Sale!`       | Allows for customizing the "sale" label text displayed on the product images               |
 | [sold_out_image_label_text](#sold_out_image_label_text)                             | `Sold out`    | Allows for customizing the "sold out" label text                                           |
@@ -1622,6 +1623,20 @@ Allows for customizing the text shown when a product is unavailable to purchase.
 
 ```js
 [wps_products notice_unavailable_text="This is a custom message"]
+```
+
+### pagination_load_more_button_color
+
+Allows for customizing the color of the "load more" button
+
+| Possible values      |
+| :------------------- |
+| Any valid CSS string |
+
+**Example**
+
+```js
+[wps_products pagination_load_more_button_color="#FFFFFF"]
 ```
 
 ### pagination_load_more_text
