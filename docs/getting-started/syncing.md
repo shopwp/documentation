@@ -262,16 +262,6 @@ The best way to check for this is to deactivate the plugin and reactivate again.
 
 Another reason for this error is that the database column `enable_automatic_syncing` is set to `0`. Setting this to `1` can fix the issue. This database column is found inside the `wp_wps_settings_general` table.
 
-### "The webhook from Shopify is either invalid or expired"
-
-This can be fixed by turning on the "Use alternative webhook authentication" setting.
-
-1. Open the ShopWP settings admin page
-2. Open the "Syncing" section
-3. Make sure "Use alternative webhook authentication" is enabled
-4. Save the settings
-5. Try syncing again
-
 ### Fixing BasicAuth
 
 If your site is behind BasicAuth, the syncing process will probably fail to complete. This is because ShopWP relies on the WordPress HTTP API, which requires you to attach your BasicAuth credentials to each request. The easiest way to do this is using the following filter:
@@ -285,10 +275,19 @@ function wpbp_http_request_args( $r, $url ) {
 add_filter( 'http_request_args', 'wpbp_http_request_args', 10, 2);
 ```
 
-### AccessDenied: We're sorry, but this service is not available in your location
+### "AccessDenied: We're sorry, but this service is not available in your location"
 
 This error is usually a result of a bad CNAME entry.
 
 There might be a conflict in the CNAME being used twice for redirecting to shopify.
 
 Log in to your Shopify dashboard and go to the domain settings. From there, check if there are any warnings or errors. You may see an error such as `Your domain has no CNAME record`.
+
+### Products do not automatically update with Webhooks extension
+
+If products are not being created or deleted automatically using the Webhooks extension, try the below two things:
+
+1. Reconnect your Shopify store. You can do this within the ShopWP Connect tab
+2. Try enabling the `Allow alternative webhook auth` setting. You can find this within the ShopWP settings
+
+![Syncing issue Address cannot be any of the domains...](./assets/syncing-issue-4.jpg)
