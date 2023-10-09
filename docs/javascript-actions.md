@@ -269,6 +269,28 @@ wp.hooks.addAction('on.syncStatus', 'shopwp', function (syncState) {
 })
 ```
 
+### on.productBuyButtonRender
+
+Runs after the Buy Button component has fully rendered. Useful for attaching DOM events to elements within the buy button component.
+
+| Parameter             | Description                            |
+| :-------------------- | :------------------------------------- |
+| productState (object) | Contains the full state of the product |
+
+**Example**
+
+```js
+wp.hooks.addAction(
+	'on.productBuyButtonRender',
+	'shopwp',
+	function (payload, settings) {
+		jQuery('#text-input-1').on('input', function (element) {
+			// On input change
+		})
+	}
+)
+```
+
 ### do.addToCart
 
 Allows you to programmatically add a variant to the ShopWP cart.

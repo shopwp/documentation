@@ -194,28 +194,6 @@ wp.hooks.addFilter(
 )
 ```
 
-### product.lineItemOptions
-
-Allows you to customize the line item options before they're added to the cart. Useful for customizing things like the quantity, variant, or min/max quantity.
-
-| Parameter                  | Description                                  |
-| :------------------------- | :------------------------------------------- |
-| lineItemOptions - (object) | Represents the line item options to be added |
-| variant - (object)         | Represents the variant data                  |
-
-**Example**
-
-```js
-wp.hooks.addFilter(
-	'product.lineItemOptions',
-	'shopwp',
-	function (lineItemOptions, variant) {
-		lineItemOptions.minQuantity = 2
-		return lineItemOptions
-	}
-)
-```
-
 ### product.colorSwatchValue
 
 Allows you to customize the value of the color swatch when using the variant buttons. This is useful if you want to display a custom color for each variant option. By default, the plugin will attempt to use the variant value to generate the color.
