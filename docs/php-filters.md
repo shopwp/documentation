@@ -495,6 +495,28 @@ add_filter('shopwp_skip_compatibility', function($should_skip) {
 });
 ```
 
+### shopwp_keep_active_whitelist
+
+Allows for customizing which plugins are kept active during the ShopWP syncing process. Useful for fixing any plugin conflicts that result from the ShopWP sync.
+
+| Parameter        | Description                             |
+| :--------------- | :-------------------------------------- |
+| $plugins (array) | Represents an array of plugin basenames |
+
+**Example**
+
+```php
+
+// Allows the plugin "ocm-site-framework" to remain activated during the ShopWP sync
+add_filter('shopwp_keep_active_whitelist', function($plugins) {
+
+   $plugins[] = 'ocm-site-framework/ocm-site-framework.php';
+
+   return $plugins;
+
+});
+```
+
 ### shopwp_get_collections_query_params
 
 Allows for customizing the query params used when fetching collections for the Storefront component
@@ -568,4 +590,23 @@ Allows for overriding the syncing verification process. Useful if you're experie
 add_filter('shopwp_skip_bulk_webhook_ver', function($default_val) {
    return true;
 });
+```
+
+### shopwp_buyer_identity_language
+
+Allows for customizing the language used for ShopWP content. Very useful for translating content on the fly with other translation plugins like G Translate.
+
+| Parameter                  | Description                       |
+| :------------------------- | :-------------------------------- |
+| $default_language (string) | Defaults to your WP site language |
+
+**Example**
+
+```php
+// Use the language set by G Translate for ShopWP content
+function customize_lang_for_shopwp($settings) {
+	return isset($_SERVER['HTTP_X_GT_LANG']) ? $_SERVER['HTTP_X_GT_LANG'] : 'en';
+}
+
+add_filter('shopwp_buyer_identity_language', 'customize_lang_for_shopwp', 10, 2);
 ```
