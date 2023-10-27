@@ -517,6 +517,26 @@ add_filter('shopwp_keep_active_whitelist', function($plugins) {
 });
 ```
 
+### shopwp_keep_active_theme
+
+Allows for keeping your theme activate during a ShopWP sync. Normally ShopWP will switch to am "empty theme" during sync to prevent any conflicts. Returning `true` will tell ShopWP not to switch themes.
+
+Note: this switch only occurs for requests made to the server so your theme will remain active on the front-end.
+
+| Parameter                    | Description                                              |
+| :--------------------------- | :------------------------------------------------------- |
+| $keep_theme_active (boolean) | Whether ShopWP will switch to an empty theme during sync |
+
+**Example**
+
+```php
+function keep_theme_active($keep_theme_active) {
+   return false;
+}
+
+add_filter('shopwp_keep_active_theme', 'keep_theme_active');
+```
+
 ### shopwp_get_collections_query_params
 
 Allows for customizing the query params used when fetching collections for the Storefront component
