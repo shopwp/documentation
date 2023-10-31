@@ -1,6 +1,6 @@
 {
 	"name": "shopwp-docs",
-	"version": "5.0.3",
+	"version": "8.0.0",
 	"private": true,
 	"scripts": {
 		"docusaurus": "docusaurus",

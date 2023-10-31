@@ -1,8 +1,3 @@
-// const  = require('')
-//const darkCodeTheme = require('prism-react-renderer/themes/dracula')
-
-// import lightCodeTheme from 'prism-react-renderer/themes/github'
-
 import { themes } from 'prism-react-renderer'
 
 const path = require('path')
