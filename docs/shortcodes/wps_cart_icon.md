@@ -47,10 +47,6 @@ Only works when not using the [icon](#icon) attribute.
 [wps_cart_icon inline_icon_color="#ff891e"]
 ```
 
-<p className="live-example-heading"><strong>Live Example:</strong></p>
-
-<CartIcon settings={{ iconColor: "#ff891e" }} />
-
 ### counter_background_color
 
 Changes the background color of the cart counter. Default: `#6ae06a`.
@@ -60,10 +56,6 @@ Changes the background color of the cart counter. Default: `#6ae06a`.
 ```js
 [wps_cart_icon counter_background_color="red"]
 ```
-
-<p className="live-example-heading live-example-heading-default-cart"><strong>Live Example:</strong></p>
-
-<CartIcon settings={{ counterBackgroundColor: "red" }} />
 
 ### counter_text_color
 
@@ -75,10 +67,6 @@ Changes the text color of the cart counter.
 [wps_cart_icon counter_text_color="black"]
 ```
 
-<p className="live-example-heading live-example-heading-default-cart"><strong>Live Example:</strong></p>
-
-<CartIcon settings={{ counterBackgroundColor: "red", counterTextColor: 'black' }} />
-
 ### show_counter
 
 Whether to display a "counter" next to the icon indicating the cart quantity. Default: `true`.
@@ -88,7 +76,3 @@ Whether to display a "counter" next to the icon indicating the cart quantity. De
 ```js
 [wps_cart_icon show_counter="false"]
 ```
-
-<p className="live-example-heading live-example-heading-default-cart"><strong>Live Example:</strong></p>
-
-<CartIcon settings={{ showCounter: false }} />
