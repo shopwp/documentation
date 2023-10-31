@@ -22,7 +22,7 @@ Installing ShopWP Pro comes with a few steps. If you've already purchased ShopWP
 
 Before you can install ShopWP Pro version you must [purchase it](https://wpshop.io/purchase). Simply select the subscription you want and finish the checkout process.
 
-![Installing free plugin step one](./assets/install-pro-1.png)
+![Installing free plugin step one](./assets/install-pro-1new.jpg)
 
 ### 2. Download plugin
 

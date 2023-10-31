@@ -1,5 +1,10 @@
-const lightCodeTheme = require('prism-react-renderer/themes/github')
-const darkCodeTheme = require('prism-react-renderer/themes/dracula')
+// const  = require('')
+//const darkCodeTheme = require('prism-react-renderer/themes/dracula')
+
+// import lightCodeTheme from 'prism-react-renderer/themes/github'
+
+import { themes } from 'prism-react-renderer'
+
 const path = require('path')
 
 // With JSDoc @type annotations, IDEs can provide config autocompletion
@@ -154,8 +159,8 @@ module.exports = {
 				copyright: `Copyright © ${new Date().getFullYear()} ShopWP.`,
 			},
 			prism: {
-				theme: lightCodeTheme,
-				darkTheme: darkCodeTheme,
+				theme: themes.github,
+				darkTheme: themes.dracula,
 				additionalLanguages: ['php'],
 			},
 		}),

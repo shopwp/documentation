@@ -57,7 +57,7 @@ Specifies where the selected user choices should render. Takes any valid CSS sel
 
 ### sort_by
 
-Determines the products sort order. Corresponds to the [Shopify API values](shopify.pxf.io/a1Q6VR). Will be overwritten if user uses the provided sorting dropdown.
+Determines the products sort order. Corresponds to the [Shopify API values](https://shopify.dev/docs/api/storefront/2023-10/enums/productsortkeys). Will be overwritten if user uses the provided sorting dropdown.
 
 | Possible values |
 | :-------------- |

@@ -84,7 +84,7 @@ If not, turn off all your other plugins besides ShopWP. Does the error go away?
 
 Some users have also reported this error showing up due to the [Soil plugin](https://roots.io/products/soil/). If you're using this plugin, make sure you're on the latest version.
 
-## <!DOCTYPE "... is not valid JSON
+## `<!DOCTYPE "... is not valid JSON`
 
 This issue is usually caused by a misconfigured `.htaccess` file. Some plugins, like All In One WP Security, will add additional lines of code to your `.htaccess` file. However this can sometimes conflict with ShopWP.
 

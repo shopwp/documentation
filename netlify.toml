@@ -1,0 +1,14 @@
+[[redirects]]
+  from = "/guides/migrating-to-5.0"
+  to = "/guides/8.0"
+  status = 301
+
+[[redirects]]
+  from = "/php-filter"
+  to = "/php-filters"
+  status = 301  
+
+[[redirects]]
+  from = "/shortcodes/shopify.pxf.io/a1Q6VR"
+  to = "/shortcodes/wps_products"
+  status = 301    
