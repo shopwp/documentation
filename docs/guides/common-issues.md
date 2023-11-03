@@ -84,7 +84,7 @@ If not, turn off all your other plugins besides ShopWP. Does the error go away?
 
 Some users have also reported this error showing up due to the [Soil plugin](https://roots.io/products/soil/). If you're using this plugin, make sure you're on the latest version.
 
-## `<!DOCTYPE "... is not valid JSON`
+## DOCTYPE is not valid JSON
 
 This issue is usually caused by a misconfigured `.htaccess` file. Some plugins, like All In One WP Security, will add additional lines of code to your `.htaccess` file. However this can sometimes conflict with ShopWP.
 
@@ -168,9 +168,11 @@ This error is usually due to a ShopWP network request returning a 403 or 404 err
 
 The fix usually requires investigating why the network request is returning a 4xx response. This could be due to a plugin conflict, aggressive security settings, etc.
 
-## Shopify connection disappears after connecting
+## The connection process doesn't save the connection after redirecting back to WordPress
 
-If your connection to Shopify "disappears" during the connection process you may need to install a valid SSL certificate on your website. Please ensure you have a valid HTTPS connection.
+This can happen if you have basic authentication installed such as password protection. These tools can sometimes interfere with the WordPress REST API and prevent ShopWP from accessing certain data.
+
+To fix, deactivate the basic authentication altogether. Then clear your browser cache completely. After that try performing the Shopify connection again.
 
 ## Access denied. Required access: unauthenticated_read_product_inventory access scope.
 

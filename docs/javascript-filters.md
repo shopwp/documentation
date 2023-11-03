@@ -718,6 +718,39 @@ wp.hooks.addFilter(
 )
 ```
 
+### cart.checkoutButtonDisabled
+
+Allows for manually determining whether the checkout button is disabled or not
+
+| Parameter             | Description                                                                      |
+| :-------------------- | :------------------------------------------------------------------------------- |
+| defaultValue - (bool) | Represents whether the checkout button is enabled or disabled before customizing |
+| cartData - (object)   | Represents the current cart data such as total, line items, etc                  |
+| cartState - (object)  | Represents the full cart state                                                   |
+
+**Example**
+
+```js
+// Only enable checkout button if cart total is more than $15
+wp.hooks.addFilter(
+	'cart.checkoutButtonDisabled',
+	'shopwp',
+	function (defaultValue, cartData, cartState) {
+		if (!cartData) {
+			return
+		}
+
+		var total = parseFloat(cartData.cost.totalAmount.amount)
+
+		if (total > 15) {
+			return defaultValue
+		}
+
+		return true
+	}
+)
+```
+
 ### misc.linkHref
 
 Allows you to filter product or collection links. This filter will run whether you link products to WordPress or Shopify.
