@@ -11,4 +11,9 @@
 [[redirects]]
   from = "/shortcodes/shopify.pxf.io/a1Q6VR"
   to = "/shortcodes/wps_products"
-  status = 301    
+  status = 301
+
+[[redirects]]
+  from = "/shortcodes/wps_cart"
+  to = "/shortcodes/wps_cart_icon"
+  status = 301  
