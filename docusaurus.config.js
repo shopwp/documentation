@@ -158,5 +158,19 @@ module.exports = {
 				darkTheme: themes.dracula,
 				additionalLanguages: ['php'],
 			},
+			algolia: {
+				// The application ID provided by Algolia
+				appId: '7K79W0TUM3',
+				// Public API key: it is safe to commit it
+				apiKey: '3a34a440ec682201a306f8e16c239b9e',
+				indexName: 'wpshop',
+				insights: true,
+				// Optional: see doc section below
+				contextualSearch: true,
+				// Optional: Algolia search parameters
+				searchParameters: {},
+				// Optional: path for search page that enabled by default (`false` to disable it)
+				searchPagePath: 'search',
+			},
 		}),
 }
