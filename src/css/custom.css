@@ -144,6 +144,10 @@ html[data-theme='dark'] .navbar {
 	background-color: #0c0e1b;
 }
 
+html[data-theme='dark'] .DocSearch-Hit[aria-selected='true'] a {
+	background-color: #2f2f5f;
+}
+
 .shopwp-radio-text [class*='SaveInlineCSS'] {
 	margin-top: -3px;
 }
