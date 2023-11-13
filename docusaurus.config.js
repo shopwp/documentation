@@ -53,124 +53,117 @@ module.exports = {
 			},
 		],
 	],
-	themeConfig:
-		/** @type {import('@docusaurus/preset-classic').ThemeConfig} */
-		({
-			image: 'https://wpshop.io/assets/banners/shopwp-banner-og-white.jpg',
-			colorMode: {
-				defaultMode: 'dark',
+	themeConfig: {
+		image: 'https://wpshop.io/assets/banners/shopwp-banner-og-white.jpg',
+		colorMode: {
+			defaultMode: 'dark',
+		},
+		navbar: {
+			logo: {
+				alt: 'ShopWP Logo',
+				src: 'img/logo.svg',
+				srcDark: 'img/logo-dark-mode.svg',
 			},
-			navbar: {
-				logo: {
-					alt: 'ShopWP Logo',
-					src: 'img/logo.svg',
-					srcDark: 'img/logo-dark-mode.svg',
+			items: [
+				{
+					value:
+						'<p class="version-num"><span class="num">v8.2.1</span><span class="emoji">🎉</span></p>',
+					type: 'html',
+					position: 'left',
 				},
-				items: [
-					{
-						value:
-							'<p class="version-num"><span class="num">v8.2.1</span><span class="emoji">🎉</span></p>',
-						type: 'html',
-						position: 'left',
-					},
-					{
-						href: 'https://wpshop.io',
-						label: 'https://wpshop.io',
-						position: 'right',
-					},
-				],
-			},
-			footer: {
-				style: 'dark',
-				links: [
-					{
-						title: 'Docs Links',
-						items: [
-							{
-								label: 'Installing',
-								to: '/getting-started/installing',
-							},
-							{
-								label: 'Connecting',
-								to: '/getting-started/connecting',
-							},
-							{
-								label: 'Syncing',
-								to: '/getting-started/syncing',
-							},
-							{
-								label: 'Displaying',
-								to: '/getting-started/displaying',
-							},
-							{
-								label: 'Requirements',
-								to: '/getting-started/requirements',
-							},
-						],
-					},
-					{
-						title: 'Community',
-						items: [
-							{
-								label: 'Github',
-								href: 'https://github.com/shopwp',
-							},
-							{
-								label: 'Twitter',
-								href: 'https://twitter.com/wpshopify',
-							},
-							{
-								label: 'Youtube',
-								href: 'https://www.youtube.com/c/WPShopify',
-							},
-							{
-								label: 'Slack',
-								href: 'https://wpshop.io/purchase',
-							},
-						],
-					},
-					{
-						title: 'More',
-						items: [
-							{
-								href: 'https://wpshop.io/purchase',
-								label: 'Pricing',
-							},
-							{
-								label: 'Plugin Extensions',
-								href: 'https://wpshop.io/extensions',
-							},
-							{
-								href: 'https://wpshop.io/features',
-								label: 'Demo',
-							},
-							{
-								href: 'https://wpshop.io/faq',
-								label: 'FAQ',
-							},
-						],
-					},
-				],
-				copyright: `Copyright © ${new Date().getFullYear()} ShopWP.`,
-			},
-			prism: {
-				theme: themes.github,
-				darkTheme: themes.dracula,
-				additionalLanguages: ['php'],
-			},
-			algolia: {
-				// The application ID provided by Algolia
-				appId: '7K79W0TUM3',
-				// Public API key: it is safe to commit it
-				apiKey: '3a34a440ec682201a306f8e16c239b9e',
-				indexName: 'wpshop',
-				insights: true,
-				// Optional: see doc section below
-				contextualSearch: true,
-				// Optional: Algolia search parameters
-				searchParameters: {},
-				// Optional: path for search page that enabled by default (`false` to disable it)
-				searchPagePath: 'search',
-			},
-		}),
+				{
+					href: 'https://wpshop.io',
+					label: 'https://wpshop.io',
+					position: 'right',
+				},
+			],
+		},
+		footer: {
+			style: 'dark',
+			links: [
+				{
+					title: 'Docs Links',
+					items: [
+						{
+							label: 'Installing',
+							to: '/getting-started/installing',
+						},
+						{
+							label: 'Connecting',
+							to: '/getting-started/connecting',
+						},
+						{
+							label: 'Syncing',
+							to: '/getting-started/syncing',
+						},
+						{
+							label: 'Displaying',
+							to: '/getting-started/displaying',
+						},
+						{
+							label: 'Requirements',
+							to: '/getting-started/requirements',
+						},
+					],
+				},
+				{
+					title: 'Community',
+					items: [
+						{
+							label: 'Github',
+							href: 'https://github.com/shopwp',
+						},
+						{
+							label: 'Twitter',
+							href: 'https://twitter.com/wpshopify',
+						},
+						{
+							label: 'Youtube',
+							href: 'https://www.youtube.com/c/WPShopify',
+						},
+						{
+							label: 'Slack',
+							href: 'https://wpshop.io/purchase',
+						},
+					],
+				},
+				{
+					title: 'More',
+					items: [
+						{
+							href: 'https://wpshop.io/purchase',
+							label: 'Pricing',
+						},
+						{
+							label: 'Plugin Extensions',
+							href: 'https://wpshop.io/extensions',
+						},
+						{
+							href: 'https://wpshop.io/features',
+							label: 'Demo',
+						},
+						{
+							href: 'https://wpshop.io/faq',
+							label: 'FAQ',
+						},
+					],
+				},
+			],
+			copyright: `Copyright © ${new Date().getFullYear()} ShopWP.`,
+		},
+		prism: {
+			theme: themes.github,
+			darkTheme: themes.dracula,
+			additionalLanguages: ['php'],
+		},
+		algolia: {
+			appId: '7K79W0TUM3',
+			apiKey: '6804324fe7ecb5a9de575a3daabcb7cc',
+			indexName: 'wpshop',
+			insights: true,
+			contextualSearch: false,
+			searchParameters: {},
+			searchPagePath: 'search',
+		},
+	},
 }
