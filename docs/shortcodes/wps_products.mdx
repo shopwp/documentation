@@ -767,7 +767,9 @@ Determines how many products will appear in each row.
 
 ### show_price_range
 
-Determines whether to show price ranges for each product. Only applicable when `pricing` is not set within the [excludes](#excludes) attribute.
+When this is set to `true`, the lowest price will be shown with a "From" label next to it.
+
+Cannot be combined with [show_compare_at](#show_compare_at). Must use one or the other.
 
 | Possible values |
 | :-------------- |
@@ -782,7 +784,11 @@ Determines whether to show price ranges for each product. Only applicable when `
 
 ### show_compare_at
 
-Determines whether to show the compare at price for each product. Only applicable when `pricing` is not set within the [excludes](#excludes) attribute.
+When this is set to `true`, the sale price will be shown with a "Now" label next to it.
+
+Note: this will only display if a variant is selected or if the product has only one variant.
+
+Cannot be combined with [show_price_range](#show_price_range). Must use one or the other.
 
 | Possible values |
 | :-------------- |

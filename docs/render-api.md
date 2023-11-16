@@ -2,7 +2,7 @@
 
 ShopWP allows you to display your Shopify products and collections programmatically with PHP. This is called the "Render API".
 
-The Render API is a set of PHP classes and functions which you can use inside your own files. Each class has various methods which allow you to display your data.
+The Render API is a set of PHP classes and functions which you can use inside your own files. Each class has various methods which allow you to display your products.
 
 Let's see how it's done.
 
@@ -36,7 +36,7 @@ We pass the WordPress post title to a parameter called `title`. We have convenie
 
 So all shortcode attributes can be used with the Render API.
 
-It's important to note that the `Products()` method is responsible for outputting one or more "full" products. By "full", we simply mean they contain all the _other_ product components like title, description, buy button, etc. Here is a [live demo](https://wpshop.io/features/#component-features-demo) of a "full" product.
+It's important to note that the `Products()` method is responsible for outputting one or more "full" products. By "full", we simply mean they contain all the _other_ product components like title, description, buy button, etc. Here is a [live demo](https://wpshop.io/features) of a "full" product.
 
 ## List of available classes
 
