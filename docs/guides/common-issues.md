@@ -60,17 +60,17 @@ This error can sometimes happen if the product or collection in Shopify is saved
 
 ## Products / collections not showing
 
-When your products are failing to show, it usually means that you need to assign them to the ShopWP sales channel. This sales channel is created automatically when you initially connect your store. It's used to control what products are visible in ShopWP. Below are the steps for assigning your products to the sales channel.
+When your products are failing to show, it usually means that you need to assign them to the [ShopWP sales channel](/guides/common-issues#products--collections-not-showing). This sales channel is created automatically when you initially connect your store. It's used to control what products are visible in ShopWP. Below are the steps for assigning your products to the sales channel.
 
 1. Open the product inside Shopify and look for the section called, "Sales channels and apps". Click the manage link.
 
 ![ShopWP Pro Common Issues 1](./assets/common-issues/visible-1.png)
 
-2. Assign the product to the ShopWP sales channel and click "Done". Now head back to WordPress to see if the product shows up. Sometimes this can take 1-2 minutes.
+2. Assign the product to the [ShopWP sales channel](/guides/common-issues#products--collections-not-showing) and click "Done". Now head back to WordPress to see if the product shows up. Sometimes this can take 1-2 minutes.
 
 ![ShopWP Pro Common Issues 1](./assets/common-issues/visible-2.png)
 
-Another common reason for this is Shopify's API cache. If you're noticing that many of your products and collections **are showing**, except for one or two, you can try forcing Shopify's API cache to flush. To do this, open the offending product or collection in Shopify. Turn the ShopWP sales channel off. Then, update the description by adding a period or something small. Save the product again. Finally, set the ShopWP sales channel back to active again and save the product. Wait 10mins and it should start showing.
+Another common reason for this is Shopify's API cache. If you're noticing that many of your products and collections **are showing**, except for one or two, you can try forcing Shopify's API cache to flush. To do this, open the offending product or collection in Shopify. Turn the [ShopWP sales channel](/guides/common-issues#products--collections-not-showing) off. Then, update the description by adding a period or something small. Save the product again. Finally, set the [ShopWP sales channel](/guides/common-issues#products--collections-not-showing) back to active again and save the product. Wait 10mins and it should start showing.
 
 ## ReferenceError: shopwp is not defined
 

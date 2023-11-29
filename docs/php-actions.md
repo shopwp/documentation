@@ -89,7 +89,7 @@ add_action('shopwp_webhook_after_product_delete', function($data) {
 
 ### shopwp_webhook_after_product_listings_remove
 
-This action runs after a product is removed from the ShopWP sales channel. Connect the corresponding webhook first.
+This action runs after a product is removed from the [ShopWP sales channel](/guides/common-issues#products--collections-not-showing). Connect the corresponding webhook first.
 
 **Examples**
 
@@ -101,7 +101,7 @@ add_action('shopwp_webhook_after_product_listings_remove', function($data) {
 
 ### shopwp_webhook_after_product_listings_add
 
-This action runs after a product is added to the ShopWP sales channel. Connect the corresponding webhook first.
+This action runs after a product is added to the [ShopWP sales channel](/guides/common-issues#products--collections-not-showing). Connect the corresponding webhook first.
 
 **Examples**
 

@@ -15,43 +15,7 @@ ShopWP allows you to display your [Shopify](https://shopify.pxf.io/5bPL0L) produ
 
 ## Default Pages
 
-ShopWP comes with two default pages: `ShopWP Products` and `ShopWP Collections`. These two pages are created when the plugin is first installed.
-
-### Listing Pages
-
-The purpose of these default pages is to display your products and collections without needing to configure anything. If you don't want to use them, you can turn them off within the plugin settings. You can also choose a different page to be used instead.
-
-#### Changing the listing pages
-
-If you would like to change the default listing pages, go into the plugin settings and open the General section. Once open, configure the `Default Products Page` and `Default Collections Page` options and click save settings toward the bottom.
-
-![ShopWP changing listing pages](./assets/listing-pages1.png)
-
-#### Turning listing pages off
-
-In order to turn the default pages off, go into the plugin settings and open the General section. Once open, toggle the `Enable Default Pages` option and save the settings.
-
-![ShopWP enabling product detail pages](./assets/listing-pages2.png)
-
-### Detail Pages
-
-ShopWP allows you to create detail pages for your products and collections. They are created for you automatically when you sync your products. By default they are not created.
-
-So before you can use them you'll need to run a sync.
-
-#### Running a sync
-
-1. First, open the "Sync" tab and use the [One-time Sync](/getting-started/syncing#one-time-sync) button. This will attempt to sync all of your products.
-
-![Running a one-time sync](./assets/tools/tools-sync-new-1.jpg)
-
-If you don't wish to sync all of your products you can [adjust the syncing settings](/getting-started/syncing#products-sync-query) first.
-
-![ShopWP enabling product detail pages](./assets/listing-pages4.png)
-
-3. Once the sync is finished, you should see a list of products within WordPress under `ShopWP - Products`.
-
-![The ShopWP product posts](./assets/listing-pages5.png)
+[Read the new extensive tutorial](https://wpshop.io/blog/how-to-manage-your-shopwp-product-and-collection-pages/) on product and collection pages in ShopWP.
 
 ## Caching
 

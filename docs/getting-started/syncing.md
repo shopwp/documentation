@@ -18,10 +18,10 @@ One of the main features of ShopWP is the ability to sync your Shopify data into
 etc
 ```
 
-You can also choose to create detail pages for each product / collection assigned to the ShopWP sales channel.
+You can also choose to create detail pages for each product / collection assigned to the [ShopWP sales channel](/guides/common-issues#products--collections-not-showing).
 
 :::info
-Only products assigned to the ShopWP sales channel will be synced into WordPress.
+Only products assigned to the [ShopWP sales channel](/guides/common-issues#products--collections-not-showing) will be synced into WordPress.
 :::
 
 :::info
@@ -40,7 +40,7 @@ As the name implies, one-time sync will sync your Shopify data only once. It's a
 
 This **will not keep things updated automatically**. If you change anything inside Shopify, you'll need to manually sync again to pull the changes back into WordPress.
 
-The syncing process will use the settings that you have configured under `ShopWP Pro - Settings - Syncing`. This includes whether to create product detail pages, syncing feature images, etc. Depending on your syncing settings ShopWP will attempt to create a "product post" for each Shopify product that you have assigned to the ShopWP sales channel.
+The syncing process will use the settings that you have configured under `ShopWP Pro - Settings - Syncing`. This includes whether to create product detail pages, syncing feature images, etc. Depending on your syncing settings ShopWP will attempt to create a "product post" for each Shopify product that you have assigned to the [ShopWP sales channel](/guides/common-issues#products--collections-not-showing).
 
 ### Automatic syncing
 
@@ -237,6 +237,10 @@ If you're a developer trying to sync on localhost, this Syncing URL must be made
 Another reason this error can show is if you have a redirect setup within the Shopify domain settings. To check for this, login to Shopify and go to Settings. From there, click the `Domains` section.
 
 You should see your `.myshopify.com` domain listed. This should set as your primary domain. If you see your WordPress domain make sure it's not being redirected to `.myshopify.com` OR set as your primary domain. You are ok to delete these.
+
+### "Tried running the bulk query ..."
+
+This error indicates that ShopWP wasn't able to find any products to sync. Try making sure the products you want to sync are assigned to the [ShopWP sales channel](/guides/common-issues#products--collections-not-showing) inside Shopify.
 
 ### "Variable $id of type ID! was provided invalid value"
 
