@@ -196,7 +196,13 @@ wp.hooks.addFilter(
 
 ### product.colorSwatchValue
 
-Allows you to customize the value of the color swatch when using the variant buttons. This is useful if you want to display a custom color for each variant option. By default, the plugin will attempt to use the variant value to generate the color.
+Allows you to customize the value of the color swatch when using the variant buttons. This is useful if you want to display a custom color for each variant option.
+
+By default ShopWP will attempt to use a "native CSS color" based on the variant name. For example, if you name your variant "White", ShopWP will correctly show a white color. This is because the plugin is able to identify what color that represents in CSS.
+
+The full list of available color names can be [found here](https://www.w3.org/wiki/CSS/Properties/color/keywords) under the column "Color name".
+
+This filter is particularly useful if you want to make sure to display a custom color not available in the CSS color names.
 
 | Parameter        | Description                                                     |
 | :--------------- | :-------------------------------------------------------------- |
@@ -1159,6 +1165,20 @@ wp.hooks.addFilter(
 	'shopwp',
 	function (defaultValue, productState) {
 		return '<p>Total left: ' + productState.payload.totalInventory + '</p>'
+	}
+)
+```
+
+```js
+// Show a notice if product contains a specific tag
+wp.hooks.addFilter(
+	'after.productBuyButton',
+	'shopwp',
+	function (defaultValue, productState) {
+		if (productState.payload.tags.includes('_preorder')) {
+			return `<p style='color:#C92228;'>
+					<strong>PRE-ORDER ITEM!</strong> Order will be fulfilled when the stock arrives by expected ship date listed below. We recommend placing separate orders for pre-order and in-stock items</p>`
+		}
 	}
 )
 ```

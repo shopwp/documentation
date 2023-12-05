@@ -45,6 +45,7 @@ Every attribute below can also be used with the following shortcodes:
 | [product_id](#product_id)                                                           | `false`       | Display products based on one or more product ids                                          |
 | [post_id](#post_id)                                                                 | `false`       | Display products based on one or more WordPress post id(s)                                 |
 | [query](#query)                                                                     | `false`       | Use a [custom query](https://shopify.dev/docs/api/usage/search-syntax) to filter products  |
+| [query_exclude](#query_exclude)                                                     | `false`       | Allows for excluding certain products from the list of products                            |
 | [sort_by](#sort_by)                                                                 | `false`       | Determines the sort order when displaying multiple products                                |
 | [reverse](#reverse)                                                                 | `false`       | Reverse the order of products                                                              |
 | [page_size](#page_size)                                                             | `10`          | Determines the number of products to show per page                                         |
@@ -353,6 +354,27 @@ Allows you to construct your own query based on the [Shopify search syntax](http
 ```js
 // List 5 products with the name "Caramel Apple", or products that have an inventory of over 500 items and less than or equal to 1000 items.
 [wps_products query="(title:Caramel Apple) OR (inventory_total:>500 inventory_total:<=1000)"]
+```
+
+### query_exclude
+
+Allows you to exclude certain products from the list of products.
+
+| Possible values                              |
+| :------------------------------------------- |
+| Comma seperated list of product ids (string) |
+| current (string)                             |
+
+**Example**
+
+```js
+// Show products with tag "super", but also exclude products with id 123 and 456
+[wps_products tag="super" query_exclude="123, 456"]
+```
+
+```js
+// Exclude the currently shown product. Only works when showing products in a product detail page template
+[wps_products query_exclude="current"]
 ```
 
 ### sort_by
