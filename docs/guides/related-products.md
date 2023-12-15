@@ -11,6 +11,7 @@ $post_id            = 157189; // required
 
 $result = $Products->get_product([
     'post_id' => $post_id,
+    'query_exclude' => 'current',
     'schema' => '
         collections(first: 1) {
             edges {
