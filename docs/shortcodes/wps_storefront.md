@@ -474,3 +474,21 @@ Allows for showing the search component with the Storefront component
 ```js
 [wps_storefront with_search="true"]
 ```
+
+### filter_option_open_on_load
+
+Allows for determining which filter group to open on page load. Defaults to `tags`.
+
+| Possible values |
+| :-------------- |
+| tags            |
+| collections     |
+| vendors         |
+| types           |
+| price           |
+
+**Example**
+
+```js
+[wps_storefront filter_option_open_on_load="collections"]
+```

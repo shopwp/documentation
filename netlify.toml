@@ -17,3 +17,8 @@
   from = "/shortcodes/wps_cart"
   to = "/shortcodes/wps_cart_icon"
   status = 301  
+
+[[redirects]]
+  from = "/guides/setting-up-cross-domain-tracking"
+  to = "https://wpshop.io/blog/cross-site-tracking-for-wordpress-and-shopify/"
+  status = 301    
