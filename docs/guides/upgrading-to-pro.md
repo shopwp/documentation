@@ -14,7 +14,7 @@ The upgrade process will _not_ remove any content you may have added, including 
 
 The first step is to purchase a license key. You can do this by [visiting our purchase page](https://wpshop.io/purchase).
 
-![ShopWP Pro Upgrade Guide Step 1 - Purchase](./assets/upgrading/upgrading-1.jpg)
+![ShopWP Pro Upgrade Guide Step 1 - Purchase](./assets/upgrading/upgrading-first.jpg)
 
 ### 2. Download the Pro Version
 

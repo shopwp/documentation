@@ -208,6 +208,14 @@ This can happen if you have overly aggressive security settings blocking access 
 
 We've also seen this occur in sites that have their privacy settings set too high. Switching this from private to public can sometimes help.
 
+### Stuck stuck at "Processing data ..."
+
+This indicates that you web sever is having trouble processing the amount of data ShopWP is trying to process.
+
+Open the ShopWP Syncing settings `ShopWP Pro - Settings - Syncing`, and change the "Items per chunk" value to `20` instead of 250.
+
+Stop any existing sync, use the Remove all sync tool, and then perform a new one-time sync.
+
 ### "The webhook from Shopify is either invalid or expired"
 
 This error will occur if your `Syncing URL` setting does not match your WordPress domain. These two values **must** match for the syncing to work properly.
