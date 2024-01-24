@@ -1,20 +1,34 @@
 # Using JavaScript Hooks
 
-ShopWP provides many different types of JavaScript hooks. These hooks allow you to customize the plugin.
+ShopWP provides various types of JavaScript hooks to customize the plugin.
 
-For example, you can detect when the cart opens or when a user clicks the checkout button. When these "actions" run, you can then execute your own code—making the desired customization.
+For example, you can detect when the cart opens or customize text in the product layout. When these "hooks" run, you can then execute your own code to make the desired customization.
 
 Let's see how this works.
 
 ## What are they?
 
-JavaScript (JS) hooks were introduced to WordPress in version `5.0` with the advent of the highly anticipated Gutenberg release. These hooks are very similar to the PHP hooks that WordPress developers have been familiar with for years.
+JavaScript hooks were introduced to WordPress in version `5.0` with the advent of the highly anticipated Gutenberg release. These hooks are very similar to the PHP hooks that WordPress developers have been familiar with for years.
 
-Like PHP hooks, JS hooks allow you to "filter" data and listen to unique "actions". This guide won't be a comprehensive tutorial on how to use WordPress hooks. For that, please take a look at the [official WordPress documentation](https://developer.wordpress.org/block-editor/packages/packages-hooks/) first.
+Like PHP hooks, JavaScript hooks allow you to "filter" data and listen to unique "actions". This guide won't be a comprehensive tutorial on how to use WordPress hooks. For that, please take a look at the [official WordPress documentation](https://developer.wordpress.org/block-editor/packages/packages-hooks/) first.
 
-## How to use them
+## How to use
 
-ShopWP injects its JavaScript in the footer to improve performance. However, it's possible that your theme's JavaScript may run _before_ ShopWP. If this occurs, none of the custom JavaScript hooks you write will work.
+### Plugin settings
+
+ShopWP provides an area in the plugin setting where you can add your custom JavaScript code. You can find it by going to:
+
+`ShopWP Pro -> Settings -> Misc -> JavaScript code`
+
+![JavaScript code settings sceenshot](./assets/javascript-code/javascript-code.png)
+
+This code you add is stored in the WordPress database. ShopWP then dynamically creates (or updates) a JavaScript file called `user-overrides.js`. ShopWP takes care of ensuring this file is loaded in the correct order so your changes always run after ShopWP is loaded.
+
+### Using a theme file
+
+Instead of adding code to the plugin settings, you can create a dedicated JavaScript file in your theme instead.
+
+ShopWP injects it's JavaScript in the footer to improve performance. However, it's possible that your theme's JavaScript may run _before_ ShopWP. If this occurs, none of the custom JavaScript hooks you write will work.
 
 To get around this, be sure to set `shopwp-public` (or `shopwp-admin` if writing code for the backend) as a dependency in your theme's `wp_enqueue_script`.
 

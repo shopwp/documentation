@@ -42,7 +42,7 @@ This will remove any custom fields applied to your product posts as well as any 
 
 ## Checkout redirects to page not found
 
-Issue: Clicking the "Begin checkout" button inside the ShopWP cart takes you to a page not found error.
+Issue: Clicking the "Begin checkout" button inside the ShopWP cart takes you to a page not found error. Or, it redirects you to a login page.
 
 This can occur if your Shopify online store is password protected. The solution is to remove the password protection so that the checkout page can be reached by non-logged in users.
 
@@ -193,3 +193,17 @@ Not working:
 `https://119c44085e74.ngrok.app/fr/wp-json`
 
 Usually this is because of a translation plugin changing your site URL
+
+## useSyncExternalStore is not a function
+
+This error is due to not being on WordPress `6.2` or higher.
+
+## The "Remove all synced data" tool will time out
+
+This is known to happen when deleting all data after synced thousands of products. The PHP memory will be exhausted and the operation times out.
+
+The solution is to add this code to your `wp-config.php` file to increase the memory limit, and try again:
+
+```php
+define( 'WP_MEMORY_LIMIT', '500M' );
+```

@@ -74,3 +74,15 @@ li_fat_id
 This means that cross-site tracking is automatically built in for Google Analytics and various social media ad clicks.
 
 If you need to add additional parameters to this list you can leverage the [`misc.trackingParams`](/javascript-filters#misctrackingparams)
+
+## Add domain to order
+
+As of ShopWP version `8.5.0`, you can now auto assign a custom attribute to any ShopWP order. This attribute contains the domain of your WordPress site. This is helpful for making any custom integrations or improving analytics.
+
+You can turn this on by going to `ShopWP Pro -> Settings -> Checkout`. Find the setting called "Add custom attributes to Shopify order?"
+
+![Shopify domain tag setting screenshot](./assets/checkout-tag-setting.png)
+
+After the order is made, the attribute will show up within the "Additional details" section on the Order Edit screen. See screenshot below:
+
+![Custom domain attribute in Shopify screenshot](./assets/checkout-tag.png)
