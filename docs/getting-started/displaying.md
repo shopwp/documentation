@@ -15,7 +15,7 @@ ShopWP allows you to display your [Shopify](https://shopify.pxf.io/5bPL0L) produ
 
 ## Default Pages
 
-[Read the new extensive tutorial](https://wpshop.io/blog/how-to-manage-your-shopwp-product-and-collection-pages/) on product and collection pages in ShopWP.
+We've written an [extensive tutorial](https://wpshop.io/blog/how-to-manage-your-shopwp-product-and-collection-pages/) on the ShopWP default pages.
 
 ## Caching
 

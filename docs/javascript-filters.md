@@ -1273,12 +1273,16 @@ Allows you add custom HTML before the product title. You must return HTML as a s
 **Example**
 
 ```js
-// Adds the product vendor name before title
+// Add vendor above title
 wp.hooks.addFilter(
 	'before.productTitle',
 	'shopwp',
 	function (defaultValue, productState) {
-		return '<p>Vendor: ' + productState.payload.vendor + '</p>'
+		return (
+			'<p style="color: #828282;margin-bottom: 5px;">' +
+			productState.payload.vendor +
+			'</p>'
+		)
 	}
 )
 ```

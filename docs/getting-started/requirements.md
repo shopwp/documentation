@@ -63,51 +63,74 @@ The below plugins are not currently unsupported by ShopWP:
 
 ## Known plugin conflicts
 
-- [WP Rocket](https://wp-rocket.me/):
-  WP Rocket will attempt to to minify and merge the JavaScript from ShopWP. This will prevent ShopWP from loading properly. To fix this, you need to add ShopWP to the WP Rocket exclusion list.
+### WP Rocket
 
-  Within the File Optimization tab of WP Rocket, find the `Excludes` tab. [Learn more](https://docs.wp-rocket.me/article/54-exclude-pages-from-the-cache)
+[WP Rocket](https://wp-rocket.me/) will attempt to to minify and merge the JavaScript from ShopWP. This will prevent ShopWP from loading properly. To fix this, you need to add ShopWP to the WP Rocket exclusion list.
 
-- [WP-Optimize](https://wordpress.org/plugins/wp-optimize/):
-  WP-Optimize will try to minify and merge the JavaScript from the plugin. You'll need to manually exclude the plugin's JavaScript from this process since ShopWP already optimizes things. You can [follow this guide](https://getwpo.com/faqs/#How-do-I-exclude-individual-JavaScript-scripts-from-being-minified-and-merged-).
+Within the File Optimization tab of WP Rocket, find the [`Excludes`](https://docs.wp-rocket.me/article/54-exclude-pages-from-the-cache) tab.
 
-- [OptimizeBuilder](https://www.optimizepress.com/):
-  If you're using the OptimizeBuilder plugin from OptimizePress, you'll need to manually "enable" the ShopWP JavaScript and CSS. OptimizeBuilder turns these off by default. To do this, open the OptimizeBuilder plugin settings and go to the scripts and styles tab. From there, find the ShopWP plugin and enable `Js` and `Css` for both the frontend and backend. Then click save.
+Then add the below code
 
-- [WPCode Lite](https://wphive.com/plugins/insert-headers-and-footers/):
-  There is a known issue that causes ShopWP to disappear completely when this plugin is installed.
+For all the JavaScript sections:
 
-- [TheGem Theme Elements (for WPBakery)](https://codex-themes.com/thegem/):
-  This plugin uses a WordPress filter called `nonce_life`, and sets it to 1 year. This causes all ShopWP REST Endpoints to fail with a 403 error. To fix, open the plugin and comment out the below function:
+```php
+/wp-content/plugins/shopwp-pro/dist/(.*).js
+```
 
-  ```php
-  function thegem_nonce_life() {
-    return 31536000;
-  }
+For all the CSS sections:
 
-  add_filter('nonce_life', 'thegem_nonce_life');
-  ```
+```php
+/wp-content/plugins/shopwp-pro/dist/(.*).css
+```
 
-- [GeotargetingWP](https://geotargetingwp.com/)
-  This plugin can sometimes prevent the ShopWP products (and cart) from "functioning". Meaning, it will render products but clicking on them will do nothing.
+![WP Rocket settings for ShopWP](./assets/wp-rocket-settings.png)
 
-  The main culprit seems to be [Geotargeting's AJAX mode](https://geotargetingwp.com/docs/geotargetingwp/ajax-mode#ajax-mode). Try turning this off first.
+### WP-Optimize
 
-  In case you need to turn it back on, you'll need to run a little piece of ShopWP JavaScript to "render" the products. This piece of code will run after Geotargeting loads.
+[WP-Optimize](https://wordpress.org/plugins/wp-optimize/) will try to minify and merge the JavaScript from the plugin. You'll need to manually exclude the plugin's JavaScript from this process since ShopWP already optimizes things. You can [follow this guide](https://getwpo.com/faqs/#How-do-I-exclude-individual-JavaScript-scripts-from-being-minified-and-merged-).
 
-  Geotrageting provides a callback function that you can use.
+### OptimizeBuilder
 
-  ```js
-  $(document).on('geotwp_ajax_success', function (e, data) {
-  	wp.hooks.doAction('do.shopRender')
-  })
-  ```
+If you're using the [OptimizeBuilder](https://www.optimizepress.com/) plugin from OptimizePress, you'll need to manually "enable" the ShopWP JavaScript and CSS. OptimizeBuilder turns these off by default. To do this, open the OptimizeBuilder plugin settings and go to the scripts and styles tab. From there, find the ShopWP plugin and enable `Js` and `Css` for both the frontend and backend. Then click save.
 
-- Caching plugins:
-  If you're using a WordPress caching plugin, you may run into a JavaScript error that looks like this:
+### WPCode Lite
 
-  ```js
-  403 Error: Cookie check failed
-  ```
+There is a known issue in [WPCode Lite](https://wphive.com/plugins/insert-headers-and-footers/) that causes ShopWP to disappear completely when this plugin is installed.
 
-  This happens if a caching plugin caches the WordPress REST API too aggressively. You can either try deactivating the caching plugin altogether, or adjust the settings so the plugin doesn't cache the WordPress REST API at all.
+### TheGem Theme Elements
+
+[TheGem Theme Elements](https://codex-themes.com/thegem/) uses a WordPress filter called `nonce_life`, and sets it to 1 year. This causes all ShopWP REST Endpoints to fail with a 403 error. To fix, open the plugin and comment out the below function:
+
+```php
+function thegem_nonce_life() {
+  return 31536000;
+}
+
+add_filter('nonce_life', 'thegem_nonce_life');
+```
+
+### GeotargetingWP
+
+[GeotargetingWP](https://geotargetingwp.com/) can sometimes prevent the ShopWP products (and cart) from "functioning". Meaning, it will render products but clicking on them will do nothing.
+
+The main culprit seems to be [Geotargeting's AJAX mode](https://geotargetingwp.com/docs/geotargetingwp/ajax-mode#ajax-mode). Try turning this off first.
+
+In case you need to turn it back on, you'll need to run a little piece of ShopWP JavaScript to "render" the products. This piece of code will run after Geotargeting loads.
+
+Geotrageting provides a callback function that you can use.
+
+```js
+$(document).on('geotwp_ajax_success', function (e, data) {
+	wp.hooks.doAction('do.shopRender')
+})
+```
+
+### Caching plugins
+
+If you're using a WordPress caching plugin, you may run into a JavaScript error that looks like this:
+
+```js
+403 Error: Cookie check failed
+```
+
+This happens if a caching plugin caches the WordPress REST API too aggressively. You can either try deactivating the caching plugin altogether, or adjust the settings so the plugin doesn't cache the WordPress REST API at all.
