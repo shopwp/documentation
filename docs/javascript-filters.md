@@ -757,6 +757,28 @@ wp.hooks.addFilter(
 )
 ```
 
+### cart.checkoutButtonText
+
+Allows for customizing the checkout button text
+
+| Parameter             | Description                                                     |
+| :-------------------- | :-------------------------------------------------------------- |
+| defaultValue - (bool) | "Begin checkout" by default                                     |
+| cartData - (object)   | Represents the current cart data such as total, line items, etc |
+| cartState - (object)  | Represents the full cart state                                  |
+
+**Example**
+
+```js
+wp.hooks.addFilter(
+	'cart.checkoutButtonText',
+	'shopwp',
+	function (defaultValue, cartData, cartState) {
+		return 'Something custom'
+	}
+)
+```
+
 ### misc.linkHref
 
 Allows you to filter product or collection links. This filter will run whether you link products to WordPress or Shopify.

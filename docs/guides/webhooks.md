@@ -39,6 +39,7 @@ Each hook below is linked to an example of how to use it.
 - [shopwp_webhook_after_order_create](/php-actions#shopwp_webhook_after_order_create)
 - [shopwp_webhook_after_order_edit](/php-actions#shopwp_webhook_after_order_edit)
 - [shopwp_webhook_after_order_delete](/php-actions#shopwp_webhook_after_order_delete)
+- [shopwp_webhook_after_customer_create](/php-actions#shopwp_webhook_after_customer_create)
 
 ## Using the PHP hooks
 
