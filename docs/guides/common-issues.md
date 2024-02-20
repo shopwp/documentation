@@ -46,6 +46,8 @@ Issue: Clicking the "Begin checkout" button inside the ShopWP cart takes you to 
 
 This can occur if your Shopify online store is password protected. The solution is to remove the password protection so that the checkout page can be reached by non-logged in users.
 
+This can also occur if your products are not assigned to the Online Store sales channel. Make sure any products you wish to sell with ShopWP are assigned to both the ` ShopWP` and `Online Store` sales channels.
+
 ## Elementor widgets disappear after updating ShopWP
 
 Run this sql query in your database to make your widgets appear again:
