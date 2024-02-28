@@ -68,6 +68,7 @@ Every attribute below can also be used with the following shortcodes:
 | [min_quantity](#min_quantity)                                                       | `false`       | Sets a "minimum" number to the quantity field                                              |
 | [max_quantity](#max_quantity)                                                       | `false`       | Sets a "maximum" number to the quantity field                                              |
 | [excludes](#excludes)                                                               | `false`       | Allows for excluding certain product components like the title, description, etc           |
+| [with_search](#with_search)                                                         | `false`       | Allows for showing a search field for the products                                         |
 | [items_per_row](#items_per_row)                                                     | `false`       | Determines how many products will appear in each row                                       |
 | [show_price_range](#show_price_range)                                               | `false`       | Determines whether to show price ranges for each product                                   |
 | [show_compare_at](#show_compare_at)                                                 | `false`       | Determines whether to show the compare at price for each product                           |
@@ -775,6 +776,22 @@ Allows for excluding certain product components like the title, description, etc
 ```js
 // Don't show the title or pricing
 [wps_products excludes="title, pricing"]
+```
+
+### with_search
+
+Allows for show a search field with the products
+
+| Possible values |
+| :-------------- |
+| false (default) |
+| true            |
+
+**Example**
+
+```js
+// Don't show the title or pricing
+[wps_products with_search="true"]
 ```
 
 ### items_per_row

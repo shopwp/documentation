@@ -86,3 +86,9 @@ You can turn this on by going to `ShopWP Pro -> Settings -> Checkout`. Find the 
 After the order is made, the attribute will show up within the "Additional details" section on the Order Edit screen. See screenshot below:
 
 ![Custom domain attribute in Shopify screenshot](./assets/checkout-tag.png)
+
+## Change logo link
+
+The Shopify checkout pages will display your store logo in the upper left hand corner. Unfortunately, the "link" for this logo will point to your Shopify theme. To make this link to your WordPress site instead, follow this tutorial:
+
+https://www.youtube.com/watch?v=aZbgIiGymuI
