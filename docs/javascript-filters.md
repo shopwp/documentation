@@ -194,6 +194,21 @@ wp.hooks.addFilter(
 )
 ```
 
+```js
+// Select a specific variant, depending on the product
+wp.hooks.addFilter(
+	'product.preSelectVariantById',
+	'shopwp',
+	function (defaultId, payload) {
+		if ((payload.title = 'Lismore Mattress')) {
+			return 'gid://shopify/ProductVariant/47701372666140'
+		}
+
+		return false
+	}
+)
+```
+
 ### product.colorSwatchValue
 
 Allows you to customize the value of the color swatch when using the variant buttons. This is useful if you want to display a custom color for each variant option.
