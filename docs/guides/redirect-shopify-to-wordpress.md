@@ -38,7 +38,8 @@ Immediately after the opening `<head>` tag, add the below snippet:
 {% if request.page_type == 'product' %}
 <script>
 	window.location.replace(
-		'https://<your-wordpress-domain>.com/products/{{product.handle}}/?utm_source=shop'
+		'https://<your-wordpress-domain>.com/products/{{product.handle}}' +
+			window.location.search
 	)
 </script>
 {% endif %}

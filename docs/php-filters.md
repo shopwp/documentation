@@ -630,3 +630,27 @@ function customize_lang_for_shopwp($settings) {
 
 add_filter('shopwp_buyer_identity_language', 'customize_lang_for_shopwp', 10, 2);
 ```
+
+```php
+// Use the language set by Polylang for ShopWP content
+function customize_lang_for_shopwp($settings) {
+
+    $default_lang = \get_bloginfo("language");
+
+	if (!function_exists('pll_current_language')) {
+        return $default_lang;
+    }
+
+    $lang = \pll_current_language();
+
+    if (empty($lang)) {
+        if (function_exists('pll_default_language')) {
+            $lang = \pll_default_language();
+        }
+    }
+
+    return $lang;
+}
+
+add_filter('shopwp_buyer_identity_language', 'customize_lang_for_shopwp', 10, 2);
+```
