@@ -496,6 +496,62 @@ wp.hooks.addFilter(
 )
 ```
 
+### product.variants
+
+Allows for customizing the variants a user will see on the front-end. Useful for hiding specific variants that a user can choose from.
+
+| Parameter          | Description                                  |
+| :----------------- | :------------------------------------------- |
+| variants - (array) | A JavaScript array of the available variants |
+
+**Example**
+
+```js
+// Don't show the user any variants with the title "Ignore me"
+wp.hooks.addFilter(
+	'product.variants',
+	'shopwp-custom',
+	function (variants, payload) {
+		variants.edges = variants.edges.filter(variant => {
+			if (!variant.node.title === 'Ignore me') {
+				return false
+			}
+
+			return variant
+		})
+
+		variants.edges = variants.edges.filter(v => v)
+
+		return variants
+	}
+)
+```
+
+### product.requestSettings
+
+Allows for customizing the settings used to fetch products. These settings are eventually passed to the raw
+Shopify API request. Useful for whitelisting specific metafields to include in the request.
+
+| Parameter           | Description                                                 |
+| :------------------ | :---------------------------------------------------------- |
+| settings - (object) | A JavaScript object containing a list of all API parameters |
+
+**Example**
+
+```js
+// Tell ShopWP to whitelist custom metafields in the resulting payload for use in other hooks
+wp.hooks.addFilter('product.requestSettings', 'shopwp-custom', function (data) {
+	data.metafields = [
+		{
+			namespace: 'custom',
+			key: 'weeee',
+		},
+	]
+
+	return data
+})
+```
+
 ### cart.checkoutUrl
 
 Allows you to customize the final checkout url. Useful for adding tracking parameters or customizations to the final checkout page.

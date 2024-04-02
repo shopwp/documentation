@@ -103,3 +103,19 @@ Sometimes your theme design will conflict with the small "border radius" that Sh
 	border-radius: 0 !important;
 }
 ```
+
+## Reduce the size of the ShopWP cart icon
+
+```css
+.swp-icon.swp-icon-cart {
+	width: 23px;
+	height: 23px;
+}
+
+.swp-cart-icon-inline .swp-cart-counter {
+	top: -4px;
+	right: -7px;
+	width: 20px;
+	height: 20px;
+}
+```
