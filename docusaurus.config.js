@@ -1,12 +1,10 @@
-import { themes } from 'prism-react-renderer'
-
-const path = require('path')
+import { themes as prismThemes } from 'prism-react-renderer'
 
 // With JSDoc @type annotations, IDEs can provide config autocompletion
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
 	title: 'Official ShopWP Plugin Documentation',
-	tagline: 'Sell and build custom Shopify experiences on WordPress',
+	tagline: 'Sell Shopify products on WordPress',
 	url: 'https://docs.wpshop.io',
 	baseUrl: '/',
 	onBrokenLinks: 'ignore',
@@ -67,7 +65,7 @@ module.exports = {
 			items: [
 				{
 					value:
-						'<p class="version-num"><span class="num">v8.6.0</span><span class="emoji">🎉</span></p>',
+						'<p class="version-num"><span class="num">v8.6.1</span><span class="emoji">🎉</span></p>',
 					type: 'html',
 					position: 'left',
 				},
@@ -152,9 +150,9 @@ module.exports = {
 			copyright: `Copyright © ${new Date().getFullYear()} ShopWP.`,
 		},
 		prism: {
-			theme: themes.github,
-			darkTheme: themes.dracula,
-			additionalLanguages: ['php'],
+			theme: prismThemes.github,
+			darkTheme: prismThemes.dracula,
+			additionalLanguages: ['css', 'php'],
 		},
 		algolia: {
 			appId: '7K79W0TUM3',

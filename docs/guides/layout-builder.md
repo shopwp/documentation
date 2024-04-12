@@ -6,7 +6,7 @@ sidebar_position: 2
 
 The ShopWP Layout Builder allows you to visually design your products and collections in various ways.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/YKIbiE_ZNsU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/YKIbiE_ZNsU" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 ## How it works
 

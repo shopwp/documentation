@@ -40,16 +40,12 @@ And to hide the counter within a standard cart icon (not fixed), use this CSS:
 
 ## Change selected button colors
 
-The below CSS will customize the variant button selected colors, as well as the variant badge within the cart. Replace #000 with the color of your choice.
+The below CSS will customize the variant button selected colors. Replace `purple` with the color of your choice.
 
 ```css
-.wpshopify-variant-buttons button[data-is-variant-selected='true'] {
-	background-color: #000;
-	border-color: #000;
-}
-
-.wps-cart-lineitem-variant-title[class*='badge'] {
-	background-color: #000;
+.swp-variants button[data-is-variant-selected='true'] {
+	background: purple;
+	border-color: purple;
 }
 ```
 
@@ -81,10 +77,6 @@ This CSS snippet will customize the background color of the subscription dropdow
 ```
 
 ## Remove border radius
-
-:::info
-A new plugin setting was introduced in ShopWP 8.0 to control the border radius
-:::
 
 Sometimes your theme design will conflict with the small "border radius" that ShopWP puts on all it's elements. You can remove this border radius with the below CSS:
 

@@ -134,3 +134,9 @@ If you're using a WordPress caching plugin, you may run into a JavaScript error 
 ```
 
 This happens if a caching plugin caches the WordPress REST API too aggressively. You can either try deactivating the caching plugin altogether, or adjust the settings so the plugin doesn't cache the WordPress REST API at all.
+
+## Cloudflare
+
+There is a known conflict when Rocket Loader is enabled within Cloudflare. This will cause the ShopWP components to be duplicated on the front-end. The solution is to exclude Rocket Loader on the pages where you display products. See screenshot below.
+
+![Rocket Loader settings for ShopWP](./assets/rocket-loader.png)

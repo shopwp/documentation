@@ -8,7 +8,7 @@ Connecting your [Shopify](https://shopify.pxf.io/5bPL0L) store to WordPress is t
 
 It takes just a few moments, so let's begin!
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/YypIUgOvoqA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/YypIUgOvoqA" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 ## How to connect
 

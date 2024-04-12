@@ -6,7 +6,7 @@ For example, you can detect when the cart opens or customize text in the product
 
 Let's see how this works.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/LnRT7f8Tugg?si=8SC_44OehUpcJIe0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/LnRT7f8Tugg?si=8SC_44OehUpcJIe0" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 ## What are they?
 

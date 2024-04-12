@@ -50,3 +50,24 @@ if (in_collection('Sale', $product_collections)) {
 
 get_footer('wpshopify');
 ```
+
+## Add custom attributes to the ShopWP script tags
+
+The below snippet uses the native WordPress `wp_script_attributes` hook to customize the ShopWP script tag attributes.
+
+```php
+function update_shopwp_script_attrs($attrs) {
+
+	if ( empty( $attrs['id'] ) || empty( $attrs['src'] ) ) {
+		return $attrs;
+	}
+
+	if ( str_contains( $attrs['id'], 'shopwp' ) ) {
+		$attrs['data-cfasync'] = 'true';
+	}
+
+	return $attrs;
+}
+
+add_filter('wp_script_attributes', 'update_shopwp_script_attrs', 10, 1);
+```

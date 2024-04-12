@@ -114,7 +114,8 @@ Every attribute below can also be used with the following shortcodes:
 | [mobile_columns](#mobile_columns)                                                   | `false`       | Determines the number of columns to show on mobile                                         |
 | [select_first_variant](#select_first_variant)                                       | `false`       | Allows for selecting the first product variant on page load                                |
 | [reset_variants_after_adding](#reset_variants_after_adding)                         | `false`       | Determines whether to reset the variant selections after adding to cart                    |
-| [with_sorting](#with_sorting)                                                       | `false`       | Determines whether to show a sorting / filtering dropdown with the products                |
+| [with_sorting](#with_sorting)                                                       | `false`       | Determines whether to show a sorting / filtering dropdown above the products               |
+| [with_page_size](#with_page_size)                                                   | `false`       | Determines whether to show a page size dropdown above the products                         |
 | [after_added_text](#after_added_text)                                               | `false`       | Determines the button text that shows after adding to cart                                 |
 | [clear_selections_text](#clear_selections_text)                                     | `false`       | Allows for customizing the "clear selections" text                                         |
 | [quantity_step](#quantity_step)                                                     | `false`       | Allows for customizing the "quantity step" for the product quantity input                  |
@@ -155,7 +156,7 @@ Every attribute below can also be used with the following shortcodes:
 | [description_type_line_height](#description_type_line_height)                       | `false`       | Customizes the line-height of an add to cart button                                        |
 | [description_type_text_decoration](#description_type_text_decoration)               | `false`       | Customizes the text-decoration of the description                                          |
 | [description_type_text_transform](#description_type_text_transform)                 | `false`       | Customizes the text-transform of the description                                           |
-| [variant_dropdown_text_color](#variant_dropdown_text_color)                         | `#FFFFFF`     | Customizes the text color of the variant dropdown                                          |
+| [variant_dropdown_button_text_color](#variant_dropdown_button_text_color)           | `#FFFFFF`     | Customizes the text color of the variant dropdown                                          |
 | [variant_dropdown_type_font_family](#variant_dropdown_type_font_family)             | `false`       | Customizes the font-family of the variant dropdown                                         |
 | [variant_dropdown_type_font_size](#variant_dropdown_type_font_size)                 | `false`       | Customizes the font-size of the variant dropdown                                           |
 | [variant_dropdown_type_font_style](#variant_dropdown_type_font_style)               | `false`       | Customizes the font-style of the variant dropdown                                          |
@@ -1505,7 +1506,7 @@ Determines whether to reset the variant selections after adding to cart.
 
 ### with_sorting
 
-Determines whether to show a sorting / filtering dropdown with the products. This will allow users to filter the products similar to the [Storefront](/shortcodes/wps_storefront) component.
+Determines whether to show a sorting / filtering dropdown above the products. This will allow users to filter the products similar to the [Storefront](/shortcodes/wps_storefront) component.
 
 | Possible values |
 | :-------------- |
@@ -1516,6 +1517,21 @@ Determines whether to show a sorting / filtering dropdown with the products. Thi
 
 ```js
 [wps_products with_sorting="true"]
+```
+
+### with_page_size
+
+Determines whether to show a page size dropdown above the products. This will allow users to change how many products show per page.
+
+| Possible values |
+| :-------------- |
+| true            |
+| false `Default` |
+
+**Example**
+
+```js
+[wps_products with_page_size="true"]
 ```
 
 ### after_added_text
@@ -2209,9 +2225,9 @@ Customizes the `text-transform` of the product's add to cart button.
 [wps_products description_type_text_decoration="wavy overline"]
 ```
 
-### variant_dropdown_text_color
+### variant_dropdown_button_text_color
 
-Customizes the `background-color` of an add to cart button.
+Customizes the text color of a variant dropdown menu
 
 | Possible values                          |
 | :--------------------------------------- |
@@ -2220,11 +2236,11 @@ Customizes the `background-color` of an add to cart button.
 **Example**
 
 ```js
-// Set the button color to black
-[wps_products variant_dropdown_text_color="#000"]
+// Set the text color to black
+[wps_products variant_dropdown_button_text_color="#000"]
 
-// Set the button color to red
-[wps_products variant_dropdown_text_color="red"]
+// Set the text color to red
+[wps_products variant_dropdown_button_text_color="red"]
 ```
 
 ### variant_dropdown_type_font_family
