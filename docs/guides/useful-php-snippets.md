@@ -63,11 +63,30 @@ function update_shopwp_script_attrs($attrs) {
 	}
 
 	if ( str_contains( $attrs['id'], 'shopwp' ) ) {
-		$attrs['data-cfasync'] = 'true';
+		$attrs = array_merge(['data-cfasync' => true], $attrs);
 	}
 
 	return $attrs;
 }
 
 add_filter('wp_script_attributes', 'update_shopwp_script_attrs', 10, 1);
+```
+
+## Display products based on tags of current WordPress post
+
+The below snippet will use the tags added to the post as criteria for filtering your Shopify products. Make sure the WordPress tag name matches the tag in Shopify exactly for this to work.
+
+```php
+$Products = ShopWP\Factories\Render\Products\Products_Factory::build();
+
+$tags = get_tags([
+  'hide_empty' => false
+]);
+
+if (!empty($tags)) {
+  $Products->products([
+    'tag' => $tags,
+    'connective' => 'and'
+  ]);
+}
 ```

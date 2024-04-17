@@ -111,3 +111,13 @@ Sometimes your theme design will conflict with the small "border radius" that Sh
 	height: 20px;
 }
 ```
+
+## Force all product titles to one line
+
+```css
+.swp-product-title {
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+```

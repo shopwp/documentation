@@ -30,6 +30,9 @@
 General Overrides
 
 */
+img {
+	height: auto;
+}
 
 main p {
 	font-size: 19px;
