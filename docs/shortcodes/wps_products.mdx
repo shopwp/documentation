@@ -89,6 +89,8 @@ Every attribute below can also be used with the following shortcodes:
 | [carousel](#carousel)                                                               | `false`       | Allows for showing products in a carousel style                                                                            |
 | [carousel_dots](#carousel_dots)                                                     | `false`       | Determines whether to show the carousel dots or not                                                                        |
 | [carousel_infinite](#carousel_infinite)                                             | `false`       | Determines whether to continue sliding through products endlessly                                                          |
+| [carousel_autoplay](#carousel_autoplay)                                             | `false`       | Determines whether to start the carousel automatically on page load                                                        |
+| [carousel_autoplay_speed](#carousel_autoplay_speed)                                 | `3000`        | Determines how fast the carousel will rotate when autoplay is turned on. Defaults to 3 seconds.                            |
 | [carousel_speed](#carousel_speed)                                                   | `500`         | Determines the carousel speed                                                                                              |
 | [carousel_slides_to_show](#carousel_slides_to_show)                                 | `4`           | Determines the number of carousel slides to show at once                                                                   |
 | [carousel_slides_to_scroll](#carousel_slides_to_scroll)                             | `4`           | Determines the number of carousel slides to scroll at once                                                                 |
@@ -1063,6 +1065,35 @@ Determines whether to continue sliding through products endlessly.
 [wps_products carousel="true" carousel_infinite="false"]
 ```
 
+### carousel_autoplay
+
+Determines whether to automatically start the carousel on page load.
+
+| Possible values |
+| :-------------- |
+| true            |
+| false `Default` |
+
+**Example**
+
+```js
+[wps_products carousel="true" carousel_autoplay="true"]
+```
+
+### carousel_autoplay_speed
+
+Determines how fast the carousel will roate when `carousel_autoplay` is turned on. Defaults to 3 seconds, or `3000` milliseconds.
+
+| Possible values                            |
+| :----------------------------------------- |
+| Any number in milliseconds. Default `3000` |
+
+**Example**
+
+```js
+[wps_products carousel="true" carousel_autoplay="true" carousel_autoplay_speed="2000"]
+```
+
 ### carousel_speed
 
 Determines the carousel speed. Default: `500`ms.
@@ -1460,6 +1491,8 @@ Determines the number of columns to show on mobile. By default, products will st
 ### select_first_variant
 
 Allows for selecting the first product variant on page load. This will only work with products that have one "option" to choose from. For example, it will work with a product that provides a color option, but not with products that provide color _and_ size.
+
+Note: this will only select variants that are "in stock".
 
 | Possible values |
 | :-------------- |
