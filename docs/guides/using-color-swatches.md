@@ -44,18 +44,14 @@ Here, we're adding the option name `material` to the list. Now ShopWP will check
 If you're unable to name your variant to match a [valid HTML color name](https://htmlcolorcodes.com/color-names), you can provide a custom color to use instead. You can do this by using the `product.colorSwatchValue` filter in your theme's JavaScript, like this:
 
 ```js
-wp.hooks.addFilter(
-	'product.colorSwatchValue',
-	'shopwp',
-	function (variantValue) {
-		if (variantValue === 'some variant value') {
-			// Here any valid CSS color value will work
-			return '#696969'
-		}
-
-		return variantValue
+wp.hooks.addFilter('product.colorSwatchValue', 'shopwp', function (colorName) {
+	// Here any valid CSS color value will work
+	if (colorName === 'Heather Gray') {
+		return '#2e2e2e'
 	}
-)
+
+	return colorName
+})
 ```
 
 ## Overriding All Variant CSS

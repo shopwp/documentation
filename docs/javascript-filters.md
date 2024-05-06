@@ -31,10 +31,11 @@ wp.hooks.addFilter(
 
 Allows for customizing the name of a product option. For example, `Color` or `Size`. This will run for both [variant styles](/shortcodes/wps_products#variant_style).
 
-| Parameter                     | Description                                                                            |
-| :---------------------------- | :------------------------------------------------------------------------------------- |
-| optionName - (string)         | The option name text                                                                   |
-| productOptionState - (object) | The state of the product option. Contains info such as whether the option is selected. |
+| Parameter             | Description                                                                            |
+| :-------------------- | :------------------------------------------------------------------------------------- |
+| optionName - (string) | The option name text                                                                   |
+| option - (object)     | The name value pair                                                                    |
+| state - (object)      | The product state object. Contains info such as whether the option is selected or not. |
 
 **Example**
 
@@ -42,7 +43,7 @@ Allows for customizing the name of a product option. For example, `Color` or `Si
 wp.hooks.addFilter(
 	'product.optionName',
 	'shopwp',
-	function (optionName, productOptionState) {
+	function (optionName, option, state) {
 		return optionName + ' custom'
 	}
 )
@@ -219,15 +220,19 @@ The full list of available color names can be [found here](https://www.w3.org/wi
 
 This filter is particularly useful if you want to make sure to display a custom color not available in the CSS color names.
 
-| Parameter        | Description                                                     |
-| :--------------- | :-------------------------------------------------------------- |
-| color - (string) | Represents the name of the color. For example, `black` or `red` |
+| Parameter            | Description                                                     |
+| :------------------- | :-------------------------------------------------------------- |
+| colorName - (string) | Represents the name of the color. For example, `black` or `red` |
 
 **Example**
 
 ```js
-wp.hooks.addFilter('product.colorSwatchValue', 'shopwp', function (color) {
-	return color
+wp.hooks.addFilter('product.colorSwatchValue', 'shopwp', function (colorName) {
+	if (colorName === 'Heather Gray') {
+		return '#2e2e2e'
+	}
+
+	return colorName
 })
 ```
 
@@ -611,9 +616,10 @@ wp.hooks.addFilter(
 
 Allows you to customize the subscription description label
 
-| Parameter                    | Description        |
-| :--------------------------- | :----------------- |
-| subscriptionLabel - (string) | Subscription label |
+| Parameter                    | Description         |
+| :--------------------------- | :------------------ |
+| subscriptionLabel - (string) | Subscription label  |
+| lineItem - (object)          | Cart line item data |
 
 **Example**
 
@@ -621,7 +627,7 @@ Allows you to customize the subscription description label
 wp.hooks.addFilter(
 	'cart.lineItemSubscriptionDescription',
 	'shopwp',
-	function (subscriptionLabel) {
+	function (subscriptionLabel, lineItem) {
 		return subscriptionLabel
 	}
 )

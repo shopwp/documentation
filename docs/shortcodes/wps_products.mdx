@@ -53,7 +53,6 @@ Every attribute below can also be used with the following shortcodes:
 | [connective](#connective)                                                           | `false`       | Determines how the products are found when filtering                                                                       |
 | [subscriptions](#subscriptions)                                                     | `false`       | Determines whether to enable subscriptions for the specific product                                                        |
 | [subscriptions_select_on_load](#subscriptions_select_on_load)                       | `false`       | Determines whether to auto select the subscription option when the product loads                                           |
-| [subscriptions_autoload](#subscriptions_autoload)                                   | `false`       | Determines whether the subscription data will show on page load or not                                                     |
 | [keep_commas](#keep_commas)                                                         | `false`       | Whether to search products with commas in their title                                                                      |
 | [direct_checkout](#direct_checkout)                                                 | `false`       | Allows for linking customers directly to the Shopify checkout process                                                      |
 | [align_height](#align_height)                                                       | `false`       | Attempts to "align" the height of products when displayed in a grid                                                        |
@@ -538,23 +537,6 @@ Determines whether to auto select the subscription option when the product loads
 ```js
 // Select the subscriptions option automatically when the product loads
 [wps_products subscriptions_select_on_load="true"]
-```
-
-### subscriptions_autoload
-
-Determines whether the subscription data will show on page load or not. Useful if you wish to show subscription prices without forcing the user to click on the subscription tab first.
-
-**_This feature is only available with [ShopWP Pro](https://wpshop.io/pricing)._**
-
-| Possible values |
-| :-------------- |
-| true            |
-| false `Default` |
-
-**Example**
-
-```js
-[wps_products subscriptions_autoload="true"]
 ```
 
 ### keep_commas
