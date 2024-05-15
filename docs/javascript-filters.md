@@ -590,6 +590,43 @@ wp.hooks.addFilter('cart.isCheckingOut', 'shopwp', function (isCheckingOut) {
 })
 ```
 
+### cart.lineItems
+
+Allows you to customize the line items before they're added to the cart. Fires whenever a product is added to the ShopWP cart.
+
+| Parameter               | Description                                 |
+| :---------------------- | :------------------------------------------ |
+| data - (array)          | Represents the data being added to the cart |
+| variant - (object)      | Represents the variant data being added     |
+| productState - (object) | Represents the full product state           |
+
+**Example**
+
+```js
+// Add a different product to the cart at the same time as another
+wp.hooks.addFilter(
+	'cart.lineItems',
+	'shopwp',
+	function (data, variant, productState) {
+		var idOfBundleProduct = '22222055505968'
+
+		var foundLineItem = data.filter(v => {
+			console.log('v', v.merchandiseId)
+			return v.merchandiseId.includes(idOfBundleProduct)
+		})
+		// A bundled product has been added to the cart. Now let's add the additional item
+		if (foundLineItem.length) {
+			data.push({
+				merchandiseId: 'gid://shopify/ProductVariant/22221824131120',
+				quantity: 1,
+			})
+		}
+
+		return data
+	}
+)
+```
+
 ### cart.lineItemsLink
 
 Allows you to set a link for the lineitems inside the cart.
@@ -1334,7 +1371,7 @@ Allows you add custom HTML before the product price. You must return HTML as a s
 wp.hooks.addFilter(
 	'before.productPricing',
 	'shopwp',
-	function (defaultValue, props) {
+	function (defaultValue, productState) {
 		return '<p>Vendor: ' + productState.payload.vendor + '</p>'
 	}
 )

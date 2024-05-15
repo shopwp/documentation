@@ -209,3 +209,9 @@ The solution is to add this code to your `wp-config.php` file to increase the me
 ```php
 define( 'WP_MEMORY_LIMIT', '500M' );
 ```
+
+## "Loading chunk failed ..."
+
+Usually these type of errors are due to a conflict with caching plugins. Check whether you have a caching plugin installed. If so, you can tell them to "ignore" ShopWP which usually fixes the issue.
+
+You'll want to make sure to exclude ShopWP from any JavaScript optimizations such as minification or concatenation.
