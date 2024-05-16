@@ -89,6 +89,20 @@ For all the CSS sections:
 
 [WP-Optimize](https://wordpress.org/plugins/wp-optimize/) will try to minify and merge the JavaScript from the plugin. You'll need to manually exclude the plugin's JavaScript from this process since ShopWP already optimizes things. You can [follow this guide](https://getwpo.com/faqs/#How-do-I-exclude-individual-JavaScript-scripts-from-being-minified-and-merged-).
 
+### LiteSpeed Cache
+
+[LiteSpeed](https://wordpress.org/plugins/litespeed-cache/) will try to minify and merge the ShopWP JavaScript which causes loading issues and conflicts. You’ll need to manually exclude ShopWP’s JavaScript from this process. ShopWP comes optimized already so this is fine.
+
+You can [follow this guide](https://thrivethemes.com/docs/configuring-the-css-and-javascript-exclusions-in-the-litespeed-cache-plugin).
+
+Inside the WordPress admin, click `LiteSpeed Cache -> Page Optimization`. From there, click the `Tuning` tab.
+
+Within the JavaScript section, add the following:
+
+`/wp-content/plugins/shopwp-pro/dist/(.*).js`
+
+That should do the
+
 ### OptimizeBuilder
 
 If you're using the [OptimizeBuilder](https://www.optimizepress.com/) plugin from OptimizePress, you'll need to manually "enable" the ShopWP JavaScript and CSS. OptimizeBuilder turns these off by default. To do this, open the OptimizeBuilder plugin settings and go to the scripts and styles tab. From there, find the ShopWP plugin and enable `Js` and `Css` for both the frontend and backend. Then click save.

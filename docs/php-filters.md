@@ -644,3 +644,21 @@ function customize_lang_for_shopwp($settings) {
 
 add_filter('shopwp_buyer_identity_language', 'customize_lang_for_shopwp', 10, 2);
 ```
+
+```js
+// If the translation plugin also modifies the URL, we need to update the ShopWP URLs to reflect this
+wp.hooks.addFilter(
+	'misc.linkHref',
+	'shopwp',
+	function (linkHref, linkTo, payload) {
+		if (shopwp.misc.siteLang !== 'en') {
+			linkHref = linkHref.replace(
+				'/products/',
+				'/' + shopwp.misc.siteLang + '/products/'
+			)
+		}
+
+		return linkHref
+	}
+)
+```

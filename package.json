@@ -14,17 +14,17 @@
 		"write-heading-ids": "export NODE_OPTIONS=--openssl-legacy-provider; docusaurus write-heading-ids"
 	},
 	"dependencies": {
-		"@docusaurus/core": "^3.2.1",
-		"@docusaurus/mdx-loader": "^3.2.1",
-		"@docusaurus/preset-classic": "^3.2.1",
-		"@docusaurus/types": "^3.2.1",
-		"@loadable/component": "^5.16.3",
+		"@docusaurus/core": "^3.3.2",
+		"@docusaurus/mdx-loader": "^3.3.2",
+		"@docusaurus/preset-classic": "^3.3.2",
+		"@docusaurus/types": "^3.3.2",
+		"@loadable/component": "^5.16.4",
 		"@mdx-js/react": "^3.0.1",
-		"clsx": "^2.1.0",
+		"clsx": "^2.1.1",
 		"docusaurus-plugin-module-alias": "^0.0.2",
 		"prism-react-renderer": "^2.3.1",
-		"react": "18.2.0",
-		"react-dom": "18.2.0",
+		"react": "18.3.1",
+		"react-dom": "18.3.1",
 		"react-loadable": "^5.5.0"
 	},
 	"browserslist": {

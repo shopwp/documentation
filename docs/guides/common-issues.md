@@ -215,3 +215,9 @@ define( 'WP_MEMORY_LIMIT', '500M' );
 Usually these type of errors are due to a conflict with caching plugins. Check whether you have a caching plugin installed. If so, you can tell them to "ignore" ShopWP which usually fixes the issue.
 
 You'll want to make sure to exclude ShopWP from any JavaScript optimizations such as minification or concatenation.
+
+## Custom Shopify domain is not being used
+
+If you've setup a custom domain in Shopify but it's not showing up on your product links, check to make sure your store is not password protected.
+
+Shopify will default to using the `.myshopify.com` domain if your store is password protected.
