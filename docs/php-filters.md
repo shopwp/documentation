@@ -577,7 +577,7 @@ add_filter('shopwp_show_dashboard', function($should_show, $user) {
 
 ### shopwp_settings
 
-Allows for customizing the main ShopWP settings object. Useful for customizing things like language / currency, etc.
+Allows for customizing the main ShopWP settings object, programmatically.
 
 | Parameter         | Description                 |
 | :---------------- | :-------------------------- |
@@ -586,10 +586,10 @@ Allows for customizing the main ShopWP settings object. Useful for customizing t
 **Example**
 
 ```php
-// Change the language to German
+// Change the ShopWP cache length
 add_filter('shopwp_settings', function($settings) {
 
-   $settings['general']['language_code'] = 'de';
+   $settings['general']['data_cache_length'] = 1000;
 
    return $settings;
 
