@@ -573,23 +573,6 @@ wp.hooks.addFilter('cart.checkoutUrl', 'shopwp', function (url) {
 })
 ```
 
-### cart.isCheckingOut
-
-Allows you to short-circuit the checkout redirect.
-
-| Parameter              | Description                          |
-| :--------------------- | :----------------------------------- |
-| isCheckingOut - (bool) | Whether to redirect to checkout page |
-
-**Example**
-
-```js
-// Prevent the checkout redirect
-wp.hooks.addFilter('cart.isCheckingOut', 'shopwp', function (isCheckingOut) {
-	return false
-})
-```
-
 ### cart.lineItems
 
 Allows you to customize the line items before they're added to the cart. Fires whenever a product is added to the ShopWP cart.
@@ -1253,7 +1236,7 @@ Allows you add custom HTML after the cart line items. You must return HTML as a 
 
 ```js
 wp.hooks.addFilter(
-	'after.cartTitle',
+	'after.cartLineItems',
 	'shopwp',
 	function (defaultValue, cartData) {
 		return '<p>Test</p>'

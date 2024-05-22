@@ -349,7 +349,11 @@ wp.hooks.doAction('do.cartToggle', 'close')
 
 ### do.updateCartAttributes
 
-Allows for adding / updating custom attributes to the cart. This will merge the attributes you set with any existing attributes that have been applied already. Useful if you have multiple different attributes that you want to set.
+Allows for adding or updating custom attributes to the cart _as whole_. This will merge any existing attributes with the ones you set here. Useful if you have multiple different attributes that you want to set globally on the order itself.
+
+The attributes you pass will be attached to the order data and viewable within the Shopify admin interface.
+
+If you want to add attributes to a single lineitem, see [cart.lineItemAttributes](https://docs.wpshop.io/javascript-filters#cartlineitemattributes)
 
 | Parameter           | Description                                                                                                                                               |
 | :------------------ | :-------------------------------------------------------------------------------------------------------------------------------------------------------- |
