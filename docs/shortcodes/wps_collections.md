@@ -160,33 +160,19 @@ Determines how many collections will appear in each row.
 
 ### collections_excludes
 
-Allows for excluding certain collection components like the title. Takes a comma separated string of values.
+Allows for excluding certain collection components like the title or products. Takes a comma separated string of values. Default value `products`.
 
 | Possible values |
 | :-------------- |
 | image           |
 | title           |
 | description     |
+| products        |
 
 **Example**
 
 ```js
 [wps_collections collections_excludes="title, description"]
-```
-
-### collections_single
-
-Determines whether to show the collection products or not. Useful for only showing one collection with it's products. Enables the `products_` shortcode attributes.
-
-| Possible values |
-| :-------------- |
-| true            |
-| false           |
-
-**Example**
-
-```js
-[wps_collections collections_single="true"]
 ```
 
 ### collections_pagination

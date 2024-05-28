@@ -478,6 +478,30 @@ wp.hooks.addFilter(
 )
 ```
 
+### product.titleHeadingTag
+
+Allows for customizing the HTML tag for the product title. Default `h2` and `h1` on product detail pages.
+
+Should return the name of the tag without brackets, e.g., "h3" or "h4".
+
+| Parameter               | Description                                                                                    |
+| :---------------------- | :--------------------------------------------------------------------------------------------- |
+| defaultTag - (string)   | Represents the default tag. Default `h2`                                                       |
+| productState - (object) | The full product state. Contains info such as product data, is selected, the DOM element, etc. |
+
+**Example**
+
+```js
+wp.hooks.addFilter(
+	'product.titleHeadingTag',
+	'shopwp',
+	function (defaultVal, productState) {
+		console.log('productState', productState)
+		return 'h3'
+	}
+)
+```
+
 ### product.sortingOptions
 
 Allows for customizing the product sorting options.
@@ -1468,6 +1492,48 @@ wp.hooks.addFilter(
 	'shopwp',
 	function (defaultValue, payload) {
 		return '<p>Vendor: ' + payload.vendor + '</p>'
+	}
+)
+```
+
+### before.storefrontFilters
+
+Allows you add custom HTML before the Storefront filters. You must return HTML as a string.
+
+| Parameter             | Description                               |
+| :-------------------- | :---------------------------------------- |
+| defaultValue (string) | Will be an empty string                   |
+| settings (object)     | Represents the Storefront settings object |
+
+**Example**
+
+```js
+wp.hooks.addFilter(
+	'before.storefrontFilters',
+	'shopwp',
+	function (defaultValue, settings) {
+		return '<p>Before Storefront Filters</p>'
+	}
+)
+```
+
+### after.storefrontFilters
+
+Allows you add custom HTML after the Storefront filters. You must return HTML as a string.
+
+| Parameter             | Description                               |
+| :-------------------- | :---------------------------------------- |
+| defaultValue (string) | Will be an empty string                   |
+| settings (object)     | Represents the Storefront settings object |
+
+**Example**
+
+```js
+wp.hooks.addFilter(
+	'after.storefrontFilters',
+	'shopwp',
+	function (defaultValue, settings) {
+		return '<p>Before Storefront Filters</p>'
 	}
 )
 ```
