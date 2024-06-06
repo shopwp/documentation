@@ -97,6 +97,7 @@ Every attribute below can also be used with the following shortcodes:
 | [carousel_next_arrow](#carousel_next_arrow)                                         | `false`       | Allows to specifying a custom "next slide" arrow icon                                                                      |
 | [images_align](#images_align)                                                       | `false`       | Allows for determining how the featured image is positioned horizontally                                                   |
 | [images_show_next_on_hover](#images_show_next_on_hover)                             | `false`       | Determines whether to show the next image when hovering over the featured image                                            |
+| [images_lazy_load](#images_lazy_load)                                               | `true`        | Determines whether to lazy load the images using the loading attribute                                                     |
 | [images_sizing_toggle](#images_sizing_toggle)                                       | `false`       | Determines whether to enable custom image sizing                                                                           |
 | [images_sizing_width](#images_sizing_width)                                         | `false`       | Sets the width when using custom image sizing                                                                              |
 | [images_sizing_height](#images_sizing_height)                                       | `false`       | Sets the height when using custom image sizing                                                                             |
@@ -663,7 +664,7 @@ Determines whether to show the product images as a carousel. Default `false`.
 
 Determines whether to show the product thumbnails within an images carousel.
 
-**_This feature is only available with [ShopWP Pro](https://wpshop.io/pricing)._**
+**\_This feature only works when [`show_images_carousel`](#show_images_carousel) is set to `true`.**
 
 | Possible values |
 | :-------------- |
@@ -846,9 +847,9 @@ Determines whether to only show the product feature image. By default, all produ
 
 ### show_zoom
 
-Determines whether to enable product image zooming. When enabled, zoom will be triggered on the featured image.
+Determines whether to enable product image zooming. When enabled, zoom will be triggered when the user clicks / taps on the featured image.
 
-**_This feature is only available with [ShopWP Pro](https://wpshop.io/pricing)._**
+**_This feature will only work when [`link_to`](#link_to) is set to `none` or `modal`_**
 
 | Possible values |
 | :-------------- |
@@ -1186,6 +1187,22 @@ Determines whether to show the next image when hovering over the featured image.
 ```js
 // Align the featured image to the left
 [wps_products images_show_next_on_hover="true"]
+```
+
+### images_lazy_load
+
+Determines whether or not to lazy load the product images. Default `true`.
+
+| Possible values |
+| :-------------- |
+| true `Default`  |
+| false           |
+
+**Example**
+
+```js
+// Don't lazy load images. Useful if images will display as above the fold content for performance boost
+[wps_products images_lazy_load="false"]
 ```
 
 ### images_sizing_toggle
