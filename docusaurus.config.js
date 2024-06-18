@@ -65,7 +65,7 @@ module.exports = {
 			items: [
 				{
 					value:
-						'<p class="version-num"><span class="num">v8.8.4</span><span class="emoji">🎉</span></p>',
+						'<p class="version-num"><span class="num">v8.8.5</span><span class="emoji">🎉</span></p>',
 					type: 'html',
 					position: 'left',
 				},
