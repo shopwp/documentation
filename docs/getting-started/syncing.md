@@ -200,7 +200,9 @@ RewriteRule . /index.php [L]
 
 Another possible reason for this behavior is having WordPress installed in a subdirectory. ShopWP does not currently support sub directory installations. So your options are to either use a top-level domain or a subdomain instead.
 
-Finally, another reason could be due to syncing on localhost. You need to make sure your local dev environment is [exposed to the internet via a proxy](#using-localhost).
+Another reason could be due to syncing on localhost. You need to make sure your local dev environment is [exposed to the internet via a proxy](#using-localhost).
+
+Another known reason for this issue is a conflict with the `Wordfence Security` plugin. Deactivating will let the sync continue.
 
 ### Sync stuck at "Removing previously synced data ..."
 
