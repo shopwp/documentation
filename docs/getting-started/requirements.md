@@ -139,6 +139,14 @@ $(document).on('geotwp_ajax_success', function (e, data) {
 })
 ```
 
+### Speed Optimizer
+
+The Speed Optimizer plugin by Siteground is known to conflict with ShopWP's JavaScript files. Activating the plugin will prevent the products from displaying on the front-end.
+
+To fix this, you need to open the Speed Optimizer Front-end settings and exclude ShopWP from both CSS and JavaScript optimizations. See screenshot below.
+
+![Speed Optimizer exclude settings for ShopWP](./assets/speed-optimizer-exclude.jpg)
+
 ### Caching plugins
 
 If you're using a WordPress caching plugin, you may run into a JavaScript error that looks like this:

@@ -4,7 +4,7 @@ sidebar_position: 3
 
 # Subscriptions
 
-ShopWP integrates with the [Recharge app](https://apps.shopify.com/subscription-payments), enabling you to display and sell subscription products.
+Starting in ShopWP version `8.0`, subscriptions functionality is now built-in for free. You will still need to manage your subscriptions using a [Shopify app](https://apps.shopify.com/), but any app will now work seamlessly with ShopWP.
 
 ## Getting started
 
@@ -13,43 +13,20 @@ Before you start, please make sure to meet the below requirements:
 ### Requirements
 
 1. Purchase and install [ShopWP Pro](https://wpshop.io/purchase)
-2. Purchase and install [ShopWP Pro Recharge Extension](https://wpshop.io/extensions/recharge)
-3. [Recharge Shopify app](https://apps.shopify.com/subscription-payments) installed and configured
-4. Your [Recharge API key added](#adding-the-recharge-api-key) to the ShopWP settings
+2. Install a subscriptions [Shopify app](https://apps.shopify.com/)
+3. Show the subscriptions widget
 
-### Adding the Recharge API key
+### Install a subscriptions app
 
-1. First, open the `Apps` page within your Shopify store and click the Recharge app.
+1. First, open the `Apps` page within your Shopify store and type in subscriptions.
 
-![Finding the Recharge app](./assets/subscriptions/recharge-install-1.png)
+![Finding the Recharge app](./assets/subscriptions/shopify-app-store1.png)
 
-2. Once the next page loads, click the `Integrations` link found in the top nav bar.
+2. Choose an app. Any will work, but there are pros and cons to each. We'll install Appstle because they provide a reasonably cheap subscriptions solution for smaller stores.
 
-![Finding the Recharge app](./assets/subscriptions/recharge-install-2.png)
+![Finding the Recharge app](./assets/subscriptions/shopify-app-store2.png)
 
-3. Next, click the `API tokens...` link on the right-hand side of the page.
-
-![Finding the Recharge app](./assets/subscriptions/recharge-install-3.png)
-
-4. You may need to agree to the Recharge terms of service if this is your first time using their API. Click all the checkboxes and then click Accept.
-
-![Finding the Recharge app](./assets/subscriptions/recharge-install-4.png)
-
-5. Click the `Create an API token` button on the right-hand side of the page.
-
-![Finding the Recharge app](./assets/subscriptions/recharge-install-5.png)
-
-6. Give your token a name. This can be anything you want, but something easy to identify your site would be useful such as your wordpress domain. Next, add your contact email address (probably the same as your WordPress user email). For the permissions, set the `Subscriptions` and `Products` to read and write. Finally click the terms of service checkbox and save.
-
-![Finding the Recharge app](./assets/subscriptions/recharge-install-6.png)
-
-7. You should then be shown a confirmation notice with your newly generated API token displayed.
-
-![Finding the Recharge app](./assets/subscriptions/recharge-install-7.png)
-
-8. The last step is to copy the API token and paste it into the plugin settings under the "Subscriptions" section. Click save to finish. You're now ready to [start displaying your subscriptions](#displaying-the-subscriptions-widget).
-
-![Finding the Recharge app](./assets/subscriptions/recharge-install-8.png)
+3. After installing the app, you'll want to configure it. This step will vary depending on which app you choose, so please follow the steps provided by the app developer for creating subscription products.
 
 ## Displaying the Subscriptions widget
 

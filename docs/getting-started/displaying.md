@@ -12,6 +12,7 @@ ShopWP allows you to display your [Shopify](https://shopify.pxf.io/5bPL0L) produ
 - [Elementor Extension](https://wpshop.io/extensions/elementor/)
 - [Beaver Builder Extension](https://wpshop.io/extensions/beaver-builder/)
 - [Render API](/render-api)
+- [Layout Builder](/guides/layout-builder)
 
 ## Default Pages
 

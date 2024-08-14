@@ -213,6 +213,26 @@ add_filter('shopwp_register_collections_args', function($args) {
 });
 ```
 
+### shopwp_register_layout_builder_args
+
+Allows you to customize the custom post type settings of the ShopWP layout builder post type
+
+| Parameter | Description                                                                                                                                                 |
+| :-------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| $args     | Represents the default custom post type settings. A full list can be [found here](https://developer.wordpress.org/reference/functions/register_post_type/). |
+
+**Example**: Turn off third-party metaboxes
+
+```php
+add_filter('shopwp_register_layout_builder_args', function($args) {
+
+   $args['publicly_queryable'] = false;
+
+   return $args;
+
+});
+```
+
 ### shopwp_register_shopify_collections_tax
 
 Allows for customizing the collections taxonomy registration.

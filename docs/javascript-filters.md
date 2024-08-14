@@ -601,16 +601,25 @@ wp.hooks.addFilter('cart.checkoutUrl', 'shopwp', function (url) {
 
 Allows you to customize the line items before they're added to the cart. Fires whenever a product is added to the ShopWP cart.
 
+If you wish to prevent a user from adding a specific variant to the cart, you can return an object with an error property. The error property's value should contain the error message you wish to display, like this:
+
+```js
+return {
+	error:
+		'You can only add 1 pack to the cart. Remove existing pack first to add this one.',
+}
+```
+
 | Parameter               | Description                                 |
 | :---------------------- | :------------------------------------------ |
 | data - (array)          | Represents the data being added to the cart |
 | variant - (object)      | Represents the variant data being added     |
-| productState - (object) | Represents the full product state           |
+| productState - (object) | Represents the latest product state         |
+| cartData - (object)     | Represents the latest cart state            |
 
-**Example**
+**Example**: Add a different product to the cart at the same time (bundles)
 
 ```js
-// Add a different product to the cart at the same time as another
 wp.hooks.addFilter(
 	'cart.lineItems',
 	'shopwp',
@@ -630,6 +639,54 @@ wp.hooks.addFilter(
 		}
 
 		return data
+	}
+)
+```
+
+**Example**: Prevent a variant from being added based on the contents of the cart
+
+```js
+function checkIfRestrictedProductsAreAdded(idOfProduct, cartData) {
+	var idsOfRestrictedProducts = [
+		'gid://shopify/Product/10547035086',
+		'gid://shopify/Product/7428111925439',
+		'gid://shopify/Product/7428115235007',
+		'gid://shopify/Product/7408819077311',
+		'gid://shopify/Product/7593148645567',
+	]
+
+	// If we're dealing with a restricted product
+	if (idsOfRestrictedProducts.includes(idOfProduct)) {
+		// Cart not empty, need to do addition checks
+		if (cartData.lines.edges.length) {
+			var existingPackAlreadyInCart = cartData.lines.edges.filter(line => {
+				return idsOfRestrictedProducts.includes(
+					line.node.merchandise.product.id
+				)
+			})
+
+			if (existingPackAlreadyInCart.length) {
+				// Can't add to cart, existing pack already here
+				return true
+			}
+		}
+	}
+
+	return false
+}
+
+wp.hooks.addFilter(
+	'cart.lineItems',
+	'shopwp',
+	function (data, variant, productState, cartData) {
+		if (checkIfRestrictedProductsAreAdded(productState.payload.id, cartData)) {
+			return {
+				error:
+					'You can only add 1 of these to the cart. Remove existing product first to add this one.',
+			}
+		} else {
+			return data
+		}
 	}
 )
 ```

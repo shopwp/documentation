@@ -174,6 +174,14 @@ We've done our best to make syncing work across different environments. However,
 
 If none of these steps resolve your syncing issues, [please send us an email](mailto:hello@wpshop.io) and we'll be happy to fix it for you.
 
+### Products not syncing
+
+If the syncing finishes successfully, but no products are imported, you can check the following things:
+
+1. Make sure the `Enable default products page` setting is enabled. You can find this within the ShopWP settings under "General".
+2. Make sure the products you're trying to sync are not set to "draft" mode inside Shopify. Products need to be published to sync.
+3. MAke sure any products that you wish to sync are assigned to the ShopWP sales channel within Shopify.
+
 ### Sync stuck at "Fetching Shopify data"
 
 A common reason for this issue is not having any collections selected when choosing to sync collections. Open the ShopWP syncing settings and find the "Sync products from collections" setting. Make sure _at least one collection_ is selected. Try syncing again.
@@ -228,7 +236,9 @@ To check, open your ShopWP settings and open the `Syncing` section. Scroll down 
 https://mysite.org
 ```
 
-You can also try enabling the `Allow alternative webhook auth` setting. You can find this within the ShopWP settings
+Another thing to try is reconnecting your Shopify store from the ShopWP `Connect` tab.
+
+Finally, you can also try enabling the `Allow alternative webhook auth` setting. You can find this within the ShopWP Syncing settings.
 
 ![Syncing issue Address cannot be any of the domains...](./assets/syncing-issue-4.jpg)
 

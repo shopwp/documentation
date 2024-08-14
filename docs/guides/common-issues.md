@@ -114,10 +114,6 @@ If you're missing the "Currency" and "Language" dropdowns in the below screensho
 
 ![ShopWP Pro Pricing Settings](./assets/common-issues/missing-langs.png)
 
-## Recharge request failed with error message: You do not have sufficient permissions (scopes) for this object
-
-This error is due to incorrect permissions on your Recharge API key. This can happen when you accidentally forget to set `Subscriptions` and `Products` to "Read and write" when creating your Recharge API key.
-
 ## Redirect product links to Shopify
 
 If you're trying to link all of your products to Shopify, you may need to add the below chunk of PHP to your WordPress theme's `functions.php` file:
