@@ -636,24 +636,24 @@ add_filter('shopwp_skip_bulk_webhook_ver', function($default_val) {
 
 Allows for customizing the language used for ShopWP content. Very useful for translating content on the fly with other translation plugins like G Translate.
 
-| Parameter                  | Description                       |
-| :------------------------- | :-------------------------------- |
-| $default_language (string) | Defaults to your WP site language |
+| Parameter              | Description                       |
+| :--------------------- | :-------------------------------- |
+| $default_lang (string) | Defaults to your WP site language |
 
-**Example**
+**Example** Use the language set by G Translate for ShopWP content
 
 ```php
-// Use the language set by G Translate for ShopWP content
-function customize_lang_for_shopwp($settings) {
+function customize_lang_for_shopwp($default_lang) {
 	return isset($_SERVER['HTTP_X_GT_LANG']) ? $_SERVER['HTTP_X_GT_LANG'] : 'en';
 }
 
-add_filter('shopwp_buyer_identity_language', 'customize_lang_for_shopwp', 10, 2);
+add_filter('shopwp_buyer_identity_language', 'customize_lang_for_shopwp');
 ```
 
+**Example** Use the language set by Polylang for ShopWP content, else use default WP language
+
 ```php
-// Use the language set by Polylang for ShopWP content, else use default WP language
-function customize_lang_for_shopwp($settings) {
+function customize_lang_for_shopwp($default_lang) {
 
 	if (!function_exists('pll_current_language')) {
 		return \get_bloginfo("language");
@@ -662,7 +662,24 @@ function customize_lang_for_shopwp($settings) {
 	return \pll_current_language();
 }
 
-add_filter('shopwp_buyer_identity_language', 'customize_lang_for_shopwp', 10, 2);
+add_filter('shopwp_buyer_identity_language', 'customize_lang_for_shopwp');
+```
+
+**Example** Use the language set by WPML
+
+```php
+function customize_lang_for_shopwp($default_lang) {
+
+    $my_current_lang = apply_filters('wpml_current_language', NULL);
+
+	if ($my_current_lang) {
+		return $my_current_lang;
+	}
+
+	return $default_lang;
+}
+
+add_filter('shopwp_buyer_identity_language', 'customize_lang_for_shopwp');
 ```
 
 ```js

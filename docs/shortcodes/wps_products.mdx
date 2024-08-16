@@ -88,6 +88,7 @@ Every attribute below can also be used with the following shortcodes:
 | [infinite_scroll_offset](#infinite_scroll_offset)                                   | `false`                   | Determines the offset from the edge of the items container                                                                 |
 | [full_width](#full_width)                                                           | `false`                   | When set to `true`, will force the product to span the width of its container                                              |
 | [link_to](#link_to)                                                                 | `false`                   | Allows for determining where products link to, if anywhere                                                                 |
+| [link_to_url](#link_to_url)                                                         | `false`                   | Allows for setting a custom URL that the product should link to                                                            |
 | [link_target](#link_target)                                                         | `false`                   | Allows for determining whether links open in a new tab or not Default: `_self`                                             |
 | [link_with_buy_button](#link_with_buy_button)                                       | `false`                   | Determines whether to show the buy button controls when linking                                                            |
 | [carousel](#carousel)                                                               | `false`                   | Allows for showing products in a carousel style                                                                            |
@@ -1049,7 +1050,7 @@ When set to `true`, will force the product to span the width of its container.
 
 Allows for determining where products link to, if anywhere.
 
-**_The modal option is only available with [ShopWP Pro](https://wpshop.io/pricing)._**
+If set to `external`, you must also set the `link_to_url` attribute to a valid URL.
 
 | Possible values     |
 | :------------------ |
@@ -1057,11 +1058,26 @@ Allows for determining where products link to, if anywhere.
 | wordpress `Default` |
 | shopify             |
 | modal               |
+| external            |
 
 **Example**
 
 ```js
 [wps_products link_to="none"]
+```
+
+### link_to_url
+
+Allows for setting a custom URL that the product should link to.
+
+| Possible values |
+| :-------------- |
+| URL (string)    |
+
+**Example**
+
+```js
+[wps_products link_to="none" link_to_url="https://google.com"]
 ```
 
 ### link_target
