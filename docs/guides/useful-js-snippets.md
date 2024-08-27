@@ -59,3 +59,72 @@ wp.hooks.addFilter(
 	}
 )
 ```
+
+## Add Rich Text metafields below the buy button
+
+This code allows for transforming the Rich Text metafield from a complex nested object to a string of HTML to return.
+
+```js
+function objectToHTML(obj) {
+	// Helper function to process children
+	function processChildren(children) {
+		return children.map(child => objectToHTML(child)).join('')
+	}
+
+	// Base case for text nodes
+	if (obj.type === 'text') {
+		let text = obj.value
+		if (obj.bold) text = `<b>${text}</b>`
+		if (obj.italic) text = `<i>${text}</i>`
+		return text
+	}
+
+	// Handling different types of elements
+	switch (obj.type) {
+		case 'root':
+			return processChildren(obj.children)
+
+		case 'paragraph':
+			return `<p>${processChildren(obj.children)}</p>`
+
+		case 'list-item':
+			return `<li>${processChildren(obj.children)}</li>`
+
+		case 'list':
+			let listType = obj.listType === 'ordered' ? 'ol' : 'ul'
+			return `<${listType}>${processChildren(obj.children)}</${listType}>`
+
+		case 'link':
+			return `<a href="${obj.url}">${processChildren(obj.children)}</a>`
+
+		case 'heading':
+			return `<h${obj.level}>${processChildren(obj.children)}</h${obj.level}>`
+
+		default:
+			// If there's an unknown type, just return the children wrapped in a div for safety
+			return `<div>${processChildren(obj.children)}</div>`
+	}
+}
+
+wp.hooks.addFilter(
+	'after.productBuyButton',
+	'shopwp',
+	function (defaultValue, productState) {
+		var metafields = productState.payload.metafields.filter(Boolean)
+
+		if (metafields.length) {
+			var finalHTML = '<div class="swp-metafields">'
+
+			metafields.forEach(metafield => {
+				var metafieldValue = JSON.parse(metafield.value)
+
+				finalHTML += objectToHTML(metafieldValue)
+			})
+
+			return finalHTML + '</div>'
+		} else {
+			return null
+		}
+	}
+)
+```

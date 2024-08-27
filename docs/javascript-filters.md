@@ -411,24 +411,23 @@ In the example below, you'll notice custom HTML elements such as `<ProductImages
 
 ```js
 wp.hooks.addFilter(
-	wp.hooks.addFilter(
-		'product.subscriptionLabel',
-		'shopwp',
-		function (
-			text,
-			sellingGroup,
-			isSelected,
-			saveAmount,
-			regularPrice,
-			discountPrice
-		) {
-			if (isSelected) {
-				return text + ' (Good choice!)'
-			} else {
-				return text
-			}
+	'product.subscriptionLabel',
+	'shopwp',
+	function (
+		text,
+		sellingGroup,
+		isSelected,
+		saveAmount,
+		regularPrice,
+		discountPrice
+	) {
+		if (isSelected) {
+			// Add custom text when the user selects the subscription option
+			return 'Subscribe and Save'
+		} else {
+			return 'Subscribe and Save'
 		}
-	)
+	}
 )
 ```
 
