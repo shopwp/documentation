@@ -580,6 +580,28 @@ wp.hooks.addFilter('product.requestSettings', 'shopwp-custom', function (data) {
 })
 ```
 
+### product.leftInStockText
+
+Allows for customizing the "left in stock"—or urgency—text that is shown to users when a variant is selected.
+
+| Parameter               | Description                                                         |
+| :---------------------- | :------------------------------------------------------------------ |
+| defaultText - (string)  | The text of the urgency message shown to customer                   |
+| quantityLeft - (in)     | The total available quantity left in stock for the selected variant |
+| productState - (object) | A JavaScript object containing the full product state               |
+
+**Example**: Add the total available quantity to the left in stock text
+
+```js
+wp.hooks.addFilter(
+	'product.leftInStockText',
+	'shopwp',
+	function (defaultText, quantityLeft, productState) {
+		return 'Only' + quantityLeft + ' left in stock!'
+	}
+)
+```
+
 ### cart.checkoutUrl
 
 Allows you to customize the final checkout url. Useful for adding tracking parameters or customizations to the final checkout page.

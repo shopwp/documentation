@@ -537,3 +537,25 @@ Allows for manually fetching new product data
 ```js
 wp.hooks.doAction('do.shopHydrate')
 ```
+
+### do.updateBuyerIdentity
+
+Allows for programmatically updating the "buyer identity" associated with the Shopify cart session.
+
+The buyer identity controls things like, email, phone, company info, etc. A full list of possible arguments can be [found here](https://shopify.dev/docs/api/storefront/unstable/mutations/cartBuyerIdentityUpdate).
+
+Note: while this hook will properly pass information like customer email to the Shopify checkout page, it will **not** log the user in if they’re not already logged in. In this case, it will simply pre-fill the email on the checkout page.
+
+You can pass the `customerAccessToken` property to authenticate a user to a checkout.
+
+| Parameter              | Description                                                                                                                                                                                            |
+| :--------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| buyerIdentity (object) | A JavaScript object containing the buyer identity. Use the same parameters outlined in the [Shopify documentation](https://shopify.dev/docs/api/storefront/unstable/mutations/cartBuyerIdentityUpdate) |
+
+**Example** Pass a user's email to the checkout page
+
+```js
+wp.hooks.doAction('do.updateBuyerIdentity', {
+	email: 'laxavo8316@biscoine.com',
+})
+```
