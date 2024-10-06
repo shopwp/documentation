@@ -121,3 +121,13 @@ Sometimes your theme design will conflict with the small "border radius" that Sh
 	overflow: hidden;
 }
 ```
+
+## Move cart icon to left
+
+This CSS snippet will move the cart icon to the left side of the page.
+
+```css
+.wps-cart-icon-fixed.wps-cart-is-empty {
+	display: none;
+}
+```

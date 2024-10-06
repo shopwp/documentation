@@ -138,6 +138,8 @@ Every attribute below can also be used with the following shortcodes:
 | [sale_label_text](#sale_label_text)                                                 | `Sale!`                   | Allows for customizing the "sale" label text displayed on the product images                                               |
 | [sold_out_image_label_text](#sold_out_image_label_text)                             | `Sold out`                | Allows for customizing the "sold out" label text                                                                           |
 | [show_reviews](#show_reviews)                                                       | `false`                   | Whether to show reviews rating above the product title or not                                                              |
+| [product_metafields](#product_metafields)                                           | `false`                   | Allows for whitelisting certain product metafields to be returned in the JavaScript payload                                |
+| [product_variant_metafields](#product_variant_metafields)                           | `false`                   | Allows for whitelisting certain product variant metafields to be returned in the JavaScript payload                        |
 | [title_color](#title_color)                                                         | `#111111`                 | Customizes the background-color of an add to cart button                                                                   |
 | [title_type_font_family](#title_type_font_family)                                   | `false`                   | Customizes the font-family of an add to cart button                                                                        |
 | [title_type_font_size](#title_type_font_size)                                       | `false`                   | Customizes the font-size of an add to cart button                                                                          |
@@ -2701,6 +2703,58 @@ Customizes the `text-transform` of the product's add to cart button.
 
 // Set the text to wavy overline
 [wps_products add_to_cart_button_type_text_decoration="wavy overline"]
+```
+
+### product_metafields
+
+Allows for whitelisting product metafields to be returned in the JavaScript payload
+
+You will need to construct a JavaScript array that contains one or more objects with a `namespace` and `key` value pair. Like this:
+
+`[{ namespace: "custom", key: "hello" }]`
+
+You will then need to pass this array into a [base64 encoder](https://www.base64encode.org/).
+
+After you have the final base64 string, you can pass it to the shortcode like this:
+
+`[wps_products product_metafields="W3sgbmFtZXNwYWNlOiAiY3VzdG9tIiwga2V5OiAiaGVsbG8iIH1d"]`
+
+(The W3sgbmFtZXNwYWNlOiAiY3VzdG9tIiwga2V5OiAiaGVsbG8iIH1d part is a Base64 encoded string in this format:)
+
+| Possible values                                  |
+| :----------------------------------------------- |
+| A valid base64 encoded array of metafield values |
+
+**Example**
+
+```js
+[wps_products product_metafields="W3sgbmFtZXNwYWNlOiAiY3VzdG9tIiwga2V5OiAiaGVsbG8iIH1d"]
+```
+
+### product_variant_metafields
+
+Allows for whitelisting product variant metafields to be returned in the JavaScript payload.
+
+You will need to construct a JavaScript array that contains one or more objects with a `namespace` and `key` value pair. Like this:
+
+`[{ namespace: "custom", key: "hello" }]`
+
+You will then need to pass this array into a [base64 encoder](https://www.base64encode.org/).
+
+After you have the final base64 string, you can pass it to the shortcode like this:
+
+`[wps_products product_variant_metafields="W3sgbmFtZXNwYWNlOiAiY3VzdG9tIiwga2V5OiAiaGVsbG8iIH1d"]`
+
+(The W3sgbmFtZXNwYWNlOiAiY3VzdG9tIiwga2V5OiAiaGVsbG8iIH1d part is a Base64 encoded string in this format:)
+
+| Possible values                                  |
+| :----------------------------------------------- |
+| A valid base64 encoded array of metafield values |
+
+**Example**
+
+```js
+[wps_products product_variant_metafields="W3sgbmFtZXNwYWNlOiAiY3VzdG9tIiwga2V5OiAiaGVsbG8iIH1d"]
 ```
 
 ### dropzone_product_title

@@ -90,3 +90,24 @@ if (!empty($tags)) {
   ]);
 }
 ```
+
+## Whitelisting metafields globally
+
+If you want to whitelist multiple Shopify metafields—to be used in any JavaScript used for ShopWP—you can do so using the below code.
+
+The `product_metafields` and `product_variant_metafields` attributes need to be set to a base64 encoded string. The base64 encoded string must be a JavaScript array, containing one or more objects with a `namespace` and `key` property, like this:
+
+```
+[{ namespace: "custom", key: "hello" }]
+```
+
+```php
+add_filter('shopwp_products_default_settings', function($settings) {
+
+   $settings['product_metafields'] = "W3sgbmFtZXNwYWNlOiAiY3VzdG9tIiwga2V5OiAiYXdhcmRzX2FuZF9jZXJ0aWZpY2F0aW9ucyIgfV0=";
+   // $settings['product_variant_metafields'] = "...";
+
+   return $settings;
+
+});
+```
