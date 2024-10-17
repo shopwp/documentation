@@ -10,7 +10,7 @@ ShopWP comes in two versions; a [free version](https://wordpress.org/plugins/wps
 If you're upgrading from free to Pro, please read the [Upgrading](/guides/upgrading-to-pro) guide.
 :::
 
-We recommended the [Shopify Lite plan](https://shopify.pxf.io/vnqbrj) if you intend to only sell on WordPress and other sales channels such as Facebook or Instagram. All plugin features will work with Shopify Lite and is a great option if want to save money!
+We recommended the [Shopify Starter plan](https://www.shopify.com/starter) if you intend to only sell on WordPress and other sales channels such as Facebook or Instagram. All plugin features will work with the Shopify Starter plan and is a great option if want to save money!
 
 Okay, let's get started! 🙌
 

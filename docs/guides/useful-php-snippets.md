@@ -111,3 +111,21 @@ add_filter('shopwp_products_default_settings', function($settings) {
 
 });
 ```
+
+## Close Storefront filters on mobile only
+
+The below snippet will close the Storefront filters on mobile only, while keeping the collection filter open on desktop.
+
+```php
+add_filter('shopwp_storefront_default_settings', function($settings) {
+
+    if (wp_is_mobile()) {
+        $settings['filter_option_open_on_load'] = false;
+    } else {
+        $settings['filter_option_open_on_load'] = 'collections';
+    }
+
+    return $settings;
+
+});
+```
