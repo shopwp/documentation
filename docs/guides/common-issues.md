@@ -217,3 +217,11 @@ You'll want to make sure to exclude ShopWP from any JavaScript optimizations suc
 If you've setup a custom domain in Shopify but it's not showing up on your product links, check to make sure your store is not password protected.
 
 Shopify will default to using the `.myshopify.com` domain if your store is password protected.
+
+## Oauth error
+
+During the connection process, if you're redirected to a page that looks like the screenshot below, it most likely means that you're logged into the wrong Shopify store. Shopify will complain that you don't have the correct permissions to connect the store.
+
+First log out of Shopify. Then log in to the specific store that you're trying to connect. After that's done, try the connection process again.
+
+![ShopWP oauth error](./assets/common-issues/shopify-oauth-error.png)

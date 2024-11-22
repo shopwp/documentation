@@ -30,6 +30,12 @@ By default, your domain uses the format: `abc.myshopify.com`.
 
 :::
 
+During the connection process, if you're redirected to a page that looks like the screenshot below, it most likely means that you're logged into the wrong Shopify store. Shopify will complain that you don't have the correct permissions to connect the store.
+
+First log out of Shopify. Then log in to the specific store that you're trying to connect. After that's done, try the connection process again.
+
+![ShopWP oauth error](./assets/shopify-oauth-error.png)
+
 ![ShopWP Disconnect page](./assets/connecting-2.jpg)
 
 ### 3. Authorize the connection
@@ -37,12 +43,6 @@ By default, your domain uses the format: `abc.myshopify.com`.
 If this is your first time connecting, you will be asked to authorize the connection within Shopify. Click the `Install app` button toward the bottom.
 
 ![ShopWP Disconnect page](./assets/connecting-3.png)
-
-If you see a Shopify notice that says something like, `ShopWP is currently unsupported ...` you can ignore this and install anyway.
-
-The notice will show to some users incorrectly and we're currently working with Shopify to have this removed.
-
-![ShopWP not supported notice](./assets/connecting-3-5.jpg)
 
 ### 4. Finish the wizard
 
