@@ -83,7 +83,9 @@ For all the CSS sections:
 /wp-content/plugins/shopwp-pro/dist/(.*).css
 ```
 
-![WP Rocket settings for ShopWP](./assets/wp-rocket-settings.png)
+![WP Rocket settings for ShopWP](./assets/wp-rocket-settings.png).
+
+It has also been shown that WP Rocket's "Lazy load" feature will conflict with ShopWP. Please turn that off as well.
 
 ### WP-Optimize
 

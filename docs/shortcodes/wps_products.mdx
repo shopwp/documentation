@@ -297,12 +297,15 @@ Display products based on one or more product types. Comma-separate to display p
 
 ### available_for_sale
 
-Display products based on their availability. Setting to `true` will only show products that are in stock. Setting to `any` will show products that are also out of stock.
+Display products based on their availability. Passing `true` will only show products that are in stock. The default behavior is to show both in stock and out of stock products.
 
-| Possible values |
-| :-------------- |
-| true            |
-| any (default)   |
+If you're filtering products by collection, you may also pass `false` which means "show only out of stock products".
+
+| Possible values            |
+| :------------------------- |
+| `true`                     |
+| `false` (collections only) |
+| `any` (default)            |
 
 **Example:** Only show products that are in-stock
 
@@ -310,7 +313,7 @@ Display products based on their availability. Setting to `true` will only show p
 [wps_products available_for_sale="true"]
 ```
 
-**Example:** Only show products that are out-of-stock
+**Example:** Only show products that are out-of-stock (only works when filtering by collection)
 
 ```js
 [wps_products available_for_sale="false"]
