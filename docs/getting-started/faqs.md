@@ -21,6 +21,14 @@ ShopWP provides a few major benefits over other Shopify / WordPress solutions:
 
 A commonly expressed frustration with the Shopify buy button is that it requires copying / pasting JavaScript code into the WordPress page. This might work for a one-time embed, however making changes requires regenerating the embed code each time. This quickly becomes unmanageable when you want to embed different products on multiple pages.
 
+## Where do I find my .myshopify.com domain?
+
+When your Shopify store is first created, it is automatically assigned a `.myshopify.com` domain. This acts as a sort of unique identifier for your shop.
+
+Your `.myshopify.com` domain can be found inside the Shopify admin under `Shopify -> Settings -> Domains`. (See screenshot below).
+
+![ShopWP Pro Common Issues 1](./assets/common-issues/visible-2.png)
+
 ## Can I use my WordPress domain for the checkout?
 
 If you want to use your WordPress domain for the Shopify checkout, you'll need to use a subdomain and assign that as your "primary" domain in Shopify. For example, if your WordPress domain is `widgets.com`, you could use something like `shop.widgets.com`.
