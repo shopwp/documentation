@@ -126,6 +126,20 @@ Determines the number of collections to show per page. Only applicable when pagi
 [wps_collections collections_page_size="4"]
 ```
 
+### collections_id
+
+Displays any single collection based on collection ID.
+
+| Possible values                   |
+| :-------------------------------- |
+| Any numeric Shopify collection id |
+
+**Example:**
+
+```js
+[wps_collections collections_id="123456789"]
+```
+
 ### collections_limit
 
 Limits the number of collections. Max allowed is `250`.
