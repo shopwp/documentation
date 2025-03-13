@@ -212,6 +212,10 @@ Another reason could be due to syncing on localhost. You need to make sure your 
 
 Another known reason for this issue is a conflict with the `Wordfence Security` plugin. Deactivating will let the sync continue.
 
+Another known reason for this issue is regarding how the bulk webhooks work. When ShopWP syncs _on more than one_ WordPress site, and one of the syncs cancels early due to an error, the wrong webhook callback address will remain attached to the Shopify store. For example, if a user runs a sync on a staging site but it fails, and then attempts to run another sync on a production site—the latter will use the staging site for the webhook callback address which is responsible for delivering the final syncing payload. The payload will never arrive (sent to wrong site) and thus appear to be stuck.
+
+Only one WordPress site can run a sync at any given time (current limitation of using the `BULK_OPERATIONS_FINISH` webhook to retrieve the bulk operation payload). The other option is long polling.
+
 ### Sync stuck at "Removing previously synced data ..."
 
 This can happen if you have overly aggressive security settings blocking access to the WordPress REST API.
