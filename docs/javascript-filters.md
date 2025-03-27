@@ -274,10 +274,11 @@ wp.hooks.addFilter('product.modalSettings', 'shopwp', function (modalSettings) {
 
 Allows you to customize the add to cart button text.
 
-| Parameter              | Description                                      |
-| :--------------------- | :----------------------------------------------- |
-| defaultText - (string) | Represents the default add to cart text          |
-| state - (object)       | Represents the state of the buy button component |
+| Parameter                 | Description                                      |
+| :------------------------ | :----------------------------------------------- |
+| defaultText - (string)    | Represents the default add to cart text          |
+| buyButtonState - (object) | Represents the state of the buy button component |
+| productState - (object)   | Represents the state of the product as a whole   |
 
 **Example**
 
@@ -285,9 +286,10 @@ Allows you to customize the add to cart button text.
 wp.hooks.addFilter(
 	'product.addToCartText',
 	'shopwp',
-	function (defaultText, state) {
+	function (defaultText, buyButtonState, productState) {
 		console.log('defaultText', defaultText)
-		console.log('state', state)
+		console.log('buyButtonState', buyButtonState)
+		console.log('productState', productState)
 
 		return 'Custom add to cart text'
 	}
