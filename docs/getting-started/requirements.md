@@ -20,6 +20,7 @@ With this in mind, our minimum requirements for ShopWP are:
 - PHP `memory_limit` of `64MB` (256 MB if running into syncing timeout issues)
 - PHP `max_execution_time` of `100` (300 if running into syncing timeout issues)
 - A valid HTTPS certificate
+- The WordPress REST API is turned on
 
 ## Subdirectories
 
