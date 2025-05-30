@@ -95,4 +95,14 @@ storefront_access_token - Storefront API access token
 
 ![ShopWP app work around 2](./assets/app-workaround/15.png)
 
-Done! You can now use ShopWP.
+Done! You can now use ShopWP. Make sure to uninstall the `SQL Buddy` plugin if you don't plan on using it again.
+
+## phpmyadmin
+
+If you don't see an existing record in the database, then you'll need to uninstall SQL Buddy and use a different method instead. SQL Buddy will not allow you to add new records to the database.
+
+In this case, using phpmyadmin through your webhost is the easiest option. Most webhosts will have this option available for you to choose.
+
+Once you login to phpmyadmin, click the `wp_wps_settings_connection` table and go to the `insert` tab. From there, you can manually insert a row. See the below screenshot.
+
+![ShopWP app work around 2](./assets/app-workaround/16.png)
