@@ -4,7 +4,7 @@ sidebar_position: 2
 
 # Connecting
 
-Connecting your [Shopify](https://shopify.pxf.io/5bPL0L) store to WordPress is the first step in using ShopWP.
+Connecting your [Shopify](https://shopify.com) store to WordPress is the first step in using ShopWP.
 
 It takes just a few moments, so let's begin!
 
@@ -14,62 +14,51 @@ It takes just a few moments, so let's begin!
 
 ### 1. Start the connection
 
-To begin, navigate to the "Connect" tab within the plugin Settings. You should see a screen that says "Disconnected". Click the button that says `Connect your Shopify store`. This will open a wizard to guide you through the process.
+Within the WordPress plugin settings go to the "Connect" tab. Click the button that says `Connect your Shopify store`.
 
-![ShopWP Disconnect page](./assets/connecting-1.jpg)
+![ShopWP Disconnect page](./assets/connecting/connecting0-min.png)
 
-### 2. Enter your Shopify domain
+### 2. Install the Shopify app
 
-Once you're on the wizard page, enter your `.myshopify.com` domain and click the `Connect your Shopify store` button.
+You will be redirected to the Shopify app page. Click the `Install` button.
+
+![ShopWP Disconnect page](./assets/connecting/connecting1-min.png)
+
+### 3. Confirm the install
+
+You will be shown a new install screen showing which permissions the app will need. Click the `Install` button to finalize the process.
+
+![ShopWP Disconnect page](./assets/connecting/connecting2-min.png)
+
+### 4. Connect your WordPress site
+
+Click the `Connect site` button to connect your WordPress site.
+
+![ShopWP Disconnect page](./assets/connecting/connecting3-min.png)
+
+### 5. Enter WordPress domain
+
+Enter your WordPress domain and click the `Connect site` button.
 
 :::info
-
-The `.myshopify.com` domain is what you use to login to Shopify. It can be found inside the Shopify admin. It will be the domain that's displayed in the address bar.
-
-By default, your domain uses the format: `abc.myshopify.com`.
-
+If you're connecting a dev site, make sure to enter the same domain found in your ShopWP syncing url setting. This must be a [publicly accessible URL](/getting-started/syncing#using-localhost).
 :::
 
-During the connection process, if you're redirected to a page that looks like the screenshot below, it most likely means that you're logged into the wrong Shopify store. Shopify will complain that you don't have the correct permissions to connect the store.
+![ShopWP Disconnect page](./assets/connecting/connecting4-min.png)
 
-First log out of Shopify. Then log in to the specific store that you're trying to connect. After that's done, try the connection process again.
+### 6. Confirm the connection
 
-![ShopWP oauth error](./assets/shopify-oauth-error.png)
+If the connection was successful, you should see a confirmation screen like below. You can click into the site and see more details (or disconnect if needed).
 
-![ShopWP Disconnect page](./assets/connecting-2.jpg)
+![ShopWP Disconnect page](./assets/connecting/connecting5-min.png)
+![ShopWP Disconnect page](./assets/connecting/connecting6-min.png)
 
-### 3. Authorize the connection
+### 7. Back to WordPress
 
-If this is your first time connecting, you will be asked to authorize the connection within Shopify. Click the `Install app` button toward the bottom.
+At this point, you can go back to the WordPress site to see that the connection is now "active" in the plugin. 
 
-![ShopWP Disconnect page](./assets/connecting-3.png)
+You're all set! 
 
-### 4. Finish the wizard
+Next, learn how to [sync your products](/getting-started/syncing).
 
-After authorizing the connection you'll be redirected back to WordPress in order to finish the wizard process. You can either skip the wizard at this point or continue to set some basic plugin settings.
-
-![ShopWP Disconnect page](./assets/connecting-4.jpg)
-
-Once you finish the wizard you're done! You're now connected to Shopify and can begin [displaying](/getting-started/displaying) your products.
-
-![ShopWP Disconnect page](./assets/connecting-5.jpg)
-
-## Disconnecting
-
-Disconnecting your Shopify store is very easy. Simply open the `Connect` tab within the plugin settings and click the `Disconnect your Shopify store` button. After the process finishes, your store will no longer be connected to WordPress.
-
-You won't be able to display products or use the cart when disconnected.
-
-![ShopWP Disconnect page](./assets/disconnecting-1.jpg)
-
-## The Shopify App
-
-During the connection process, ShopWP installs a companion Shopify app to your store. The purpose of this app is to manage API keys and make secure connections between the two sites. The Shopify app is unlisted, and can only be installed from inside the ShopWP WordPress plugin. The app itself provides zero functionality or features. You can think of it simply as an extension of the WordPress plugin.
-
-While you're using ShopWP, please do not delete the companion Shopify app. If you do, you may notice that the plugin stops working properly. You must have this Shopify app installed if you wish to use ShopWP.
-
-If the app is deleted for whatever reason, you can always "disconnect" your store from inside the WordPress plugin and reconnect again.
-
-![ShopWP Shopify app](./assets/app-1.png)
-
-![ShopWP Shopify app index page](./assets/app-2.png)
+![ShopWP Disconnect page](./assets/connecting/connecting7-min.png)
